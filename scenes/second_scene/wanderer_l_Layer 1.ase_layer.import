@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.spriteframes-split-layer"
+type="SpriteFrames"
+uid="uid://dh7sopkqtdygp"
+path="res://.godot/imported/wanderer_l_Layer 1.ase_layer-c5234b605d5778855fa3b42ce31318f4.res"
+
+[deps]
+
+files=["res://.godot/imported/wanderer_l_Layer 1.ase_layer-c5234b605d5778855fa3b42ce31318f4.Layer 1.texture.res"]
+
+source_file="res://scenes/second_scene/wanderer_l_Layer 1.ase_layer"
+dest_files=["res://.godot/imported/wanderer_l_Layer 1.ase_layer-c5234b605d5778855fa3b42ce31318f4.res", "res://.godot/imported/wanderer_l_Layer 1.ase_layer-c5234b605d5778855fa3b42ce31318f4.Layer 1.texture.res"]
+
+[params]
+

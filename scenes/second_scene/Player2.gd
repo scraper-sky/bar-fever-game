@@ -3,10 +3,14 @@ extends CharacterBody2D
 
 @export var speed = 300.0
 @export var jump_velocity = -400.0
+@export var dialogue_resource: DialogueResource
+@export var dialogue_start: String = "start"
 @onready var animation_player = $AnimationPlayer
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+		
 
 func _physics_process(delta):
 	# Add gravity
@@ -39,3 +43,7 @@ func _physics_process(delta):
 		animation_player.stop()
 		
 	move_and_slide()
+	
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+	
