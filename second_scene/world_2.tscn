@@ -1,0 +1,130 @@
+[gd_scene load_steps=11 format=3 uid="uid://dti7nlt73w1pt"]
+
+[ext_resource type="Script" path="res://second_scene/Player2.gd" id="1_7lwsp"]
+[ext_resource type="Texture2D" uid="uid://d1ab6q2vdpgqm" path="res://second_scene/raina2d.png" id="2_70ee7"]
+[ext_resource type="Texture2D" uid="uid://bitffx0qqf5qb" path="res://background&art/neoncitylayer1.png" id="3_n474i"]
+[ext_resource type="Texture2D" uid="uid://bpugcjj8uyk5q" path="res://background&art/neoncitylayer2.png" id="4_q1wp7"]
+
+[sub_resource type="Theme" id="Theme_dwmqt"]
+
+[sub_resource type="Animation" id="Animation_bl830"]
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_govmh"]
+_data = {
+"default": SubResource("Animation_bl830")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i2rln"]
+radius = 40.0
+height = 98.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6eoxu"]
+size = Vector2(2609, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0tv5"]
+size = Vector2(9, 628)
+
+[node name="World2" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_dwmqt")
+
+[node name="Player2" type="CharacterBody2D" parent="."]
+position = Vector2(-25, -17)
+script = ExtResource("1_7lwsp")
+speed = 400.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player2"]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_govmh")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
+position = Vector2(99, 552)
+shape = SubResource("CapsuleShape2D_i2rln")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player2"]
+texture_filter = 1
+position = Vector2(102, 552)
+scale = Vector2(3.0625, 3.16406)
+texture = ExtResource("2_70ee7")
+hframes = 2
+frame = 1
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": -1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "Player2/AnimationPlayer",
+"slice": "",
+"source": "res://raina2d.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "200dc72acad1dd88d86760626efed077"
+
+[node name="Camera2D" type="Camera2D" parent="Player2"]
+position = Vector2(182, 331)
+
+[node name="Barrier1" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1"]
+position = Vector2(714.5, 639.5)
+shape = SubResource("RectangleShape2D_6eoxu")
+
+[node name="Barrier2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2"]
+position = Vector2(696, -4)
+shape = SubResource("RectangleShape2D_6eoxu")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Neoncitylayer1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(816, 323.5)
+scale = Vector2(2.41205, 2.65776)
+texture = ExtResource("3_n474i")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(39, 0)
+motion_mirroring = Vector2(500, 0)
+
+[node name="Neoncitylayer2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(481, 330)
+scale = Vector2(1.25277, 1.0119)
+texture = ExtResource("4_q1wp7")
+
+[node name="Barrier3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3"]
+position = Vector2(-165, 314)
+shape = SubResource("RectangleShape2D_y0tv5")
+
+[node name="Barrier4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4"]
+position = Vector2(1344, 309)
+shape = SubResource("RectangleShape2D_y0tv5")
