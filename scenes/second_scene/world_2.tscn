@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://dti7nlt73w1pt"]
+[gd_scene load_steps=20 format=3 uid="uid://dti7nlt73w1pt"]
 
 [ext_resource type="Script" path="res://scenes/second_scene/Player2.gd" id="1_7lwsp"]
+[ext_resource type="Script" path="res://scenes/second_scene/world_2.gd" id="1_75xp1"]
 [ext_resource type="Texture2D" uid="uid://d1ab6q2vdpgqm" path="res://scenes/second_scene/raina2d.png" id="2_70ee7"]
 [ext_resource type="Texture2D" uid="uid://bitffx0qqf5qb" path="res://background&art/neoncitylayer1.png" id="3_n474i"]
 [ext_resource type="Texture2D" uid="uid://dnt8xax5o751t" path="res://background&art/barrier.png" id="4_7rxoq"]
@@ -9,6 +10,8 @@
 [ext_resource type="Script" path="res://scenes/second_scene/area_2d.gd" id="5_iv88o"]
 [ext_resource type="Resource" uid="uid://dx1ronbw6qj86" path="res://TestDialogue.dialogue" id="6_cbxgm"]
 [ext_resource type="Texture2D" uid="uid://dfohh1yxkq41u" path="res://characters/wanderer.png" id="7_ey4ky"]
+[ext_resource type="Texture2D" uid="uid://dr5p58bjooqbx" path="res://background&art/undreamer.png" id="10_g5oks"]
+[ext_resource type="Script" path="res://scenes/second_scene/undreamer.gd" id="11_5yrdi"]
 
 [sub_resource type="Theme" id="Theme_dwmqt"]
 
@@ -47,6 +50,7 @@ size = Vector2(2609, 7)
 size = Vector2(9, 628)
 
 [node name="World2" type="Node2D"]
+script = ExtResource("1_75xp1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 40.0
@@ -102,8 +106,8 @@ position = Vector2(182, 331)
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Neoncitylayer1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(645, 385)
-scale = Vector2(2.41205, 2.65776)
+position = Vector2(1210, 859.75)
+scale = Vector2(3.33225, 3.86578)
 texture = ExtResource("3_n474i")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -173,4 +177,36 @@ position = Vector2(1346, 246.5)
 scale = Vector2(8.2, 15.2188)
 texture = ExtResource("5_bgpmq")
 
+[node name="Undreamer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 93.0
+offset_top = 36.0
+offset_right = 214.0
+offset_bottom = 223.0
+script = ExtResource("11_5yrdi")
+
+[node name="UndreamerDevice" type="Sprite2D" parent="Undreamer"]
+position = Vector2(535, 402)
+scale = Vector2(1.29847, 1.36259)
+texture = ExtResource("10_g5oks")
+
+[node name="Undream" type="Button" parent="Undreamer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 487.0
+offset_top = 42.0
+offset_right = 687.0
+offset_bottom = 128.0
+
+[node name="Exit" type="Button" parent="Undreamer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 504.0
+offset_top = 160.0
+offset_right = 670.0
+offset_bottom = 225.0
+
 [connection signal="body_entered" from="Mysterious_Person" to="Player2" method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="Undreamer/Undream" to="Undreamer" method="_on_undream_pressed"]
+[connection signal="pressed" from="Undreamer/Exit" to="Undreamer" method="_on_exit_pressed"]

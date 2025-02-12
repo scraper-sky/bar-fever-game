@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0qkyhi7vefrs"]
+[gd_scene load_steps=10 format=3 uid="uid://d0qkyhi7vefrs"]
 
 [ext_resource type="Script" path="res://balloon.gd" id="1_rjslf"]
+[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="2_aqgdt"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_gwpdv"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_gdgam"]
 
@@ -29,7 +30,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
-bg_color = Color(0.352941, 0.105882, 0.686275, 1)
+bg_color = Color(0.14902, 0, 0.286275, 0.933333)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -41,7 +42,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy0d5"]
-bg_color = Color(0.352941, 0.105882, 0.686275, 1)
+bg_color = Color(0.14902, 0, 0.286275, 0.933333)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -110,10 +111,10 @@ layout_mode = 2
 
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Panel/Dialogue/VBoxContainer"]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.501961)
-self_modulate = Color(0.337255, 1, 1, 1)
+modulate = Color(1, 0.415686, 1, 1)
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("2_aqgdt")
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -121,9 +122,10 @@ scroll_active = false
 
 [node name="DialogueLabel" parent="Balloon/Panel/Dialogue/VBoxContainer" instance=ExtResource("2_gwpdv")]
 unique_name_in_owner = true
-modulate = Color(0.605798, 0.947799, 0.959031, 1)
+modulate = Color(1, 0.94902, 0.960784, 1)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_aqgdt")
 text = "Dialogue..."
 
 [node name="Portrait" type="TextureRect" parent="Balloon/Panel"]
@@ -159,6 +161,7 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_aqgdt")
 text = "Response example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]

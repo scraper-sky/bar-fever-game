@@ -12,7 +12,7 @@ Mysterious_Person: Do you ever wonder why the city is moving with you?
 		- An undreaming device
 			Mysterious_Person: But you're not in a dream... => END
 		- I don't know
-			Mysterious_Person: Bing! Bing! Bing! Cooorecct! I have nothing. Haha, I'm just wasting your time. You have an undreaming device. Just press -q to leave. => END
+			Mysterious_Person: Bing! Bing! Bing! Cooorecct! I have nothing. Haha, I'm just wasting your time. You have an undreaming device. Just press -q to leave here. => END
 - Is a hidden barrier trapping me right now?
 	Mysterious_Person: Yes. Well... do you know how to escape?
 	- Yes
