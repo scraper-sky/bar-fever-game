@@ -1,12 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://dti7nlt73w1pt"]
+[gd_scene load_steps=17 format=3 uid="uid://dti7nlt73w1pt"]
 
 [ext_resource type="Script" path="res://scenes/second_scene/Player2.gd" id="1_7lwsp"]
 [ext_resource type="Texture2D" uid="uid://d1ab6q2vdpgqm" path="res://scenes/second_scene/raina2d.png" id="2_70ee7"]
 [ext_resource type="Texture2D" uid="uid://bitffx0qqf5qb" path="res://background&art/neoncitylayer1.png" id="3_n474i"]
+[ext_resource type="Texture2D" uid="uid://dnt8xax5o751t" path="res://background&art/barrier.png" id="4_7rxoq"]
 [ext_resource type="Texture2D" uid="uid://bpugcjj8uyk5q" path="res://background&art/neoncitylayer2.png" id="4_q1wp7"]
-[ext_resource type="SpriteFrames" uid="uid://dh7sopkqtdygp" path="res://scenes/second_scene/wanderer_l_Layer 1.ase_layer" id="5_7tlbd"]
+[ext_resource type="Texture2D" uid="uid://4jkctykfwtt7" path="res://background&art/wall2.png" id="5_bgpmq"]
 [ext_resource type="Script" path="res://scenes/second_scene/area_2d.gd" id="5_iv88o"]
 [ext_resource type="Resource" uid="uid://dx1ronbw6qj86" path="res://TestDialogue.dialogue" id="6_cbxgm"]
+[ext_resource type="Texture2D" uid="uid://dfohh1yxkq41u" path="res://characters/wanderer.png" id="7_ey4ky"]
 
 [sub_resource type="Theme" id="Theme_dwmqt"]
 
@@ -35,14 +37,14 @@ _data = {
 radius = 40.0
 height = 98.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umgay"]
+size = Vector2(22.9939, 23.0207)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6eoxu"]
 size = Vector2(2609, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0tv5"]
 size = Vector2(9, 628)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_umgay"]
-size = Vector2(22.9939, 23.0207)
 
 [node name="World2" type="Node2D"]
 
@@ -95,18 +97,6 @@ metadata/_aseprite_wizard_source_file_hash_ = "200dc72acad1dd88d86760626efed077"
 [node name="Camera2D" type="Camera2D" parent="Player2"]
 position = Vector2(182, 331)
 
-[node name="Barrier1" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1"]
-position = Vector2(712, 484)
-shape = SubResource("RectangleShape2D_6eoxu")
-
-[node name="Barrier2" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2"]
-position = Vector2(696, -4)
-shape = SubResource("RectangleShape2D_6eoxu")
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -125,30 +115,62 @@ position = Vector2(184, 316)
 scale = Vector2(1.25277, 1.0119)
 texture = ExtResource("4_q1wp7")
 
+[node name="Mysterious_Person" type="Area2D" parent="."]
+position = Vector2(1269, 588)
+scale = Vector2(5.15625, 4.53125)
+script = ExtResource("5_iv88o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mysterious_Person"]
+position = Vector2(2.13333, -35.531)
+shape = SubResource("RectangleShape2D_umgay")
+
+[node name="Sprite2D" type="Sprite2D" parent="Mysterious_Person"]
+position = Vector2(5.62424, -31.1172)
+texture = ExtResource("7_ey4ky")
+
+[node name="Barrier1" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1"]
+position = Vector2(712, 484)
+shape = SubResource("RectangleShape2D_6eoxu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Barrier1"]
+position = Vector2(596.5, 479.5)
+scale = Vector2(47.6562, 5.3)
+texture = ExtResource("4_7rxoq")
+
+[node name="Barrier2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2"]
+position = Vector2(696, -4)
+shape = SubResource("RectangleShape2D_6eoxu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Barrier2"]
+position = Vector2(-160.5, 239.5)
+scale = Vector2(8.1, 15.2812)
+texture = ExtResource("5_bgpmq")
+
 [node name="Barrier3" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3"]
 position = Vector2(-165, 314)
 shape = SubResource("RectangleShape2D_y0tv5")
 
+[node name="Sprite2D" type="Sprite2D" parent="Barrier3"]
+position = Vector2(594, -6)
+scale = Vector2(47.6562, 5.3)
+texture = ExtResource("4_7rxoq")
+
 [node name="Barrier4" type="StaticBody2D" parent="."]
+position = Vector2(19, -7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4"]
 position = Vector2(1344, 309)
 shape = SubResource("RectangleShape2D_y0tv5")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(1269, 588)
-scale = Vector2(5.15625, 4.53125)
-script = ExtResource("5_iv88o")
+[node name="Sprite2D" type="Sprite2D" parent="Barrier4"]
+position = Vector2(1346, 246.5)
+scale = Vector2(8.2, 15.2188)
+texture = ExtResource("5_bgpmq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
-position = Vector2(2.71513, -41.931)
-sprite_frames = ExtResource("5_7tlbd")
-speed_scale = 0.1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1.74548, -42.5931)
-shape = SubResource("RectangleShape2D_umgay")
-
-[connection signal="body_entered" from="Area2D" to="Player2" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Mysterious_Person" to="Player2" method="_on_area_2d_body_entered"]

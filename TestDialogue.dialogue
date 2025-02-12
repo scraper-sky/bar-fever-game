@@ -1,25 +1,26 @@
 ~ start
-Mysterious Person: [[Hi|Hello|Howdy]], the winds are heavy today.
-Mysterious Person: Do you ever wonder why the city is moving with you?
+Mysterious_Person: [[Hi|Hello|Howdy]], the winds are heavy today.
+Mysterious_Person: Do you ever wonder why the city is moving with you?
 - I must be in a dream.
-	Mysterious Person: Haha no.
-	Raina: Well... what am I in? Where am I?
-	Mysterious Person: Guess what's in my pocket. Then I'll reveal.
-	- A handkerchief
-		Mysterious Person: Wrong!
-	- A mbitz trading device
-		Mysterious Person: I wish I could have that, but no...
-	- An undreaming device
-		Mysterious Person: But you're not in a dream...
-	- I don't know
-		Mysterious Person: Bing! Bing! Bing! Cooorecct! I have nothing. Haha, I'm just wasthing your time. You have an undreaming device. Just press -q. => END
+	Mysterious_Person: Haha no.
+	- Well... what am I in? Where am I?
+		Mysterious_Person: Guess what's in my pocket. Then I'll reveal.
+		- A handkerchief
+			Mysterious_Person: Wrong! => END
+		- A mbitz trading device
+			Mysterious_Person: I wish I could have that, but no... => END
+		- An undreaming device
+			Mysterious_Person: But you're not in a dream... => END
+		- I don't know
+			Mysterious_Person: Bing! Bing! Bing! Cooorecct! I have nothing. Haha, I'm just wasting your time. You have an undreaming device. Just press -q to leave. => END
 - Is a hidden barrier trapping me right now?
-	Mysterious Person: Yes. Well... do you know how to escape?
+	Mysterious_Person: Yes. Well... do you know how to escape?
 	- Yes
-		Mysterious Person: You clearly don't. Why are you still here then... => END
+		Mysterious_Person: You clearly don't. Why are you still here then... => END
 	- No
-		Mysterious Person: Sucks for you. Then stay here with me. For eternity.
-- You're playing tricks on me! => start
+		Mysterious_Person: Sucks for you. Then stay in this box with me. For eternity. => END
+- You're playing tricks on me!
+	Mysterious_Person: Depends on how you're looking at it... => END
 - End the conversation => END
-Mysterious Person: I know what's waiting for you... don't leave. 
+Mysterious_Person: I know what's waiting for you... don't leave. 
 => END

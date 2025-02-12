@@ -45,5 +45,5 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
-	
+	#DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+	DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_start)
