@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://scenes/second_scene/Player2.gd" id="1_7lwsp"]
 [ext_resource type="Script" path="res://scenes/second_scene/world_2.gd" id="1_75xp1"]
 [ext_resource type="Texture2D" uid="uid://d1ab6q2vdpgqm" path="res://scenes/second_scene/raina2d.png" id="2_70ee7"]
-[ext_resource type="Texture2D" uid="uid://bitffx0qqf5qb" path="res://background&art/neoncitylayer1.png" id="3_n474i"]
 [ext_resource type="Texture2D" uid="uid://dnt8xax5o751t" path="res://background&art/barrier.png" id="4_7rxoq"]
-[ext_resource type="Texture2D" uid="uid://bpugcjj8uyk5q" path="res://background&art/neoncitylayer2.png" id="4_q1wp7"]
 [ext_resource type="Texture2D" uid="uid://4jkctykfwtt7" path="res://background&art/wall2.png" id="5_bgpmq"]
 [ext_resource type="Script" path="res://scenes/second_scene/area_2d.gd" id="5_iv88o"]
+[ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://background&art/neoncitybackground.png" id="5_kl62o"]
+[ext_resource type="Texture2D" uid="uid://dt2vh8kml4w6x" path="res://background&art/neoncityskylines.png" id="6_baomu"]
 [ext_resource type="Resource" uid="uid://dx1ronbw6qj86" path="res://TestDialogue.dialogue" id="6_cbxgm"]
 [ext_resource type="Texture2D" uid="uid://dfohh1yxkq41u" path="res://characters/wanderer.png" id="7_ey4ky"]
 [ext_resource type="Texture2D" uid="uid://dr5p58bjooqbx" path="res://background&art/undreamer.png" id="10_g5oks"]
@@ -105,19 +105,19 @@ position = Vector2(182, 331)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="Neoncitylayer1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1210, 859.75)
-scale = Vector2(3.33225, 3.86578)
-texture = ExtResource("3_n474i")
+[node name="neoncitylayer1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(663.5, 578.5)
+scale = Vector2(2.29531, 3.40608)
+texture = ExtResource("5_kl62o")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(39, 0)
 motion_mirroring = Vector2(500, 0)
 
-[node name="Neoncitylayer2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(184, 316)
-scale = Vector2(1.25277, 1.0119)
-texture = ExtResource("4_q1wp7")
+[node name="neoncitylayer2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(262, 271.5)
+scale = Vector2(1.24291, 1.46429)
+texture = ExtResource("6_baomu")
 
 [node name="Mysterious_Person" type="Area2D" parent="."]
 position = Vector2(1269, 588)
