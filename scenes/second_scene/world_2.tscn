@@ -100,6 +100,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "200dc72acad1dd88d86760626efed077"
 
 [node name="Camera2D" type="Camera2D" parent="Player2"]
 position = Vector2(182, 331)
+zoom = Vector2(1.5, 1.5)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
