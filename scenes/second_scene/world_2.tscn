@@ -105,6 +105,7 @@ zoom = Vector2(1.5, 1.5)
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1, 0)
 
 [node name="neoncitylayer1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(663.5, 578.5)
@@ -113,7 +114,6 @@ texture = ExtResource("5_kl62o")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(39, 0)
-motion_mirroring = Vector2(500, 0)
 
 [node name="neoncitylayer2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(262, 271.5)
