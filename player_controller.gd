@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed = 10.0 
-@export var jump_power = 15.0 
+@export var speed = 10.0
+@export var jump_power = 15.0
 @onready var animation_player = $AnimationPlayer
 
 var speed_multiplier = 30.0
@@ -9,35 +9,33 @@ var jump_multiplier = -30.0
 var direction = 0
 var start_position: Vector2
 var is_respawning = false
-#const SPEED = 300.0
-#const JUMP_VELOCITY = -400.0
 
 func _ready():
 	start_position = position
+	is_respawning = false
 
 func respawn():
 	if not is_respawning:
 		is_respawning = true
-		position = start_position  # Reset to start
-		animation_player.stop() 
+		position = start_position
+		animation_player.stop()
 		animation_player.seek(0, true)
-		print("Respawning player")  # Debug
+		for platform in get_tree().get_nodes_in_group("tween_nodes"):
+			if platform.has_method("stop_tween"):
+				platform.call_deferred("stop_tween")
+		print("Respawning player")
 		get_tree().call_deferred("reload_current_scene")
 
-			
 func _physics_process(delta: float) -> void:
 	if is_respawning:
-		return  # Skip physics if respawning
+		return
 
-	# Add the gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = jump_power * jump_multiplier
 
-	# Get the input direction and handle the movement/deceleration
 	direction = Input.get_axis("ui_left", "ui_right")
 	if direction != 0:
 		velocity.x = direction * speed * speed_multiplier
@@ -50,9 +48,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
 		if is_on_floor():
-			animation_player.stop()  # Stop animation when idle on the ground
+			animation_player.stop()
 
-	# Stop animation if jumping or falling
 	if not is_on_floor():
 		animation_player.stop()
 

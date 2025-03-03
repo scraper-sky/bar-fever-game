@@ -13,7 +13,7 @@ point_count = 2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eg8u1"]
 size = Vector2(32, 2)
 
-[node name="MovingPlatformLarge" type="Path2D" node_paths=PackedStringArray("path_follow_2D")]
+[node name="MovingPlatformLarge" type="Path2D" node_paths=PackedStringArray("path_follow_2D") groups=["moving_platform"]]
 curve = SubResource("Curve2D_1cyh2")
 script = ExtResource("1_k2xjq")
 path_follow_2D = NodePath("PathFollow2D")

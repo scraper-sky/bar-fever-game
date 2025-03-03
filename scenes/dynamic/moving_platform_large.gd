@@ -2,9 +2,12 @@ extends Path2D
 class_name MovingPlatform
 
 @export var path_follow_2D: PathFollow2D
-@export var speed: float = 100.0  # Movement speed in units per second
-@export var loop_mode: bool = false  # True for continuous loop, False for back-and-forth
-@export var pause_at_ends: float = 0.0  # Seconds to pause at start/end (for back-and-forth mode)
+@export var speed: float = 100.0
+@export var loop_mode: bool = false
+@export var pause_at_ends: float = 0.0
+
+var tween: Tween
+var is_moving = true
 
 func _ready():
 	if not path_follow_2D:
@@ -16,18 +19,25 @@ func _ready():
 	start_movement()
 
 func start_movement():
-	var tween = get_tree().create_tween().set_loops()
-	var path_length = curve.get_baked_length()  
-	var travel_time = path_length / speed 
-	if loop_mode:
-		tween.tween_property(path_follow_2D, "progress", path_length, travel_time).from(0.0)
-		tween.tween_callback(func(): path_follow_2D.progress = 0.0)  
-	else:
-		tween.tween_property(path_follow_2D, "progress", path_length, travel_time).from(0.0)
-		if pause_at_ends > 0:
-			tween.tween_interval(pause_at_ends)  
-		tween.tween_property(path_follow_2D, "progress", 0.0, travel_time)
-		if pause_at_ends > 0:
-			tween.tween_interval(pause_at_ends)  
-	
-	
+	while is_moving:
+		tween = get_tree().create_tween()
+		var path_length = curve.get_baked_length()
+		var travel_time = path_length / speed
+		if loop_mode:
+			tween.tween_property(path_follow_2D, "progress", path_length, travel_time).from(0.0)
+			await tween.finished
+			path_follow_2D.progress = 0.0
+		else:
+			tween.tween_property(path_follow_2D, "progress", path_length, travel_time).from(0.0)
+			if pause_at_ends > 0:
+				await get_tree().create_timer(pause_at_ends).timeout
+			tween.tween_property(path_follow_2D, "progress", 0.0, travel_time)
+			if pause_at_ends > 0:
+				await get_tree().create_timer(pause_at_ends).timeout
+		await tween.finished
+
+func stop_tween():
+	is_moving = false
+	if tween and tween.is_valid():
+		tween.kill()
+		tween = null
