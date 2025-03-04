@@ -30,17 +30,6 @@ func respawn():
 		print("Respawning player")
 		get_tree().call_deferred("reload_current_scene")
 
-func save_game():
-	var save_data = {
-		"level": get_tree().current_scene.scene_file_path,
-		"player_x": position.x,
-		"player_y": position.y
-	}
-	var file = FileAccess.open("user://savegame.json", FileAccess.WRITE)
-	file.store_string(JSON.stringify(save_data))
-	file.close()
-	print("Game saved")
-
 func _physics_process(delta: float) -> void:
 	if is_respawning:
 		return
