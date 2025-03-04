@@ -100,7 +100,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "200dc72acad1dd88d86760626efed077"
 
 [node name="Camera2D" type="Camera2D" parent="Player2"]
 position = Vector2(182, 331)
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(0.75, 0.75)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -116,8 +116,8 @@ texture = ExtResource("5_kl62o")
 position = Vector2(39, 0)
 
 [node name="neoncitylayer2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(262, 271.5)
-scale = Vector2(1.24291, 1.46429)
+position = Vector2(421, 225)
+scale = Vector2(1.27497, 1.55291)
 texture = ExtResource("6_baomu")
 
 [node name="Mysterious_Person" type="Area2D" parent="."]

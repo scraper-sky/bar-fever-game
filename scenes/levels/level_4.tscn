@@ -1,0 +1,329 @@
+[gd_scene load_steps=13 format=4 uid="uid://by2oub33kp6q0"]
+
+[ext_resource type="Script" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
+[ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
+[ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="3_r57se"]
+[ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="4_3w7cl"]
+[ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://background&art/neoncitybackground.png" id="5_70o17"]
+[ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="6_uluqj"]
+[ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="7_0uwjf"]
+[ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="8_de15b"]
+[ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="9_asjyv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3gnf3"]
+texture = ExtResource("3_r57se")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_af02t"]
+texture = ExtResource("4_3w7cl")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-17.5, 18, -18.75, -1, -16.75, -14.5, 16.75, -15, 17, 17.25)
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/size_in_atlas = Vector2i(5, 3)
+1:6/0 = 0
+0:7/0 = 0
+6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:7/0 = 0
+9:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:8/0 = 0
+6:8/0 = 0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:8/0 = 0
+9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:9/0 = 0
+9:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+6:0/size_in_atlas = Vector2i(4, 4)
+6:0/0 = 0
+2:5/0 = 0
+6:5/size_in_atlas = Vector2i(4, 2)
+6:5/0 = 0
+7:7/size_in_atlas = Vector2i(2, 2)
+7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/size_in_atlas = Vector2i(2, 3)
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qk64i"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_3gnf3")
+sources/1 = SubResource("TileSetAtlasSource_af02t")
+
+[node name="level_4" type="Node2D"]
+script = ExtResource("1_7pvna")
+
+[node name="MainPlayer" parent="." instance=ExtResource("2_r4k2g")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(4, 22)
+tile_map_data = PackedByteArray("AAD//wIAAQAJAAcAAAD//wMAAQAJAAcAAAD//wQAAQAJAAcAAAD//wUAAQAJAAcAAAD//wYAAQAJAAcAAAD//wcAAQAJAAcAAAD//wgAAQAJAAcAAAD//wkAAQAJAAcAAAD//woAAQAJAAcAAAD//wsAAQAJAAcAAAD//wwAAQAJAAcAAAD//w0AAQAJAAcAAAD/////AQAJAAcAAAD//wAAAQAJAAcAAAD//wEAAQAJAAcAAAAAAAQAAQAGAAkAAAADAAQAAQAGAAkAAAAGAAQAAQAGAAkAAAAJAAQAAQAGAAkAAAAMAAQAAQAGAAkAAAAPAAQAAQAGAAkAAAAQAP//AQAJAAcAAAAQAAAAAQAJAAcAAAAQAAEAAQAJAAcAAAAQAAIAAQAJAAcAAAAQAAMAAQAJAAcAAAAQAAQAAQAJAAcAAAAQAAUAAQAJAAcAAAAQAAYAAQAJAAcAAAAQAAcAAQAJAAcAAAAQAAgAAQAJAAcAAAAQAAkAAQAJAAcAAAAQAAoAAQAJAAcAAAAQAAsAAQAJAAcAAAAQAAwAAQAJAAcAAAAQAA0AAQAJAAcAAAAQAA4AAQAJAAcAAAAQAA8AAQAJAAcAAAAQABAAAQAJAAcAAAAQABEAAQAJAAcAAAAQABIAAQAJAAcAAAAQABMAAQAJAAcAAAAQABQAAQAJAAcAAAAQABUAAQAJAAcAAAD//w4AAQAJAAcAAAD//w8AAQAJAAcAAAD//xAAAQAJAAcAAAD//xEAAQAJAAcAAAD//xIAAQAJAAcAAAD//xMAAQAJAAcAAAD//xQAAQAJAAcAAAD//xUAAQAJAAcAAAD//xYAAQAJAAcAAAD//xcAAQAJAAcAAAD//xgAAQAJAAcAAAD//xkAAQAJAAcAAAD//xoAAQAJAAcAAAD//xsAAQAJAAcAAAAQABYAAQAJAAcAAAAQABcAAQAJAAcAAAAQABgAAQAJAAcAAAAQABkAAQAJAAcAAAAQABoAAQAJAAcAAAAQABsAAQAJAAcAAAAQABwAAQAJAAcAAAAQAB0AAQAJAAcAAAAQAB4AAQAJAAcAAAAQAB8AAQAJAAcAAAAQACAAAQAJAAcAAAAQACEAAQAJAAcAAAD//xwAAQAJAAcAAAD//x0AAQAJAAcAAAD//x4AAQAJAAcAAAD//x8AAQAJAAcAAAD//yAAAQAJAAcAAAD//yEAAQAJAAcAAAD//yIAAQAJAAcAAAD//yMAAQAJAAcAAAD//yQAAQAJAAcAAAAQACIAAQAJAAcAAAAQACMAAQAJAAcAAAAQACQAAQAJAAcAAAD//yUAAQAJAAcAAAD//yYAAQAJAAcAAAD//ycAAQAJAAcAAAD//ygAAQAJAAcAAAD//ykAAQAJAAcAAAAQACUAAQAJAAcAAAAQACYAAQAJAAcAAAAQACcAAQAJAAcAAAAQACgAAQAJAAcAAAAQACkAAQAJAAcAAAABAAoAAQAHAAkAAAACAAoAAQAHAAkAAAAEAAoAAQAHAAkAAAAFAAoAAQAHAAkAAAAHAAoAAQAHAAkAAAAIAAoAAQAHAAkAAAAKAAoAAQAHAAkAAAALAAoAAQAHAAkAAAANAAoAAQAHAAkAAAAOAAoAAQAHAAkAAAADABAAAQAHAAkAAAAEABAAAQAHAAkAAAAAACkAAQAJAAcAAAAOACkAAQAJAAcAAAAPACkAAQAJAAcAAAABACkAAQAJAAcAAAAIABAAAQAHAAkAAAAJABAAAQAHAAkAAAAMABAAAQAHAAkAAAANABAAAQAHAAkAAAABABQAAQAJAAcAAAACABQAAQAJAAcAAAAEABQAAQAHAAkAAAAFABQAAQAHAAkAAAAHABQAAQAHAAkAAAAIABQAAQAHAAkAAAAKABQAAQAHAAkAAAALABQAAQAHAAkAAAANABQAAQAJAAcAAAAOABQAAQAJAAcAAAADABkAAQAGAAkAAAAGABkAAQAGAAkAAAAJABkAAQAGAAkAAAAMABkAAQAGAAkAAAABAB4AAQAJAAcAAAACAB4AAQAJAAcAAAAEAB4AAQAHAAkAAAAFAB4AAQAHAAkAAAAHAB4AAQAHAAkAAAAIAB4AAQAHAAkAAAAKAB4AAQAHAAkAAAALAB4AAQAHAAkAAAANAB4AAQAJAAcAAAAOAB4AAQAJAAcAAAADACIAAQAGAAkAAAAGACIAAQAGAAkAAAAJACIAAQAGAAkAAAAMACIAAQAGAAkAAAABACYAAQAJAAcAAAACACYAAQAJAAcAAAAEACYAAQAJAAcAAAAFACYAAQAJAAcAAAAIACYAAQAJAAcAAAAHACYAAQAJAAcAAAAKACYAAQAJAAcAAAALACYAAQAJAAcAAAAOACYAAQAJAAcAAAANACYAAQAJAAcAAAACACkAAQAJAAcAAAADACkAAQAJAAcAAAAEACkAAQAJAAcAAAAFACkAAQAJAAcAAAAGACkAAQAJAAcAAAAHACkAAQAJAAcAAAAIACkAAQAJAAcAAAAJACkAAQAJAAcAAAAKACkAAQAJAAcAAAALACkAAQAJAAcAAAAMACkAAQAJAAcAAAANACkAAQAJAAcAAAAEACcAAQAGAAkAAAAEACgAAQAJAAcAAAALACcAAQAGAAkAAAALACgAAQAJAAcAAAAAABQAAQAJAAcAAAAPABQAAQAJAAcAAAAPAB4AAQAJAAcAAAAAAB4AAQAJAAcAAAA=")
+tile_set = SubResource("TileSet_qk64i")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(633, 1731)
+scale = Vector2(2.7651, 5.13228)
+texture = ExtResource("5_70o17")
+
+[node name="BluePortal" parent="." instance=ExtResource("6_uluqj")]
+position = Vector2(486, 2557)
+
+[node name="flickerlamp" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(34, 458)
+
+[node name="flickerlamp2" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(283, 468)
+
+[node name="flickerlamp3" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(441, 444)
+
+[node name="flickerlamp4" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(647, 463)
+
+[node name="flickerlamp5" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(110, 476)
+
+[node name="flickerlamp6" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(151, 766)
+
+[node name="flickerlamp7" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(184, 767)
+
+[node name="flickerlamp8" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(343, 809)
+
+[node name="flickerlamp9" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(373, 811)
+
+[node name="flickerlamp10" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(532, 803)
+
+[node name="flickerlamp11" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(564, 806)
+
+[node name="flickerlamp12" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(-29, 821)
+
+[node name="flickerlamp13" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(931, 817)
+
+[node name="flickerlamp14" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(295, 1123)
+
+[node name="flickerlamp15" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(66, 1116)
+
+[node name="flickerlamp16" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(336, 1124)
+
+[node name="flickerlamp17" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(32, 1150)
+
+[node name="flickerlamp18" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(413, 1126)
+
+[node name="flickerlamp19" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(879, 1123)
+
+[node name="flickerlamp20" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(911, 1125)
+
+[node name="flickerlamp21" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(680, 870)
+
+[node name="flickerlamp22" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(395, 935)
+
+[node name="flickerlamp23" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(225, 901)
+
+[node name="flickerlamp24" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(14, 947)
+
+[node name="flickerlamp25" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(94, 1144)
+
+[node name="flickerlamp26" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(711, 835)
+
+[node name="flickerlamp27" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(258, 888)
+
+[node name="flickerlamp28" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(375, 1122)
+
+[node name="flickerlamp29" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(168, 1415)
+
+[node name="flickerlamp30" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(555, 1416)
+
+[node name="flickerlamp31" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(755, 1414)
+
+[node name="flickerlamp32" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(635, 1741)
+
+[node name="flickerlamp33" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(674, 1746)
+
+[node name="flickerlamp34" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(706, 1774)
+
+[node name="flickerlamp35" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(413, 1748)
+
+[node name="flickerlamp36" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(444, 1738)
+
+[node name="flickerlamp37" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(488, 1736)
+
+[node name="flickerlamp38" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(112, 1710)
+
+[node name="flickerlamp39" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(78, 1728)
+
+[node name="flickerlamp40" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(46, 1745)
+
+[node name="flickerlamp41" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(228, 1744)
+
+[node name="flickerlamp42" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(819, 1744)
+
+[node name="flickerlamp43" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(857, 1767)
+
+[node name="flickerlamp44" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(928, 1767)
+
+[node name="flickerlamp45" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(128, 2042)
+
+[node name="flickerlamp46" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(740, 2038)
+
+[node name="flickerlamp47" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(530, 2052)
+
+[node name="flickerlamp48" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(220, 2363)
+
+[node name="flickerlamp49" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(169, 2048)
+
+[node name="flickerlamp50" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(563, 2051)
+
+[node name="flickerlamp51" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(357, 2423)
+
+[node name="flickerlamp52" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(288, 2301)
+
+[node name="flickerlamp53" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(243, 2298)
+
+[node name="flickerlamp54" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(70, 2539)
+
+[node name="flickerlamp55" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(821, 2548)
+
+[node name="flickerlamp56" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(638, 2302)
+
+[node name="flickerlamp57" parent="." instance=ExtResource("7_0uwjf")]
+position = Vector2(674, 2303)
+
+[node name="ColorBlock" parent="." instance=ExtResource("8_de15b")]
+position = Vector2(42, 1333)
+
+[node name="ColorBlock2" parent="." instance=ExtResource("9_asjyv")]
+position = Vector2(95, 1333)
+
+[node name="ColorBlock3" parent="." instance=ExtResource("8_de15b")]
+position = Vector2(147, 1333)
+
+[node name="ColorBlock4" parent="." instance=ExtResource("8_de15b")]
+position = Vector2(937, 1332)
+
+[node name="ColorBlock5" parent="." instance=ExtResource("8_de15b")]
+position = Vector2(877, 1974)
+
+[node name="ColorBlock6" parent="." instance=ExtResource("9_asjyv")]
+position = Vector2(884, 1332)
+
+[node name="ColorBlock7" parent="." instance=ExtResource("9_asjyv")]
+position = Vector2(990, 1332)
+
+[node name="ColorBlock8" parent="." instance=ExtResource("8_de15b")]
+position = Vector2(975, 1974)
+
+[node name="ColorBlock9" parent="." instance=ExtResource("8_de15b")]
+position = Vector2(103, 1972)
+
+[node name="ColorBlock10" parent="." instance=ExtResource("9_asjyv")]
+position = Vector2(926, 1974)
+
+[node name="ColorBlock11" parent="." instance=ExtResource("9_asjyv")]
+position = Vector2(151, 1972)
+
+[node name="ColorBlock12" parent="." instance=ExtResource("9_asjyv")]
+position = Vector2(55, 1972)

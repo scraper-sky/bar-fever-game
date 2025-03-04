@@ -14,6 +14,10 @@ func _ready():
 	start_position = position
 	is_respawning = false
 
+func _input(event):
+	if event.is_action_pressed("menu_in"):
+		get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
+
 func respawn():
 	if not is_respawning:
 		is_respawning = true
@@ -25,6 +29,17 @@ func respawn():
 				platform.call_deferred("stop_tween")
 		print("Respawning player")
 		get_tree().call_deferred("reload_current_scene")
+
+func save_game():
+	var save_data = {
+		"level": get_tree().current_scene.scene_file_path,
+		"player_x": position.x,
+		"player_y": position.y
+	}
+	var file = FileAccess.open("user://savegame.json", FileAccess.WRITE)
+	file.store_string(JSON.stringify(save_data))
+	file.close()
+	print("Game saved")
 
 func _physics_process(delta: float) -> void:
 	if is_respawning:

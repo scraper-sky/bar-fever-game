@@ -10,13 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="8_oyruo"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="9_4y3vf"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnmmo"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vol5t"]
 texture = ExtResource("1_4526a")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnpy5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j46wm"]
 texture = ExtResource("2_x4r34")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -95,8 +95,8 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_qg25o"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_vnmmo")
-sources/1 = SubResource("TileSetAtlasSource_qnpy5")
+sources/0 = SubResource("TileSetAtlasSource_vol5t")
+sources/1 = SubResource("TileSetAtlasSource_j46wm")
 
 [sub_resource type="Curve2D" id="Curve2D_0cwe4"]
 resource_local_to_scene = true
