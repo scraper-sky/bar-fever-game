@@ -8,13 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="6_fubn5"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="7_f2nix"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5jyc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mjn61"]
 texture = ExtResource("2_sp886")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ffmns"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcaob"]
 texture = ExtResource("3_p870m")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -93,8 +93,8 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_dg2e2"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_n5jyc")
-sources/1 = SubResource("TileSetAtlasSource_ffmns")
+sources/0 = SubResource("TileSetAtlasSource_mjn61")
+sources/1 = SubResource("TileSetAtlasSource_fcaob")
 
 [node name="level_3" type="Node2D"]
 

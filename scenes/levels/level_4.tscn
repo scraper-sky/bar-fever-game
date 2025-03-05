@@ -257,7 +257,7 @@ position = Vector2(928, 1767)
 position = Vector2(128, 2042)
 
 [node name="flickerlamp46" parent="." instance=ExtResource("7_0uwjf")]
-position = Vector2(740, 2038)
+position = Vector2(932, 2368)
 
 [node name="flickerlamp47" parent="." instance=ExtResource("7_0uwjf")]
 position = Vector2(530, 2052)
@@ -266,7 +266,7 @@ position = Vector2(530, 2052)
 position = Vector2(220, 2363)
 
 [node name="flickerlamp49" parent="." instance=ExtResource("7_0uwjf")]
-position = Vector2(169, 2048)
+position = Vector2(7, 2257)
 
 [node name="flickerlamp50" parent="." instance=ExtResource("7_0uwjf")]
 position = Vector2(563, 2051)
@@ -287,7 +287,7 @@ position = Vector2(70, 2539)
 position = Vector2(821, 2548)
 
 [node name="flickerlamp56" parent="." instance=ExtResource("7_0uwjf")]
-position = Vector2(638, 2302)
+position = Vector2(678, 2361)
 
 [node name="flickerlamp57" parent="." instance=ExtResource("7_0uwjf")]
 position = Vector2(674, 2303)
