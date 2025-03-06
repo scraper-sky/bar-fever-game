@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://qhdkaolahpms"]
 
-[ext_resource type="Script" path="res://dialogue_portrait_initiator.gd" id="1_tmgn4"]
+[ext_resource type="Script" uid="uid://cygctqfftrxff" path="res://dialogue_portrait_initiator.gd" id="1_tmgn4"]
 
 [node name="Dialogue_Portrait_Initiator" type="Node2D"]
 script = ExtResource("1_tmgn4")

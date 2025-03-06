@@ -224,4 +224,3 @@ position = Vector2(1616, 804)
 
 [node name="BluePortal" parent="." instance=ExtResource("7_f2nix")]
 position = Vector2(1464, 883)
-target_scene = "res://scenes/levels/level_4.tscn"

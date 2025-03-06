@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://d0qkyhi7vefrs"]
 
-[ext_resource type="Script" path="res://balloon.gd" id="1_rjslf"]
+[ext_resource type="Script" uid="uid://uq7esdr4hjbh" path="res://balloon.gd" id="1_rjslf"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="2_aqgdt"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_gwpdv"]
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_gdgam"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_gdgam"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0.352941, 0.105882, 0.686275, 1)

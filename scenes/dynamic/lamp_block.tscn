@@ -1,32 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://8mauqn3dyagd"]
+[gd_scene load_steps=4 format=3 uid="uid://8mauqn3dyagd"]
 
-[ext_resource type="Script" path="res://scenes/dynamic/lamp_block.gd" id="1_6sy3k"]
 [ext_resource type="Texture2D" uid="uid://b8byl6kfkued5" path="res://background&art/lamp_block1.png" id="2_uvfrs"]
-[ext_resource type="Texture2D" uid="uid://7n3ktlwkfnnh" path="res://background&art/lamp_block2.png" id="3_gouyo"]
+
+[sub_resource type="GDScript" id="GDScript_b2ycv"]
+script/source = "extends Area2D
+
+var is_on = false
+
+func _ready():
+	update_sprite()
+	connect(\"input_event\", _on_input_event)
+
+func toggle():
+	is_on = !is_on
+	update_sprite()
+
+func update_sprite():
+	var sprite = $Sprite2D
+	if sprite:
+		sprite.texture = preload(\"res://background&art/lamp_block2.png\") if is_on else preload(\"res://background&art/lamp_block1.png\")
+	else:
+		print(\"Error: No Sprite2D on \", name)
+
+func _on_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		get_parent().toggle_adjacent(position)
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88pe1"]
 size = Vector2(64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_h0xxm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_uvfrs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_gouyo")
-}],
-"loop": true,
-"name": &"toggle",
-"speed": 5.0
-}]
-
 [node name="LampBlock" type="Area2D"]
-script = ExtResource("1_6sy3k")
+script = SubResource("GDScript_b2ycv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_88pe1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_h0xxm")
-animation = &"toggle"
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_uvfrs")
