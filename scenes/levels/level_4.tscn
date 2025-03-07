@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://by2oub33kp6q0"]
+[gd_scene load_steps=15 format=4 uid="uid://by2oub33kp6q0"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="7_0uwjf"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="8_de15b"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="9_asjyv"]
+[ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="10_fu4h6"]
+[ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="11_ay42o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3gnf3"]
 texture = ExtResource("3_r57se")
@@ -120,6 +122,7 @@ texture = ExtResource("5_70o17")
 
 [node name="BluePortal" parent="." instance=ExtResource("6_uluqj")]
 position = Vector2(486, 2557)
+target_scene = "res://scenes/levels/level_5.tscn"
 
 [node name="flickerlamp" parent="." instance=ExtResource("7_0uwjf")]
 position = Vector2(34, 458)
@@ -327,3 +330,18 @@ position = Vector2(151, 1972)
 
 [node name="ColorBlock12" parent="." instance=ExtResource("9_asjyv")]
 position = Vector2(55, 1972)
+
+[node name="floatingtorii" parent="." instance=ExtResource("10_fu4h6")]
+position = Vector2(743, 1201)
+
+[node name="floatingtorii2" parent="." instance=ExtResource("10_fu4h6")]
+position = Vector2(429, 1517)
+
+[node name="floatingtorii3" parent="." instance=ExtResource("10_fu4h6")]
+position = Vector2(310, 1206)
+
+[node name="floatingtoriiv2" parent="." instance=ExtResource("11_ay42o")]
+position = Vector2(693, 1569)
+
+[node name="floatingtoriiv3" parent="." instance=ExtResource("11_ay42o")]
+position = Vector2(490, 1845)

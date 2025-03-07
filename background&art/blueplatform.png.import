@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wqvheqb0r00o"
-path="res://.godot/imported/obstacleblock.png-cd3209feb156ec9aabe598db99d1b3d8.ctex"
+uid="uid://b717b883hvkr3"
+path="res://.godot/imported/blueplatform.png-b6a0d7960fc79866f18adc4813aafc28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/third_scene/obstacleblock.png"
-dest_files=["res://.godot/imported/obstacleblock.png-cd3209feb156ec9aabe598db99d1b3d8.ctex"]
+source_file="res://background&art/blueplatform.png"
+dest_files=["res://.godot/imported/blueplatform.png-b6a0d7960fc79866f18adc4813aafc28.ctex"]
 
 [params]
 

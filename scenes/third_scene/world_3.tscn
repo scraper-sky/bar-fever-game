@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://eylmp2skk0v2"]
 
-[ext_resource type="Script" uid="uid://cedhvwc18w65t" path="res://scenes/third_scene/items_pressed.gd" id="1_ucsph"]
+[ext_resource type="Script" path="res://scenes/third_scene/items_pressed.gd" id="1_ucsph"]
 [ext_resource type="Resource" uid="uid://c37mpx4ieahji" path="res://strangepaperdialogue.dialogue" id="2_ujuys"]
 [ext_resource type="Resource" uid="uid://conei417jr0r4" path="res://alcoholbottledialogue.dialogue" id="3_blsx1"]
 

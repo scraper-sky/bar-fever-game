@@ -6,7 +6,6 @@ func _ready():
 	update_sprite()
 	if not is_connected("body_entered", _on_body_entered):
 		connect("body_entered", _on_body_entered)
-	print("LampBlock ", name, " ready at ", position)
 
 func toggle():
 	is_on = !is_on
@@ -21,5 +20,4 @@ func update_sprite():
 
 func _on_body_entered(body):
 	if body.name == "MainPlayer":
-		print("MainPlayer touched ", name, " at ", position)
 		get_parent().toggle_adjacent(position)

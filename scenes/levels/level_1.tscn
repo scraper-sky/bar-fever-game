@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cxa0ih033yf0a"]
+[gd_scene load_steps=17 format=4 uid="uid://cxa0ih033yf0a"]
 
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="1_4526a"]
 [ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="2_x4r34"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="7_uflvd"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="8_oyruo"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="9_4y3vf"]
+[ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="10_tn1f1"]
+[ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="11_8ve0l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vol5t"]
 texture = ExtResource("1_4526a")
@@ -135,6 +137,7 @@ curve = SubResource("Curve2D_w70oi")
 
 [node name="BluePortal" parent="." instance=ExtResource("5_b16y8")]
 position = Vector2(1056, 8)
+target_scene = "res://scenes/levels/level_2.tscn"
 
 [node name="flickerlamp" parent="." instance=ExtResource("6_awgri")]
 position = Vector2(156, 287)
@@ -297,3 +300,9 @@ text = "1. Welcome to the Given Land
 
 If you're wondering who's talking to you...
 Well, just forget about it"
+
+[node name="floatingtorii" parent="." instance=ExtResource("10_tn1f1")]
+position = Vector2(189, 444)
+
+[node name="floatingtoriiv2" parent="." instance=ExtResource("11_8ve0l")]
+position = Vector2(730, 38)
