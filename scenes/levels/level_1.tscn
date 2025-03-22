@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cxa0ih033yf0a"]
+[gd_scene load_steps=18 format=4 uid="uid://cxa0ih033yf0a"]
 
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="1_4526a"]
 [ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="2_x4r34"]
@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="9_4y3vf"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="10_tn1f1"]
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="11_8ve0l"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="12_tgm38"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vol5t"]
 texture = ExtResource("1_4526a")
@@ -306,3 +307,6 @@ position = Vector2(189, 444)
 
 [node name="floatingtoriiv2" parent="." instance=ExtResource("11_8ve0l")]
 position = Vector2(730, 38)
+
+[node name="FloatingParticles" parent="." instance=ExtResource("12_tgm38")]
+position = Vector2(447, 254)

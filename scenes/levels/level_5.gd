@@ -12,18 +12,15 @@ func _ready():
 	for i in range(lamp_nodes.size()):
 		var lamp = lamp_nodes[i]
 		lamp_blocks[lamp.position] = lamp
-		lamp.is_on = (i % 2) == 0  # 5 on, 5 off
+		lamp.is_on = (i % 2) == 0 
 		lamp_states[lamp.position] = lamp.is_on
 		lamp.update_sprite()
 	update_obstacle()
 
 func toggle_adjacent(lamp_pos: Vector2):
-	# Toggle the lamp itself
 	if lamp_blocks.has(lamp_pos):
 		lamp_states[lamp_pos] = !lamp_states[lamp_pos]
 		lamp_blocks[lamp_pos].toggle()
-
-	# Toggle lamp directly below (in 5x2 grid)
 	var below_pos = lamp_pos + Vector2(0, 64)  # Down 64px
 	if lamp_blocks.has(below_pos):
 		lamp_states[below_pos] = !lamp_states[below_pos]

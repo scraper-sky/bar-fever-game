@@ -47,6 +47,7 @@ _data = {
 
 [node name="MainPlayer" type="CharacterBody2D"]
 z_index = 1
+collision_mask = 7
 script = ExtResource("1_dgjmo")
 
 [node name="Camera2D" type="Camera2D" parent="."]

@@ -1,0 +1,306 @@
+[gd_scene load_steps=19 format=4 uid="uid://r3rb56u7yrik"]
+
+[ext_resource type="Script" path="res://scenes/levels/level_6.gd" id="1_fta2x"]
+[ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_kvmlg"]
+[ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="2_awcdf"]
+[ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="3_h3ysi"]
+[ext_resource type="Texture2D" uid="uid://datrui1vhfc4b" path="res://background&art/abandonednightcity.png" id="4_t51po"]
+[ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="6_21esf"]
+[ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/spike_trap.tscn" id="7_012n5"]
+[ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="8_2466l"]
+[ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="9_i4v3b"]
+[ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="10_4s3nr"]
+[ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/ghost.tscn" id="11_0axwl"]
+[ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="12_utfl0"]
+[ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="13_o37gu"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="14_kt6on"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e111w"]
+texture = ExtResource("2_awcdf")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w3753"]
+texture = ExtResource("3_h3ysi")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-17.5, 18, -18.75, -1, -16.75, -14.5, 16.75, -15, 17, 17.25)
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/size_in_atlas = Vector2i(5, 3)
+1:6/0 = 0
+0:7/0 = 0
+6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:7/0 = 0
+9:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:8/0 = 0
+6:8/0 = 0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:8/0 = 0
+9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:9/0 = 0
+9:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+6:0/size_in_atlas = Vector2i(4, 4)
+6:0/0 = 0
+2:5/0 = 0
+6:5/size_in_atlas = Vector2i(4, 2)
+6:5/0 = 0
+7:7/size_in_atlas = Vector2i(2, 2)
+7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/size_in_atlas = Vector2i(2, 3)
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pf4i8"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_e111w")
+sources/1 = SubResource("TileSetAtlasSource_w3753")
+
+[sub_resource type="Curve2D" id="Curve2D_kioll"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[node name="level_6" type="Node2D"]
+script = ExtResource("1_fta2x")
+
+[node name="MainPlayer" parent="." instance=ExtResource("1_kvmlg")]
+position = Vector2(3, 6)
+jump_power = 18.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(4, 22)
+tile_map_data = PackedByteArray("AAD8//7/AQAJAAcAAAD8////AQAJAAcAAAD8/wAAAQAJAAcAAAD8/wEAAQAJAAcAAAD8/wIAAQAJAAcAAAD8/wMAAQAJAAcAAAD9//7/AQAJAAcAAAD9////AQAJAAcAAAD9/wAAAQAJAAcAAAD9/wEAAQAJAAcAAAD9/wIAAQAJAAcAAAD9/wMAAQAJAAcAAAD+/wIAAQAJAAcAAAD+/wMAAQAJAAcAAAD//wIAAQAJAAcAAAD//wMAAQAJAAcAAAAAAAIAAQAJAAcAAAAAAAMAAQAJAAcAAAABAAIAAQAJAAcAAAABAAMAAQAJAAcAAAACAAIAAQAJAAcAAAACAAMAAQAJAAcAAAADAAIAAQAJAAcAAAADAAMAAQAJAAcAAAAEAAIAAQAJAAcAAAAEAAMAAQAJAAcAAAAFAAIAAQAJAAcAAAAFAAMAAQAJAAcAAAAGAAIAAQAJAAcAAAAGAAMAAQAJAAcAAAAHAAIAAQAJAAcAAAAHAAMAAQAJAAcAAAAIAAIAAQAJAAcAAAAIAAMAAQAJAAcAAAAJAAIAAQAJAAcAAAAJAAMAAQAJAAcAAAAKAAIAAQAJAAcAAAAKAAMAAQAJAAcAAAALAAIAAQAJAAcAAAALAAMAAQAJAAcAAAAMAAIAAQAJAAcAAAAMAAMAAQAJAAcAAAANAAMAAQAJAAcAAAANAAQAAQAJAAcAAAAMAAQAAQAJAAcAAAANAAUAAQAJAAcAAAAOAAUAAQAJAAcAAAAOAAQAAQAJAAcAAAARAAUAAQAJAAcAAAARAAYAAQAJAAcAAAASAAUAAQAJAAcAAAASAAYAAQAJAAcAAAATAAUAAQAJAAcAAAATAAYAAQAJAAcAAAAUAAUAAQAJAAcAAAAUAAYAAQAJAAcAAAAVAAUAAQAJAAcAAAAVAAYAAQAJAAcAAAAWAAUAAQAJAAcAAAAWAAYAAQAJAAcAAAAXAAUAAQAJAAcAAAAXAAYAAQAJAAcAAAAYAAUAAQAJAAcAAAAYAAYAAQAJAAcAAAAZAAUAAQAJAAcAAAAZAAYAAQAJAAcAAAAaAP3/AQAJAAcAAAAaAP7/AQAJAAcAAAAaAP//AQAJAAcAAAAaAAAAAQAJAAcAAAAaAAEAAQAJAAcAAAAaAAIAAQAJAAcAAAAaAAMAAQAJAAcAAAAaAAQAAQAJAAcAAAAaAAUAAQAJAAcAAAAaAAYAAQAJAAcAAAAbAAUAAQAJAAcAAAAbAAYAAQAJAAcAAAAOAAYAAQAJAAcAAAAOAAcAAQAJAAcAAAAOAAgAAQAJAAcAAAAOAAkAAQAJAAcAAAANAAkAAQAJAAcAAAANAAoAAQAJAAcAAAANAAsAAQAJAAcAAAANAAwAAQAJAAcAAAANAA0AAQAJAAcAAAAMAA0AAQAJAAcAAAAMAA4AAQAJAAcAAAAMAA8AAQAJAAcAAAALAA8AAQAJAAcAAAAMAAwAAQAJAAcAAAAMAAsAAQAJAAcAAAAMAAoAAQAJAAcAAAANAAgAAQAJAAcAAAANAAcAAQAJAAcAAAANAAYAAQAJAAcAAAARAAcAAQAJAAcAAAARAAgAAQAJAAcAAAARAAkAAQAJAAcAAAARAAoAAQAJAAcAAAASAAoAAQAJAAcAAAASAAsAAQAJAAcAAAASAAwAAQAJAAcAAAASAA0AAQAJAAcAAAASAA4AAQAJAAcAAAATAA4AAQAJAAcAAAATAA8AAQAJAAcAAAAUAA8AAQAJAAcAAAAVAA8AAQAJAAcAAAAWAA8AAQAJAAcAAAAXABAAAQAJAAcAAAAXAA8AAQAJAAcAAAAWAA4AAQAJAAcAAAAVAA4AAQAJAAcAAAAUAA4AAQAJAAcAAAAUAA0AAQAJAAcAAAATAA0AAQAJAAcAAAATAAwAAQAJAAcAAAATAAsAAQAJAAcAAAASAAkAAQAJAAcAAAASAAgAAQAJAAcAAAASAAcAAQAJAAcAAAAWABAAAQAJAAcAAAALABAAAQAJAAcAAAAMABAAAQAJAAcAAAALABEAAQAJAAcAAAAKABEAAQAJAAcAAAAJABEAAQAJAAcAAAAJABIAAQAJAAcAAAAIABIAAQAJAAcAAAAIABMAAQAJAAcAAAAIABQAAQAJAAcAAAAIABUAAQAJAAcAAAAIABYAAQAJAAcAAAAJABcAAQAJAAcAAAAKABcAAQAJAAcAAAALABcAAQAHAAkAAAAMABcAAQAGAAkAAAANABcAAQAGAAkAAAAOABcAAQAHAAkAAAAPABcAAQAGAAkAAAAQABcAAQAGAAkAAAARABcAAQAHAAkAAAARABgAAQAJAAcAAAASABgAAQAHAAkAAAATABgAAQAGAAkAAAAIABcAAQAJAAcAAAAIABgAAQAJAAcAAAAJABgAAQAJAAcAAAAKABgAAQAJAAcAAAALABgAAQAJAAcAAAAMABgAAQAJAAcAAAANABgAAQAJAAcAAAAOABgAAQAJAAcAAAAPABgAAQAJAAcAAAAPABkAAQAJAAcAAAAQABkAAQAJAAcAAAAQABgAAQAJAAcAAAAKABkAAQAJAAcAAAAJABkAAQAJAAcAAAALABkAAQAJAAcAAAAIABkAAQAJAAcAAAAMABkAAQAJAAcAAAANABkAAQAJAAcAAAAOABkAAQAJAAcAAAAJABMAAQAJAAcAAAAJABQAAQAJAAcAAAAJABUAAQAJAAcAAAAJABYAAQAJAAcAAAAKABYAAQAJAAcAAAAKABIAAQAJAAcAAAAKABMAAQAJAAcAAAAKABQAAQAJAAcAAAAKABUAAQAJAAcAAAARABkAAQAJAAcAAAASABkAAQAJAAcAAAATABkAAQAJAAcAAAAUABkAAQAGAAkAAAAVABkAAQAHAAkAAAAWABkAAQAGAAkAAAAXABoAAQAJAAcAAAAWABoAAQAJAAcAAAAWABsAAQAJAAcAAAAXABsAAQAJAAcAAAAXABwAAQAJAAcAAAAYABwAAQAJAAcAAAAYABsAAQAJAAcAAAAZABsAAQAJAAcAAAAaABsAAQAJAAcAAAAZABwAAQAJAAcAAAAaABwAAQAJAAcAAAAbABwAAQAJAAcAAAAbABsAAQAJAAcAAAAbABoAAQAJAAcAAAAbABkAAQAJAAcAAAAbABgAAQAJAAcAAAAbABcAAQAGAAkAAAAaABcAAQAGAAkAAAAaABgAAQAGAAkAAAAaABkAAQAJAAcAAAAaABoAAQAJAAcAAAAZABoAAQAJAAcAAAAYABoAAQAJAAcAAAAXABkAAQAHAAkAAAAYABkAAQAGAAkAAAAZABkAAQAHAAkAAAAUABoAAQAJAAcAAAAVABoAAQAJAAcAAAAVABsAAQAJAAcAAAAUABsAAQAJAAcAAAAVABwAAQAJAAcAAAAWABwAAQAJAAcAAAAUABwAAQAJAAcAAAATABoAAQAJAAcAAAATABsAAQAJAAcAAAATABwAAQAJAAcAAAAcABcAAQAHAAkAAAAdABcAAQAGAAkAAAAeABcAAQAGAAkAAAAfABcAAQAHAAkAAAAgABcAAQAGAAkAAAAhABcAAQAGAAkAAAAiABcAAQAHAAkAAAAjABcAAQAGAAkAAAAkABcAAQAGAAkAAAAlABcAAQAHAAkAAAAmABcAAQAJAAcAAAAnABcAAQAJAAcAAAAnABYAAQAJAAcAAAAnABUAAQAJAAcAAAAoABUAAQAJAAcAAAAoABQAAQAJAAcAAAAoABMAAQAJAAcAAAAoABIAAQAJAAcAAAAoABEAAQAJAAcAAAAoABAAAQAJAAcAAAAnAA8AAQAJAAcAAAAnAA4AAQAJAAcAAAAnAA0AAQAJAAcAAAAnAAwAAQAJAAcAAAAoAAwAAQAJAAcAAAAoAA0AAQAJAAcAAAAoAA4AAQAJAAcAAAAoAA8AAQAJAAcAAAAnABAAAQAJAAcAAAAnABEAAQAJAAcAAAAnABIAAQAJAAcAAAAnABMAAQAJAAcAAAAnABQAAQAJAAcAAAAoABYAAQAJAAcAAAAoABcAAQAJAAcAAAAcABgAAQAJAAcAAAAdABgAAQAJAAcAAAAeABgAAQAJAAcAAAAfABgAAQAJAAcAAAAgABgAAQAJAAcAAAAhABgAAQAJAAcAAAAiABgAAQAJAAcAAAAjABgAAQAJAAcAAAAkABgAAQAJAAcAAAAlABgAAQAJAAcAAAAmABgAAQAJAAcAAAAnABgAAQAJAAcAAAAoABgAAQAJAAcAAAAcAAYAAQAJAAcAAAAdAAYAAQAJAAcAAAAeAAYAAQAJAAcAAAAfAAYAAQAJAAcAAAAgAAYAAQAJAAcAAAAhAAYAAQAJAAcAAAAiAAYAAQAJAAcAAAAjAAcAAQAJAAcAAAAkAAcAAQAJAAcAAAAlAAcAAQAJAAcAAAAmAAcAAQAJAAcAAAAnAAcAAQAJAAcAAAAnAAgAAQAJAAcAAAAnAAkAAQAJAAcAAAAnAAoAAQAJAAcAAAAnAAsAAQAJAAcAAAAoAAsAAQAJAAcAAAAoAAoAAQAJAAcAAAAoAAkAAQAJAAcAAAAoAAgAAQAJAAcAAAAoAAcAAQAJAAcAAAAnAAYAAQAJAAcAAAAmAAYAAQAJAAcAAAAlAAYAAQAJAAcAAAAkAAYAAQAJAAcAAAAjAAYAAQAJAAcAAAAoAAYAAQAJAAcAAAATAAcAAQAJAAcAAAAUAAcAAQAJAAcAAAAVAAcAAQAJAAcAAAAWAAcAAQAJAAcAAAAXAAcAAQAJAAcAAAAYAAcAAQAJAAcAAAAZAAcAAQAJAAcAAAAaAAcAAQAJAAcAAAAbAAcAAQAJAAcAAAAcAAcAAQAJAAcAAAAdAAcAAQAJAAcAAAAeAAcAAQAJAAcAAAAfAAcAAQAJAAcAAAAgAAcAAQAJAAcAAAAhAAcAAQAJAAcAAAAiAAcAAQAJAAcAAAAcAAUAAQAJAAcAAAAdAAUAAQAJAAcAAAAeAAUAAQAJAAcAAAAfAAUAAQAJAAcAAAAgAAUAAQAJAAcAAAAhAAUAAQAJAAcAAAAiAAUAAQAJAAcAAAAjAAUAAQAJAAcAAAAkAAUAAQAJAAcAAAAlAAUAAQAJAAcAAAAmAAUAAQAJAAcAAAAnAAUAAQAJAAcAAAAoAAUAAQAJAAcAAAAYAAMAAQAAAAEAAAAVAAMAAQAAAAEAAAAVAAAAAQAAAAEAAAAYAAAAAQAAAAEAAAAUAP7/AQAJAAcAAAAVAP7/AQAJAAcAAAAWAP7/AQAJAAcAAAAXAP7/AQAJAAcAAAAYAP7/AQAJAAcAAAAZAP7/AQAJAAcAAAAUAP3/AQAJAAcAAAAVAP3/AQAJAAcAAAAWAP3/AQAJAAcAAAAXAP3/AQAJAAcAAAAYAP3/AQAJAAcAAAAZAP3/AQAJAAcAAAATAP3/AQAJAAcAAAATAP7/AQAJAAcAAAATAP//AQAJAAcAAAATAAAAAQAJAAcAAAATAAEAAQAJAAcAAAATAAIAAQAJAAcAAAATAAMAAQAJAAcAAAATAAQAAQAJAAcAAAA=")
+tile_set = SubResource("TileSet_pf4i8")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(2085, 1173)
+scale = Vector2(4.05599, 5.42262)
+texture = ExtResource("4_t51po")
+
+[node name="BluePortal" parent="." instance=ExtResource("6_21esf")]
+position = Vector2(1243, 633)
+
+[node name="SpikeTrap" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1315, 1590)
+
+[node name="SpikeTrap2" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1379, 1590)
+
+[node name="SpikeTrap3" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1443, 1590)
+
+[node name="SpikeTrap4" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1507, 1590)
+
+[node name="SpikeTrap5" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1571, 1590)
+
+[node name="SpikeTrap6" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1635, 1590)
+
+[node name="SpikeTrap7" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1700, 1462)
+
+[node name="SpikeTrap8" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1764, 1462)
+
+[node name="SpikeTrap9" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1828, 1462)
+
+[node name="SpikeTrap10" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1892, 1462)
+
+[node name="SpikeTrap11" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1956, 1462)
+
+[node name="SpikeTrap12" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(2020, 1462)
+
+[node name="SpikeTrap13" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(2084, 1462)
+
+[node name="SpikeTrap14" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(2148, 1462)
+
+[node name="SpikeTrap15" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(2212, 1462)
+
+[node name="SpikeTrap16" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(2276, 1462)
+
+[node name="SpikeTrap17" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(2340, 1462)
+
+[node name="SpikeTrap18" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(2404, 1462)
+
+[node name="SpikeTrap19" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(2468, 1462)
+
+[node name="SpikeTrap20" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1379, 886)
+
+[node name="SpikeTrap21" parent="." instance=ExtResource("7_012n5")]
+position = Vector2(1444, 886)
+
+[node name="ColorBlock" parent="." instance=ExtResource("8_2466l")]
+position = Vector2(16, 185)
+
+[node name="ColorBlock2" parent="." instance=ExtResource("8_2466l")]
+position = Vector2(71, 185)
+
+[node name="ColorBlock3" parent="." instance=ExtResource("8_2466l")]
+position = Vector2(126, 185)
+
+[node name="ColorBlock4" parent="." instance=ExtResource("8_2466l")]
+position = Vector2(180, 185)
+
+[node name="ColorBlock_2" parent="." instance=ExtResource("9_i4v3b")]
+position = Vector2(479, 183)
+
+[node name="ColorBlock_3" parent="." instance=ExtResource("9_i4v3b")]
+position = Vector2(539, 183)
+
+[node name="ColorBlock_4" parent="." instance=ExtResource("9_i4v3b")]
+position = Vector2(598, 183)
+
+[node name="ColorBlock_5" parent="." instance=ExtResource("9_i4v3b")]
+position = Vector2(655, 183)
+
+[node name="MovingPlatformLarge" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(1393, 1540)
+scale = Vector2(-2.07513, 2.23668)
+curve = SubResource("Curve2D_kioll")
+
+[node name="MovingPlatformLarge2" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(1597.54, 1541.45)
+scale = Vector2(-2.75385, 3.50933)
+curve = SubResource("Curve2D_kioll")
+
+[node name="MovingPlatformLarge3" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(1778, 1429)
+scale = Vector2(-2.0751, 2.8654)
+curve = SubResource("Curve2D_kioll")
+
+[node name="MovingPlatformLarge4" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(2066, 1266)
+scale = Vector2(-2.0751, 2.8654)
+curve = SubResource("Curve2D_kioll")
+
+[node name="MovingPlatformLarge5" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(2192, 1174)
+scale = Vector2(-2.0751, 2.8654)
+curve = SubResource("Curve2D_kioll")
+
+[node name="MovingPlatformLarge6" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(2068, 1043)
+scale = Vector2(-2.0751, 2.8654)
+curve = SubResource("Curve2D_kioll")
+
+[node name="MovingPlatformLarge7" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(1880, 1014)
+scale = Vector2(-2.0751, 2.8654)
+curve = SubResource("Curve2D_kioll")
+
+[node name="MovingPlatformLarge8" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(1733, 994)
+scale = Vector2(-2.0751, 2.8654)
+curve = SubResource("Curve2D_kioll")
+
+[node name="MovingPlatformLarge10" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(1614, 960)
+scale = Vector2(-2.0751, 2.8654)
+curve = SubResource("Curve2D_kioll")
+
+[node name="MovingPlatformLarge9" parent="." instance=ExtResource("10_4s3nr")]
+position = Vector2(1925, 1356)
+scale = Vector2(-2.0751, 2.8654)
+curve = SubResource("Curve2D_kioll")
+
+[node name="ghost" parent="." instance=ExtResource("11_0axwl")]
+position = Vector2(208, 109)
+
+[node name="ghost2" parent="." instance=ExtResource("11_0axwl")]
+position = Vector2(430, 110)
+
+[node name="ghost3" parent="." instance=ExtResource("11_0axwl")]
+position = Vector2(658, 99)
+
+[node name="flickerlamp" parent="." instance=ExtResource("12_utfl0")]
+position = Vector2(1003, 617)
+
+[node name="flickerlamp2" parent="." instance=ExtResource("12_utfl0")]
+position = Vector2(907, 984)
+
+[node name="flickerlamp3" parent="." instance=ExtResource("12_utfl0")]
+position = Vector2(1018, 1258)
+
+[node name="floatingtorii" parent="." instance=ExtResource("13_o37gu")]
+position = Vector2(1462, 695)
+
+[node name="FloatingParticles" parent="." instance=ExtResource("14_kt6on")]
+position = Vector2(1026, 93)
+
+[node name="FloatingParticles2" parent="." instance=ExtResource("14_kt6on")]
+position = Vector2(1121, 1010)
+
+[node name="FloatingParticles3" parent="." instance=ExtResource("14_kt6on")]
+position = Vector2(2019, 1124)
+
+[node name="FloatingParticles4" parent="." instance=ExtResource("14_kt6on")]
+position = Vector2(1842, 640)

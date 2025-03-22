@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cw1ds7xodg5ik"]
+[gd_scene load_steps=14 format=4 uid="uid://cw1ds7xodg5ik"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_1rbsa"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="2_lfk8p"]
@@ -8,14 +8,16 @@
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="7_2tko8"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="8_43lde"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="8_uif8c"]
+[ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/spike_trap.tscn" id="9_gi70n"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="10_hi48w"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rljh4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itajj"]
 texture = ExtResource("2_lfk8p")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8bcnf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xo1l"]
 texture = ExtResource("3_wiuqk")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -94,8 +96,8 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_qg25o"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_rljh4")
-sources/1 = SubResource("TileSetAtlasSource_8bcnf")
+sources/0 = SubResource("TileSetAtlasSource_itajj")
+sources/1 = SubResource("TileSetAtlasSource_5xo1l")
 
 [node name="level_2" type="Node2D"]
 
@@ -211,7 +213,7 @@ position = Vector2(1599, 457)
 position = Vector2(166, 676)
 
 [node name="flickerlamp2" parent="." instance=ExtResource("8_uif8c")]
-position = Vector2(358, 676)
+position = Vector2(357, 675)
 
 [node name="flickerlamp3" parent="." instance=ExtResource("8_uif8c")]
 position = Vector2(1196, 703)
@@ -232,3 +234,12 @@ theme_override_fonts/normal_font = ExtResource("8_43lde")
 text = "2. Glad to see that you're enjoying your time in Given Land
 
 Given land started out as a given; it was destined to be here. An amusement park that connected people's mental nodes to their desired thrills, a waken dream that was finally realized, Given land was all you needed to be given."
+
+[node name="SpikeTrap" parent="." instance=ExtResource("9_gi70n")]
+position = Vector2(612, 502)
+
+[node name="SpikeTrap2" parent="." instance=ExtResource("9_gi70n")]
+position = Vector2(804, 311)
+
+[node name="FloatingParticles" parent="." instance=ExtResource("10_hi48w")]
+position = Vector2(855, 158)

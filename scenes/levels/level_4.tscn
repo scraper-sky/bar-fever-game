@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://by2oub33kp6q0"]
+[gd_scene load_steps=16 format=4 uid="uid://by2oub33kp6q0"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="9_asjyv"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="10_fu4h6"]
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="11_ay42o"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="12_uxm2d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3gnf3"]
 texture = ExtResource("3_r57se")
@@ -345,3 +346,18 @@ position = Vector2(693, 1569)
 
 [node name="floatingtoriiv3" parent="." instance=ExtResource("11_ay42o")]
 position = Vector2(490, 1845)
+
+[node name="FloatingParticles" parent="." instance=ExtResource("12_uxm2d")]
+position = Vector2(538, 491)
+
+[node name="FloatingParticles2" parent="." instance=ExtResource("12_uxm2d")]
+position = Vector2(504, 1031)
+
+[node name="FloatingParticles3" parent="." instance=ExtResource("12_uxm2d")]
+position = Vector2(524, 1529)
+
+[node name="FloatingParticles4" parent="." instance=ExtResource("12_uxm2d")]
+position = Vector2(517, 1964)
+
+[node name="FloatingParticles5" parent="." instance=ExtResource("12_uxm2d")]
+position = Vector2(518, 2387)

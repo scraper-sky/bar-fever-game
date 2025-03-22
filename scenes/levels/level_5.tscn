@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://cpep8iv7y7bfb"]
+[gd_scene load_steps=21 format=4 uid="uid://cpep8iv7y7bfb"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_5.gd" id="1_53jy1"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="2_tq3vs"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bocun7dayxmoy" path="res://background&art/obstacleblock.png" id="9_yvtft"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="11_t0d57"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="12_xu5a5"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="13_ne1uf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbg7v"]
 texture = ExtResource("2_tq3vs")
@@ -231,6 +232,7 @@ texture = ExtResource("4_3vmhg")
 
 [node name="BluePortal" parent="." instance=ExtResource("8_bfasp")]
 position = Vector2(465, -87)
+target_scene = "res://scenes/levels/level_6.tscn"
 
 [node name="ObstacleBlock" type="StaticBody2D" parent="."]
 position = Vector2(416, -32)
@@ -260,3 +262,6 @@ position = Vector2(96, 160)
 
 [node name="ColorBlock5" parent="." instance=ExtResource("12_xu5a5")]
 position = Vector2(224, 160)
+
+[node name="FloatingParticles" parent="." instance=ExtResource("13_ne1uf")]
+position = Vector2(353, 16)
