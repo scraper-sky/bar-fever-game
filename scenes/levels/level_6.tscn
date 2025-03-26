@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://r3rb56u7yrik"]
+[gd_scene load_steps=28 format=4 uid="uid://r3rb56u7yrik"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_6.gd" id="1_fta2x"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_kvmlg"]
@@ -104,6 +104,69 @@ sources/0 = SubResource("TileSetAtlasSource_e111w")
 sources/1 = SubResource("TileSetAtlasSource_w3753")
 
 [sub_resource type="Curve2D" id="Curve2D_kioll"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_j823y"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_ixc62"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_4ygn5"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_87s1r"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_3p405"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_3jhnh"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_e8b63"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_p6j0m"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_2lwvg"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 17, -24, 0, 0, 0, 0, 12.542, -61.9647)
@@ -230,53 +293,54 @@ curve = SubResource("Curve2D_kioll")
 [node name="MovingPlatformLarge2" parent="." instance=ExtResource("10_4s3nr")]
 position = Vector2(1597.54, 1541.45)
 scale = Vector2(-2.75385, 3.50933)
-curve = SubResource("Curve2D_kioll")
+curve = SubResource("Curve2D_j823y")
 
 [node name="MovingPlatformLarge3" parent="." instance=ExtResource("10_4s3nr")]
 position = Vector2(1778, 1429)
 scale = Vector2(-2.0751, 2.8654)
-curve = SubResource("Curve2D_kioll")
+curve = SubResource("Curve2D_ixc62")
 
 [node name="MovingPlatformLarge4" parent="." instance=ExtResource("10_4s3nr")]
 position = Vector2(2066, 1266)
 scale = Vector2(-2.0751, 2.8654)
-curve = SubResource("Curve2D_kioll")
+curve = SubResource("Curve2D_4ygn5")
 
 [node name="MovingPlatformLarge5" parent="." instance=ExtResource("10_4s3nr")]
 position = Vector2(2192, 1174)
 scale = Vector2(-2.0751, 2.8654)
-curve = SubResource("Curve2D_kioll")
+curve = SubResource("Curve2D_87s1r")
 
 [node name="MovingPlatformLarge6" parent="." instance=ExtResource("10_4s3nr")]
 position = Vector2(2068, 1043)
 scale = Vector2(-2.0751, 2.8654)
-curve = SubResource("Curve2D_kioll")
+curve = SubResource("Curve2D_3p405")
 
 [node name="MovingPlatformLarge7" parent="." instance=ExtResource("10_4s3nr")]
 position = Vector2(1880, 1014)
 scale = Vector2(-2.0751, 2.8654)
-curve = SubResource("Curve2D_kioll")
+curve = SubResource("Curve2D_3jhnh")
 
 [node name="MovingPlatformLarge8" parent="." instance=ExtResource("10_4s3nr")]
 position = Vector2(1733, 994)
 scale = Vector2(-2.0751, 2.8654)
-curve = SubResource("Curve2D_kioll")
+curve = SubResource("Curve2D_e8b63")
 
 [node name="MovingPlatformLarge10" parent="." instance=ExtResource("10_4s3nr")]
 position = Vector2(1614, 960)
 scale = Vector2(-2.0751, 2.8654)
-curve = SubResource("Curve2D_kioll")
+curve = SubResource("Curve2D_p6j0m")
 
 [node name="MovingPlatformLarge9" parent="." instance=ExtResource("10_4s3nr")]
 position = Vector2(1925, 1356)
 scale = Vector2(-2.0751, 2.8654)
-curve = SubResource("Curve2D_kioll")
+curve = SubResource("Curve2D_2lwvg")
 
 [node name="ghost" parent="." instance=ExtResource("11_0axwl")]
 position = Vector2(208, 109)
 
 [node name="ghost2" parent="." instance=ExtResource("11_0axwl")]
 position = Vector2(430, 110)
+start_direction = -1
 
 [node name="ghost3" parent="." instance=ExtResource("11_0axwl")]
 position = Vector2(658, 99)
