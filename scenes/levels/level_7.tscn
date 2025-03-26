@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://bqj7iq6jc16bl"]
+[gd_scene load_steps=42 format=4 uid="uid://bqj7iq6jc16bl"]
 
 [ext_resource type="Script" uid="uid://c47efte5ou18r" path="res://scenes/levels/level_7.gd" id="1_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_5ffpf"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="11_wreli"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="12_ymk4h"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="13_ymk4h"]
+[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="14_st48t"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="15_dfn7m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e111w"]
 texture = ExtResource("3_27cbj")
@@ -584,3 +586,134 @@ position = Vector2(-489, -702)
 
 [node name="floatingtorii2" parent="." instance=ExtResource("13_ymk4h")]
 position = Vector2(14, -914)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -838.0
+offset_top = -519.0
+offset_right = -669.0
+offset_bottom = -421.0
+theme_override_fonts/normal_font = ExtResource("14_st48t")
+text = "7. This is the right path; keep following this platform"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = -494.0
+offset_right = 447.0
+offset_bottom = -396.0
+theme_override_fonts/normal_font = ExtResource("14_st48t")
+text = "7. This is the right path; keep following this platform"
+
+[node name="Control3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control3"]
+layout_mode = 0
+offset_left = 276.0
+offset_top = -1262.0
+offset_right = 441.0
+offset_bottom = -1164.0
+theme_override_fonts/normal_font = ExtResource("14_st48t")
+text = "7. This is the right path; keep following this platform"
+
+[node name="Control4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control4"]
+layout_mode = 0
+offset_left = -506.0
+offset_top = -1300.0
+offset_right = -341.0
+offset_bottom = -1202.0
+theme_override_fonts/normal_font = ExtResource("14_st48t")
+text = "7. This is the right path; keep following this platform"
+
+[node name="Control5" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control5"]
+layout_mode = 0
+offset_left = -165.0
+offset_top = -1986.0
+offset_bottom = -1888.0
+theme_override_fonts/normal_font = ExtResource("14_st48t")
+text = "7. This is the right path; keep following this platform"
+
+[node name="Control6" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control6"]
+layout_mode = 0
+offset_left = -382.0
+offset_top = -1874.0
+offset_right = -217.0
+offset_bottom = -1776.0
+theme_override_fonts/normal_font = ExtResource("14_st48t")
+text = "7. This is the right path; keep following this platform"
+
+[node name="Control7" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control7"]
+layout_mode = 0
+offset_left = -795.0
+offset_top = -1889.0
+offset_right = -630.0
+offset_bottom = -1791.0
+theme_override_fonts/normal_font = ExtResource("14_st48t")
+text = "7. This is the right path; keep following this platform"
+
+[node name="Control8" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control8"]
+layout_mode = 0
+offset_left = -31.0
+offset_top = 52.0
+offset_right = 134.0
+offset_bottom = 150.0
+theme_override_fonts/normal_font = ExtResource("14_st48t")
+text = "7. The boy who cried wolf"
+
+[node name="FloatingParticles" parent="." instance=ExtResource("15_dfn7m")]
+position = Vector2(-175, -419)
+
+[node name="FloatingParticles2" parent="." instance=ExtResource("15_dfn7m")]
+position = Vector2(-200, -1116)
+
+[node name="FloatingParticles3" parent="." instance=ExtResource("15_dfn7m")]
+position = Vector2(-200, -1849)
+
+[node name="FloatingParticles4" parent="." instance=ExtResource("15_dfn7m")]
+position = Vector2(-201, -2307)
