@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=4 uid="uid://by2oub33kp6q0"]
 
-[ext_resource type="Script" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
+[ext_resource type="Script" uid="uid://chfqsurmss50t" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="3_r57se"]
 [ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="4_3w7cl"]

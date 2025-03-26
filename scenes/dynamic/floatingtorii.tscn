@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://gw0an34kb46r"]
 
-[ext_resource type="Script" path="res://scenes/dynamic/floatingtorii.gd" id="1_3q6xj"]
+[ext_resource type="Script" uid="uid://dhsc8jg32fuo3" path="res://scenes/dynamic/floatingtorii.gd" id="1_3q6xj"]
 [ext_resource type="Texture2D" uid="uid://b8oq7tmm8k6i7" path="res://background&art/floatingtorii1.png" id="2_tlqnm"]
 [ext_resource type="Texture2D" uid="uid://bhm0bl37map2n" path="res://background&art/floatingtorii2.png" id="3_ybk5i"]
 [ext_resource type="Texture2D" uid="uid://ctbw12h7tk1im" path="res://background&art/floatingtorii3.png" id="4_rrerw"]

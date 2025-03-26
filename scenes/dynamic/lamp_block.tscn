@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://8mauqn3dyagd"]
 
-[ext_resource type="Script" path="res://scenes/dynamic/lamp_block.gd" id="1_6sy3k"]
+[ext_resource type="Script" uid="uid://y8pxvo0vmfvy" path="res://scenes/dynamic/lamp_block.gd" id="1_6sy3k"]
 [ext_resource type="Texture2D" uid="uid://b8byl6kfkued5" path="res://background&art/lamp_block1.png" id="2_uvfrs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88pe1"]

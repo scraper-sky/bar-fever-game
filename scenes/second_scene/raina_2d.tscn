@@ -1,7 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://0ufq0gfpe6dc"]
-
-[sub_resource type="Resource" id="Resource_4vorx"]
-metadata/__load_path__ = "res://addons/raina2d.aseprite"
+[gd_scene format=3 uid="uid://0ufq0gfpe6dc"]
 
 [node name="raina2d"]
 position = Vector2(94, 119)

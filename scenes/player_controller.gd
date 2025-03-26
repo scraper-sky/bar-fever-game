@@ -22,13 +22,12 @@ func respawn():
 	if not is_respawning:
 		is_respawning = true
 		position = start_position
+		velocity = Vector2.ZERO  # Reset movement
 		animation_player.stop()
 		animation_player.seek(0, true)
-		for platform in get_tree().get_nodes_in_group("tween_nodes"):
-			if platform.has_method("stop_tween"):
-				platform.call_deferred("stop_tween")
-		print("Respawning player")
-		get_tree().call_deferred("reload_current_scene")
+		print("Respawning player at ", position)
+		await get_tree().create_timer(0.1).timeout  # Small delay
+		is_respawning = false
 
 func _physics_process(delta: float) -> void:
 	if is_respawning:

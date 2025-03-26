@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=4 uid="uid://r3rb56u7yrik"]
 
-[ext_resource type="Script" path="res://scenes/levels/level_6.gd" id="1_fta2x"]
+[ext_resource type="Script" uid="uid://dqlqf5pjt83vv" path="res://scenes/levels/level_6.gd" id="1_fta2x"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_kvmlg"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="2_awcdf"]
 [ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="3_h3ysi"]
@@ -197,6 +197,7 @@ texture = ExtResource("4_t51po")
 
 [node name="BluePortal" parent="." instance=ExtResource("6_21esf")]
 position = Vector2(1243, 633)
+target_scene = "res://scenes/levels/level_7.tscn"
 
 [node name="SpikeTrap" parent="." instance=ExtResource("7_012n5")]
 position = Vector2(1315, 1590)
