@@ -57,3 +57,8 @@ func _physics_process(delta: float) -> void:
 		animation_player.stop()
 
 	move_and_slide()
+
+func force_jump(boost: float):
+	velocity.y = jump_power * jump_multiplier * boost  # -450 * boost
+	print("Forced jump applied, velocity: ", velocity.y)
+	move_and_slide()  # Apply immediately

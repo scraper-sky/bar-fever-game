@@ -1,0 +1,414 @@
+[gd_scene load_steps=24 format=4 uid="uid://c3ndo40cfpll6"]
+
+[ext_resource type="Script" uid="uid://fu7qss4phh5" path="res://scenes/levels/level_8.gd" id="1_7snfr"]
+[ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_ene4w"]
+[ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="3_h6r4t"]
+[ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="4_w2i51"]
+[ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://background&art/neoncitybackground.png" id="5_xsrpe"]
+[ext_resource type="PackedScene" uid="uid://deb144eh5m8eb" path="res://scenes/area_functionality/blue_portal_local.tscn" id="6_0kxia"]
+[ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/spike_trap.tscn" id="7_ene4w"]
+[ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="8_h6r4t"]
+[ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="9_w2i51"]
+[ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/ghost.tscn" id="10_xsrpe"]
+[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="11_5umh1"]
+[ext_resource type="FontFile" uid="uid://bffg4lkd5k5p8" path="res://fonts&style/Exo-Italic-VariableFont_wght.ttf" id="12_v7ucw"]
+[ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="13_vsqe1"]
+[ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="14_kk2ik"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsqe1"]
+texture = ExtResource("3_h6r4t")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kk2ik"]
+texture = ExtResource("4_w2i51")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-17.5, 18, -18.75, -1, -16.75, -14.5, 16.75, -15, 17, 17.25)
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/size_in_atlas = Vector2i(5, 3)
+1:6/0 = 0
+0:7/0 = 0
+6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:7/0 = 0
+9:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:8/0 = 0
+6:8/0 = 0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:8/0 = 0
+9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:9/0 = 0
+9:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+6:0/size_in_atlas = Vector2i(4, 4)
+6:0/0 = 0
+2:5/0 = 0
+6:5/size_in_atlas = Vector2i(4, 2)
+6:5/0 = 0
+7:7/size_in_atlas = Vector2i(2, 2)
+7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/size_in_atlas = Vector2i(2, 3)
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_w53co"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_vsqe1")
+sources/1 = SubResource("TileSetAtlasSource_kk2ik")
+
+[sub_resource type="Curve2D" id="Curve2D_w2i51"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 5, 7, 0, 0, 0, 0, 192.293, -1224.6)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_h6r4t"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3.94736, 3.19568, 0, 0, 0, 0, 403.412, -75.9736)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_xsrpe"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 173.64, -31.7419)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_0kxia"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -170.538, -55.2829)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_5umh1"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 108.8, -26.1639)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_v7ucw"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 73.5652, -58.084)
+}
+point_count = 2
+
+[node name="level_8" type="Node2D"]
+script = ExtResource("1_7snfr")
+
+[node name="MainPlayer" parent="." instance=ExtResource("2_ene4w")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(4, 22)
+tile_map_data = PackedByteArray("AAD8/wEAAQAJAAcAAAD8/wIAAQAHAAkAAAD8/wMAAQAJAAcAAAD9/wEAAQAJAAcAAAD9/wIAAQAHAAkAAAD9/wMAAQAJAAcAAAD+/wEAAQAJAAcAAAD+/wIAAQAHAAkAAAD+/wMAAQAJAAcAAAD//wEAAQAJAAcAAAD//wIAAQAHAAkAAAD//wMAAQAJAAcAAAAAAAEAAQAJAAcAAAAAAAIAAQAHAAkAAAAAAAMAAQAJAAcAAAABAAEAAQAJAAcAAAABAAIAAQAHAAkAAAABAAMAAQAJAAcAAAACAAEAAQAJAAcAAAACAAIAAQAHAAkAAAACAAMAAQAJAAcAAAADAAEAAQAJAAcAAAADAAIAAQAHAAkAAAADAAMAAQAJAAcAAAAEAAEAAQAJAAcAAAAEAAIAAQAHAAkAAAAEAAMAAQAJAAcAAAAFAAEAAQAJAAcAAAAFAAIAAQAHAAkAAAAFAAMAAQAJAAcAAAD4/wEAAQAJAAcAAAD4/wIAAQAHAAkAAAD5/wEAAQAJAAcAAAD5/wIAAQAHAAkAAAD6/wEAAQAJAAcAAAD6/wIAAQAHAAkAAAD7/wEAAQAJAAcAAAD7/wIAAQAHAAkAAAD4/wMAAQAJAAcAAAD5/wMAAQAJAAcAAAD6/wMAAQAJAAcAAAD7/wMAAQAJAAcAAAAGAAEAAQAJAAcAAAAGAAIAAQAHAAkAAAAGAAMAAQAJAAcAAAAHAAEAAQAJAAcAAAAHAAIAAQAHAAkAAAAHAAMAAQAJAAcAAAAIAAEAAQAJAAcAAAAIAAIAAQAHAAkAAAAIAAMAAQAJAAcAAAAJAAEAAQAHAAkAAAAJAAIAAQAHAAkAAAAJAAMAAQAJAAcAAAAKAAEAAQAJAAcAAAAKAAIAAQAJAAcAAAAKAAMAAQAJAAcAAAD1/+P/AQAJAAcAAAD1/+T/AQAJAAcAAAD1/+X/AQAJAAcAAAD1/+b/AQAJAAcAAAD1/+f/AQAJAAcAAAD1/+j/AQAJAAcAAAD1/+n/AQAJAAcAAAD1/+r/AQAJAAcAAAD1/+v/AQAJAAcAAAD1/+z/AQAJAAcAAAD1/+3/AQAJAAcAAAD1/+7/AQAJAAcAAAD1/+//AQAJAAcAAAD1//D/AQAJAAcAAAD1//H/AQAJAAcAAAD1//L/AQAJAAcAAAD1//P/AQAJAAcAAAD1//T/AQAJAAcAAAD1//X/AQAJAAcAAAD1//b/AQAJAAcAAAD1//f/AQAJAAcAAAD1//j/AQAJAAcAAAD1//n/AQAJAAcAAAD1//r/AQAJAAcAAAD1//v/AQAJAAcAAAD1//z/AQAJAAcAAAD1//3/AQAJAAcAAAD1//7/AQAJAAcAAAD1////AQAJAAcAAAD1/wAAAQAJAAcAAAD1/wEAAQAJAAcAAAD1/wIAAQAJAAcAAAD1/wMAAQAJAAcAAAD2/+P/AQAHAAkAAAD2/+T/AQAHAAkAAAD2/+X/AQAHAAkAAAD2/+b/AQAHAAkAAAD2/+f/AQAHAAkAAAD2/+j/AQAHAAkAAAD2/+n/AQAHAAkAAAD2/+r/AQAHAAkAAAD2/+v/AQAHAAkAAAD2/+z/AQAHAAkAAAD2/+3/AQAHAAkAAAD2/+7/AQAHAAkAAAD2/+//AQAHAAkAAAD2//D/AQAHAAkAAAD2//H/AQAHAAkAAAD2//L/AQAHAAkAAAD2//P/AQAHAAkAAAD2//T/AQAHAAkAAAD2//X/AQAHAAkAAAD2//b/AQAHAAkAAAD2//f/AQAHAAkAAAD2//j/AQAHAAkAAAD2//n/AQAHAAkAAAD2//r/AQAHAAkAAAD2//v/AQAHAAkAAAD2//z/AQAHAAkAAAD2//3/AQAHAAkAAAD2//7/AQAHAAkAAAD2////AQAHAAkAAAD2/wAAAQAHAAkAAAD2/wEAAQAHAAkAAAD2/wIAAQAHAAkAAAD2/wMAAQAJAAcAAAD3/+P/AQAJAAcAAAD3/+T/AQAJAAcAAAD3/+X/AQAJAAcAAAD3/+b/AQAJAAcAAAD3/+f/AQAJAAcAAAD3/+j/AQAJAAcAAAD3/+n/AQAJAAcAAAD3/+r/AQAJAAcAAAD3/+v/AQAJAAcAAAD3/+z/AQAJAAcAAAD3/+3/AQAJAAcAAAD3/+7/AQAJAAcAAAD3/+//AQAJAAcAAAD3//D/AQAJAAcAAAD3//H/AQAJAAcAAAD3//L/AQAJAAcAAAD3//P/AQAJAAcAAAD3//T/AQAJAAcAAAD3//X/AQAJAAcAAAD3//b/AQAJAAcAAAD3//f/AQAJAAcAAAD3//j/AQAJAAcAAAD3//n/AQAJAAcAAAD3//r/AQAJAAcAAAD3//v/AQAJAAcAAAD3//z/AQAJAAcAAAD3//3/AQAJAAcAAAD3//7/AQAJAAcAAAD3////AQAJAAcAAAD3/wAAAQAJAAcAAAD3/wEAAQAJAAcAAAD3/wIAAQAHAAkAAAD3/wMAAQAJAAcAAAAIAOP/AQAJAAcAAAAIAOT/AQAJAAcAAAAIAOX/AQAJAAcAAAAIAOb/AQAJAAcAAAAIAOf/AQAJAAcAAAAIAOj/AQAJAAcAAAAIAOn/AQAJAAcAAAAIAOr/AQAJAAcAAAAIAOv/AQAJAAcAAAAIAOz/AQAJAAcAAAAIAO3/AQAJAAcAAAAIAO7/AQAJAAcAAAAIAO//AQAJAAcAAAAIAPD/AQAJAAcAAAAIAPH/AQAJAAcAAAAIAPL/AQAJAAcAAAAIAPP/AQAJAAcAAAAIAPT/AQAJAAcAAAAIAPX/AQAJAAcAAAAIAPb/AQAJAAcAAAAIAPf/AQAJAAcAAAAIAPj/AQAJAAcAAAAIAPn/AQAJAAcAAAAIAPr/AQAJAAcAAAAIAPv/AQAJAAcAAAAIAPz/AQAJAAcAAAAIAP3/AQAJAAcAAAAIAP7/AQAJAAcAAAAIAP//AQAJAAcAAAAIAAAAAQAJAAcAAAAJAOP/AQAJAAcAAAAJAOT/AQAHAAkAAAAJAOX/AQAHAAkAAAAJAOb/AQAHAAkAAAAJAOf/AQAHAAkAAAAJAOj/AQAHAAkAAAAJAOn/AQAHAAkAAAAJAOr/AQAHAAkAAAAJAOv/AQAHAAkAAAAJAOz/AQAHAAkAAAAJAO3/AQAHAAkAAAAJAO7/AQAHAAkAAAAJAO//AQAHAAkAAAAJAPD/AQAHAAkAAAAJAPH/AQAHAAkAAAAJAPL/AQAHAAkAAAAJAPP/AQAHAAkAAAAJAPT/AQAHAAkAAAAJAPX/AQAHAAkAAAAJAPb/AQAHAAkAAAAJAPf/AQAHAAkAAAAJAPj/AQAHAAkAAAAJAPn/AQAHAAkAAAAJAPr/AQAHAAkAAAAJAPv/AQAHAAkAAAAJAPz/AQAHAAkAAAAJAP3/AQAHAAkAAAAJAP7/AQAHAAkAAAAJAP//AQAHAAkAAAAJAAAAAQAHAAkAAAAKAOP/AQAJAAcAAAAKAOT/AQAHAAkAAAAKAOX/AQAJAAcAAAAKAOb/AQAJAAcAAAAKAOf/AQAJAAcAAAAKAOj/AQAJAAcAAAAKAOn/AQAJAAcAAAAKAOr/AQAJAAcAAAAKAOv/AQAJAAcAAAAKAOz/AQAJAAcAAAAKAO3/AQAJAAcAAAAKAO7/AQAJAAcAAAAKAO//AQAJAAcAAAAKAPD/AQAJAAcAAAAKAPH/AQAJAAcAAAAKAPL/AQAJAAcAAAAKAPP/AQAJAAcAAAAKAPT/AQAJAAcAAAAKAPX/AQAJAAcAAAAKAPb/AQAJAAcAAAAKAPf/AQAJAAcAAAAKAPj/AQAJAAcAAAAKAPn/AQAJAAcAAAAKAPr/AQAJAAcAAAAKAPv/AQAJAAcAAAAKAPz/AQAJAAcAAAAKAP3/AQAJAAcAAAAKAP7/AQAJAAcAAAAKAP//AQAJAAcAAAAKAAAAAQAJAAcAAAALAOP/AQAJAAcAAAALAOT/AQAHAAkAAAALAOX/AQAJAAcAAAAMAOP/AQAJAAcAAAAMAOT/AQAHAAkAAAAMAOX/AQAJAAcAAAANAOP/AQAJAAcAAAANAOT/AQAHAAkAAAANAOX/AQAJAAcAAAAOAOP/AQAJAAcAAAAOAOT/AQAHAAkAAAAOAOX/AQAJAAcAAAAPAOP/AQAJAAcAAAAPAOT/AQAHAAkAAAAPAOX/AQAJAAcAAAAQAOP/AQAJAAcAAAAQAOT/AQAHAAkAAAAQAOX/AQAJAAcAAAARAOP/AQAJAAcAAAARAOT/AQAHAAkAAAARAOX/AQAJAAcAAAASAOP/AQAJAAcAAAASAOT/AQAHAAkAAAASAOX/AQAJAAcAAAATAOP/AQAJAAcAAAATAOT/AQAHAAkAAAATAOX/AQAJAAcAAAAUAOP/AQAJAAcAAAAUAOT/AQAHAAkAAAAUAOX/AQAJAAcAAAAVAOP/AQAJAAcAAAAVAOT/AQAHAAkAAAAVAOX/AQAJAAcAAAAWAOP/AQAJAAcAAAAWAOT/AQAHAAkAAAAWAOX/AQAJAAcAAAAXAOP/AQAJAAcAAAAXAOT/AQAHAAkAAAAXAOX/AQAJAAcAAAAYAOP/AQAJAAcAAAAYAOT/AQAHAAkAAAAYAOX/AQAJAAcAAAAZAOP/AQAHAAkAAAAZAOT/AQAHAAkAAAAZAOX/AQAJAAcAAAAaAOP/AQAJAAcAAAAaAOT/AQAJAAcAAAAaAOX/AQAJAAcAAAD1/+L/AQAJAAcAAAD1/93/AQAJAAcAAAD1/97/AQAJAAcAAAD1/9//AQAJAAcAAAD1/+D/AQAJAAcAAAD1/+H/AQAJAAcAAAD2/93/AQAHAAkAAAD2/97/AQAHAAkAAAD2/9//AQAHAAkAAAD2/+D/AQAHAAkAAAD2/+H/AQAHAAkAAAD2/+L/AQAHAAkAAAD3/93/AQAJAAcAAAD3/97/AQAJAAcAAAD3/9//AQAJAAcAAAD3/+D/AQAJAAcAAAD3/+H/AQAJAAcAAAD3/+L/AQAJAAcAAAD1/9r/AQAJAAcAAAD1/9v/AQAJAAcAAAD1/9z/AQAJAAcAAAD2/9r/AQAJAAcAAAD2/9v/AQAHAAkAAAD2/9z/AQAHAAkAAAD3/9r/AQAJAAcAAAD3/9v/AQAHAAkAAAD3/9z/AQAJAAcAAAD4/9r/AQAJAAcAAAD4/9v/AQAHAAkAAAD4/9z/AQAJAAcAAAD5/9r/AQAJAAcAAAD5/9v/AQAHAAkAAAD5/9z/AQAJAAcAAAD6/9r/AQAJAAcAAAD6/9v/AQAHAAkAAAD6/9z/AQAJAAcAAAD7/9r/AQAJAAcAAAD7/9v/AQAHAAkAAAD7/9z/AQAJAAcAAAD8/9r/AQAJAAcAAAD8/9v/AQAHAAkAAAD8/9z/AQAJAAcAAAD9/9r/AQAJAAcAAAD9/9v/AQAHAAkAAAD9/9z/AQAJAAcAAAD+/9r/AQAJAAcAAAD+/9v/AQAHAAkAAAD+/9z/AQAJAAcAAAD//9r/AQAJAAcAAAD//9v/AQAHAAkAAAD//9z/AQAJAAcAAAAAANr/AQAJAAcAAAAAANv/AQAHAAkAAAAAANz/AQAJAAcAAAABANr/AQAJAAcAAAABANv/AQAHAAkAAAABANz/AQAJAAcAAAACANr/AQAJAAcAAAACANv/AQAHAAkAAAACANz/AQAJAAcAAAADANr/AQAJAAcAAAADANv/AQAHAAkAAAADANz/AQAJAAcAAAAEANr/AQAJAAcAAAAEANv/AQAHAAkAAAAEANz/AQAJAAcAAAAFANr/AQAJAAcAAAAFANv/AQAHAAkAAAAFANz/AQAJAAcAAAAGANr/AQAJAAcAAAAGANv/AQAHAAkAAAAGANz/AQAJAAcAAAAHANr/AQAJAAcAAAAHANv/AQAHAAkAAAAHANz/AQAJAAcAAAAIANr/AQAJAAcAAAAIANv/AQAHAAkAAAAIANz/AQAJAAcAAAAJANr/AQAJAAcAAAAJANv/AQAHAAkAAAAJANz/AQAJAAcAAAAKANr/AQAJAAcAAAAKANv/AQAHAAkAAAAKANz/AQAJAAcAAAALANr/AQAJAAcAAAALANv/AQAHAAkAAAALANz/AQAJAAcAAAAMANr/AQAJAAcAAAAMANv/AQAHAAkAAAAMANz/AQAJAAcAAAANANr/AQAJAAcAAAANANv/AQAHAAkAAAANANz/AQAJAAcAAAAOANr/AQAJAAcAAAAOANv/AQAHAAkAAAAOANz/AQAJAAcAAAAPANr/AQAJAAcAAAAPANv/AQAHAAkAAAAPANz/AQAJAAcAAAAQANr/AQAJAAcAAAAQANv/AQAHAAkAAAAQANz/AQAJAAcAAAARANr/AQAJAAcAAAARANv/AQAHAAkAAAARANz/AQAJAAcAAAASANr/AQAJAAcAAAASANv/AQAHAAkAAAASANz/AQAJAAcAAAATANr/AQAJAAcAAAATANv/AQAHAAkAAAATANz/AQAJAAcAAAAUANr/AQAJAAcAAAAUANv/AQAHAAkAAAAUANz/AQAJAAcAAAAVANr/AQAJAAcAAAAVANv/AQAHAAkAAAAVANz/AQAJAAcAAAAWANr/AQAJAAcAAAAWANv/AQAHAAkAAAAWANz/AQAJAAcAAAAXANr/AQAJAAcAAAAXANv/AQAHAAkAAAAXANz/AQAJAAcAAAAYANr/AQAJAAcAAAAYANv/AQAHAAkAAAAYANz/AQAJAAcAAAAZANr/AQAJAAcAAAAZANv/AQAHAAkAAAAZANz/AQAHAAkAAAAaANr/AQAJAAcAAAAaANv/AQAJAAcAAAAaANz/AQAJAAcAAAAYAN3/AQAJAAcAAAAYAN7/AQAJAAcAAAAYAN//AQAJAAcAAAAYAOD/AQAJAAcAAAAYAOH/AQAJAAcAAAAYAOL/AQAJAAcAAAAZAN3/AQAHAAkAAAAZAN7/AQAHAAkAAAAZAN//AQAHAAkAAAAZAOD/AQAHAAkAAAAZAOH/AQAHAAkAAAAZAOL/AQAHAAkAAAAaAN3/AQAJAAcAAAAaAN7/AQAJAAcAAAAaAN//AQAJAAcAAAAaAOD/AQAJAAcAAAAaAOH/AQAJAAcAAAAaAOL/AQAJAAcAAAD8//r/AQAJAAcAAAD8//v/AQAJAAcAAAD8//z/AQAJAAcAAAD8//3/AQAJAAcAAAD8//7/AQAJAAcAAAD8////AQAJAAcAAAD8/wAAAQAJAAcAAAACAPr/AQAJAAcAAAACAPv/AQAJAAcAAAACAPz/AQAJAAcAAAACAP3/AQAJAAcAAAACAP7/AQAJAAcAAAACAP//AQAJAAcAAAACAAAAAQAJAAcAAAA=")
+tile_set = SubResource("TileSet_w53co")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-66, -869)
+scale = Vector2(3.35758, 7.73677)
+texture = ExtResource("5_xsrpe")
+
+[node name="BluePortal" parent="." instance=ExtResource("6_0kxia")]
+position = Vector2(1429, -2130)
+target_scene = "res://scenes/levels/level_9.tscn"
+
+[node name="SpikeTrap" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(-476, 54)
+
+[node name="SpikeTrap2" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(-412, 54)
+
+[node name="SpikeTrap3" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(-348, 54)
+
+[node name="SpikeTrap4" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(-284, 54)
+
+[node name="SpikeTrap5" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(228, 54)
+
+[node name="SpikeTrap6" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(292, 54)
+
+[node name="SpikeTrap7" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(356, 54)
+
+[node name="SpikeTrap8" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(420, 54)
+
+[node name="SpikeTrap9" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(484, 54)
+
+[node name="SpikeTrap10" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(1508, -1866)
+
+[node name="SpikeTrap11" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(1444, -1866)
+
+[node name="SpikeTrap12" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(1380, -1866)
+
+[node name="SpikeTrap13" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(1316, -1866)
+
+[node name="SpikeTrap14" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(1252, -1866)
+
+[node name="SpikeTrap15" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(1188, -1866)
+
+[node name="SpikeTrap16" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(1124, -1866)
+
+[node name="SpikeTrap17" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(1060, -1866)
+
+[node name="SpikeTrap18" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(996, -1866)
+
+[node name="SpikeTrap19" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(932, -1866)
+
+[node name="SpikeTrap20" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(868, -1866)
+
+[node name="SpikeTrap21" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(804, -1866)
+
+[node name="SpikeTrap22" parent="." instance=ExtResource("7_ene4w")]
+position = Vector2(740, -1866)
+
+[node name="MovingPlatformLarge" parent="." instance=ExtResource("8_h6r4t")]
+position = Vector2(-16, 45)
+scale = Vector2(1.77333, 1.56459)
+curve = SubResource("Curve2D_w2i51")
+
+[node name="MovingPlatformLarge2" parent="." instance=ExtResource("8_h6r4t")]
+position = Vector2(614, -1878)
+scale = Vector2(1.99796, 2.21129)
+curve = SubResource("Curve2D_h6r4t")
+
+[node name="MovingPlatformLarge3" parent="." instance=ExtResource("8_h6r4t")]
+position = Vector2(183, -654)
+scale = Vector2(1.62405, 1.89024)
+curve = SubResource("Curve2D_xsrpe")
+
+[node name="MovingPlatformLarge4" parent="." instance=ExtResource("8_h6r4t")]
+position = Vector2(119, -1075)
+scale = Vector2(1.54218, 1.71843)
+curve = SubResource("Curve2D_0kxia")
+
+[node name="MovingPlatformLarge5" parent="." instance=ExtResource("8_h6r4t")]
+position = Vector2(321, -1536)
+scale = Vector2(1.25, 1.45238)
+curve = SubResource("Curve2D_5umh1")
+
+[node name="flickerlamp" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(407, -1656)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp2" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(377, -838)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp3" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(418, -793)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp4" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(384, -741)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp5" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(-221, -1288)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp6" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(-273, -1244)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp7" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(-228, -1206)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp8" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(817, -2242)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp9" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(870, -2242)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp10" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(117, -1452)
+scale = Vector2(1.25, 1.45238)
+
+[node name="flickerlamp11" parent="." instance=ExtResource("9_w2i51")]
+position = Vector2(276, -1864)
+scale = Vector2(1.25, 1.45238)
+
+[node name="MovingPlatformLarge6" parent="." instance=ExtResource("8_h6r4t")]
+position = Vector2(784, -2020)
+scale = Vector2(1.91667, 1.85938)
+curve = SubResource("Curve2D_v7ucw")
+
+[node name="ghost" parent="." instance=ExtResource("10_xsrpe")]
+position = Vector2(1192, -1961)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -171.0
+offset_top = -73.0
+offset_right = 106.0
+offset_bottom = 30.0
+theme_override_fonts/normal_font = ExtResource("11_5umh1")
+text = "7. Just stop already.
+
+You're so ungrateful with what you're being given"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = -720.0
+offset_right = 344.0
+offset_bottom = -668.0
+theme_override_fonts/normal_font = ExtResource("12_v7ucw")
+text = "7. Take this platform
+"
+
+[node name="Control3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control3"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = -1123.0
+offset_right = 224.0
+offset_bottom = -1071.0
+theme_override_fonts/normal_font = ExtResource("12_v7ucw")
+text = "7. Take this platform
+"
+
+[node name="Control4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control4"]
+layout_mode = 0
+offset_left = 287.0
+offset_top = -1586.0
+offset_right = 473.0
+offset_bottom = -1534.0
+theme_override_fonts/normal_font = ExtResource("12_v7ucw")
+text = "7. Take this platform
+"
+
+[node name="Control5" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control5"]
+layout_mode = 0
+offset_left = 651.0
+offset_top = -2013.0
+offset_right = 837.0
+offset_bottom = -1961.0
+theme_override_fonts/normal_font = ExtResource("12_v7ucw")
+text = "7. Take the platform above"
+
+[node name="Control6" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control6"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = -1364.0
+offset_right = 464.0
+offset_bottom = -1278.0
+theme_override_fonts/normal_font = ExtResource("12_v7ucw")
+text = "7. Take a leap of faith right here. The portal is right below here.
+"
+
+[node name="floatingtorii" parent="." instance=ExtResource("13_vsqe1")]
+position = Vector2(326, -1011)
+
+[node name="floatingtoriiv2" parent="." instance=ExtResource("14_kk2ik")]
+position = Vector2(81, -1715)

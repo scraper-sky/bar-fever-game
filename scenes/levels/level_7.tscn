@@ -16,13 +16,13 @@
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="14_st48t"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="15_dfn7m"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e111w"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dfn7m"]
 texture = ExtResource("3_27cbj")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w3753"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rm7r"]
 texture = ExtResource("4_x1ki7")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -101,8 +101,8 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_pf4i8"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_e111w")
-sources/1 = SubResource("TileSetAtlasSource_w3753")
+sources/0 = SubResource("TileSetAtlasSource_dfn7m")
+sources/1 = SubResource("TileSetAtlasSource_8rm7r")
 
 [sub_resource type="Curve2D" id="Curve2D_13aap"]
 resource_local_to_scene = true
@@ -289,6 +289,7 @@ texture = ExtResource("5_73o88")
 
 [node name="BluePortal" parent="." instance=ExtResource("6_fusg1")]
 position = Vector2(-598, -2512)
+target_scene = "res://scenes/levels/level_8.tscn"
 
 [node name="ghost" parent="." instance=ExtResource("11_88heu")]
 position = Vector2(-443, -78)
@@ -704,7 +705,7 @@ offset_top = 52.0
 offset_right = 134.0
 offset_bottom = 150.0
 theme_override_fonts/normal_font = ExtResource("14_st48t")
-text = "7. The boy who cried wolf"
+text = "7. I'm the boy who cried wolf"
 
 [node name="FloatingParticles" parent="." instance=ExtResource("15_dfn7m")]
 position = Vector2(-175, -419)
