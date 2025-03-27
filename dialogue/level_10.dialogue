@@ -1,0 +1,30 @@
+~ Ghost1
+Ghost1: Between Ghost2 and Ghost3, one is a liar. The correct path is to the right. 
+=> END
+~ Ghost2
+Ghost2: Both I and Ghost4 always tell the truth. You can bet on us. The correct path is upwards.
+=> END
+~ Ghost3
+Ghost3: Both Ghost1 and Ghost5 are dumb liars. Listen to me. The correct path is downwards.
+=> END
+~ Ghost4
+Ghost4: Ghost3 always lies. The correct path is to the left.
+=> END
+~ Ghost5
+Ghost5: I know that between Ghost1 or Ghost4, at least one of them is being truthful here. Maybe listen to them.
+=> END
+~ ghost1
+ghost1: Between Ghost2 or Ghost5, one of them is a liar, and I'm certain the correct path is not to the right.
+=> END
+~ ghost2
+ghost2: Both Ghost3 and I are always honest, and we're certain the correct path is not left.
+=> END
+~ ghost3
+ghost3: The correct path is down, and between Ghost1 and Ghost4, one is being truthful.
+=> END
+~ ghost4
+ghost4: I don't know, but I'm the only rational ghost here: either Ghost5 is truthful or the correct path is right.
+=> END
+~ ghost5
+ghost5: Ghost2 is a stupid liar, and the correct path is not to the right. Don't go there. You'll regret it.
+=> END

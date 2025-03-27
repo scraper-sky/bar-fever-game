@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://conei417jr0r4"
+path="res://.godot/imported/alcoholbottledialogue.dialogue-467cf28dbf29995f42b377ed37f50618.tres"
+
+[deps]
+
+source_file="res://dialogue/alcoholbottledialogue.dialogue"
+dest_files=["res://.godot/imported/alcoholbottledialogue.dialogue-467cf28dbf29995f42b377ed37f50618.tres"]
+
+[params]
+
+defaults=true

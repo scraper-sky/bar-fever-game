@@ -168,12 +168,13 @@ func import_content(path: String, prefix: String, imported_line_map: Dictionary,
 		for i in range(0, content.size()):
 			var line = content[i]
 			if line.strip_edges().begins_with("~ "):
+				var indent: String = "\t".repeat(get_indent(line))
 				var title = line.strip_edges().substr(2)
 				if "/" in line:
 					var bits = title.split("/")
-					content[i] = "~ %s/%s" % [_imported_titles[bits[0]], bits[1]]
+					content[i] = "%s~ %s/%s" % [indent, _imported_titles[bits[0]], bits[1]]
 				else:
-					content[i] = "~ %s/%s" % [str(path.hash()), title]
+					content[i] = "%s~ %s/%s" % [indent, str(path.hash()), title]
 
 			elif "=>< " in line:
 				var jump: String = line.substr(line.find("=>< ") + "=>< ".length()).strip_edges()
@@ -227,12 +228,12 @@ func build_line_tree(raw_lines: PackedStringArray) -> DMTreeLine:
 		tree_line.text = raw_line.strip_edges()
 
 		# Handle any "using" directives.
-		if raw_line.begins_with("using "):
+		if tree_line.type == DMConstants.TYPE_USING:
 			var using_match: RegExMatch = regex.USING_REGEX.search(raw_line)
 			if "state" in using_match.names:
 				var using_state: String = using_match.strings[using_match.names.state].strip_edges()
 				if not using_state in autoload_names:
-					add_error(i, 0, DMConstants.ERR_UNKNOWN_USING)
+					add_error(tree_line.line_number, 0, DMConstants.ERR_UNKNOWN_USING)
 				elif not using_state in using_states:
 					using_states.append(using_state)
 				continue
@@ -287,7 +288,7 @@ func build_line_tree(raw_lines: PackedStringArray) -> DMTreeLine:
 
 		# Append the current line to the current parent (note: the root is the most basic parent).
 		var parent: DMTreeLine = parent_chain[parent_chain.size() - 1]
-		tree_line.parent = parent
+		tree_line.parent = weakref(parent)
 		parent.children.append(tree_line)
 
 		previous_line = tree_line
@@ -367,7 +368,7 @@ func parse_title_line(tree_line: DMTreeLine, line: DMCompiledLine, siblings: Arr
 		result = add_error(tree_line.line_number, 2, DMConstants.ERR_TITLE_BEGINS_WITH_NUMBER)
 
 	# Only import titles are allowed to have "/" in them
-	var valid_title = regex.VALID_TITLE_REGEX.search(line.text.replace("/", "").substr(line.text.find("~ ") + 2).strip_edges())
+	var valid_title = regex.VALID_TITLE_REGEX.search(line.text.replace("/", ""))
 	if not valid_title:
 		result = add_error(tree_line.line_number, 2, DMConstants.ERR_TITLE_INVALID_CHARACTERS)
 
@@ -677,6 +678,10 @@ func parse_dialogue_line(tree_line: DMTreeLine, line: DMCompiledLine, siblings: 
 	if tree_line.text.begins_with("\\elif"): tree_line.text = tree_line.text.substr(1)
 	if tree_line.text.begins_with("\\else"): tree_line.text = tree_line.text.substr(1)
 	if tree_line.text.begins_with("\\while"): tree_line.text = tree_line.text.substr(1)
+	if tree_line.text.begins_with("\\match"): tree_line.text = tree_line.text.substr(1)
+	if tree_line.text.begins_with("\\when"): tree_line.text = tree_line.text.substr(1)
+	if tree_line.text.begins_with("\\do"): tree_line.text = tree_line.text.substr(1)
+	if tree_line.text.begins_with("\\set"): tree_line.text = tree_line.text.substr(1)
 	if tree_line.text.begins_with("\\-"): tree_line.text = tree_line.text.substr(1)
 	if tree_line.text.begins_with("\\~"): tree_line.text = tree_line.text.substr(1)
 	if tree_line.text.begins_with("\\=>"): tree_line.text = tree_line.text.substr(1)
@@ -714,6 +719,19 @@ func parse_dialogue_line(tree_line: DMTreeLine, line: DMCompiledLine, siblings: 
 			line.concurrent_lines = previous_line.concurrent_lines
 
 	parse_character_and_dialogue(tree_line, line, siblings, sibling_index, parent)
+
+	# Check for any inline expression errors
+	var resolved_line_data: DMResolvedLineData = DMResolvedLineData.new("")
+	var bbcodes: Array[Dictionary] = resolved_line_data.find_bbcode_positions_in_string(tree_line.text, true, true)
+	for bbcode: Dictionary in bbcodes:
+		var tag: String = bbcode.code
+		var code: String = bbcode.raw_args
+		if tag.begins_with("do") or tag.begins_with("set") or tag.begins_with("if"):
+			var expression: Array = expression_parser.tokenise(code, DMConstants.TYPE_MUTATION, bbcode.start + bbcode.code.length())
+			if expression.size() == 0:
+				add_error(tree_line.line_number, tree_line.indent, DMConstants.ERR_INVALID_EXPRESSION)
+			elif expression[0].type == DMConstants.TYPE_ERROR:
+				add_error(tree_line.line_number, tree_line.indent + expression[0].index, expression[0].value)
 
 	# If the line isn't part of a weighted random group then make it point to the next
 	# available sibling.
@@ -898,6 +916,9 @@ func get_line_type(raw_line: String) -> String:
 
 	if text.begins_with("import "):
 		return DMConstants.TYPE_IMPORT
+
+	if text.begins_with("using "):
+		return DMConstants.TYPE_USING
 
 	if text.begins_with("#"):
 		return DMConstants.TYPE_COMMENT

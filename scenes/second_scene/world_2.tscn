@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://dwxp688q2gnk3" path="res://scenes/second_scene/area_2d.gd" id="5_iv88o"]
 [ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://background&art/neoncitybackground.png" id="5_kl62o"]
 [ext_resource type="Texture2D" uid="uid://dt2vh8kml4w6x" path="res://background&art/neoncityskylines.png" id="6_baomu"]
-[ext_resource type="Resource" uid="uid://dx1ronbw6qj86" path="res://TestDialogue.dialogue" id="6_cbxgm"]
+[ext_resource type="Resource" uid="uid://dx1ronbw6qj86" path="res://dialogue/TestDialogue.dialogue" id="6_cbxgm"]
 [ext_resource type="Texture2D" uid="uid://dfohh1yxkq41u" path="res://characters/wanderer.png" id="7_ey4ky"]
 [ext_resource type="Texture2D" uid="uid://dr5p58bjooqbx" path="res://background&art/undreamer.png" id="10_g5oks"]
 [ext_resource type="Script" uid="uid://c4n0aow3ri0lr" path="res://scenes/second_scene/undreamer.gd" id="11_5yrdi"]

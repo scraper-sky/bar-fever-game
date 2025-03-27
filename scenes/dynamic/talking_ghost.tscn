@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://chw3wbntnx678"]
+
+[ext_resource type="Script" uid="uid://fq3dmngbvst6" path="res://scenes/dynamic/talking_ghost.gd" id="1_56u7b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xsjd"]
+size = Vector2(59, 74)
+
+[node name="talking_ghost" type="Area2D"]
+script = ExtResource("1_56u7b")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(29.5, 36)
+shape = SubResource("RectangleShape2D_1xsjd")

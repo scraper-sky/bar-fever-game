@@ -13,13 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="11_8ve0l"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="12_tgm38"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vol5t"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iav0o"]
 texture = ExtResource("1_4526a")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j46wm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dnkej"]
 texture = ExtResource("2_x4r34")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -98,8 +98,8 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_qg25o"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_vol5t")
-sources/1 = SubResource("TileSetAtlasSource_j46wm")
+sources/0 = SubResource("TileSetAtlasSource_iav0o")
+sources/1 = SubResource("TileSetAtlasSource_dnkej")
 
 [sub_resource type="Curve2D" id="Curve2D_0cwe4"]
 resource_local_to_scene = true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://c37mpx4ieahji"
+path="res://.godot/imported/strangepaperdialogue.dialogue-f377768448f154ca884c9d6cb3b65db6.tres"
+
+[deps]
+
+source_file="res://dialogue/strangepaperdialogue.dialogue"
+dest_files=["res://.godot/imported/strangepaperdialogue.dialogue-f377768448f154ca884c9d6cb3b65db6.tres"]
+
+[params]
+
+defaults=true
