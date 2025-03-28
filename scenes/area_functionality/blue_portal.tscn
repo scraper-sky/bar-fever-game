@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://doy1jks5c41vu"]
 
 [ext_resource type="Script" uid="uid://dkklrbvxu7tcb" path="res://scenes/area_functionality/blue_portal.gd" id="1_rg0xs"]
-[ext_resource type="Texture2D" uid="uid://d2po8pytsyfhi" path="res://background&art/blueportalflicker1.png" id="2_yb1gx"]
-[ext_resource type="Texture2D" uid="uid://dwgrpktrky3sw" path="res://background&art/blueportalflicker2.png" id="3_mg5k3"]
-[ext_resource type="Texture2D" uid="uid://mg8x7nvedooj" path="res://background&art/blueportalflicker3.png" id="4_oo026"]
-[ext_resource type="Texture2D" uid="uid://c8d8up5k2us3h" path="res://background&art/blueportalflicker4.png" id="5_1if4u"]
+[ext_resource type="Texture2D" uid="uid://d2po8pytsyfhi" path="res://assets/background&art/blueportalflicker1.png" id="2_yb1gx"]
+[ext_resource type="Texture2D" uid="uid://dwgrpktrky3sw" path="res://assets/background&art/blueportalflicker2.png" id="3_mg5k3"]
+[ext_resource type="Texture2D" uid="uid://mg8x7nvedooj" path="res://assets/background&art/blueportalflicker3.png" id="4_oo026"]
+[ext_resource type="Texture2D" uid="uid://c8d8up5k2us3h" path="res://assets/background&art/blueportalflicker4.png" id="5_1if4u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ngbh0"]
 radius = 26.0

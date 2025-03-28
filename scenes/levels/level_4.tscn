@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://chfqsurmss50t" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
-[ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="3_r57se"]
-[ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="4_3w7cl"]
-[ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://background&art/neoncitybackground.png" id="5_70o17"]
+[ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="3_r57se"]
+[ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://assets/background&art/purpleland.png" id="4_3w7cl"]
+[ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://assets/background&art/neoncitybackground.png" id="5_70o17"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="6_uluqj"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="7_0uwjf"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="8_de15b"]

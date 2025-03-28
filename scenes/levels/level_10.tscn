@@ -1,30 +1,34 @@
-[gd_scene load_steps=36 format=4 uid="uid://drahjq4x1ho3k"]
+[gd_scene load_steps=40 format=4 uid="uid://drahjq4x1ho3k"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_n3gcc"]
-[ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="2_c7e1w"]
-[ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="3_ilo0b"]
+[ext_resource type="Script" uid="uid://4cbo2palb5ig" path="res://scenes/levels/level_10.gd" id="1_nk72f"]
+[ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_c7e1w"]
+[ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://assets/background&art/purpleland.png" id="3_ilo0b"]
 [ext_resource type="PackedScene" uid="uid://chw3wbntnx678" path="res://scenes/dynamic/talking_ghost.tscn" id="4_c7e1w"]
-[ext_resource type="Texture2D" uid="uid://degwi4qne8xve" path="res://background&art/1ghost1.png" id="4_hl75t"]
-[ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://background&art/neoncitybackground.png" id="4_omffp"]
-[ext_resource type="Texture2D" uid="uid://dt2vh8kml4w6x" path="res://background&art/neoncityskylines.png" id="5_odo46"]
-[ext_resource type="Texture2D" uid="uid://dqmn6l7h18qe6" path="res://background&art/1ghost2.png" id="5_omffp"]
-[ext_resource type="Texture2D" uid="uid://cbihuid747e6u" path="res://background&art/1ghost3.png" id="6_7pxtr"]
-[ext_resource type="Texture2D" uid="uid://5owudlvlsxj3" path="res://background&art/1ghost4.png" id="7_ctyhw"]
-[ext_resource type="Texture2D" uid="uid://c2okltkdosj7r" path="res://background&art/1ghost5.png" id="8_cqrih"]
-[ext_resource type="Texture2D" uid="uid://ndi1w4q6svii" path="res://background&art/1ghost6.png" id="9_odo46"]
-[ext_resource type="Texture2D" uid="uid://bwpfrupwvhjnh" path="res://background&art/1ghost7.png" id="10_nk72f"]
-[ext_resource type="Texture2D" uid="uid://brt2n4n5a5gv4" path="res://background&art/1ghost8.png" id="11_vxf3i"]
-[ext_resource type="Texture2D" uid="uid://bwg0t3ykp2a8f" path="res://background&art/1ghost9.png" id="12_657iy"]
-[ext_resource type="Texture2D" uid="uid://ef6efjcpwc25" path="res://background&art/1ghost10.png" id="13_yy4hl"]
-[ext_resource type="Texture2D" uid="uid://56gqtnxu8vhs" path="res://background&art/1ghost11.png" id="14_cmr01"]
-[ext_resource type="Texture2D" uid="uid://c7b87auuaws5q" path="res://background&art/1ghost12.png" id="15_b7f35"]
-[ext_resource type="Texture2D" uid="uid://c42jm86fb7u1e" path="res://background&art/1ghost13.png" id="16_hmqkb"]
-[ext_resource type="Texture2D" uid="uid://dun42arwcanq3" path="res://background&art/1ghost14.png" id="17_l6fdw"]
+[ext_resource type="Texture2D" uid="uid://degwi4qne8xve" path="res://assets/background&art/1ghost1.png" id="4_hl75t"]
+[ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://assets/background&art/neoncitybackground.png" id="4_omffp"]
+[ext_resource type="Texture2D" uid="uid://dt2vh8kml4w6x" path="res://assets/background&art/neoncityskylines.png" id="5_odo46"]
+[ext_resource type="Texture2D" uid="uid://dqmn6l7h18qe6" path="res://assets/background&art/1ghost2.png" id="5_omffp"]
+[ext_resource type="Texture2D" uid="uid://cbihuid747e6u" path="res://assets/background&art/1ghost3.png" id="6_7pxtr"]
+[ext_resource type="Texture2D" uid="uid://5owudlvlsxj3" path="res://assets/background&art/1ghost4.png" id="7_ctyhw"]
+[ext_resource type="Texture2D" uid="uid://c2okltkdosj7r" path="res://assets/background&art/1ghost5.png" id="8_cqrih"]
+[ext_resource type="Texture2D" uid="uid://ndi1w4q6svii" path="res://assets/background&art/1ghost6.png" id="9_odo46"]
+[ext_resource type="Texture2D" uid="uid://bwpfrupwvhjnh" path="res://assets/background&art/1ghost7.png" id="10_nk72f"]
+[ext_resource type="Texture2D" uid="uid://brt2n4n5a5gv4" path="res://assets/background&art/1ghost8.png" id="11_vxf3i"]
+[ext_resource type="Texture2D" uid="uid://bwg0t3ykp2a8f" path="res://assets/background&art/1ghost9.png" id="12_657iy"]
+[ext_resource type="Texture2D" uid="uid://ef6efjcpwc25" path="res://assets/background&art/1ghost10.png" id="13_yy4hl"]
+[ext_resource type="Texture2D" uid="uid://56gqtnxu8vhs" path="res://assets/background&art/1ghost11.png" id="14_cmr01"]
+[ext_resource type="Texture2D" uid="uid://c7b87auuaws5q" path="res://assets/background&art/1ghost12.png" id="15_b7f35"]
+[ext_resource type="Texture2D" uid="uid://c42jm86fb7u1e" path="res://assets/background&art/1ghost13.png" id="16_hmqkb"]
+[ext_resource type="Texture2D" uid="uid://dun42arwcanq3" path="res://assets/background&art/1ghost14.png" id="17_l6fdw"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="19_ilo0b"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="21_7pxtr"]
 [ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="22_ctyhw"]
 [ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/spike_trap.tscn" id="23_cqrih"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/ghost.tscn" id="24_odo46"]
+[ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="27_657iy"]
+[ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="28_yy4hl"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="29_yy4hl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_55him"]
 texture = ExtResource("2_c7e1w")
@@ -211,6 +215,7 @@ _data = {
 point_count = 3
 
 [node name="level_10" type="Node2D"]
+script = ExtResource("1_nk72f")
 
 [node name="MainPlayer" parent="." instance=ExtResource("1_n3gcc")]
 position = Vector2(1, 0)
@@ -299,7 +304,23 @@ offset_top = 61.0
 offset_right = 181.0
 offset_bottom = 147.0
 theme_override_fonts/normal_font = ExtResource("19_ilo0b")
-text = "10. There's only one correct direction."
+text = "10. There's only one correct direction here..."
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 1524.0
+offset_right = 673.0
+offset_bottom = 1610.0
+theme_override_fonts/normal_font = ExtResource("19_ilo0b")
+text = "10. There's only one correct direction here..."
 
 [node name="BluePortal" parent="." instance=ExtResource("21_7pxtr")]
 position = Vector2(-2218, -372)
@@ -538,3 +559,31 @@ position = Vector2(-35, 2189)
 [node name="ghost13" parent="." instance=ExtResource("24_odo46")]
 position = Vector2(127, 2191)
 start_direction = -1
+
+[node name="floatingtorii" parent="." instance=ExtResource("27_657iy")]
+
+[node name="floatingtorii2" parent="." instance=ExtResource("27_657iy")]
+position = Vector2(-848, 975)
+
+[node name="floatingtorii3" parent="." instance=ExtResource("27_657iy")]
+position = Vector2(-591, 1349)
+
+[node name="floatingtorii4" parent="." instance=ExtResource("27_657iy")]
+position = Vector2(18, 1413)
+
+[node name="floatingtoriiv2" parent="." instance=ExtResource("28_yy4hl")]
+position = Vector2(557, 5)
+
+[node name="floatingtoriiv3" parent="." instance=ExtResource("28_yy4hl")]
+position = Vector2(763, 675)
+
+[node name="floatingtoriiv4" parent="." instance=ExtResource("28_yy4hl")]
+position = Vector2(-634, 787)
+
+[node name="floatingtoriiv5" parent="." instance=ExtResource("28_yy4hl")]
+position = Vector2(630, 1095)
+
+[node name="floatingtoriiv6" parent="." instance=ExtResource("28_yy4hl")]
+position = Vector2(940, 1410)
+
+[node name="FloatingParticles" parent="." instance=ExtResource("29_yy4hl")]

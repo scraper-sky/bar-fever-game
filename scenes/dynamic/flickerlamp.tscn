@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dpo2ex878fwrp"]
 
 [ext_resource type="Script" uid="uid://dvq8wrodgeuwc" path="res://scenes/dynamic/area_2d.gd" id="1_6o6vo"]
-[ext_resource type="Texture2D" uid="uid://cqqd6n2npbtww" path="res://background&art/cyberlamp1.png" id="1_brgj0"]
-[ext_resource type="Texture2D" uid="uid://dsddrpwvf2sa2" path="res://background&art/cyberlamp2.png" id="2_34shw"]
-[ext_resource type="Texture2D" uid="uid://bn4o1dwijvyrw" path="res://background&art/cyberlamp3.png" id="3_8wn1w"]
+[ext_resource type="Texture2D" uid="uid://cqqd6n2npbtww" path="res://assets/background&art/cyberlamp1.png" id="1_brgj0"]
+[ext_resource type="Texture2D" uid="uid://dsddrpwvf2sa2" path="res://assets/background&art/cyberlamp2.png" id="2_34shw"]
+[ext_resource type="Texture2D" uid="uid://bn4o1dwijvyrw" path="res://assets/background&art/cyberlamp3.png" id="3_8wn1w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4ivd"]
 radius = 15.0

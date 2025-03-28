@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cj8ysqlmx21au"]
 
 [ext_resource type="Script" uid="uid://bxohpfjyrgfa6" path="res://scenes/dynamic/bouncer.gd" id="1_cy0ka"]
-[ext_resource type="Texture2D" uid="uid://c3nnfxhq7abvm" path="res://background&art/cyberbounce1.png" id="2_vhcyt"]
-[ext_resource type="Texture2D" uid="uid://v456wk6v4tr2" path="res://background&art/cyberbounce2.png" id="3_lpq4m"]
-[ext_resource type="Texture2D" uid="uid://wwjcgnen2q7l" path="res://background&art/cyberbounce3.png" id="4_m5t0b"]
+[ext_resource type="Texture2D" uid="uid://c3nnfxhq7abvm" path="res://assets/background&art/cyberbounce1.png" id="2_vhcyt"]
+[ext_resource type="Texture2D" uid="uid://v456wk6v4tr2" path="res://assets/background&art/cyberbounce2.png" id="3_lpq4m"]
+[ext_resource type="Texture2D" uid="uid://wwjcgnen2q7l" path="res://assets/background&art/cyberbounce3.png" id="4_m5t0b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t6rnc"]
 animations = [{

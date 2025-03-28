@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfognf282tcs7"]
 
-[ext_resource type="Texture2D" uid="uid://bxhws5l1rljul" path="res://background&art/particlepixelyellow.png" id="1_tcw30"]
+[ext_resource type="Texture2D" uid="uid://bxhws5l1rljul" path="res://assets/background&art/particlepixelyellow.png" id="1_tcw30"]
 [ext_resource type="Script" uid="uid://bsryi2pnqjtyx" path="res://scenes/dynamic/cpu_particles_2d.gd" id="2_waihx"]
 
 [sub_resource type="Gradient" id="Gradient_6jc5c"]

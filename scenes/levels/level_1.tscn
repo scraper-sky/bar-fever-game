@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=4 uid="uid://cxa0ih033yf0a"]
 
-[ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://background&art/purplestone.png" id="1_4526a"]
-[ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://background&art/purpleland.png" id="2_x4r34"]
+[ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="1_4526a"]
+[ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://assets/background&art/purpleland.png" id="2_x4r34"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="3_0y4r0"]
 [ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="4_h65t0"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="5_b16y8"]

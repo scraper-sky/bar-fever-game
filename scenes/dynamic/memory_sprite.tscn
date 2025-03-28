@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b23xarc081usr"]
+
+[ext_resource type="Script" uid="uid://dbj33deynuj24" path="res://scenes/dynamic/memory_sprite.gd" id="1_64o7o"]
+[ext_resource type="Texture2D" uid="uid://c4rplwdm84aph" path="res://assets/memories/cyber_mem_1.png" id="2_cq7ep"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5r5d"]
+
+[node name="memory_sprite" type="Area2D"]
+script = ExtResource("1_64o7o")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(10, 8.5625)
+scale = Vector2(0.0145773, 0.0159739)
+texture = ExtResource("2_cq7ep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_j5r5d")
