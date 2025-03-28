@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dm63by45s3x61"]
+[gd_scene load_steps=18 format=4 uid="uid://dm63by45s3x61"]
 
 [ext_resource type="Script" uid="uid://bljmwhbkw5foq" path="res://scenes/levels/level_12.gd" id="1_aj8n2"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_r84c5"]
@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="6_fakti"]
 [ext_resource type="PackedScene" uid="uid://bpxvk0kyv45jg" path="res://scenes/dynamic/memory_particles.tscn" id="7_aj8n2"]
 [ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="9_yd7i6"]
+[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="10_vcewm"]
+[ext_resource type="Script" uid="uid://bn3gd3s3oihtl" path="res://scenes/levels/dialogue_trigger.gd" id="11_b73n6"]
+[ext_resource type="PackedScene" uid="uid://d1yd33gpmjb1i" path="res://scenes/dynamic/memoryloader.tscn" id="12_rhop2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qarqa"]
 texture = ExtResource("2_2ii7u")
@@ -103,6 +106,9 @@ shader = ExtResource("9_yd7i6")
 shader_parameter/intensity = 0.3
 shader_parameter/speed = 10.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhop2"]
+size = Vector2(121, 178)
+
 [node name="level_12" type="Node2D"]
 script = ExtResource("1_aj8n2")
 
@@ -131,6 +137,7 @@ position = Vector2(804, 311)
 
 [node name="BluePortal" parent="." instance=ExtResource("6_fakti")]
 position = Vector2(1466, -326)
+target_scene = "res://scenes/levels/level_transition.tscn"
 
 [node name="memory_particles" parent="." instance=ExtResource("7_aj8n2")]
 position = Vector2(713, 363)
@@ -180,3 +187,53 @@ layer = 0
 material = SubResource("ShaderMaterial_aj8n2")
 offset_right = 1152.0
 offset_bottom = 648.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 409.0
+offset_right = 594.0
+offset_bottom = 514.0
+theme_override_fonts/normal_font = ExtResource("10_vcewm")
+text = "2. Why why why"
+
+[node name="DialogueTrigger" type="Area2D" parent="."]
+script = ExtResource("11_b73n6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTrigger"]
+position = Vector2(133, 445)
+shape = SubResource("RectangleShape2D_rhop2")
+
+[node name="memoryloader" parent="." instance=ExtResource("12_rhop2")]
+position = Vector2(1183, -38)
+rotation = -0.570723
+
+[node name="memoryloader2" parent="." instance=ExtResource("12_rhop2")]
+position = Vector2(1336, -60)
+rotation = 0.267035
+
+[node name="memoryloader3" parent="." instance=ExtResource("12_rhop2")]
+position = Vector2(1278, 15)
+rotation = -0.945968
+
+[node name="memoryloader4" parent="." instance=ExtResource("12_rhop2")]
+position = Vector2(1238, 102)
+rotation = 0.197222
+
+[node name="memoryloader5" parent="." instance=ExtResource("12_rhop2")]
+position = Vector2(1340, 68)
+rotation = -0.0174533
+
+[node name="memoryloader6" parent="." instance=ExtResource("12_rhop2")]
+position = Vector2(1212, -142)
+rotation = 0.125664
+
+[node name="memoryloader7" parent="." instance=ExtResource("12_rhop2")]
+position = Vector2(1373, -193)
+rotation = -1.01753

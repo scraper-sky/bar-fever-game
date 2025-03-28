@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://yvhpacff47fk"]
+[gd_scene load_steps=17 format=4 uid="uid://yvhpacff47fk"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_beqrg"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_sp886"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="9_ypc3v"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="10_54mgj"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/ghost.tscn" id="11_825oj"]
+[ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/partyballoons.tscn" id="12_qi5uv"]
+[ext_resource type="PackedScene" uid="uid://2y5glvmluhje" path="res://scenes/dynamic/floatingcatmask.tscn" id="13_f6egh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mjn61"]
 texture = ExtResource("2_sp886")
@@ -265,3 +267,18 @@ Given Land is giving you an infinite sky. Consider it an eternal gift."
 
 [node name="ghost" parent="." instance=ExtResource("11_825oj")]
 position = Vector2(957, 546)
+
+[node name="partyballoons" parent="." instance=ExtResource("12_qi5uv")]
+position = Vector2(305, 507)
+
+[node name="partyballoons2" parent="." instance=ExtResource("12_qi5uv")]
+position = Vector2(795, 473)
+
+[node name="partyballoons3" parent="." instance=ExtResource("12_qi5uv")]
+position = Vector2(1324, 593)
+
+[node name="floatingcatmask" parent="." instance=ExtResource("13_f6egh")]
+position = Vector2(1457, 716)
+
+[node name="floatingcatmask2" parent="." instance=ExtResource("13_f6egh")]
+position = Vector2(601, 527)

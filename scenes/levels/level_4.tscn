@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://by2oub33kp6q0"]
+[gd_scene load_steps=19 format=4 uid="uid://by2oub33kp6q0"]
 
 [ext_resource type="Script" uid="uid://chfqsurmss50t" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="11_ay42o"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="12_uxm2d"]
 [ext_resource type="FontFile" uid="uid://bffg4lkd5k5p8" path="res://fonts&style/Exo-Italic-VariableFont_wght.ttf" id="13_hsvsk"]
+[ext_resource type="PackedScene" uid="uid://2y5glvmluhje" path="res://scenes/dynamic/floatingcatmask.tscn" id="14_fcb7b"]
+[ext_resource type="PackedScene" uid="uid://d1yd33gpmjb1i" path="res://scenes/dynamic/memoryloader.tscn" id="15_ov8fk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3gnf3"]
 texture = ExtResource("3_r57se")
@@ -340,7 +342,7 @@ position = Vector2(743, 1201)
 position = Vector2(429, 1517)
 
 [node name="floatingtorii3" parent="." instance=ExtResource("10_fu4h6")]
-position = Vector2(310, 1206)
+position = Vector2(275, 1224)
 
 [node name="floatingtoriiv2" parent="." instance=ExtResource("11_ay42o")]
 position = Vector2(693, 1569)
@@ -379,3 +381,13 @@ theme_override_fonts/normal_font = ExtResource("13_hsvsk")
 text = "4. You fell here for a reason.
 
 Please stay and enjoy the sky with me. Don't leave. Don't accept any more reasons. Hit a cyberlamp please. This is your final warning."
+
+[node name="floatingcatmask" parent="." instance=ExtResource("14_fcb7b")]
+position = Vector2(631, 572)
+
+[node name="floatingcatmask2" parent="." instance=ExtResource("14_fcb7b")]
+position = Vector2(566, 949)
+rotation = 0.724312
+
+[node name="memoryloader" parent="." instance=ExtResource("15_ov8fk")]
+position = Vector2(523, 190)

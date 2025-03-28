@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bco0oxl1tf6u1"
+path="res://.godot/imported/derealization.dialogue-8d648319e31290638e189db469d7d85f.tres"
+
+[deps]
+
+source_file="res://dialogue/derealization.dialogue"
+dest_files=["res://.godot/imported/derealization.dialogue-8d648319e31290638e189db469d7d85f.tres"]
+
+[params]
+
+defaults=true

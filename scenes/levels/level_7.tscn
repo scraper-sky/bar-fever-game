@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://bqj7iq6jc16bl"]
+[gd_scene load_steps=43 format=4 uid="uid://bqj7iq6jc16bl"]
 
 [ext_resource type="Script" uid="uid://c47efte5ou18r" path="res://scenes/levels/level_7.gd" id="1_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_5ffpf"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="13_ymk4h"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="14_st48t"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="15_dfn7m"]
+[ext_resource type="PackedScene" uid="uid://bahw638wvup6" path="res://scenes/dynamic/floatingsakura.tscn" id="16_8rm7r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dfn7m"]
 texture = ExtResource("3_27cbj")
@@ -718,3 +719,12 @@ position = Vector2(-200, -1849)
 
 [node name="FloatingParticles4" parent="." instance=ExtResource("15_dfn7m")]
 position = Vector2(-201, -2307)
+
+[node name="floatingsakura" parent="." instance=ExtResource("16_8rm7r")]
+position = Vector2(-138, -23)
+
+[node name="floatingsakura2" parent="." instance=ExtResource("16_8rm7r")]
+position = Vector2(-122, -766)
+
+[node name="floatingsakura3" parent="." instance=ExtResource("16_8rm7r")]
+position = Vector2(-85, -1372)

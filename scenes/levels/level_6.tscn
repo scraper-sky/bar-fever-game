@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://r3rb56u7yrik"]
+[gd_scene load_steps=30 format=4 uid="uid://r3rb56u7yrik"]
 
 [ext_resource type="Script" uid="uid://dqlqf5pjt83vv" path="res://scenes/levels/level_6.gd" id="1_fta2x"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_kvmlg"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="13_o37gu"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="14_kt6on"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="15_ppjov"]
+[ext_resource type="PackedScene" uid="uid://bahw638wvup6" path="res://scenes/dynamic/floatingsakura.tscn" id="16_pafwe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e111w"]
 texture = ExtResource("2_awcdf")
@@ -385,3 +386,9 @@ offset_right = 1268.0
 offset_bottom = 223.0
 theme_override_fonts/normal_font = ExtResource("15_ppjov")
 text = "6. If you descend, you will never return..."
+
+[node name="floatingsakura" parent="." instance=ExtResource("16_pafwe")]
+position = Vector2(1414, 1269)
+
+[node name="floatingsakura2" parent="." instance=ExtResource("16_pafwe")]
+position = Vector2(2266, 835)

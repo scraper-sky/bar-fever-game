@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://drahjq4x1ho3k"]
+[gd_scene load_steps=43 format=4 uid="uid://drahjq4x1ho3k"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_n3gcc"]
 [ext_resource type="Script" uid="uid://4cbo2palb5ig" path="res://scenes/levels/level_10.gd" id="1_nk72f"]
@@ -29,6 +29,9 @@
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="27_657iy"]
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="28_yy4hl"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="29_yy4hl"]
+[ext_resource type="PackedScene" uid="uid://dlgrob14823an" path="res://scenes/dynamic/dynamicwords.tscn" id="30_cmr01"]
+[ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/partyballoons.tscn" id="31_b7f35"]
+[ext_resource type="PackedScene" uid="uid://d1yd33gpmjb1i" path="res://scenes/dynamic/memoryloader.tscn" id="32_hmqkb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_55him"]
 texture = ExtResource("2_c7e1w")
@@ -587,3 +590,44 @@ position = Vector2(630, 1095)
 position = Vector2(940, 1410)
 
 [node name="FloatingParticles" parent="." instance=ExtResource("29_yy4hl")]
+
+[node name="dynamicwords" parent="." instance=ExtResource("30_cmr01")]
+position = Vector2(73, 151)
+rotation = -0.499164
+
+[node name="dynamicwords2" parent="." instance=ExtResource("30_cmr01")]
+position = Vector2(-108, 151)
+rotation = 0.286234
+
+[node name="dynamicwords3" parent="." instance=ExtResource("30_cmr01")]
+position = Vector2(-380, 148)
+rotation = -0.214676
+
+[node name="dynamicwords4" parent="." instance=ExtResource("30_cmr01")]
+position = Vector2(587, 163)
+rotation = 0.427606
+
+[node name="dynamicwords5" parent="." instance=ExtResource("30_cmr01")]
+position = Vector2(917, 1636)
+rotation = -0.642281
+
+[node name="dynamicwords6" parent="." instance=ExtResource("30_cmr01")]
+position = Vector2(667, 1647)
+rotation = 0.214676
+
+[node name="dynamicwords7" parent="." instance=ExtResource("30_cmr01")]
+position = Vector2(57, 1642)
+rotation = -0.286234
+
+[node name="dynamicwords8" parent="." instance=ExtResource("30_cmr01")]
+position = Vector2(-179, 1638)
+rotation = 0.427606
+
+[node name="partyballoons" parent="." instance=ExtResource("31_b7f35")]
+position = Vector2(187, 78)
+
+[node name="partyballoons2" parent="." instance=ExtResource("31_b7f35")]
+position = Vector2(-254, 68)
+
+[node name="memoryloader" parent="." instance=ExtResource("32_hmqkb")]
+position = Vector2(881, 2211)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://cpep8iv7y7bfb"]
+[gd_scene load_steps=23 format=4 uid="uid://cpep8iv7y7bfb"]
 
 [ext_resource type="Script" uid="uid://bh8hulmcii4wl" path="res://scenes/levels/level_5.gd" id="1_53jy1"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_tq3vs"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="12_xu5a5"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="13_ne1uf"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="14_j14br"]
+[ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/partyballoons.tscn" id="15_0y7y4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbg7v"]
 texture = ExtResource("2_tq3vs")
@@ -276,8 +277,14 @@ offset_bottom = 40.0
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
 offset_left = 9.0
-offset_top = -112.0
+offset_top = -122.0
 offset_right = 275.0
 offset_bottom = -69.0
 theme_override_fonts/normal_font = ExtResource("14_j14br")
 text = "5. Toggle exactly half the tiles to open the path to the portal."
+
+[node name="partyballoons" parent="." instance=ExtResource("15_0y7y4")]
+position = Vector2(336, -115)
+
+[node name="partyballoons2" parent="." instance=ExtResource("15_0y7y4")]
+position = Vector2(-30, -109)

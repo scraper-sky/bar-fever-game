@@ -14,7 +14,7 @@ func toggle():
 func update_sprite():
 	var sprite = $Sprite2D
 	if sprite:
-		sprite.texture = preload("res://background&art/lamp_block2.png") if is_on else preload("res://background&art/lamp_block1.png")
+		sprite.texture = preload("res://assets/background&art/lamp_block2.png") if is_on else preload("res://assets/background&art/lamp_block1.png")
 	else:
 		print("Error: No Sprite2D on ", name)
 
