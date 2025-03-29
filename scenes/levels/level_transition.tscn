@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://db57w5pp43j24"]
+[gd_scene load_steps=16 format=4 uid="uid://db57w5pp43j24"]
 
 [ext_resource type="Script" uid="uid://b5vhfewu4kgyh" path="res://scenes/levels/level_transition.gd" id="1_gmcu4"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="1_usua8"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="5_vwu0f"]
 [ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="7_84nfw"]
 [ext_resource type="Texture2D" uid="uid://dr5p58bjooqbx" path="res://assets/background&art/undreamer.png" id="8_84nfw"]
+[ext_resource type="Script" uid="uid://djqiwrmxn56ur" path="res://scenes/levels/undreamer_2.gd" id="8_vwu0f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lftlb"]
 texture = ExtResource("1_usua8")
@@ -134,18 +135,19 @@ material = SubResource("ShaderMaterial_vwu0f")
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="Undreamer" type="Control" parent="."]
+[node name="Undreamer2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("8_vwu0f")
 
-[node name="UndreamerDevice" type="Sprite2D" parent="Undreamer"]
+[node name="UndreamerDevice" type="Sprite2D" parent="Undreamer2"]
 position = Vector2(1720, -67)
 rotation = -1.35438
 texture = ExtResource("8_84nfw")
 
-[node name="Button" type="Button" parent="Undreamer"]
+[node name="Undream" type="Button" parent="Undreamer2"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
@@ -158,10 +160,13 @@ offset_top = -164.68
 offset_right = 1458.16
 offset_bottom = -50.68
 
-[node name="Button2" type="Button" parent="Undreamer"]
+[node name="Exit" type="Button" parent="Undreamer2"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 1479.0
 offset_top = -225.0
 offset_right = 1526.0
 offset_bottom = -86.0
+
+[connection signal="pressed" from="Undreamer2/Undream" to="Undreamer2" method="_on_undream_pressed"]
+[connection signal="pressed" from="Undreamer2/Exit" to="Undreamer2" method="_on_exit_pressed"]

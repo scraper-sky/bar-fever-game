@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dkh1mg1rsiln4"
+path="res://.godot/imported/npc_robot.dialogue-415a25c3c92b65907b58db94c679e460.tres"
+
+[deps]
+
+source_file="res://dialogue/npc_robot.dialogue"
+dest_files=["res://.godot/imported/npc_robot.dialogue-415a25c3c92b65907b58db94c679e460.tres"]
+
+[params]
+
+defaults=true
