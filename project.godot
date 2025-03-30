@@ -45,7 +45,7 @@ menu_in={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/level_10.dialogue", "res://dialogue/TestDialogue.dialogue", "res://dialogue/alcoholbottledialogue.dialogue", "res://dialogue/strangepaperdialogue.dialogue", "res://dialogue/derealization.dialogue", "res://dialogue/npc_robot.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/level_10.dialogue", "res://dialogue/TestDialogue.dialogue", "res://dialogue/alcoholbottledialogue.dialogue", "res://dialogue/strangepaperdialogue.dialogue", "res://dialogue/derealization.dialogue", "res://dialogue/npc_robot.dialogue", "res://dialogue/specialrobot1.dialogue", "res://dialogue/specialrobot2.dialogue", "res://dialogue/specialrobot3.dialogue", "res://dialogue/specialrobot4.dialogue")
 
 [layer_names]
 

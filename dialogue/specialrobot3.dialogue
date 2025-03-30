@@ -1,0 +1,16 @@
+~ start
+Being: [[yea yea| ha ha |of course]]... I know, you want to leave this place, right?
+Being: We know everything that happens, happened, and will happen. Our world memos here have already looked through the world's particles. 
+Being: We know what will happen based on configuration (wxo982). We know you'll leave and never return.
+- Can I reverse my fate and stay here?
+	Being: That won't happen. The particles have been locked in place.
+	=> END
+- What else do the particles say about me?
+	Being: I'm afraid I can't tell.
+	=> END
+- Where is the undreamer?
+	Being: The portrait of the lake during the end... tap on the planet.
+	=> END
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END

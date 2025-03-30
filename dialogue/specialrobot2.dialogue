@@ -1,0 +1,17 @@
+~ start
+Being: [[Hi|Hello|Howdy]], what do you want to know?
+- Where am I?
+	Being: I'm afraid I can't answer that.
+	=> END
+- Who am I?
+	Being: I'm afraid I can't answer that.
+	=> END
+- What am I?
+	Being: I'm afraid I can't answer that.
+	=> END
+- How can I leave?
+	Being: Maybe ask the one who's won't ever move. They were banished to one of the corners here. 
+	=> END
+- End the conversation => END
+Being: Loading (wxo982)... 
+=> END

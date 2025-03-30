@@ -1,0 +1,160 @@
+[gd_scene load_steps=11 format=3 uid="uid://cmi1wie8b2kpa"]
+
+[ext_resource type="Texture2D" uid="uid://cki45ohbs6rn3" path="res://characters/updatedraina3.png" id="2_vqf46"]
+[ext_resource type="Texture2D" uid="uid://dcv8ivf6lgnr1" path="res://characters/updatedraina4.png" id="3_3m6sx"]
+[ext_resource type="Texture2D" uid="uid://ctbkb4bnmlx42" path="res://characters/updatedraina1.png" id="4_ghfgm"]
+[ext_resource type="Texture2D" uid="uid://x1unyqsbn5cf" path="res://characters/updatedraina2.png" id="5_6ryy3"]
+[ext_resource type="Texture2D" uid="uid://dx630i6soshxl" path="res://assets/background&art/memoryreloader1.png" id="5_yq1w3"]
+[ext_resource type="Texture2D" uid="uid://cei105d8s5oe" path="res://assets/background&art/memoryreloader2.png" id="6_fp5e2"]
+[ext_resource type="Texture2D" uid="uid://b7qoqopnx83ft" path="res://assets/background&art/memoryreloader3.png" id="7_exuff"]
+
+[sub_resource type="GDScript" id="GDScript_r3058"]
+script/source = "extends CharacterBody2D
+
+@export var speed = 10.0
+@export var jump_power = 15.0
+@onready var animation = $AnimatedSprite2D
+
+var speed_multiplier = 30.0
+var jump_multiplier = -30.0
+var direction = 0
+var start_position: Vector2
+var is_respawning = false
+
+# Enum to track Raina's state
+enum State { RELOADING, UPGRADED }
+var current_state = State.RELOADING  # Start with reloading animation
+
+func _ready():
+	start_position = position
+	is_respawning = false
+	update_appearance()  # Set initial appearance
+
+func _input(event):
+	if event.is_action_pressed(\"menu_in\"):
+		get_tree().change_scene_to_file(\"res://scenes/ui/main_menu.tscn\")
+
+func respawn():
+	if not is_respawning:
+		is_respawning = true
+		position = start_position
+		velocity = Vector2.ZERO
+		update_appearance()
+		print(\"Respawning player at \", position)
+		await get_tree().create_timer(0.1).timeout
+		is_respawning = false
+
+func update_appearance():
+	if current_state == State.RELOADING:
+		animation.play(\"reloading\")
+	else:  # UPGRADED
+		animation.play(\"idle\")
+
+func upgrade():
+	current_state = State.UPGRADED
+	update_appearance()
+
+func _physics_process(delta: float) -> void:
+	if is_respawning:
+		return
+
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = jump_power * jump_multiplier
+
+	direction = Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction != 0:
+		velocity.x = direction * speed * speed_multiplier
+		if direction < 0:
+			animation.flip_h = true
+		else:
+			animation.flip_h = false
+		if current_state == State.RELOADING:
+			if animation.animation != \"reloading\":
+				animation.play(\"reloading\")
+		else:  # UPGRADED
+			if animation.animation != \"walking\":
+				animation.play(\"walking\")
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
+		if is_on_floor():
+			if current_state == State.RELOADING:
+				if animation.animation != \"reloading\":
+					animation.play(\"reloading\")
+			else:  # UPGRADED
+				if animation.animation != \"idle\":
+					animation.play(\"idle\")
+
+	move_and_slide()
+
+	if not is_on_floor() and direction == 0:
+		if current_state == State.RELOADING:
+			if animation.animation != \"reloading\":
+				animation.play(\"reloading\")
+		else:  # UPGRADED
+			if animation.animation != \"idle\":
+				animation.play(\"idle\")
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qo7xb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vqf46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3m6sx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yq1w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fp5e2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_exuff")
+}],
+"loop": true,
+"name": &"reloading",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vqf46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ghfgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6ryy3")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_prc02"]
+radius = 11.0
+height = 36.0
+
+[node name="MainPlayer2" type="CharacterBody2D"]
+script = SubResource("GDScript_r3058")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.43051e-06, -7.15256e-07)
+scale = Vector2(0.65625, 0.59375)
+sprite_frames = SubResource("SpriteFrames_qo7xb")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_prc02")

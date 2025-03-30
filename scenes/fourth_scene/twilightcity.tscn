@@ -1,12 +1,21 @@
-[gd_scene load_steps=8 format=4 uid="uid://b33yahrhpiodn"]
+[gd_scene load_steps=17 format=4 uid="uid://b33yahrhpiodn"]
 
 [ext_resource type="Script" uid="uid://noe1ufnl8eo" path="res://scenes/fourth_scene/twilightcity.gd" id="1_gdpht"]
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_n8fvj"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_tmkuj"]
 [ext_resource type="Texture2D" uid="uid://c2f7u2vu16duo" path="res://assets/background&art/crypticsky-Recovered.png" id="3_pooym"]
 [ext_resource type="Texture2D" uid="uid://dak0inob8gbmt" path="res://assets/background&art/orbsky.png" id="4_pooym"]
+[ext_resource type="PackedScene" uid="uid://dg7x0y6uedogp" path="res://scenes/dynamic/specialrobot_1.tscn" id="6_buaj7"]
+[ext_resource type="PackedScene" uid="uid://dv27et8myfsqq" path="res://scenes/dynamic/specialrobot_2.tscn" id="7_ji8uk"]
+[ext_resource type="PackedScene" uid="uid://fyvfeuy4qvct" path="res://scenes/dynamic/specialrobot_3.tscn" id="8_1e6la"]
+[ext_resource type="PackedScene" uid="uid://c6apalp4l52su" path="res://scenes/second_scene/specialrobot_4.tscn" id="9_k8sry"]
+[ext_resource type="Script" uid="uid://dtvenexpwwf33" path="res://scenes/fourth_scene/undreamer_2.gd" id="10_152um"]
+[ext_resource type="Texture2D" uid="uid://dr5p58bjooqbx" path="res://assets/background&art/undreamer.png" id="10_872l8"]
+[ext_resource type="PackedScene" uid="uid://bj7y3pjstbfay" path="res://scenes/dynamic/homexe.tscn" id="12_givce"]
+[ext_resource type="PackedScene" uid="uid://ccmcbk4iwtukm" path="res://scenes/dynamic/floatingmemopad.tscn" id="13_w2p7w"]
+[ext_resource type="PackedScene" uid="uid://baboqc1c000dx" path="res://scenes/dynamic/rainbowdevice.tscn" id="14_v4rjq"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a6bxt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4rjq"]
 texture = ExtResource("1_n8fvj")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.42271, -8, -8, 8, -8, 8, 8, -8, 8)
@@ -523,7 +532,7 @@ texture = ExtResource("1_n8fvj")
 
 [sub_resource type="TileSet" id="TileSet_4fl1q"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_a6bxt")
+sources/0 = SubResource("TileSetAtlasSource_v4rjq")
 
 [node name="twilightcity" type="Node2D"]
 script = ExtResource("1_gdpht")
@@ -546,7 +555,131 @@ position = Vector2(657, 90)
 scale = Vector2(3.50293, 3.97266)
 texture = ExtResource("3_pooym")
 
-[node name="OrbPicture" type="Sprite2D" parent="."]
-position = Vector2(1217, 280)
+[node name="specialrobot1" parent="." instance=ExtResource("6_buaj7")]
+position = Vector2(852, -80)
+
+[node name="specialrobot2" parent="." instance=ExtResource("7_ji8uk")]
+position = Vector2(-394, 127)
+
+[node name="specialrobot3" parent="." instance=ExtResource("8_1e6la")]
+position = Vector2(1476, -932)
+
+[node name="specialrobot_4" parent="." instance=ExtResource("9_k8sry")]
+position = Vector2(-151, -369)
+
+[node name="Portrait" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OrbPicture" type="Sprite2D" parent="Portrait"]
+position = Vector2(1199, 301)
 scale = Vector2(0.162109, 0.162109)
 texture = ExtResource("4_pooym")
+
+[node name="Button" type="Button" parent="Portrait"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1161.0
+offset_top = 250.0
+offset_right = 1240.0
+offset_bottom = 298.0
+
+[node name="Undreamer2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_152um")
+
+[node name="UndreamerDevice" type="Sprite2D" parent="Undreamer2"]
+position = Vector2(1370, 370)
+scale = Vector2(0.459184, 0.446882)
+texture = ExtResource("10_872l8")
+
+[node name="Undream" type="Button" parent="Undreamer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1369.0
+offset_top = 256.0
+offset_right = 1417.0
+offset_bottom = 277.0
+
+[node name="Exit" type="Button" parent="Undreamer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1364.0
+offset_top = 293.0
+offset_right = 1417.0
+offset_bottom = 311.0
+
+[node name="homexe" parent="." instance=ExtResource("12_givce")]
+position = Vector2(338, -48)
+
+[node name="homexe2" parent="." instance=ExtResource("12_givce")]
+position = Vector2(962, -427)
+
+[node name="homexe3" parent="." instance=ExtResource("12_givce")]
+position = Vector2(1124, -504)
+
+[node name="homexe4" parent="." instance=ExtResource("12_givce")]
+position = Vector2(1251, -417)
+
+[node name="homexe5" parent="." instance=ExtResource("12_givce")]
+position = Vector2(-241, -821)
+
+[node name="homexe6" parent="." instance=ExtResource("12_givce")]
+position = Vector2(-130, -823)
+
+[node name="homexe7" parent="." instance=ExtResource("12_givce")]
+position = Vector2(-14, -819)
+
+[node name="homexe8" parent="." instance=ExtResource("12_givce")]
+position = Vector2(107, -814)
+
+[node name="homexe9" parent="." instance=ExtResource("12_givce")]
+position = Vector2(418, 610)
+
+[node name="homexe10" parent="." instance=ExtResource("12_givce")]
+position = Vector2(1198, 603)
+
+[node name="floatingmemopad" parent="." instance=ExtResource("13_w2p7w")]
+position = Vector2(581, 122)
+
+[node name="floatingmemopad2" parent="." instance=ExtResource("13_w2p7w")]
+position = Vector2(648, 121)
+
+[node name="floatingmemopad3" parent="." instance=ExtResource("13_w2p7w")]
+position = Vector2(414, -125)
+
+[node name="floatingmemopad4" parent="." instance=ExtResource("13_w2p7w")]
+position = Vector2(-333, -384)
+
+[node name="floatingmemopad5" parent="." instance=ExtResource("13_w2p7w")]
+position = Vector2(228, -502)
+
+[node name="floatingmemopad6" parent="." instance=ExtResource("13_w2p7w")]
+position = Vector2(715, 122)
+
+[node name="rainbowdevice" parent="." instance=ExtResource("14_v4rjq")]
+position = Vector2(331, 246)
+
+[node name="rainbowdevice2" parent="." instance=ExtResource("14_v4rjq")]
+position = Vector2(1272, -120)
+
+[node name="rainbowdevice3" parent="." instance=ExtResource("14_v4rjq")]
+position = Vector2(1289, -763)
+
+[node name="rainbowdevice4" parent="." instance=ExtResource("14_v4rjq")]
+position = Vector2(403, -624)
+
+[node name="rainbowdevice5" parent="." instance=ExtResource("14_v4rjq")]
+position = Vector2(-176, 76)
+
+[node name="rainbowdevice6" parent="." instance=ExtResource("14_v4rjq")]
+position = Vector2(-271, 623)
+
+[connection signal="pressed" from="Portrait/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Undreamer2/Undream" to="Undreamer2" method="_on_undream_pressed"]
+[connection signal="pressed" from="Undreamer2/Exit" to="Undreamer2" method="_on_exit_pressed"]

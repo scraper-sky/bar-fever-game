@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://b3l1gjvnqv3e6"
+path="res://.godot/imported/specialrobot2.dialogue-571132aba73406665ced3ac9ac1a53f6.tres"
+
+[deps]
+
+source_file="res://dialogue/specialrobot2.dialogue"
+dest_files=["res://.godot/imported/specialrobot2.dialogue-571132aba73406665ced3ac9ac1a53f6.tres"]
+
+[params]
+
+defaults=true
