@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://beolo0be8grp7"]
+[gd_scene load_steps=12 format=4 uid="uid://beolo0be8grp7"]
 
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_vg6n8"]
 [ext_resource type="Script" uid="uid://1wtlo3gcxdo7" path="res://scenes/levels/level_14.gd" id="1_xf43s"]
@@ -7,8 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/space_spike_trap.tscn" id="5_y3x6f"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="6_2j1nx"]
 [ext_resource type="PackedScene" uid="uid://b4k87ea7nlgx3" path="res://scenes/area_functionality/red_portal.tscn" id="7_wr6ej"]
+[ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="8_7yavk"]
+[ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/electricgrass.tscn" id="9_hfkb1"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cjcmj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hfkb1"]
 texture = ExtResource("1_vg6n8")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.42271, -8, -8, 8, -8, 8, 8, -8, 8)
@@ -525,7 +527,7 @@ texture = ExtResource("1_vg6n8")
 
 [sub_resource type="TileSet" id="TileSet_c7ceo"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_cjcmj")
+sources/0 = SubResource("TileSetAtlasSource_hfkb1")
 
 [node name="level_14" type="Node2D"]
 script = ExtResource("1_xf43s")
@@ -610,3 +612,16 @@ target_position = Vector2(1115, -288)
 [node name="red_portal6" parent="." instance=ExtResource("7_wr6ej")]
 position = Vector2(1169, 132)
 target_position = Vector2(1350, -250)
+
+[node name="BluePortal" parent="." instance=ExtResource("8_7yavk")]
+position = Vector2(1493, -83)
+target_scene = "res://scenes/levels/level_15.tscn"
+
+[node name="electricgrass" parent="." instance=ExtResource("9_hfkb1")]
+position = Vector2(90, -16)
+
+[node name="electricgrass2" parent="." instance=ExtResource("9_hfkb1")]
+position = Vector2(-70, -16)
+
+[node name="electricgrass3" parent="." instance=ExtResource("9_hfkb1")]
+position = Vector2(1326, -32)
