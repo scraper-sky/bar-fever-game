@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://qia1gjqqdvr1"]
+[gd_scene load_steps=30 format=4 uid="uid://qia1gjqqdvr1"]
 
 [ext_resource type="Script" uid="uid://do4cp2iisk0j8" path="res://scenes/levels/level_9.gd" id="1_sd2du"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_6v45j"]
@@ -12,8 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="10_kj523"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="11_xampj"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/ghost.tscn" id="12_xev4b"]
-[ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="13_ylwrn"]
-[ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="14_c68rt"]
 [ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/partyballoons.tscn" id="15_b7r0f"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="16_xex4j"]
 
@@ -593,66 +591,6 @@ position = Vector2(586, 286)
 
 [node name="ghost3" parent="." instance=ExtResource("12_xev4b")]
 position = Vector2(1379, -590)
-
-[node name="ColorBlock" parent="." instance=ExtResource("13_ylwrn")]
-position = Vector2(1303, 749)
-
-[node name="ColorBlock2" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1354, 693)
-
-[node name="ColorBlock3" parent="." instance=ExtResource("13_ylwrn")]
-position = Vector2(1354, 795)
-
-[node name="ColorBlock4" parent="." instance=ExtResource("13_ylwrn")]
-position = Vector2(1427, 881)
-
-[node name="ColorBlock5" parent="." instance=ExtResource("13_ylwrn")]
-position = Vector2(1485, 936)
-
-[node name="ColorBlock6" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1414, 746)
-
-[node name="ColorBlock7" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1486, 824)
-
-[node name="ColorBlock8" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1548, 879)
-
-[node name="ColorBlock9" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1638, 976)
-
-[node name="ColorBlock10" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1700, 1033)
-
-[node name="ColorBlock11" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1158, 892)
-
-[node name="ColorBlock12" parent="." instance=ExtResource("13_ylwrn")]
-position = Vector2(1584, 1034)
-
-[node name="ColorBlock13" parent="." instance=ExtResource("13_ylwrn")]
-position = Vector2(1640, 1088)
-
-[node name="ColorBlock14" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1422, 1164)
-
-[node name="ColorBlock15" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1479, 1220)
-
-[node name="ColorBlock16" parent="." instance=ExtResource("13_ylwrn")]
-position = Vector2(1107, 947)
-
-[node name="ColorBlock17" parent="." instance=ExtResource("13_ylwrn")]
-position = Vector2(1424, 1267)
-
-[node name="ColorBlock18" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1529, 519)
-
-[node name="ColorBlock19" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1689, 684)
-
-[node name="ColorBlock20" parent="." instance=ExtResource("14_c68rt")]
-position = Vector2(1744, 744)
 
 [node name="partyballoons" parent="." instance=ExtResource("15_b7r0f")]
 position = Vector2(104, 12)

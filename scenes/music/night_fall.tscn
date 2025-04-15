@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj0bt0kk3rx6i"]
+
+[ext_resource type="AudioStream" uid="uid://dem8j1hxeryoc" path="res://scenes/music/nightfall-future-bass-music-228100.mp3" id="1_pl653"]
+[ext_resource type="Script" uid="uid://ds8r2e3pvth2d" path="res://scenes/music/night_fall.gd" id="2_rubo5"]
+
+[node name="NightFall" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_pl653")
+script = ExtResource("2_rubo5")
