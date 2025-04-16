@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="5_6siiu"]
 [ext_resource type="Texture2D" uid="uid://dpcyknat33v6f" path="res://assets/background&art/deepsky.png" id="7_hsgml"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m0brh"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mdtb3"]
 texture = ExtResource("1_721gy")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.42271, -8, -8, 8, -8, 8, 8, -8, 8)
@@ -525,7 +525,7 @@ texture = ExtResource("1_721gy")
 
 [sub_resource type="TileSet" id="TileSet_240qv"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_m0brh")
+sources/0 = SubResource("TileSetAtlasSource_mdtb3")
 
 [node name="level_15" type="Node2D"]
 script = ExtResource("1_mdtb3")
@@ -637,6 +637,7 @@ position = Vector2(1342, -15)
 
 [node name="BluePortal" parent="." instance=ExtResource("5_6siiu")]
 position = Vector2(1477, -78)
+target_scene = "res://scenes/levels/level_16.tscn"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
