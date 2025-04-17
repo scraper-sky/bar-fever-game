@@ -30,6 +30,7 @@ func _ready():
 	print("Initial state: ", State.keys()[current_state])
 	update_appearance()
 
+
 func _input(event):
 	if event.is_action_pressed("menu_in"):
 		get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
@@ -87,8 +88,15 @@ func _physics_process(delta: float) -> void:
 			else:  # UPGRADED
 				if animation.animation != "idle":
 					animation.play("idle")
-
 	move_and_slide()
+	var slide_count = get_slide_collision_count()
+	for i in range(slide_count):
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider.is_in_group("laser"):
+			print("Raina hit by laser! Respawning at ", start_position)
+			respawn()
+			break
 
 	if not is_on_floor() and direction == 0:
 		if current_state == State.RELOADING:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmi1wie8b2kpa"]
+[gd_scene load_steps=12 format=3 uid="uid://cmi1wie8b2kpa"]
 
 [ext_resource type="Script" uid="uid://bubxr8ut1e5ou" path="res://scenes/secondmainplayer.gd" id="1_ghfgm"]
 [ext_resource type="Texture2D" uid="uid://cki45ohbs6rn3" path="res://characters/updatedraina3.png" id="2_vqf46"]
@@ -55,7 +55,11 @@ animations = [{
 radius = 11.0
 height = 36.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghfgm"]
+size = Vector2(15, 36)
+
 [node name="MainPlayer2" type="CharacterBody2D"]
+collision_mask = 7
 script = ExtResource("1_ghfgm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -69,3 +73,10 @@ animation = &"walking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_prc02")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ghfgm")
