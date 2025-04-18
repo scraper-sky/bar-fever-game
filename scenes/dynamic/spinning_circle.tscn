@@ -1,9 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7j8hqopnfaxt"]
+[gd_scene load_steps=8 format=3 uid="uid://c7j8hqopnfaxt"]
 
 [ext_resource type="Texture2D" uid="uid://bsya1rg1g7kp5" path="res://assets/background&art/spinnycircle.png" id="1_35y5k"]
 [ext_resource type="Script" uid="uid://df6n6otvwxmxj" path="res://scenes/dynamic/spinning_circle.gd" id="1_cskvl"]
+[ext_resource type="Shader" uid="uid://bwt8p4neyg5ys" path="res://shaders/disco_effect.gdshader" id="1_uom8v"]
 [ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/space_spike_trap.tscn" id="2_sb2pt"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="3_cskvl"]
+[ext_resource type="PackedScene" uid="uid://dlqsxofwtcrv3" path="res://scenes/dynamic/laser_emitter.tscn" id="6_0o3ov"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uom8v"]
+shader = ExtResource("1_uom8v")
+shader_parameter/speed = 2.5
+shader_parameter/pulse_strength = 0.5
+shader_parameter/base_alpha = 0.6
+shader_parameter/alpha_pulse = 0.2
+shader_parameter/sparkle_density = 0.01
+shader_parameter/sparkle_speed = 3.0
 
 [node name="SpinningCircle" type="Node2D"]
 script = ExtResource("1_cskvl")
@@ -11,6 +22,7 @@ script = ExtResource("1_cskvl")
 [node name="Platform" type="Node2D" parent="."]
 
 [node name="Visual" type="Sprite2D" parent="Platform"]
+material = SubResource("ShaderMaterial_uom8v")
 scale = Vector2(3.906, 3.906)
 texture = ExtResource("1_35y5k")
 
@@ -36,17 +48,32 @@ position = Vector2(407, -326)
 rotation = 0.785398
 
 [node name="SpaceSpikeTrap6" parent="Obstacles" instance=ExtResource("2_sb2pt")]
-position = Vector2(378, 355)
-rotation = 2.35619
+position = Vector2(240, 461)
+rotation = 2.61799
 
 [node name="SpaceSpikeTrap7" parent="Obstacles" instance=ExtResource("2_sb2pt")]
 position = Vector2(-365, 372)
 rotation = -2.35619
 
 [node name="SpaceSpikeTrap8" parent="Obstacles" instance=ExtResource("2_sb2pt")]
-position = Vector2(463, 243)
-rotation = 2.0944
+position = Vector2(343, 382)
+rotation = 2.35619
 
 [node name="BluePortal" parent="Obstacles" instance=ExtResource("3_cskvl")]
-position = Vector2(466, 307)
-rotation = 2.35619
+position = Vector2(333, 432)
+rotation = 2.44346
+
+[node name="LaserEmitter" parent="Obstacles" instance=ExtResource("6_0o3ov")]
+position = Vector2(475, -145)
+rotation = 0.523599
+direction = 2.0
+
+[node name="LaserEmitter2" parent="Obstacles" instance=ExtResource("6_0o3ov")]
+position = Vector2(250, -434)
+rotation = 1.309
+direction = 2.0
+
+[node name="LaserEmitter3" parent="Obstacles" instance=ExtResource("6_0o3ov")]
+position = Vector2(-482, 195)
+rotation = 2.0944
+direction = -2.0

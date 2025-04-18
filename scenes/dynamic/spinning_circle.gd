@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var rotation_speed: float = -0.45  # radians/sec, slower clockwise
-@export var fixed_position: Vector2 = Vector2(400, 760)  # Center, top edge at y=210
+@export var fixed_position: Vector2 = Vector2(400, 720)  # Center, top edge at y=210
 @export var player_position: Vector2 = Vector2(400, 200)  # Raina
 @export var initial_rotation: float = -3.14159  # ~1.5 rotations before spike at top
 

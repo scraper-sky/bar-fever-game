@@ -3,6 +3,7 @@ extends Area2D
 var speed: float = 450.0
 var direction: float = 1.0
 var stopped: bool = false
+var has_hit: bool = false
 
 func _ready():
 	add_to_group("laser")
@@ -24,6 +25,11 @@ func _physics_process(delta: float):
 			print("Laser collided with MainPlayer2")
 			body.position = Vector2(0, 0)
 			break
+		elif body.name == "MainPlayer2Level18":
+			has_hit = true
+			print("Player hit spike: ", body.name)
+			set_deferred("monitoring", false)
+			get_tree().call_deferred("reload_current_scene")	
 		elif body is StaticBody2D:
 			print("Laser hit TileMap at position: ", position)
 			stopped = true
