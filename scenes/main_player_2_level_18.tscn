@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://bel6r36jwyhgm"]
+
+[ext_resource type="Script" uid="uid://cy6yli411mrag" path="res://scenes/main_player_2_level_18.gd" id="1_7oanj"]
+[ext_resource type="Texture2D" uid="uid://cki45ohbs6rn3" path="res://characters/updatedraina3.png" id="2_0l1yg"]
+[ext_resource type="Texture2D" uid="uid://dcv8ivf6lgnr1" path="res://characters/updatedraina4.png" id="3_432wq"]
+[ext_resource type="Texture2D" uid="uid://dx630i6soshxl" path="res://assets/background&art/memoryreloader1.png" id="4_obqp8"]
+[ext_resource type="Texture2D" uid="uid://cei105d8s5oe" path="res://assets/background&art/memoryreloader2.png" id="5_nlnyb"]
+[ext_resource type="Texture2D" uid="uid://b7qoqopnx83ft" path="res://assets/background&art/memoryreloader3.png" id="6_w1pd8"]
+[ext_resource type="Texture2D" uid="uid://ctbkb4bnmlx42" path="res://characters/updatedraina1.png" id="7_7qvuo"]
+[ext_resource type="Texture2D" uid="uid://x1unyqsbn5cf" path="res://characters/updatedraina2.png" id="8_ufasc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnfx8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0l1yg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_432wq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_obqp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nlnyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w1pd8")
+}],
+"loop": true,
+"name": &"reloading",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0l1yg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7qvuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ufasc")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y2mxh"]
+radius = 11.0
+height = 36.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6vp5"]
+size = Vector2(15, 36)
+
+[node name="MainPlayer2Level18" type="CharacterBody2D"]
+script = ExtResource("1_7oanj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.43051e-06, -7.15256e-07)
+scale = Vector2(0.65625, 0.59375)
+sprite_frames = SubResource("SpriteFrames_wnfx8")
+animation = &"walking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_y2mxh")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_d6vp5")

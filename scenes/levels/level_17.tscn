@@ -582,6 +582,7 @@ direction = -4.0
 
 [node name="BluePortal" parent="." instance=ExtResource("4_ddhf2")]
 position = Vector2(482, 1242)
+target_scene = "res://scenes/levels/level_18.tscn"
 
 [node name="SpaceSpikeTrap" parent="." instance=ExtResource("5_ddhf2")]
 position = Vector2(667, -1)

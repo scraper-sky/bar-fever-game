@@ -25,14 +25,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18xvg"]
 size = Vector2(66, 53)
 
-[node name="SpaceSpikeTrap" type="Node2D"]
-
-[node name="Area2D" type="Area2D" parent="."]
+[node name="SpaceSpikeTrap" type="Area2D"]
 script = ExtResource("1_mv85e")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_okope")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_18xvg")

@@ -8,7 +8,7 @@ func _ready():
 		$AnimatedSprite2D.play("flicker")
 
 func _on_body_entered(body):
-	if body.name == "MainPlayer" or body.name == "MainPlayer2":
+	if body.name in ["MainPlayer", "MainPlayer2", "MainPlayer2Level18"]:
 		call_deferred("transition_to_next_level")
 
 func transition_to_next_level():

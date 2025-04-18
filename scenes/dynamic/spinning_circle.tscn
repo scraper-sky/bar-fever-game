@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7j8hqopnfaxt"]
+
+[ext_resource type="Texture2D" uid="uid://bsya1rg1g7kp5" path="res://assets/background&art/spinnycircle.png" id="1_35y5k"]
+[ext_resource type="Script" uid="uid://df6n6otvwxmxj" path="res://scenes/dynamic/spinning_circle.gd" id="1_cskvl"]
+[ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/space_spike_trap.tscn" id="2_sb2pt"]
+[ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="3_cskvl"]
+
+[node name="SpinningCircle" type="Node2D"]
+script = ExtResource("1_cskvl")
+
+[node name="Platform" type="Node2D" parent="."]
+
+[node name="Visual" type="Sprite2D" parent="Platform"]
+scale = Vector2(3.906, 3.906)
+texture = ExtResource("1_35y5k")
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="SpaceSpikeTrap" parent="Obstacles" instance=ExtResource("2_sb2pt")]
+position = Vector2(533, 45)
+rotation = 1.5708
+
+[node name="SpaceSpikeTrap2" parent="Obstacles" instance=ExtResource("2_sb2pt")]
+position = Vector2(45, -532)
+
+[node name="SpaceSpikeTrap3" parent="Obstacles" instance=ExtResource("2_sb2pt")]
+position = Vector2(-532, -43)
+rotation = -1.5708
+
+[node name="SpaceSpikeTrap4" parent="Obstacles" instance=ExtResource("2_sb2pt")]
+position = Vector2(-395, -343)
+rotation = -0.785398
+
+[node name="SpaceSpikeTrap5" parent="Obstacles" instance=ExtResource("2_sb2pt")]
+position = Vector2(407, -326)
+rotation = 0.785398
+
+[node name="SpaceSpikeTrap6" parent="Obstacles" instance=ExtResource("2_sb2pt")]
+position = Vector2(378, 355)
+rotation = 2.35619
+
+[node name="SpaceSpikeTrap7" parent="Obstacles" instance=ExtResource("2_sb2pt")]
+position = Vector2(-365, 372)
+rotation = -2.35619
+
+[node name="SpaceSpikeTrap8" parent="Obstacles" instance=ExtResource("2_sb2pt")]
+position = Vector2(463, 243)
+rotation = 2.0944
+
+[node name="BluePortal" parent="Obstacles" instance=ExtResource("3_cskvl")]
+position = Vector2(466, 307)
+rotation = 2.35619
