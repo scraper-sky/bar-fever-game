@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1mtkxambvcqu"]
+
+[ext_resource type="AudioStream" uid="uid://reukb74g318p" path="res://scenes/music/init.mp3" id="1_1vpx0"]
+[ext_resource type="Script" uid="uid://c1fy2rb3ycxkm" path="res://scenes/music/init().gd" id="2_st538"]
+
+[node name="Init()" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_1vpx0")
+script = ExtResource("2_st538")
