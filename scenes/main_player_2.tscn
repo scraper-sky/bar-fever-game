@@ -58,7 +58,7 @@ height = 36.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghfgm"]
 size = Vector2(15, 36)
 
-[node name="MainPlayer2" type="CharacterBody2D"]
+[node name="MainPlayer2" type="CharacterBody2D" groups=["player"]]
 collision_mask = 7
 script = ExtResource("1_ghfgm")
 

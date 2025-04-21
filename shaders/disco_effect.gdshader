@@ -15,22 +15,22 @@ float rand(vec2 co) {
 void fragment() {
     // Sample sprite texture
     vec4 tex_color = texture(TEXTURE, UV);
-    
+
     // Disco effect: cycle colors
     float r = sin(TIME * speed + 0.0) * 0.5 + 0.5; // Red
     float g = sin(TIME * speed + 2.0) * 0.5 + 0.5; // Green
     float b = sin(TIME * speed + 4.0) * 0.5 + 0.5; // Blue
-    
+
     // Color pulse effect
     float pulse = sin(TIME * speed * 2.0) * pulse_strength + (1.0 - pulse_strength);
-    
+
     // Alpha pulse (0.4-0.8 range)
     float alpha = base_alpha + sin(TIME * speed) * alpha_pulse;
-    
+
     // Base disco color
     vec3 disco_color = vec3(r, g, b) * pulse;
     vec4 base_color = vec4(disco_color * tex_color.rgb, tex_color.a * alpha);
-    
+
     // Sparkle effect
     vec3 sparkle_color = vec3(0.0);
     float sparkle = rand(UV * 100.0 + TIME * sparkle_speed);
@@ -43,7 +43,7 @@ void fragment() {
         float twinkle = sin(TIME * sparkle_speed + rand(UV) * 6.283) * 0.5 + 0.5;
         sparkle_color = vec3(sr, sg, sb) * twinkle * tex_color.a;
     }
-    
+
     // Combine disco and sparkles
     COLOR = vec4(base_color.rgb + sparkle_color, base_color.a);
 }
