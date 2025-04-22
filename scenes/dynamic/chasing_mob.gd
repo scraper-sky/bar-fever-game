@@ -46,9 +46,17 @@ func _physics_process(delta: float) -> void:
 		var direction = (target_position - position).normalized()
 		velocity = direction * speed
 		
+		# Flip the sprite based on movement direction
+		if direction.x < 0:
+			animated_sprite.flip_h = true  # Face left
+		elif direction.x > 0:
+			animated_sprite.flip_h = false  # Face right
+		
+		# When player stops, ChasingMob moves right by default
 		if player.velocity.length() < 10.0:
 			velocity = Vector2(speed, 0)
 			animated_sprite.speed_scale = 1.5
+			animated_sprite.flip_h = false  # Face right when moving right
 		else:
 			animated_sprite.speed_scale = 1.0
 		
@@ -62,9 +70,14 @@ func _physics_process(delta: float) -> void:
 				print("Mob caught player: ChasingMob")
 				# Reset player position and physics state
 				player.position = Vector2(100, 200)
-				player.velocity = Vector2.ZERO  # Reset velocity to prevent immediate re-collision
+				player.velocity = Vector2.ZERO
 				position_history.clear()
 				# Move ChasingMob farther back to avoid immediate collision
-				position = player.position - Vector2(follow_distance + 20, 0)  # Add extra distance
-				catch_timer = catch_cooldown  # Start cooldown
-				break  # Exit loop to avoid multiple collision detections in the same frame
+				position = player.position - Vector2(follow_distance + 20, 0)
+				catch_timer = catch_cooldown
+				# After catching, flip based on new relative position
+				if position.x < player.position.x:
+					animated_sprite.flip_h = false  # Face right toward player
+				else:
+					animated_sprite.flip_h = true  # Face left toward player
+				break

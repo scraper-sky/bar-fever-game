@@ -18,13 +18,13 @@
 [ext_resource type="PackedScene" uid="uid://bahw638wvup6" path="res://scenes/dynamic/floatingsakura.tscn" id="16_8rm7r"]
 [ext_resource type="PackedScene" uid="uid://bj0bt0kk3rx6i" path="res://scenes/music/night_fall.tscn" id="17_c64tk"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dfn7m"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c64tk"]
 texture = ExtResource("3_27cbj")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rm7r"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bntht"]
 texture = ExtResource("4_x1ki7")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -103,8 +103,8 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_pf4i8"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_dfn7m")
-sources/1 = SubResource("TileSetAtlasSource_8rm7r")
+sources/0 = SubResource("TileSetAtlasSource_c64tk")
+sources/1 = SubResource("TileSetAtlasSource_bntht")
 
 [sub_resource type="Curve2D" id="Curve2D_13aap"]
 resource_local_to_scene = true
