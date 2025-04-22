@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="21_yj5a0"]
 [ext_resource type="PackedScene" uid="uid://dlqsxofwtcrv3" path="res://scenes/dynamic/laser_emitter.tscn" id="22_yj5a0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evkm1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yj5a0"]
 texture = ExtResource("2_155pm")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1050,7 +1050,7 @@ texture = ExtResource("2_155pm")
 31:15/0 = 0
 31:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukobw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hg2gm"]
 texture = ExtResource("3_ty7xx")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1567,16 +1567,16 @@ texture = ExtResource("3_ty7xx")
 
 [sub_resource type="TileSet" id="TileSet_ir7j7"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_evkm1")
-sources/2 = SubResource("TileSetAtlasSource_ukobw")
+sources/0 = SubResource("TileSetAtlasSource_yj5a0")
+sources/2 = SubResource("TileSetAtlasSource_hg2gm")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_318w8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdowq"]
 texture = ExtResource("11_tetix")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rwau5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tsew0"]
 texture = ExtResource("12_r7t1r")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -1655,14 +1655,15 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_q88f4"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_318w8")
-sources/1 = SubResource("TileSetAtlasSource_rwau5")
+sources/0 = SubResource("TileSetAtlasSource_qdowq")
+sources/1 = SubResource("TileSetAtlasSource_tsew0")
 
 [node name="level_23" type="Node2D"]
 script = ExtResource("1_1o3dd")
 
 [node name="BluePortal" parent="." instance=ExtResource("2_r7t1r")]
 position = Vector2(-1150, -3800)
+target_scene = "res://scenes/levels/level_24.tscn"
 
 [node name="Background" type="ParallaxBackground" parent="."]
 offset = Vector2(-400, 200)
