@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://bh4motacnc3x3"]
+[gd_scene load_steps=39 format=4 uid="uid://bh4motacnc3x3"]
 
 [ext_resource type="Texture2D" uid="uid://b5kapk1c37src" path="res://assets/background&art/chaoticsky1.png" id="1_75tqh"]
 [ext_resource type="Script" uid="uid://d3ymjhjxcchnc" path="res://scenes/levels/level_24.gd" id="1_fb8nu"]
@@ -27,6 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://bj7y3pjstbfay" path="res://scenes/dynamic/homexe.tscn" id="25_7bhya"]
 [ext_resource type="PackedScene" uid="uid://ccmcbk4iwtukm" path="res://scenes/dynamic/floatingmemopad.tscn" id="26_613b6"]
 [ext_resource type="PackedScene" uid="uid://d1yd33gpmjb1i" path="res://scenes/dynamic/memoryloader.tscn" id="27_c7ehq"]
+[ext_resource type="Shader" uid="uid://q3ovrjuernkq" path="res://shaders/static_flicker.gdshader" id="28_613b6"]
+[ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="29_c7ehq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_awrpk"]
 animations = [{
@@ -1683,6 +1685,17 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_awrpk")
 sources/1 = SubResource("TileSetAtlasSource_8pqhl")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c7ehq"]
+shader = ExtResource("28_613b6")
+shader_parameter/time_scale = 10.0
+shader_parameter/noise_density = 50.0
+shader_parameter/flicker_speed = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q6n0s"]
+shader = ExtResource("29_c7ehq")
+shader_parameter/intensity = 0.3
+shader_parameter/speed = 10.0
+
 [node name="level_24" type="Node2D"]
 script = ExtResource("1_fb8nu")
 
@@ -1964,7 +1977,6 @@ position = Vector2(1633, 4)
 start_direction = -1
 
 [node name="LaserEmitter" parent="." instance=ExtResource("15_hthbx")]
-direction = 2.0
 
 [node name="LaserEmitter2" parent="." instance=ExtResource("15_hthbx")]
 position = Vector2(2242, 200)
@@ -2132,3 +2144,19 @@ rotation = -0.0802851
 [node name="memoryloader5" parent="." instance=ExtResource("27_c7ehq")]
 position = Vector2(2331, 1476)
 rotation = -0.321141
+
+[node name="StaticOverlay" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_c7ehq")
+offset_left = -5918.0
+offset_top = -4381.0
+offset_right = -4090.0
+offset_bottom = -3402.0
+scale = Vector2(8, 8)
+
+[node name="StaticOverlay2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_q6n0s")
+offset_left = -5918.0
+offset_top = -4381.0
+offset_right = -4090.0
+offset_bottom = -3402.0
+scale = Vector2(8, 8)

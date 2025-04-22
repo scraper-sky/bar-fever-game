@@ -1,0 +1,15 @@
+~ start
+Bartender: [[What...|Huh...|Haha]] it's you again. On you seven thousandth visit here. The record-holding alcoholic.
+Bartender: What would you like to order? It's not going to be another freeze-tester, is it?
+- Just give me that again.
+	Bartender: C'mon... that's so lame. Why don't you try something else?
+	 - No
+	 - Ok...
+- I'm now a reformed man. Give me a time-looper.
+	Bartender: Woah... we're witnessing another world record from you. The first time this man's ever changed.
+- Start again => start
+- End the conversation 
+	do SceneChanger.to_level_1()  
+    => END
+Nathan: For more information see the online documentation.
+=> END

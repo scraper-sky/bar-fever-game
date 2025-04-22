@@ -45,7 +45,7 @@ _data = {
 &"default": SubResource("Animation_r5g5p")
 }
 
-[node name="MainPlayer" type="CharacterBody2D"]
+[node name="MainPlayer" type="CharacterBody2D" groups=["player"]]
 z_index = 1
 collision_mask = 7
 script = ExtResource("1_dgjmo")

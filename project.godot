@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GlobalGameState="*res://global_game_state.gd"
+GameManager="*res://scripts/game_manager.gd"
+SceneChanger="*res://scripts/SceneChanger.gd"
 
 [dialogue_manager]
 
@@ -30,6 +32,10 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
+
+[global_group]
+
+player=""
 
 [input]
 
@@ -46,7 +52,7 @@ menu_in={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/level_10.dialogue", "res://dialogue/TestDialogue.dialogue", "res://dialogue/alcoholbottledialogue.dialogue", "res://dialogue/strangepaperdialogue.dialogue", "res://dialogue/derealization.dialogue", "res://dialogue/npc_robot.dialogue", "res://dialogue/specialrobot1.dialogue", "res://dialogue/specialrobot2.dialogue", "res://dialogue/specialrobot3.dialogue", "res://dialogue/specialrobot4.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/level_10.dialogue", "res://dialogue/TestDialogue.dialogue", "res://dialogue/alcoholbottledialogue.dialogue", "res://dialogue/strangepaperdialogue.dialogue", "res://dialogue/derealization.dialogue", "res://dialogue/npc_robot.dialogue", "res://dialogue/specialrobot1.dialogue", "res://dialogue/specialrobot2.dialogue", "res://dialogue/specialrobot3.dialogue", "res://dialogue/specialrobot4.dialogue", "res://dialogue/barguy.dialogue")
 
 [layer_names]
 

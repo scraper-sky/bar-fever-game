@@ -58,7 +58,7 @@ height = 36.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d6vp5"]
 size = Vector2(15, 36)
 
-[node name="MainPlayer2Level18" type="CharacterBody2D"]
+[node name="MainPlayer2Level18" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_7oanj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
