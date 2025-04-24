@@ -56,8 +56,8 @@ Bartender: (The bartender grabs two shiny holographic devices out of his pocket 
 You: What is your name? Why are you talking like you know me?
 Bartender: Let's play these two games, Given Land and Space Sam. Remember Given Land?
 You: (Vague memories are resurfacing in your head. You remember some pink sparks) Kind of
-Bartender: Anyways, your parents suddenly disappeared while you were visiting this park. When you walk out of the magic mirror booth, everything disappears and you have to find your way out.
-Bartender: I think it's kind of generic though. I don't know why you loved that game so much.
+Bartender: Anyways, your parents suddenly disappeared while you were visiting this park. When you walk out of the magic mirror booth... 
+Bartender: Everything disappears and you have to find your way out. I think it's kind of generic though. I don't know why you loved that game so much.
 You: Normies like you can't ever comprehend its greatness.
 Bartender: What makes it so great?
 - ...
@@ -82,7 +82,7 @@ You: [wave amp=30 freq=20]Hey... Bartender, are you there?[/wave]
 Bartender: [wave amp=30 freq=24]... (You hear nothing from the bartender)[/wave]
 You: [wave amp=30 freq=28](The ocean keeps enveloping you in its waves. You're stuck inside some trough crashing you into a familiar shore)[/wave]
 You: [wave amp=30 freq=32]Am I being sent to Given Land?[/wave]
-You: [wave amp=30 freq=36](You begin wondering whether you're being sent to purgatory). Ok, fine I choose to[/wave] => game_choice
+You: [wave amp=30 freq=36](You begin wondering if you're being sent to purgatory). Ok, fine I choose to[/wave] => game_choice
 
 ~ game_choice
 - Accept my fate
