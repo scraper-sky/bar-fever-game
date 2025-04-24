@@ -79,7 +79,7 @@ grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
 [node name="Panel" type="Panel" parent="Balloon"]
-self_modulate = Color(0.878137, 0.530736, 0.768278, 1)
+self_modulate = Color(0, 0, 0, 1)
 clip_children = 2
 layout_mode = 1
 anchors_preset = 12
@@ -111,7 +111,7 @@ layout_mode = 2
 
 [node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Panel/Dialogue/VBoxContainer"]
 unique_name_in_owner = true
-modulate = Color(1, 0.415686, 1, 1)
+modulate = Color(0.931277, 0.0735381, 0.0471508, 1)
 layout_mode = 2
 mouse_filter = 1
 theme_override_fonts/normal_font = ExtResource("2_aqgdt")

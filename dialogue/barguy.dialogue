@@ -1,15 +1,94 @@
 ~ start
-Bartender: [[What...|Huh...|Haha]] it's you again. On you seven thousandth visit here. The record-holding alcoholic.
-Bartender: What would you like to order? It's not going to be another freeze-tester, is it?
-- Just give me that again.
-	Bartender: C'mon... that's so lame. Why don't you try something else?
-	 - No
-	 - Ok...
-- I'm now a reformed man. Give me a time-looper.
-	Bartender: Woah... we're witnessing another world record from you. The first time this man's ever changed.
-- Start again => start
-- End the conversation 
-	do SceneChanger.to_level_1()  
-    => END
-Nathan: For more information see the online documentation.
+Bartender: [[What...|Huh...|Haha]] it's you again. On you seven thousandth visit here.
+You: You actually kept track of all that?
+Bartender: Yes, yes I did. I had nothing better to do. Anyyyways, what would you like to order? It's not going to be another freeze-tester, is it?
+- Just give me that again. => just_give_me
+- I've been reformed. Give me a time-looper. => time_looper
+- Steal the nearest drink (it looks just like a freeze tester) => steal_drink
+- Drink your hidden time-skipper and skip 10 minutes of this conversation => time_skipper
+
+~ just_give_me
+Bartender: C'mon... that's so lame. Why don't you try something else?
+- No => no_continue
+- Ok... => play_game
+
+~ no_continue
+Bartender: Fine... Here's your seven thousandth freeze-tester.
+You: You're finally being cooperative...
+You: (Your hands grab the drink before your mind can process anything)
+You: (You take a sip and begin muttering in stupor) I... I'm living like I should. The other day, a man from this abyss came to me in some light and said...
+You: (The bartender smirks at you, but you barely realize what's going on) Wait, what did he say again? I'm out-of-loop on my dialogue.
+You: Anyways, eternal light looked back at me and punched me into some pink city.
+You: Wait... wait... what the heck? You didn't give me a time-looper, did you? I ORDERED A FREEZE-TESTER FOR FUCK'S SAKE! GIVE ME A REFUND!
+Bartender: Let's restart our chat. :) => start
+
+~ time_looper
+Bartender: Woah... we're witnessing another world record from you.
+You: shut up...
+Bartender: I'm not lying though.
+You: Oh c'mon. You're giving me another reason to pick the freeze-tester.
+Bartender: Please, for the LOVE OF GOD, pick the time-looper. I'm doing you a favor, you know?
+You: Ok... ok... I'll get it.
+Bartender: Thanks! Here's your time-looper drink.
+You: Thanks!
+Bartender: How does it feel drinking the time looper?
+- I... I don't know. I feel like the world is folding around me... => start
+- I'm feeling great! I... I... => start
+
+~ steal_drink
+You: (You take a sip) Wait, wait... did I drink a time looper? Again? => start
+
+~ time_skipper
+do SceneChanger.to_level_1()
 => END
+
+~ play_game
+Bartender: You're already drunk. Are you sure you want another drink? You've been puking out your life story non-stop today.
+You: I just want a break.
+Bartender: Remember those old TendoNin game we used to play back in school?
+You: I don't feel like playing that right now.
+Bartender: Let's play that. Reminisce about that world you used to be in. Maybe this is a better loop to put yourself in.
+You: I've lived through so many lives at this point. I'm not restarting another chapter. I have better side-quests to complete.
+Bartender: Like what?
+You: ...
+Bartender: Yea, you don't have anything. C'mon... Let's play!
+Bartender: (The bartender grabs two shiny holographic devices out of his pocket and jacks them into the nearest port)
+You: What is your name? Why are you talking like you know me?
+Bartender: Let's play these two games, Given Land and Space Sam. Remember Given Land?
+You: (Vague memories are resurfacing in your head. You remember some pink sparks) Kind of
+Bartender: Anyways, your parents suddenly disappeared while you were visiting this park. When you walk out of the magic mirror booth, everything disappears and you have to find your way out.
+Bartender: I think it's kind of generic though. I don't know why you loved that game so much.
+You: Normies like you can't ever comprehend its greatness.
+Bartender: What makes it so great?
+- ...
+    => game_experience
+- I can't explain it...
+    => game_experience
+- It's too complicated for you...
+    => game_experience
+
+~ game_experience
+Bartender: You can't even answer a question this simple.
+You: (you lost this argument) Ok fine. Let's just load the game...
+Bartender: (switches on the game; the screen begins playing)
+You: Wait I want that freezetester. This is my seven thousandth milestone.
+Bartender: Fine. (Pours the drink) Here you go:
+You: (You begin playing the game with the bartender. You feel like something's missing as time rewinds)
+Bartender: ... and on level 10, you need to navigate to ...
+You: (You barely catch anything the bartender's telling you, so you silently nod along) Ok.
+You: (Your head begins hitting some static wave. It's piercing this empty mind of yours.)
+You: (Waves crash around some floating ocean in some forgotten neural city in your head. You're being wired into something)
+You: Hey... Bartender, are you there?
+Bartender: ... (You hear nothing from the bartender)
+You: (The ocean keeps enveloping you in its waves. You're stuck inside some trough crashing you into a familiar shore)
+You: Am I being sent to Given Land?
+You: (You begin wondering whether you're in purgatory). Ok, fine I choose to
+- Accept my fate
+    do SceneChanger.to_level_1()
+    => END
+- Reluctantly accept my fate
+    do SceneChanger.to_level_1()
+    => END
+- Hesitate but accept my fate, do I have any other choice?
+    do SceneChanger.to_level_1()
+    => END
