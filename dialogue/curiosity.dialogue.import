@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://by1felkngcnhx"
+path="res://.godot/imported/curiosity.dialogue-0cc49c649c6b181af2922116def909e9.tres"
+
+[deps]
+
+source_file="res://dialogue/curiosity.dialogue"
+dest_files=["res://.godot/imported/curiosity.dialogue-0cc49c649c6b181af2922116def909e9.tres"]
+
+[params]
+
+defaults=true

@@ -5,7 +5,7 @@ Bartender: Yes, yes I did. I had nothing better to do. Anyyyways, what would you
 - Just give me that again. => just_give_me
 - I've been reformed. Give me a time-looper. => time_looper
 - Steal the nearest drink (it looks just like a freeze tester) => steal_drink
-- Drink your hidden time-skipper and skip 10 minutes of this conversation => time_skipper
+- Drink your hidden time-skipper and skip this conversation => time_skipper
 
 ~ just_give_me
 Bartender: C'mon... that's so lame. Why don't you try something else?
@@ -29,7 +29,7 @@ Bartender: I'm not lying though.
 You: Oh c'mon. You're giving me another reason to pick the freeze-tester.
 Bartender: Please, for the LOVE OF GOD, pick the time-looper. I'm doing you a favor, you know?
 You: Ok... ok... I'll get it.
-Bartender: Thanks! Here's your time-looper drink.
+Bartender: Awesome, here's your time-looper drink.
 You: Thanks!
 Bartender: How does it feel drinking the time looper?
 - I... I don't know. I feel like the world is folding around me... => start
@@ -69,20 +69,22 @@ Bartender: What makes it so great?
 
 ~ game_experience
 Bartender: You can't even answer a question this simple.
-You: (you lost this argument) Ok fine. Let's just load the game...
+You: Ok fine. Let's just load the game...
 Bartender: (switches on the game; the screen begins playing)
 You: Wait I want that freezetester. This is my seven thousandth milestone.
-Bartender: Fine. (Pours the drink) Here you go:
+Bartender: Fine. Here you go.
 You: (You begin playing the game with the bartender. You feel like something's missing as time rewinds)
 Bartender: ... and on level 10, you need to navigate to ...
-You: (You barely catch anything the bartender's telling you, so you silently nod along) Ok.
-You: (Your head begins hitting some static wave. It's piercing this empty mind of yours.)
-You: (Waves crash around some floating ocean in some forgotten neural city in your head. You're being wired into something)
-You: Hey... Bartender, are you there?
-Bartender: ... (You hear nothing from the bartender)
-You: (The ocean keeps enveloping you in its waves. You're stuck inside some trough crashing you into a familiar shore)
-You: Am I being sent to Given Land?
-You: (You begin wondering whether you're in purgatory). Ok, fine I choose to
+You: [wave amp=30 freq=8](You barely catch anything the bartender's telling you, so you silently nod along) Ok.[/wave]
+You: [wave amp=30 freq=12](Your head begins hitting some static wave. It's piercing this empty mind of yours.)[/wave]
+You: [wave amp=30 freq=16](Waves crash around some floating ocean in some forgotten neural city in your head. You're being wired into something)[/wave]
+You: [wave amp=30 freq=20]Hey... Bartender, are you there?[/wave]
+Bartender: [wave amp=30 freq=24]... (You hear nothing from the bartender)[/wave]
+You: [wave amp=30 freq=28](The ocean keeps enveloping you in its waves. You're stuck inside some trough crashing you into a familiar shore)[/wave]
+You: [wave amp=30 freq=32]Am I being sent to Given Land?[/wave]
+You: [wave amp=30 freq=36](You begin wondering whether you're being sent to purgatory). Ok, fine I choose to[/wave] => game_choice
+
+~ game_choice
 - Accept my fate
     do SceneChanger.to_level_1()
     => END
