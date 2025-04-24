@@ -7,6 +7,16 @@ signal dialogues_ready
 @export var dialogue_start : String = "start"
 @export var dialogue_resource_2 : DialogueResource
 @export var dialogue_start_2 : String = "start"
+@export var dialogue_resource_3 : DialogueResource
+@export var dialogue_start_3 : String = "start"
+@export var dialogue_resource_4 : DialogueResource
+@export var dialogue_start_4 : String = "start"
+@export var dialogue_resource_5 : DialogueResource
+@export var dialogue_start_5 : String = "start"
+@export var dialogue_resource_6 : DialogueResource
+@export var dialogue_start_6 : String = "start"
+@export var dialogue_resource_7 : DialogueResource
+@export var dialogue_start_7 : String = "start"
 @export var final_dialogue_resource : DialogueResource
 @export var final_dialogue_start : String = "start"
 
@@ -45,6 +55,21 @@ func _on_strange_paper_pressed() -> void:
 
 func _on_alcohol_bottles_pressed() -> void:
 	DialogueManager.show_dialogue_balloon(dialogue_resource_2, dialogue_start_2)
+
+func _on_katanas_pressed() -> void:
+	DialogueManager.show_dialogue_balloon(dialogue_resource_3, dialogue_start_3)
+
+func _on_strange_sign_pressed() -> void:
+	DialogueManager.show_dialogue_balloon(dialogue_resource_4, dialogue_start_4)
+
+func _on_box_pressed() -> void:
+	DialogueManager.show_dialogue_balloon(dialogue_resource_5, dialogue_start_5)
+
+func _on_fizzling_drink_pressed() -> void:
+	DialogueManager.show_dialogue_balloon(dialogue_resource_6, dialogue_start_6)
+
+func _on_lantern_pressed() -> void:
+	DialogueManager.show_dialogue_balloon(dialogue_resource_7, dialogue_start_7)
 
 func _on_dialogue_ended(res : DialogueResource) -> void:
 	if res == dialogue_resource:

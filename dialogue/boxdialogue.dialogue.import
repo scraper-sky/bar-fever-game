@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bk82jj53mw6ny"
+path="res://.godot/imported/boxdialogue.dialogue-66a21f90d31e5cde246776f83aa49c1b.tres"
+
+[deps]
+
+source_file="res://dialogue/boxdialogue.dialogue"
+dest_files=["res://.godot/imported/boxdialogue.dialogue-66a21f90d31e5cde246776f83aa49c1b.tres"]
+
+[params]
+
+defaults=true

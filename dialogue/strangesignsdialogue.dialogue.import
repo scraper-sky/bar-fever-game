@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cmxi10mu1mmh6"
+path="res://.godot/imported/strangesignsdialogue.dialogue-c431ec6b49034d8ebbce60fbbbc1f90c.tres"
+
+[deps]
+
+source_file="res://dialogue/strangesignsdialogue.dialogue"
+dest_files=["res://.godot/imported/strangesignsdialogue.dialogue-c431ec6b49034d8ebbce60fbbbc1f90c.tres"]
+
+[params]
+
+defaults=true

@@ -1,9 +1,9 @@
 ~ start
-Bartender: [[What...|Huh...|Haha]] it's you again. On you seven thousandth visit here.
+Bartender: [[What...|Huh...|Haha]] it's you again. This is your seven thousandth visit here.
 You: You actually kept track of all that?
-Bartender: Yes, yes I did. I had nothing better to do. Anyyyways, what would you like to order? It's not going to be another freeze-tester, is it?
+Bartender: Well I have nothing better to do. Anyyyways, what would you like to order? It's not going to be another freeze-tester, is it?
 - Just give me that again. => just_give_me
-- I've been reformed. Give me a time-looper. => time_looper
+- Give me a time-looper. => time_looper
 - Steal the nearest drink (it looks just like a freeze tester) => steal_drink
 - Drink your hidden time-skipper and skip this conversation => time_skipper
 

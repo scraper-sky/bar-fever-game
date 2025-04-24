@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bo3gttrkkyxfa"
+path="res://.godot/imported/katanas.dialogue-cf89515c186f6be2be889f9af666af56.tres"
+
+[deps]
+
+source_file="res://dialogue/katanas.dialogue"
+dest_files=["res://.godot/imported/katanas.dialogue-cf89515c186f6be2be889f9af666af56.tres"]
+
+[params]
+
+defaults=true

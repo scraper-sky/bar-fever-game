@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://e80h4rypu3vr"
+path="res://.godot/imported/lanterndialogue.dialogue-369afab4842e369bd7b0538088ebe84f.tres"
+
+[deps]
+
+source_file="res://dialogue/lanterndialogue.dialogue"
+dest_files=["res://.godot/imported/lanterndialogue.dialogue-369afab4842e369bd7b0538088ebe84f.tres"]
+
+[params]
+
+defaults=true
