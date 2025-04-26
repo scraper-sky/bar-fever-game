@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://be4x2hkgrnh2w"]
+
+[ext_resource type="Script" uid="uid://c527tcoeeskgg" path="res://scenes/scene_transitions/world_3_transition_2.gd" id="1_7ewia"]
+[ext_resource type="Texture2D" uid="uid://7ntie7gkg2jo" path="res://assets/background&art/secondworldtransition1.png" id="2_kmwtm"]
+[ext_resource type="Texture2D" uid="uid://gnmjt0lvqjpy" path="res://assets/background&art/secondworldtransition2.png" id="3_n71be"]
+[ext_resource type="Texture2D" uid="uid://b5g6q3vddyrrq" path="res://assets/background&art/secondworldtransition3.png" id="4_g33ra"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ub52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kmwtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n71be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g33ra")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="world_3_transition2" type="Node2D"]
+script = ExtResource("1_7ewia")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -34.0
+offset_right = 1212.0
+offset_bottom = 684.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(556, 320)
+sprite_frames = SubResource("SpriteFrames_1ub52")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 465.0
+offset_top = 492.0
+offset_right = 567.0
+offset_bottom = 531.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
