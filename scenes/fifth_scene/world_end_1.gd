@@ -5,9 +5,9 @@ extends Node2D
 
 func _process(_delta):
 	# Random static intensity with bursts
-	var intensity = randf_range(0.1, 0.4)
-	if randf() < 0.05:  # 5% chance per frame
-		intensity = randf_range(0.6, 1.0)  # High-intensity burst
+	var intensity = randf_range(0.3, 0.9)
+	if randf() < 0.35:  # 5% chance per frame
+		intensity = randf_range(0.7, 1.2)  # High-intensity burst
 	static_rect.material.set_shader_parameter("intensity", intensity)
 
 func _ready() -> void:

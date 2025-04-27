@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=3 uid="uid://bjs5602u0owi6"]
+
+[ext_resource type="Texture2D" uid="uid://ccd4xlp3hg6ri" path="res://assets/background&art/endworld.png" id="1_n6olk"]
+[ext_resource type="Script" uid="uid://c8ri0uqup20iq" path="res://scenes/fifth_scene/world_end_4.gd" id="1_vxncq"]
+[ext_resource type="PackedScene" uid="uid://3om6fwpcy8bv" path="res://scenes/area_functionality/invisible_block.tscn" id="2_qm4y3"]
+[ext_resource type="PackedScene" uid="uid://cedfjpf8arkmf" path="res://scenes/finalplayer.tscn" id="3_qm4y3"]
+[ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="5_nasiq"]
+[ext_resource type="Texture2D" uid="uid://58053c86ew4w" path="res://assets/background&art/finalundream1.png" id="6_j4wte"]
+[ext_resource type="Script" uid="uid://dwxhjkq56sdne" path="res://scenes/fifth_scene/finalundream_1.gd" id="6_jkvap"]
+[ext_resource type="Texture2D" uid="uid://3082sjrpg0bq" path="res://assets/background&art/finalundream2.png" id="7_jkvap"]
+[ext_resource type="Texture2D" uid="uid://c3b6hlp2s7cuu" path="res://assets/background&art/finalundream3.png" id="8_4hhgk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hnr2l"]
+shader = ExtResource("5_nasiq")
+shader_parameter/intensity = 0.3
+shader_parameter/speed = 10.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j8g5f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_j4wte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jkvap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4hhgk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="world_end_4" type="Node2D"]
+script = ExtResource("1_vxncq")
+
+[node name="Background" type="ParallaxBackground" parent="."]
+offset = Vector2(-400, 200)
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, -400, 200)
+
+[node name="CityLayer" type="ParallaxLayer" parent="Background"]
+z_index = -1
+motion_mirroring = Vector2(3072, 0)
+
+[node name="CitySprite1" type="Sprite2D" parent="Background/CityLayer"]
+z_index = -1
+position = Vector2(-3, -11)
+scale = Vector2(3, 3)
+texture = ExtResource("1_n6olk")
+
+[node name="CitySprite2" type="Sprite2D" parent="Background/CityLayer"]
+z_index = -1
+position = Vector2(1533, -9)
+scale = Vector2(3, 3)
+texture = ExtResource("1_n6olk")
+
+[node name="InvisibleBlock" parent="." instance=ExtResource("2_qm4y3")]
+position = Vector2(1312, 2771)
+scale = Vector2(80, 80)
+
+[node name="InvisibleBlock2" parent="." instance=ExtResource("2_qm4y3")]
+position = Vector2(-2805, 618)
+scale = Vector2(80, 80)
+
+[node name="InvisibleBlock3" parent="." instance=ExtResource("2_qm4y3")]
+position = Vector2(4509, 851)
+scale = Vector2(80, 80)
+
+[node name="finalplayer" parent="." instance=ExtResource("3_qm4y3")]
+
+[node name="GlitchOverlay" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="StaticRect" type="ColorRect" parent="GlitchOverlay"]
+material = SubResource("ShaderMaterial_hnr2l")
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="finalundream1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_jkvap")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="finalundream1"]
+position = Vector2(1047, 161)
+sprite_frames = SubResource("SpriteFrames_j8g5f")
+
+[node name="Undream" type="Button" parent="finalundream1"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 127.0
+offset_right = 1085.0
+offset_bottom = 196.0
+
+[connection signal="pressed" from="finalundream1/Undream" to="finalundream1" method="_on_undream_pressed"]

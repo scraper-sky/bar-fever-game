@@ -10,6 +10,11 @@
 [ext_resource type="Script" uid="uid://dyb26ascjvw2d" path="res://scenes/fifth_scene/undreamer_5.gd" id="6_qnb24"]
 [ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="8_xw23p"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kmpkv"]
+shader = ExtResource("8_xw23p")
+shader_parameter/intensity = 0.3
+shader_parameter/speed = 10.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw23p"]
 size = Vector2(2609, 7)
 
@@ -21,11 +26,6 @@ size = Vector2(9, 628)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_irn7r"]
 size = Vector2(9, 628)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kmpkv"]
-shader = ExtResource("8_xw23p")
-shader_parameter/intensity = 0.3
-shader_parameter/speed = 10.0
 
 [node name="world_end_2" type="Node2D"]
 script = ExtResource("1_kmpkv")
@@ -47,6 +47,46 @@ position = Vector2(39, 0)
 position = Vector2(421, 225)
 scale = Vector2(1.27497, 1.55291)
 texture = ExtResource("2_c7y1y")
+
+[node name="finalplayer" parent="." instance=ExtResource("5_qnb24")]
+
+[node name="GlitchOverlay" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="StaticRect" type="ColorRect" parent="GlitchOverlay"]
+material = SubResource("ShaderMaterial_kmpkv")
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Undreamer5" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_qnb24")
+
+[node name="UndreamerDevice" type="Sprite2D" parent="Undreamer5"]
+position = Vector2(1221, 150)
+rotation = -2.70701
+texture = ExtResource("6_fl0x6")
+
+[node name="Undream" type="Button" parent="Undreamer5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1035.0
+offset_top = 303.0
+offset_right = 1168.0
+offset_bottom = 343.0
+rotation = 0.380482
+
+[node name="Resume" type="Button" parent="Undreamer5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1068.0
+offset_top = 228.0
+offset_right = 1194.0
+offset_bottom = 268.0
+rotation = 0.380482
 
 [node name="Barrier1" type="StaticBody2D" parent="."]
 
@@ -92,46 +132,6 @@ shape = SubResource("RectangleShape2D_irn7r")
 position = Vector2(1346, 246.5)
 scale = Vector2(8.2, 15.2188)
 texture = ExtResource("4_fl0x6")
-
-[node name="finalplayer" parent="." instance=ExtResource("5_qnb24")]
-
-[node name="Undreamer5" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("6_qnb24")
-
-[node name="UndreamerDevice" type="Sprite2D" parent="Undreamer5"]
-position = Vector2(1221, 150)
-rotation = -2.70701
-texture = ExtResource("6_fl0x6")
-
-[node name="Undream" type="Button" parent="Undreamer5"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 1035.0
-offset_top = 303.0
-offset_right = 1168.0
-offset_bottom = 343.0
-rotation = 0.380482
-
-[node name="Resume" type="Button" parent="Undreamer5"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 1068.0
-offset_top = 228.0
-offset_right = 1194.0
-offset_bottom = 268.0
-rotation = 0.380482
-
-[node name="GlitchOverlay" type="CanvasLayer" parent="."]
-layer = 0
-
-[node name="StaticRect" type="ColorRect" parent="GlitchOverlay"]
-material = SubResource("ShaderMaterial_kmpkv")
-offset_right = 1152.0
-offset_bottom = 648.0
 
 [connection signal="pressed" from="Undreamer5/Undream" to="Undreamer5" method="_on_undream_pressed"]
 [connection signal="pressed" from="Undreamer5/Resume" to="Undreamer5" method="_on_resume_pressed"]

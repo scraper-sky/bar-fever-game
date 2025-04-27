@@ -1,5 +1,11 @@
 ~ start
-Bartender: Why why why 
-Bartender: You (   ) are  (    )
-Bartender: Why (   )
+Bartender: [wave amp=30 freq=8]This (undream) (undream) (undream) world [/wave]
+Bartender: [wave amp=30 freq=12] (undream) is (undream) truly a (undream) beautiful [/wave]
+Bartender: [wave amp=30 freq=16] (undream) empty (undream) (undream) mess [/wave]
+Bartender: [wave amp=30 freq=20] You (please undream) are (please undream) [/wave]
+Bartender: [wave amp=30 freq=24] (please undream) not (please undream) [/wave]
+Bartender: [wave amp=30 freq=28] (please undream) this world[/wave]
+- Undream
+	do SceneChanger.to_world_end_4()
+- Drink (           ) => start
 => END

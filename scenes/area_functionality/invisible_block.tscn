@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://3om6fwpcy8bv"]
+
+[ext_resource type="Texture2D" uid="uid://dqxqr071jhp5u" path="res://assets/background&art/invisibleblock.png" id="1_no25k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h14vv"]
+size = Vector2(64, 64)
+
+[node name="InvisibleBlock" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_no25k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_h14vv")

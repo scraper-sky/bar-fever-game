@@ -2061,6 +2061,7 @@ position = Vector2(-1016, 276)
 
 [node name="BluePortal" parent="." instance=ExtResource("18_10lpo")]
 position = Vector2(2922, 1414)
+target_scene = "res://scenes/fifth_scene/world_end_1.tscn"
 
 [node name="floatingsakura" parent="." instance=ExtResource("19_sgw35")]
 position = Vector2(3438, 34)
