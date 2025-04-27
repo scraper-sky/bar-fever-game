@@ -1,0 +1,137 @@
+[gd_scene load_steps=15 format=3 uid="uid://5nhqpg1gihnf"]
+
+[ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://assets/background&art/neoncitybackground.png" id="1_ijcrt"]
+[ext_resource type="Script" uid="uid://bp12an1k2sh2a" path="res://scenes/fifth_scene/world_end_2.gd" id="1_kmpkv"]
+[ext_resource type="Texture2D" uid="uid://dt2vh8kml4w6x" path="res://assets/background&art/neoncityskylines.png" id="2_c7y1y"]
+[ext_resource type="Texture2D" uid="uid://dnt8xax5o751t" path="res://assets/background&art/barrier.png" id="3_cgd2b"]
+[ext_resource type="Texture2D" uid="uid://4jkctykfwtt7" path="res://assets/background&art/wall2.png" id="4_fl0x6"]
+[ext_resource type="PackedScene" uid="uid://cedfjpf8arkmf" path="res://scenes/finalplayer.tscn" id="5_qnb24"]
+[ext_resource type="Texture2D" uid="uid://dr5p58bjooqbx" path="res://assets/background&art/undreamer.png" id="6_fl0x6"]
+[ext_resource type="Script" uid="uid://dyb26ascjvw2d" path="res://scenes/fifth_scene/undreamer_5.gd" id="6_qnb24"]
+[ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="8_xw23p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xw23p"]
+size = Vector2(2609, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmpkv"]
+size = Vector2(2609, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lttso"]
+size = Vector2(9, 628)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_irn7r"]
+size = Vector2(9, 628)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kmpkv"]
+shader = ExtResource("8_xw23p")
+shader_parameter/intensity = 0.3
+shader_parameter/speed = 10.0
+
+[node name="world_end_2" type="Node2D"]
+script = ExtResource("1_kmpkv")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1, 0)
+
+[node name="neoncitylayer1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(663.5, 578.5)
+scale = Vector2(2.29531, 3.40608)
+texture = ExtResource("1_ijcrt")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(39, 0)
+
+[node name="neoncitylayer2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(421, 225)
+scale = Vector2(1.27497, 1.55291)
+texture = ExtResource("2_c7y1y")
+
+[node name="Barrier1" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier1"]
+position = Vector2(712, 484)
+shape = SubResource("RectangleShape2D_xw23p")
+
+[node name="Sprite2D" type="Sprite2D" parent="Barrier1"]
+position = Vector2(596.5, 479.5)
+scale = Vector2(47.6562, 5.3)
+texture = ExtResource("3_cgd2b")
+
+[node name="Barrier2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier2"]
+position = Vector2(696, -4)
+shape = SubResource("RectangleShape2D_kmpkv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Barrier2"]
+position = Vector2(-160.5, 239.5)
+scale = Vector2(8.1, 15.2812)
+texture = ExtResource("4_fl0x6")
+
+[node name="Barrier3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier3"]
+position = Vector2(-165, 314)
+shape = SubResource("RectangleShape2D_lttso")
+
+[node name="Sprite2D" type="Sprite2D" parent="Barrier3"]
+position = Vector2(594, -6)
+scale = Vector2(47.6562, 5.3)
+texture = ExtResource("3_cgd2b")
+
+[node name="Barrier4" type="StaticBody2D" parent="."]
+position = Vector2(19, -7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier4"]
+position = Vector2(1344, 309)
+shape = SubResource("RectangleShape2D_irn7r")
+
+[node name="Sprite2D" type="Sprite2D" parent="Barrier4"]
+position = Vector2(1346, 246.5)
+scale = Vector2(8.2, 15.2188)
+texture = ExtResource("4_fl0x6")
+
+[node name="finalplayer" parent="." instance=ExtResource("5_qnb24")]
+
+[node name="Undreamer5" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_qnb24")
+
+[node name="UndreamerDevice" type="Sprite2D" parent="Undreamer5"]
+position = Vector2(1221, 150)
+rotation = -2.70701
+texture = ExtResource("6_fl0x6")
+
+[node name="Undream" type="Button" parent="Undreamer5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1035.0
+offset_top = 303.0
+offset_right = 1168.0
+offset_bottom = 343.0
+rotation = 0.380482
+
+[node name="Resume" type="Button" parent="Undreamer5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1068.0
+offset_top = 228.0
+offset_right = 1194.0
+offset_bottom = 268.0
+rotation = 0.380482
+
+[node name="GlitchOverlay" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="StaticRect" type="ColorRect" parent="GlitchOverlay"]
+material = SubResource("ShaderMaterial_kmpkv")
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[connection signal="pressed" from="Undreamer5/Undream" to="Undreamer5" method="_on_undream_pressed"]
+[connection signal="pressed" from="Undreamer5/Resume" to="Undreamer5" method="_on_resume_pressed"]

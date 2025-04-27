@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://c62y3wl0ds1uy"]
+
+[ext_resource type="Script" uid="uid://bfoio5tmn2byh" path="res://scenes/fifth_scene/world_end_3.gd" id="1_nu7y0"]
+[ext_resource type="Texture2D" uid="uid://c4rplwdm84aph" path="res://assets/memories/cyber_mem_1.png" id="1_yam0v"]
+[ext_resource type="Script" uid="uid://b8f22til4hhnr" path="res://scenes/fifth_scene/dialogue_manager.gd" id="2_58i6v"]
+[ext_resource type="Texture2D" uid="uid://dra5bs70vtn8u" path="res://characters/nbbartender2.png" id="3_2n0oi"]
+[ext_resource type="Resource" uid="uid://buj40l1ryk207" path="res://dialogue/barguy2.dialogue" id="3_f40pf"]
+[ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="5_fuipw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nu7y0"]
+shader = ExtResource("5_fuipw")
+shader_parameter/intensity = 0.3
+shader_parameter/speed = 10.0
+
+[node name="world_end_3" type="Node2D"]
+script = ExtResource("1_nu7y0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(602, 322)
+texture = ExtResource("1_yam0v")
+
+[node name="DialogueManager" type="Control" parent="Sprite2D" node_paths=PackedStringArray("top_portrait")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_58i6v")
+final_dialogue_resource = ExtResource("3_f40pf")
+top_portrait = NodePath("TopPortrait")
+portrait_neutral = ExtResource("3_2n0oi")
+
+[node name="TopPortrait" type="TextureRect" parent="Sprite2D/DialogueManager"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = -269.0
+offset_right = 613.0
+offset_bottom = 401.0
+texture = ExtResource("3_2n0oi")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(603, 354)
+
+[node name="GlitchOverlay" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="StaticRect" type="ColorRect" parent="GlitchOverlay"]
+material = SubResource("ShaderMaterial_nu7y0")
+offset_right = 1152.0
+offset_bottom = 648.0

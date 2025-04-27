@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://buj40l1ryk207"
+path="res://.godot/imported/barguy2.dialogue-32fa89519e5e501f60aafd4635d01cda.tres"
+
+[deps]
+
+source_file="res://dialogue/barguy2.dialogue"
+dest_files=["res://.godot/imported/barguy2.dialogue-32fa89519e5e501f60aafd4635d01cda.tres"]
+
+[params]
+
+defaults=true

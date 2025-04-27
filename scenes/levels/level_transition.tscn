@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dr5p58bjooqbx" path="res://assets/background&art/undreamer.png" id="8_84nfw"]
 [ext_resource type="Script" uid="uid://djqiwrmxn56ur" path="res://scenes/levels/undreamer_2.gd" id="8_vwu0f"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lftlb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vwu0f"]
 texture = ExtResource("1_usua8")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -18,7 +18,7 @@ texture_region_size = Vector2i(64, 64)
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -15.2126, -32, -32, 32, -32, 32, 32, -32, 32, -32, -32)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k7lmt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_546nq"]
 texture = ExtResource("2_djnow")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -94,22 +94,22 @@ texture_region_size = Vector2i(64, 64)
 0:1/size_in_atlas = Vector2i(2, 3)
 0:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bebrh"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qinsn"]
 texture = ExtResource("3_gmcu4")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_swsgx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0lmmv"]
 texture = ExtResource("4_84nfw")
 texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_aj2d0"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_lftlb")
-sources/1 = SubResource("TileSetAtlasSource_k7lmt")
-sources/2 = SubResource("TileSetAtlasSource_bebrh")
-sources/3 = SubResource("TileSetAtlasSource_swsgx")
+sources/0 = SubResource("TileSetAtlasSource_vwu0f")
+sources/1 = SubResource("TileSetAtlasSource_546nq")
+sources/2 = SubResource("TileSetAtlasSource_qinsn")
+sources/3 = SubResource("TileSetAtlasSource_0lmmv")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vwu0f"]
 shader = ExtResource("7_84nfw")
