@@ -81,6 +81,8 @@ offset_bottom = 648.0
 [node name="finalundream1" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 9.0
+offset_top = -16.0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("6_jkvap")
@@ -92,9 +94,9 @@ sprite_frames = SubResource("SpriteFrames_j8g5f")
 [node name="Undream" type="Button" parent="finalundream1"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 1008.0
-offset_top = 127.0
-offset_right = 1085.0
-offset_bottom = 196.0
+offset_left = 1020.0
+offset_top = 124.0
+offset_right = 1097.0
+offset_bottom = 193.0
 
 [connection signal="pressed" from="finalundream1/Undream" to="finalundream1" method="_on_undream_pressed"]
