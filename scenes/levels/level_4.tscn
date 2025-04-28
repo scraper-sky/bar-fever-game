@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://by2oub33kp6q0"]
+[gd_scene load_steps=20 format=4 uid="uid://by2oub33kp6q0"]
 
 [ext_resource type="Script" uid="uid://chfqsurmss50t" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
@@ -15,6 +15,7 @@
 [ext_resource type="FontFile" uid="uid://bffg4lkd5k5p8" path="res://fonts&style/Exo-Italic-VariableFont_wght.ttf" id="13_hsvsk"]
 [ext_resource type="PackedScene" uid="uid://2y5glvmluhje" path="res://scenes/dynamic/floatingcatmask.tscn" id="14_fcb7b"]
 [ext_resource type="PackedScene" uid="uid://d1yd33gpmjb1i" path="res://scenes/dynamic/memoryloader.tscn" id="15_ov8fk"]
+[ext_resource type="PackedScene" uid="uid://c30gelrcycaml" path="res://scenes/area_functionality/glitch_portal.tscn" id="16_pmra4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3gnf3"]
 texture = ExtResource("3_r57se")
@@ -391,3 +392,6 @@ rotation = 0.724312
 
 [node name="memoryloader" parent="." instance=ExtResource("15_ov8fk")]
 position = Vector2(523, 190)
+
+[node name="glitch_portal" parent="." instance=ExtResource("16_pmra4")]
+position = Vector2(58, 1881)

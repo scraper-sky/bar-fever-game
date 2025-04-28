@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://c30gelrcycaml"]
+
+[ext_resource type="Script" uid="uid://dxwt42sb7fp4j" path="res://scenes/area_functionality/glitch_portal.gd" id="1_33y0x"]
+[ext_resource type="Texture2D" uid="uid://ddd4v4seygpcp" path="res://assets/background&art/placeholderportal.png" id="1_i63ug"]
+[ext_resource type="Shader" uid="uid://b7yfkty4ex8tl" path="res://shaders/glitch_portal.gdshader" id="2_egeca"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_obiqg"]
+shader = ExtResource("2_egeca")
+shader_parameter/swirl_speed = 1.0
+shader_parameter/swirl_intensity = 0.5
+shader_parameter/wave_frequency = 10.0
+shader_parameter/transparency = 0.5
+shader_parameter/glitch_intensity = 0.05
+shader_parameter/scanline_speed = 5.0
+shader_parameter/scanline_density = 50.0
+shader_parameter/noise_speed = 0.2
+shader_parameter/pixelation_size = 0.02
+shader_parameter/flicker_speed = 5.0
+shader_parameter/tint_color = Vector3(0.8, 0.6, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33y0x"]
+size = Vector2(70, 95)
+
+[node name="glitch_portal" type="Area2D"]
+script = ExtResource("1_33y0x")
+
+[node name="sprite" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.079)
+material = SubResource("ShaderMaterial_obiqg")
+position = Vector2(1.5, -3.21865e-06)
+scale = Vector2(1.10938, 1.46875)
+texture = ExtResource("1_i63ug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_33y0x")

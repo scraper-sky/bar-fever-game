@@ -131,7 +131,7 @@ offset_bottom = 40.0
 script = ExtResource("13_7tn3t")
 
 [node name="fourthanimation" type="AnimatedSprite2D" parent="Control"]
-position = Vector2(3080, 675)
+position = Vector2(3091, 675)
 scale = Vector2(0.582031, 0.495536)
 sprite_frames = SubResource("SpriteFrames_0gym1")
 

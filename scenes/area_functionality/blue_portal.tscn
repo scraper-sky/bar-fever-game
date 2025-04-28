@@ -31,7 +31,6 @@ animations = [{
 }]
 
 [node name="BluePortal" type="Area2D"]
-position = Vector2(4, 4)
 script = ExtResource("1_rg0xs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
