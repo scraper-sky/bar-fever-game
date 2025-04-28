@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://8s7388nn132f"]
+[gd_scene load_steps=7 format=4 uid="uid://8s7388nn132f"]
 
 [ext_resource type="Texture2D" uid="uid://cgj4jpo16a2bw" path="res://assets/background&art/embeddedworldtilemap.png" id="1_h300w"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_3ucv7"]
+[ext_resource type="PackedScene" uid="uid://clvjfhd6smwur" path="res://scenes/area_functionality/lock_puzzle.tscn" id="3_mdnee"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3ucv7"]
 
@@ -32,3 +33,6 @@ tile_set = SubResource("TileSet_mdnee")
 [node name="MainPlayer" parent="." instance=ExtResource("2_3ucv7")]
 speed = 15.0
 jump_power = 20.0
+
+[node name="LockPuzzle" parent="." instance=ExtResource("3_mdnee")]
+position = Vector2(561, -91)
