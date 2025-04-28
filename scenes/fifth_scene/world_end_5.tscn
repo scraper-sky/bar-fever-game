@@ -1,0 +1,155 @@
+[gd_scene load_steps=21 format=3 uid="uid://dqdcmqilrij2"]
+
+[ext_resource type="Script" uid="uid://n73tj0itfhfb" path="res://scenes/fifth_scene/world_end_5.gd" id="1_g0r6m"]
+[ext_resource type="Texture2D" uid="uid://du8bv55i71kwh" path="res://assets/background&art/finalworldend1.png" id="1_jhhx0"]
+[ext_resource type="Texture2D" uid="uid://ce7fgoqfhrwsf" path="res://assets/background&art/finalworldend2.png" id="2_g0r6m"]
+[ext_resource type="Texture2D" uid="uid://b4axib3xlnh4g" path="res://assets/background&art/finalworldend3.png" id="3_7tn3t"]
+[ext_resource type="Texture2D" uid="uid://c2krbbqqc4n24" path="res://assets/background&art/finalworldend4.png" id="4_a8las"]
+[ext_resource type="Texture2D" uid="uid://dxc0uwrp68s6o" path="res://assets/background&art/finalworldend5.png" id="5_i3b0k"]
+[ext_resource type="Texture2D" uid="uid://bssb1e8chex6y" path="res://assets/background&art/finalworldend6.png" id="6_18jpf"]
+[ext_resource type="Texture2D" uid="uid://uxdbfwpwjjgh" path="res://assets/background&art/finalworldend7.png" id="7_5r8s8"]
+[ext_resource type="Texture2D" uid="uid://bvltwphu7xm6v" path="res://assets/background&art/finalworldend8.png" id="8_15dx5"]
+[ext_resource type="Texture2D" uid="uid://biyxfps7c8dxs" path="res://assets/background&art/finalworldend9.png" id="9_j2bkq"]
+[ext_resource type="Texture2D" uid="uid://bq78rp47nhsg5" path="res://assets/background&art/finalworldend10.png" id="10_0l328"]
+[ext_resource type="Texture2D" uid="uid://drl28i6b4n0o2" path="res://assets/background&art/finalworldend11.png" id="11_ht3hh"]
+[ext_resource type="Texture2D" uid="uid://co5tnsn2mkjbi" path="res://assets/background&art/finalworldend12.png" id="12_dyouw"]
+[ext_resource type="Script" uid="uid://brfcptprghhfg" path="res://scenes/fifth_scene/control.gd" id="13_7tn3t"]
+[ext_resource type="PackedScene" uid="uid://3om6fwpcy8bv" path="res://scenes/area_functionality/invisible_block.tscn" id="13_o7ll7"]
+[ext_resource type="PackedScene" uid="uid://cedfjpf8arkmf" path="res://scenes/finalplayer.tscn" id="14_6pu76"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8wl8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jhhx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g0r6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7tn3t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vmuup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a8las")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i3b0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_18jpf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gosli"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_5r8s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_15dx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j2bkq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0gym1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_0l328")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ht3hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dyouw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="world_end_5" type="Node2D"]
+script = ExtResource("1_g0r6m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3599.0
+offset_top = -2985.0
+offset_right = 9231.0
+offset_bottom = 4940.0
+color = Color(0, 0, 0, 1)
+
+[node name="firstanimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(674, 753)
+scale = Vector2(0.679688, 0.636161)
+sprite_frames = SubResource("SpriteFrames_i8wl8")
+
+[node name="secondanimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(1431, 777)
+sprite_frames = SubResource("SpriteFrames_vmuup")
+
+[node name="thirdanimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(2203, 732)
+scale = Vector2(0.611328, 0.539063)
+sprite_frames = SubResource("SpriteFrames_gosli")
+
+[node name="InvisibleBlock" parent="." instance=ExtResource("13_o7ll7")]
+position = Vector2(2255, 3350)
+scale = Vector2(80, 80)
+
+[node name="InvisibleBlock2" parent="." instance=ExtResource("13_o7ll7")]
+position = Vector2(-2652, 269)
+scale = Vector2(80, 80)
+
+[node name="InvisibleBlock3" parent="." instance=ExtResource("13_o7ll7")]
+position = Vector2(5800, 331)
+scale = Vector2(80, 80)
+
+[node name="finalplayer" parent="." instance=ExtResource("14_6pu76")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_7tn3t")
+
+[node name="fourthanimation" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(3080, 675)
+scale = Vector2(0.582031, 0.495536)
+sprite_frames = SubResource("SpriteFrames_0gym1")
+
+[node name="stillbutton" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 2983.0
+offset_top = 712.0
+offset_right = 3047.0
+offset_bottom = 742.0
+
+[node name="notbutton" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 3087.0
+offset_top = 712.0
+offset_right = 3128.0
+offset_bottom = 738.0
+
+[connection signal="pressed" from="Control/stillbutton" to="Control" method="_on_stillbutton_pressed"]
+[connection signal="pressed" from="Control/notbutton" to="Control" method="_on_notbutton_pressed"]
