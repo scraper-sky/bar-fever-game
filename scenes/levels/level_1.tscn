@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cxa0ih033yf0a"]
+[gd_scene load_steps=26 format=4 uid="uid://cxa0ih033yf0a"]
 
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="1_4526a"]
 [ext_resource type="Script" uid="uid://mtl5lqyk5fvb" path="res://scripts/LevelRoot.gd" id="1_wtwp4"]
@@ -8,15 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="4_h65t0"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="5_b16y8"]
 [ext_resource type="Texture2D" uid="uid://cmvce7vxi45mj" path="res://assets/background&art/circustilemap.png" id="5_iwr0g"]
-[ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="6_awgri"]
+[ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="6_awgri"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="7_uflvd"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="8_oyruo"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="9_4y3vf"]
-[ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="10_tn1f1"]
-[ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="11_8ve0l"]
-[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="12_tgm38"]
-[ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/partyballoons.tscn" id="13_dnkej"]
-[ext_resource type="PackedScene" uid="uid://2y5glvmluhje" path="res://scenes/dynamic/floatingcatmask.tscn" id="14_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/decoration/floatingtorii/floatingtorii.tscn" id="10_tn1f1"]
+[ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/decoration/floatingtorii2/floatingtoriiv_2.tscn" id="11_8ve0l"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="12_tgm38"]
+[ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/decoration/partyballoons/partyballoons.tscn" id="13_dnkej"]
+[ext_resource type="PackedScene" uid="uid://2y5glvmluhje" path="res://scenes/dynamic/decoration/floatingcatmask/floatingcatmask.tscn" id="14_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="18_np2pn"]
+[ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="19_v6ha0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iav0o"]
 texture = ExtResource("1_4526a")
@@ -558,3 +560,14 @@ position = Vector2(861, 266)
 
 [node name="floatingcatmask" parent="." instance=ExtResource("14_mm8aj")]
 position = Vector2(619, 430)
+
+[node name="Coin" parent="." instance=ExtResource("18_np2pn")]
+position = Vector2(71, 360)
+
+[node name="Hud" parent="." instance=ExtResource("19_v6ha0")]
+
+[node name="Coin2" parent="." instance=ExtResource("18_np2pn")]
+position = Vector2(731, 304)
+
+[node name="Coin3" parent="." instance=ExtResource("18_np2pn")]
+position = Vector2(996, 503)

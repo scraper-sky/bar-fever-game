@@ -4,7 +4,7 @@ extends Node2D
 @onready var player = $MainPlayer
 @onready var portraitbutton = $Portrait/Button
 @onready var undreamer = $Undreamer2
-var npc_robot_scene = preload("res://scenes/dynamic/npc_robot.tscn")
+var npc_robot_scene = preload("res://scenes/dynamic/obstacles/npcrobot/npc_robot.tscn")
 
 
 func _ready():

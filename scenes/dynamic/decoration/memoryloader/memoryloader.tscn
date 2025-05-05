@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1yd33gpmjb1i"]
+
+[ext_resource type="Script" uid="uid://e0ma32do56bu" path="res://scenes/dynamic/decoration/memoryloader/memoryloader.gd" id="1_qu3lc"]
+[ext_resource type="Texture2D" uid="uid://c1ejml27uj0mr" path="res://assets/background&art/memoryloader1.png" id="2_st4b4"]
+[ext_resource type="Texture2D" uid="uid://dthrbmwr4bdc0" path="res://assets/background&art/memoryloader2.png" id="3_gwxqj"]
+[ext_resource type="Texture2D" uid="uid://bcaoubrcxb24q" path="res://assets/background&art/memoryloader3.png" id="4_ux2jj"]
+[ext_resource type="Texture2D" uid="uid://dqh72totm3avr" path="res://assets/background&art/memoryloader4.png" id="5_e4aca"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_piwfr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_st4b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gwxqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ux2jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e4aca")
+}],
+"loop": true,
+"name": &"floating",
+"speed": 5.0
+}]
+
+[node name="memoryloader" type="Node2D"]
+script = ExtResource("1_qu3lc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_piwfr")
+animation = &"floating"

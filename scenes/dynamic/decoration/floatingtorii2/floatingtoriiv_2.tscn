@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://bv0quf0yd0s51"]
+
+[ext_resource type="Texture2D" uid="uid://b8oq7tmm8k6i7" path="res://assets/background&art/floatingtorii1.png" id="1_hm6e3"]
+[ext_resource type="Script" uid="uid://cg775ho7nu8co" path="res://scenes/dynamic/decoration/floatingtorii2/floatingtoriiv_2.gd" id="1_xtjjo"]
+[ext_resource type="Texture2D" uid="uid://bhm0bl37map2n" path="res://assets/background&art/floatingtorii2.png" id="2_4htt0"]
+[ext_resource type="Texture2D" uid="uid://ctbw12h7tk1im" path="res://assets/background&art/floatingtorii3.png" id="3_rx8pi"]
+[ext_resource type="Texture2D" uid="uid://cqva5s2ld8qpe" path="res://assets/background&art/floatingtorii4.png" id="4_ikk2o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0ro1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hm6e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4htt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rx8pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ikk2o")
+}],
+"loop": true,
+"name": &"floatingtorii",
+"speed": 7.0
+}]
+
+[node name="floatingtoriiv2" type="Node2D"]
+script = ExtResource("1_xtjjo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -0.47822
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_g0ro1")
+animation = &"floatingtorii"

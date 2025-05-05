@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://caldgm7xgd0le"]
+
+[ext_resource type="Script" uid="uid://ly0omgcqyqwk" path="res://scenes/dynamic/obstacles/npcrobot/npc_robot.gd" id="1_4gnku"]
+[ext_resource type="Shader" uid="uid://bj7dyivoyj88q" path="res://shaders/flashing_dots.gdshader" id="2_xfc07"]
+[ext_resource type="Texture2D" uid="uid://dp5k63jlswnu2" path="res://assets/background&art/being.png" id="3_k6jbs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kx2tu"]
+shader = ExtResource("2_xfc07")
+shader_parameter/flash_speed = 3.0
+shader_parameter/black_threshold = 0.1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yl803"]
+size = Vector2(51, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p06p8"]
+size = Vector2(51, 55)
+
+[node name="NPCRobot" type="CharacterBody2D"]
+script = ExtResource("1_4gnku")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_kx2tu")
+position = Vector2(0.5, 1)
+scale = Vector2(1.01562, 0.96875)
+texture = ExtResource("3_k6jbs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_yl803")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_p06p8")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_body_entered"]

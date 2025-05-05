@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://bpxvk0kyv45jg"]
+
+[ext_resource type="Script" uid="uid://daxy7pdjd8x5j" path="res://scenes/dynamic/decoration/memoryparticles/memory_particles.gd" id="1_s7j7w"]
+[ext_resource type="Texture2D" uid="uid://brso17uf6pjsc" path="res://assets/memories/memoryparticles1.png" id="2_l3y4h"]
+[ext_resource type="Texture2D" uid="uid://52ebjpauw4gc" path="res://assets/memories/memoryparticles2.png" id="3_4st66"]
+[ext_resource type="Texture2D" uid="uid://p0c257a3wayb" path="res://assets/memories/memoryparticles3.png" id="4_a6b6y"]
+[ext_resource type="Texture2D" uid="uid://bnyso7ygnanh" path="res://assets/memories/memoryparticles4.png" id="5_woypn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16rjc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_l3y4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4st66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a6b6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_woypn")
+}],
+"loop": true,
+"name": &"order1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4st66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a6b6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_woypn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l3y4h")
+}],
+"loop": true,
+"name": &"order2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a6b6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_woypn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4st66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l3y4h")
+}],
+"loop": true,
+"name": &"order3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_woypn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a6b6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4st66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l3y4h")
+}],
+"loop": true,
+"name": &"order4",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsuny"]
+size = Vector2(63, 62)
+
+[node name="memory_particles" type="Area2D"]
+script = ExtResource("1_s7j7w")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_16rjc")
+animation = &"order4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_vsuny")

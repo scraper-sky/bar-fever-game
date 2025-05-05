@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjruqqlklphst"]
+
+[ext_resource type="Script" uid="uid://b4kjdp7ovcksd" path="res://scenes/dynamic/obstacles/chasingmob/chasing_mob.gd" id="1_sj483"]
+[ext_resource type="Texture2D" uid="uid://bdoqjqf2360j8" path="res://assets/background&art/mossghost1.png" id="2_fpq56"]
+[ext_resource type="Texture2D" uid="uid://bk7kijxah5sop" path="res://assets/background&art/mossghost2.png" id="3_b4thh"]
+[ext_resource type="Texture2D" uid="uid://d4jnrgvot4p2c" path="res://assets/background&art/mossghost3.png" id="4_5h288"]
+[ext_resource type="Texture2D" uid="uid://l8a0uxbyeup1" path="res://assets/background&art/mossghost4.png" id="5_3m0ak"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_htm14"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fpq56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b4thh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5h288")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3m0ak")
+}],
+"loop": true,
+"name": &"float",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frsfq"]
+size = Vector2(50, 58)
+
+[node name="ChasingMob" type="CharacterBody2D"]
+script = ExtResource("1_sj483")
+
+[node name="Visual" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_htm14")
+animation = &"float"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_frsfq")

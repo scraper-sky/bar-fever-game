@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cj8ysqlmx21au"]
+
+[ext_resource type="Script" uid="uid://bxohpfjyrgfa6" path="res://scenes/dynamic/platforms/bouncer/bouncer.gd" id="1_cy0ka"]
+[ext_resource type="Texture2D" uid="uid://c3nnfxhq7abvm" path="res://assets/background&art/cyberbounce1.png" id="2_vhcyt"]
+[ext_resource type="Texture2D" uid="uid://v456wk6v4tr2" path="res://assets/background&art/cyberbounce2.png" id="3_lpq4m"]
+[ext_resource type="Texture2D" uid="uid://wwjcgnen2q7l" path="res://assets/background&art/cyberbounce3.png" id="4_m5t0b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t6rnc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vhcyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lpq4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m5t0b")
+}],
+"loop": false,
+"name": &"extend",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2htc"]
+size = Vector2(66, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cy0ka"]
+size = Vector2(66, 38)
+
+[node name="bouncer" type="Area2D"]
+script = ExtResource("1_cy0ka")
+
+[node name="SpringSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.5, 0)
+scale = Vector2(1.01562, 1)
+sprite_frames = SubResource("SpriteFrames_t6rnc")
+animation = &"extend"
+frame = 2
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 9)
+shape = SubResource("RectangleShape2D_w2htc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(20, -27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-19, 37)
+shape = SubResource("RectangleShape2D_cy0ka")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

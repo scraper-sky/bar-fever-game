@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_d1pgp"]
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="2_d1pgp"]
-[ext_resource type="PackedScene" uid="uid://dlqsxofwtcrv3" path="res://scenes/dynamic/laser_emitter.tscn" id="3_s5aqk"]
+[ext_resource type="PackedScene" uid="uid://dlqsxofwtcrv3" path="res://scenes/dynamic/obstacles/lasers/laser_emitter.tscn" id="3_s5aqk"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="4_ddhf2"]
-[ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/space_spike_trap.tscn" id="5_ddhf2"]
-[ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/electricgrass.tscn" id="6_r3g1g"]
+[ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="5_ddhf2"]
+[ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/decoration/electricgrass/electricgrass.tscn" id="6_r3g1g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v5eg7"]
 texture = ExtResource("1_d1pgp")

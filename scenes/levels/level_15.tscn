@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_721gy"]
 [ext_resource type="Script" uid="uid://db6drbco14jl0" path="res://scenes/levels/level_15.gd" id="1_mdtb3"]
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="2_6siiu"]
-[ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/space_spike_trap.tscn" id="3_ak4l1"]
-[ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/electricgrass.tscn" id="4_mdtb3"]
+[ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="3_ak4l1"]
+[ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/decoration/electricgrass/electricgrass.tscn" id="4_mdtb3"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="5_6siiu"]
 [ext_resource type="Texture2D" uid="uid://dpcyknat33v6f" path="res://assets/background&art/deepsky.png" id="7_hsgml"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cw1ds7xodg5ik"]
+[gd_scene load_steps=17 format=4 uid="uid://cw1ds7xodg5ik"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_1rbsa"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_lfk8p"]
@@ -7,10 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="6_xrdvg"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="7_2tko8"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="8_43lde"]
-[ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="8_uif8c"]
-[ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/spike_trap.tscn" id="9_gi70n"]
-[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="10_hi48w"]
+[ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="8_uif8c"]
+[ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/obstacles/spiketrap/spike_trap.tscn" id="9_gi70n"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="10_hi48w"]
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="11_nt80m"]
+[ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="12_brxtv"]
+[ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="13_tv7cl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itajj"]
 texture = ExtResource("2_lfk8p")
@@ -247,3 +249,14 @@ position = Vector2(855, 158)
 
 [node name="LevelEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("11_nt80m")
+
+[node name="Coin" parent="." instance=ExtResource("12_brxtv")]
+position = Vector2(159, 504)
+
+[node name="Coin2" parent="." instance=ExtResource("12_brxtv")]
+position = Vector2(671, 434)
+
+[node name="Coin3" parent="." instance=ExtResource("12_brxtv")]
+position = Vector2(868, 243)
+
+[node name="Hud" parent="." instance=ExtResource("13_tv7cl")]

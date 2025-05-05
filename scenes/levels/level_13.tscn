@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://di3b52543b71d" path="res://scenes/levels/level_13.gd" id="1_pkyvj"]
 [ext_resource type="Texture2D" uid="uid://ca3hvll1db5u6" path="res://assets/background&art/alienplanet.png" id="1_y6ise"]
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="2_2mki6"]
-[ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/electricgrass.tscn" id="3_2mki6"]
+[ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/decoration/electricgrass/electricgrass.tscn" id="3_2mki6"]
 [ext_resource type="PackedScene" uid="uid://b4k87ea7nlgx3" path="res://scenes/area_functionality/red_portal.tscn" id="6_lj5c5"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="7_4habk"]
 [ext_resource type="PackedScene" uid="uid://bbt4ccu4v6n65" path="res://scenes/music/UncertainTimes.tscn" id="8_a8b8j"]

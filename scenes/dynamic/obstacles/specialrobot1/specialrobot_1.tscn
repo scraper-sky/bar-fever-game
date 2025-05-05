@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dg7x0y6uedogp"]
+
+[ext_resource type="Script" uid="uid://bx0ynwxne8i10" path="res://scenes/dynamic/obstacles/specialrobot1/specialrobot_1.gd" id="1_tbll4"]
+[ext_resource type="Texture2D" uid="uid://b6qcteyd0qdft" path="res://assets/background&art/specialrobot.png" id="2_7vutm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vg2qq"]
+size = Vector2(50, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqtlw"]
+size = Vector2(60, 60)
+
+[node name="specialrobot1" type="CharacterBody2D"]
+script = ExtResource("1_tbll4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7vutm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_vg2qq")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_iqtlw")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_body_entered"]

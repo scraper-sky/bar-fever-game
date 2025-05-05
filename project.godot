@@ -20,6 +20,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GlobalGameState="*res://global_game_state.gd"
 GameManager="*res://scripts/game_manager.gd"
 SceneChanger="*res://scripts/SceneChanger.gd"
+GameState="*res://scripts/GameState.gd"
 
 [dialogue_manager]
 

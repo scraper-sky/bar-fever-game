@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjrc4jfda4v7w"]
+
+[ext_resource type="Script" uid="uid://dyfrwg5kbdpjq" path="res://scenes/dynamic/obstacles/ghost/ghost.gd" id="1_l5x4e"]
+[ext_resource type="Texture2D" uid="uid://dbwesxif4dpu1" path="res://assets/background&art/ghost1.png" id="2_ypqhu"]
+[ext_resource type="Texture2D" uid="uid://duq2y3436qyah" path="res://assets/background&art/ghost2.png" id="3_kusjg"]
+[ext_resource type="Texture2D" uid="uid://c3d1jss8j00l4" path="res://assets/background&art/ghost3.png" id="4_3ayg0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1lvml"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ypqhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kusjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3ayg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kusjg")
+}],
+"loop": true,
+"name": &"float",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8ptk"]
+size = Vector2(25, 55)
+
+[node name="ghost" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_l5x4e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1lvml")
+animation = &"float"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11.5, 2.5)
+shape = SubResource("RectangleShape2D_q8ptk")

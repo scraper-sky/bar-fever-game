@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://de1fg8n8wgcj3"]
+
+[ext_resource type="Script" uid="uid://cw41vyask5th6" path="res://scenes/dynamic/collectibles/coin/coin.gd" id="1_dqkin"]
+[ext_resource type="Texture2D" uid="uid://coenrlbqt3css" path="res://assets/background&art/spinningcoin1.png" id="1_nje13"]
+[ext_resource type="Texture2D" uid="uid://duhoack3kwjd4" path="res://assets/background&art/spinningcoin2.png" id="2_qej72"]
+[ext_resource type="Texture2D" uid="uid://ci0ft70ep0hel" path="res://assets/background&art/spinningcoin3.png" id="3_dqkin"]
+[ext_resource type="AudioStream" uid="uid://by6ftq2y1nv4p" path="res://scenes/music/coinwav.mp3" id="5_hilvk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hilvk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nje13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qej72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dqkin")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_huffi"]
+radius = 8.0
+
+[node name="Coin" type="Area2D"]
+script = ExtResource("1_dqkin")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hilvk")
+animation = &"spin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_huffi")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_hilvk")

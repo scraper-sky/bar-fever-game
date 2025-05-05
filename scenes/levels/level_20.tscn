@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://b1qogfkwsa1ws" path="res://assets/background&art/fairydirt.png" id="2_aq57r"]
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="3_d85wr"]
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="4_lgs6p"]
-[ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/space_spike_trap.tscn" id="5_lgs6p"]
+[ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="5_lgs6p"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="6_0865j"]
 [ext_resource type="PackedScene" uid="uid://b4k87ea7nlgx3" path="res://scenes/area_functionality/red_portal.tscn" id="7_x0akd"]
-[ext_resource type="PackedScene" uid="uid://dlqsxofwtcrv3" path="res://scenes/dynamic/laser_emitter.tscn" id="8_0865j"]
+[ext_resource type="PackedScene" uid="uid://dlqsxofwtcrv3" path="res://scenes/dynamic/obstacles/lasers/laser_emitter.tscn" id="8_0865j"]
 [ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="10_v5cdi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x0akd"]

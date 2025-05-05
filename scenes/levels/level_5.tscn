@@ -13,9 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bocun7dayxmoy" path="res://assets/background&art/obstacleblock.png" id="9_yvtft"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="11_t0d57"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="12_xu5a5"]
-[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="13_ne1uf"]
+[ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="13_ne1uf"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="14_j14br"]
-[ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/partyballoons.tscn" id="15_0y7y4"]
+[ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/decoration/partyballoons/partyballoons.tscn" id="15_0y7y4"]
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="17_h717f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbg7v"]

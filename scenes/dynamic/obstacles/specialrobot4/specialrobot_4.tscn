@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6apalp4l52su"]
+
+[ext_resource type="Script" uid="uid://4xyficgtfks7" path="res://scenes/dynamic/obstacles/specialrobot4/specialrobot_4.gd" id="1_fbxsg"]
+[ext_resource type="Texture2D" uid="uid://bdwng5bffas3x" path="res://assets/background&art/specialrobot5.png" id="2_ax1jj"]
+[ext_resource type="Texture2D" uid="uid://r2ky70buppdy" path="res://assets/background&art/specialrobot6.png" id="3_5quac"]
+[ext_resource type="Texture2D" uid="uid://btvr73bwdb2vv" path="res://assets/background&art/specialrobot7.png" id="4_doho6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uvwd0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ax1jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5quac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_doho6")
+}],
+"loop": true,
+"name": &"floating",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_en57s"]
+size = Vector2(35, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahc2j"]
+size = Vector2(41, 55)
+
+[node name="specialrobot_4" type="CharacterBody2D"]
+script = ExtResource("1_fbxsg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uvwd0")
+animation = &"floating"
+frame_progress = 0.25133
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_en57s")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_ahc2j")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_body_entered"]
