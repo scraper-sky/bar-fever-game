@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cw1ds7xodg5ik"]
+[gd_scene load_steps=15 format=4 uid="uid://cw1ds7xodg5ik"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_1rbsa"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_lfk8p"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/flickerlamp.tscn" id="8_uif8c"]
 [ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/spike_trap.tscn" id="9_gi70n"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="10_hi48w"]
+[ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="11_nt80m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itajj"]
 texture = ExtResource("2_lfk8p")
@@ -243,3 +244,6 @@ position = Vector2(804, 311)
 
 [node name="FloatingParticles" parent="." instance=ExtResource("10_hi48w")]
 position = Vector2(855, 158)
+
+[node name="LevelEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("11_nt80m")

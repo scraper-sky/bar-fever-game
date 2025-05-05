@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cpep8iv7y7bfb"]
+[gd_scene load_steps=26 format=4 uid="uid://cpep8iv7y7bfb"]
 
 [ext_resource type="Script" uid="uid://bh8hulmcii4wl" path="res://scenes/levels/level_5.gd" id="1_53jy1"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_tq3vs"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="13_ne1uf"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="14_j14br"]
 [ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/partyballoons.tscn" id="15_0y7y4"]
+[ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="17_h717f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbg7v"]
 texture = ExtResource("2_tq3vs")
@@ -528,3 +529,6 @@ position = Vector2(336, -115)
 
 [node name="partyballoons2" parent="." instance=ExtResource("15_0y7y4")]
 position = Vector2(-30, -109)
+
+[node name="LevelEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("17_h717f")

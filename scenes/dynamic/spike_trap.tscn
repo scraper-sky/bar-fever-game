@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://vnidjrc1n3oj"]
+[gd_scene load_steps=6 format=3 uid="uid://vnidjrc1n3oj"]
 
 [ext_resource type="Script" uid="uid://bcacy1gej13ef" path="res://scenes/dynamic/spike_trap_area.gd" id="1_7ve0j"]
+[ext_resource type="Shader" uid="uid://co6qkca2ty20f" path="res://shaders/spike_trap.gdshader" id="1_opq46"]
 [ext_resource type="Texture2D" uid="uid://s1n7q0usnfcq" path="res://assets/background&art/spike_trap.png" id="2_2f4yq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rrt7p"]
+shader = ExtResource("1_opq46")
+shader_parameter/emission_strength = 0.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cgw3"]
 size = Vector2(64, 43)
 
 [node name="SpikeTrap" type="Node2D"]
+modulate = Color(1.5, 1.5, 1.5, 1)
+material = SubResource("ShaderMaterial_rrt7p")
 
 [node name="SpikeTrapArea" type="Area2D" parent="."]
 collision_layer = 4

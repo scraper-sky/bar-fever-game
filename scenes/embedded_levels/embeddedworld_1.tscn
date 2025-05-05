@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://8s7388nn132f"]
+[gd_scene load_steps=10 format=4 uid="uid://8s7388nn132f"]
 
 [ext_resource type="Texture2D" uid="uid://cgj4jpo16a2bw" path="res://assets/background&art/embeddedworldtilemap.png" id="1_h300w"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_3ucv7"]
 [ext_resource type="Texture2D" uid="uid://cmvce7vxi45mj" path="res://assets/background&art/circustilemap.png" id="2_dnv4w"]
 [ext_resource type="PackedScene" uid="uid://clvjfhd6smwur" path="res://scenes/area_functionality/lock_puzzle.tscn" id="3_mdnee"]
+[ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="5_bmnd6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3ucv7"]
 
@@ -296,3 +297,6 @@ jump_power = 20.0
 
 [node name="LockPuzzle" parent="." instance=ExtResource("3_mdnee")]
 position = Vector2(561, -91)
+
+[node name="LevelEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("5_bmnd6")

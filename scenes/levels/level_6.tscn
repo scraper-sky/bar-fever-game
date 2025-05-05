@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://r3rb56u7yrik"]
+[gd_scene load_steps=33 format=4 uid="uid://r3rb56u7yrik"]
 
 [ext_resource type="Script" uid="uid://dqlqf5pjt83vv" path="res://scenes/levels/level_6.gd" id="1_fta2x"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_kvmlg"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="14_kt6on"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="15_ppjov"]
 [ext_resource type="PackedScene" uid="uid://bahw638wvup6" path="res://scenes/dynamic/floatingsakura.tscn" id="16_pafwe"]
+[ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="18_glmj6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e111w"]
 texture = ExtResource("2_awcdf")
@@ -643,3 +644,6 @@ position = Vector2(1414, 1269)
 
 [node name="floatingsakura2" parent="." instance=ExtResource("16_pafwe")]
 position = Vector2(2266, 835)
+
+[node name="LevelEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("18_glmj6")

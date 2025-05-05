@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://xa7pgmir7am0"]
+[gd_scene load_steps=16 format=4 uid="uid://xa7pgmir7am0"]
 
 [ext_resource type="Script" uid="uid://bptonvwg0iexh" path="res://scenes/levels/level_22.gd" id="1_ts6dj"]
 [ext_resource type="Texture2D" uid="uid://da4ui8wg5cpjd" path="res://assets/background&art/floatingcities.png" id="1_ui775"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="8_0x7s7"]
 [ext_resource type="PackedScene" uid="uid://b4k87ea7nlgx3" path="res://scenes/area_functionality/red_portal.tscn" id="9_ykmed"]
 [ext_resource type="PackedScene" uid="uid://b200y7l58l6ol" path="res://scenes/dynamic/pink_pool.tscn" id="10_ykmed"]
+[ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="12_v83sl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts6dj"]
 texture = ExtResource("2_7ylon")
@@ -1642,3 +1643,9 @@ target_position = Vector2(680, 0)
 
 [node name="PinkPool" parent="." instance=ExtResource("10_ykmed")]
 position = Vector2(1300, 368)
+
+[node name="Dreamer" parent="." instance=ExtResource("12_v83sl")]
+offset_left = 258.0
+offset_top = 245.0
+offset_right = 298.0
+offset_bottom = 285.0

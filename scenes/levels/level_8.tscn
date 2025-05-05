@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://c3ndo40cfpll6"]
+[gd_scene load_steps=28 format=4 uid="uid://c3ndo40cfpll6"]
 
 [ext_resource type="Script" uid="uid://fu7qss4phh5" path="res://scenes/levels/level_8.gd" id="1_7snfr"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_ene4w"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="13_vsqe1"]
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="14_kk2ik"]
 [ext_resource type="PackedScene" uid="uid://dh8odhiktoxc1" path="res://scenes/dynamic/floatingpinksign.tscn" id="15_kk2ik"]
+[ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="17_40qa3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsqe1"]
 texture = ExtResource("3_h6r4t")
@@ -685,3 +686,6 @@ rotation = -0.403171
 [node name="floatingpinksign4" parent="." instance=ExtResource("15_kk2ik")]
 position = Vector2(252, -1231)
 rotation = 0.563741
+
+[node name="LevelEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("17_40qa3")

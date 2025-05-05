@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://djepaoy7t5j4e"]
+[gd_scene load_steps=20 format=4 uid="uid://djepaoy7t5j4e"]
 
 [ext_resource type="Script" uid="uid://d03fc830ghowf" path="res://scenes/levels/level_11.gd" id="1_ntgks"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_sewkk"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/floatingtorii.tscn" id="8_bk8ll"]
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/floatingtoriiv_2.tscn" id="9_4fty2"]
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="10_4fty2"]
+[ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="11_1nnno"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4fty2"]
 texture = ExtResource("2_ntgks")
@@ -220,3 +221,6 @@ offset_right = 547.0
 offset_bottom = 453.0
 theme_override_fonts/normal_font = ExtResource("10_4fty2")
 text = "1. You have lessons to learn. Let's start from square one. Be happy with what you're given."
+
+[node name="LevelEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("11_1nnno")

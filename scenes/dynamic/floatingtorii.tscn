@@ -27,6 +27,7 @@ animations = [{
 }]
 
 [node name="floatingtorii" type="Node2D"]
+modulate = Color(1.25, 1.25, 1.25, 1)
 script = ExtResource("1_3q6xj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

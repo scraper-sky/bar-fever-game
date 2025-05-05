@@ -27,6 +27,7 @@ animations = [{
 }]
 
 [node name="flickerlamp" type="Node2D"]
+modulate = Color(1.15, 1.15, 1.15, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_6o6vo")

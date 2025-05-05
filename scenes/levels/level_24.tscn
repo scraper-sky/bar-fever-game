@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://bh4motacnc3x3"]
+[gd_scene load_steps=40 format=4 uid="uid://bh4motacnc3x3"]
 
 [ext_resource type="Texture2D" uid="uid://b5kapk1c37src" path="res://assets/background&art/chaoticsky1.png" id="1_75tqh"]
 [ext_resource type="Script" uid="uid://d3ymjhjxcchnc" path="res://scenes/levels/level_24.gd" id="1_fb8nu"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://d1yd33gpmjb1i" path="res://scenes/dynamic/memoryloader.tscn" id="27_c7ehq"]
 [ext_resource type="Shader" uid="uid://q3ovrjuernkq" path="res://shaders/static_flicker.gdshader" id="28_613b6"]
 [ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="29_c7ehq"]
+[ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="30_q6n0s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_awrpk"]
 animations = [{
@@ -2161,3 +2162,15 @@ offset_top = -4381.0
 offset_right = -4090.0
 offset_bottom = -3402.0
 scale = Vector2(8, 8)
+
+[node name="Dreamer" parent="." instance=ExtResource("30_q6n0s")]
+offset_left = -692.0
+offset_top = 312.0
+offset_right = -652.0
+offset_bottom = 352.0
+
+[node name="Dreamer2" parent="." instance=ExtResource("30_q6n0s")]
+offset_left = 526.0
+offset_top = 212.0
+offset_right = 566.0
+offset_bottom = 252.0

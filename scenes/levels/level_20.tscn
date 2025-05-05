@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bqibtski661tn"]
+[gd_scene load_steps=14 format=4 uid="uid://bqibtski661tn"]
 
 [ext_resource type="Texture2D" uid="uid://da4ui8wg5cpjd" path="res://assets/background&art/floatingcities.png" id="1_qpktt"]
 [ext_resource type="Script" uid="uid://bdniem405f0iw" path="res://scenes/levels/level_20.gd" id="1_x0akd"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="6_0865j"]
 [ext_resource type="PackedScene" uid="uid://b4k87ea7nlgx3" path="res://scenes/area_functionality/red_portal.tscn" id="7_x0akd"]
 [ext_resource type="PackedScene" uid="uid://dlqsxofwtcrv3" path="res://scenes/dynamic/laser_emitter.tscn" id="8_0865j"]
+[ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="10_v5cdi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x0akd"]
 texture = ExtResource("2_aq57r")
@@ -1667,3 +1668,9 @@ position = Vector2(-519, -6)
 [node name="LaserEmitter5" parent="." instance=ExtResource("8_0865j")]
 position = Vector2(415, 141)
 direction = 0.25
+
+[node name="Dreamer" parent="." instance=ExtResource("10_v5cdi")]
+offset_left = -51.0
+offset_top = -48.0
+offset_right = -11.0
+offset_bottom = -8.0

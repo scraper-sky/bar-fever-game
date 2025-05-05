@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://chs7jyve2lsw6"]
+
+[ext_resource type="Script" uid="uid://ch0vjn4syeipj" path="res://scenes/miscellaneous/dreamer.gd" id="1_o2pcm"]
+[ext_resource type="Texture2D" uid="uid://4dkxm47i0lop" path="res://assets/background&art/giveupper1.png" id="2_ifq7s"]
+[ext_resource type="Texture2D" uid="uid://b1c4myoms0af5" path="res://assets/background&art/giveupper2.png" id="3_s7ljd"]
+[ext_resource type="Texture2D" uid="uid://biajubpknydu0" path="res://assets/background&art/giveupper3.png" id="4_t6r58"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_houw2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ifq7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s7ljd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t6r58")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Dreamer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_o2pcm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_houw2")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -37.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 28.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

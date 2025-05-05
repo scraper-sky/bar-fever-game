@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://yvhpacff47fk"]
+[gd_scene load_steps=18 format=4 uid="uid://yvhpacff47fk"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_beqrg"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_sp886"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/ghost.tscn" id="11_825oj"]
 [ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/partyballoons.tscn" id="12_qi5uv"]
 [ext_resource type="PackedScene" uid="uid://2y5glvmluhje" path="res://scenes/dynamic/floatingcatmask.tscn" id="13_f6egh"]
+[ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="14_t4txi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mjn61"]
 texture = ExtResource("2_sp886")
@@ -255,3 +256,6 @@ position = Vector2(1457, 716)
 
 [node name="floatingcatmask2" parent="." instance=ExtResource("13_f6egh")]
 position = Vector2(601, 527)
+
+[node name="LevelEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("14_t4txi")

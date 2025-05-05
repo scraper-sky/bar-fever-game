@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://bqj7iq6jc16bl"]
+[gd_scene load_steps=47 format=4 uid="uid://bqj7iq6jc16bl"]
 
 [ext_resource type="Script" uid="uid://c47efte5ou18r" path="res://scenes/levels/level_7.gd" id="1_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_5ffpf"]
@@ -17,6 +17,8 @@
 [ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="14_st48t"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/floating_particles.tscn" id="15_dfn7m"]
 [ext_resource type="PackedScene" uid="uid://bahw638wvup6" path="res://scenes/dynamic/floatingsakura.tscn" id="16_8rm7r"]
+[ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="18_bntht"]
+[ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="19_7co51"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c64tk"]
 texture = ExtResource("3_27cbj")
@@ -981,3 +983,12 @@ position = Vector2(-122, -766)
 
 [node name="floatingsakura3" parent="." instance=ExtResource("16_8rm7r")]
 position = Vector2(-85, -1372)
+
+[node name="Dreamer" parent="." instance=ExtResource("18_bntht")]
+offset_left = 163.0
+offset_top = 87.0
+offset_right = 203.0
+offset_bottom = 127.0
+
+[node name="LevelEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("19_7co51")
