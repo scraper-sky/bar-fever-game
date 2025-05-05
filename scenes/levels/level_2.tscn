@@ -259,4 +259,13 @@ position = Vector2(671, 434)
 [node name="Coin3" parent="." instance=ExtResource("12_brxtv")]
 position = Vector2(868, 243)
 
+[node name="Coin4" parent="." instance=ExtResource("12_brxtv")]
+position = Vector2(1188, 580)
+
+[node name="Coin5" parent="." instance=ExtResource("12_brxtv")]
+position = Vector2(1320, 576)
+
+[node name="Coin6" parent="." instance=ExtResource("12_brxtv")]
+position = Vector2(1369, 574)
+
 [node name="Hud" parent="." instance=ExtResource("13_tv7cl")]
