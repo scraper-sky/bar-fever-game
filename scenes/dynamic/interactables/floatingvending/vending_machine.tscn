@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://b416focs68jte"]
+
+[ext_resource type="Texture2D" uid="uid://8vagi7ej86yc" path="res://assets/background&art/floatingvending.png" id="1_wr5f1"]
+[ext_resource type="Script" uid="uid://e7r0ov1mpc2l" path="res://scenes/dynamic/interactables/floatingvending/vending_machine.gd" id="1_wrcuy"]
+[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="2_351tj"]
+[ext_resource type="AudioStream" uid="uid://dxr8xqqpxyunw" path="res://scenes/music/error-89206.mp3" id="3_wrcuy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oy0r4"]
+size = Vector2(110, 104)
+
+[node name="VendingMachine" type="Area2D"]
+script = ExtResource("1_wrcuy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-58, 45)
+texture = ExtResource("1_wr5f1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-62, 44)
+shape = SubResource("RectangleShape2D_oy0r4")
+
+[node name="ErrorSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wrcuy")
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+size = Vector2i(196, 109)
+visible = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 192.0
+offset_bottom = 105.0
+
+[node name="SpeedBoostButton" type="Button" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_351tj")
+text = "Speed Boost (10 coins)"
+
+[node name="MapHintButton" type="Button" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_351tj")
+text = "Map Hint (15 coins)"
+
+[node name="LevelSkipperButton" type="Button" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_351tj")
+text = "Level Skipper (25 coins)"

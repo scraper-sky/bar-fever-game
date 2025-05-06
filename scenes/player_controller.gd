@@ -9,6 +9,8 @@ var jump_multiplier = -30.0
 var direction = 0
 var start_position: Vector2
 var is_respawning = false
+var base_speed: float = 200.0
+var current_speed: float = base_speed
 
 func _ready():
 	start_position = position
@@ -58,6 +60,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+func apply_speed_boost(multiplier: float) -> void:
+	current_speed = base_speed * multiplier
+
+func remove_speed_boost() -> void:
+	current_speed = base_speed
+	
 func force_jump(boost: float):
 	velocity.y = jump_power * jump_multiplier * boost  # -450 * boost
 	print("Forced jump applied, velocity: ", velocity.y)

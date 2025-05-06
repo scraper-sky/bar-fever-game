@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://bqj7iq6jc16bl"]
+[gd_scene load_steps=50 format=4 uid="uid://bqj7iq6jc16bl"]
 
 [ext_resource type="Script" uid="uid://c47efte5ou18r" path="res://scenes/levels/level_7.gd" id="1_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_5ffpf"]
@@ -21,6 +21,7 @@
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="19_7co51"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="20_d07tw"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="21_aqqx4"]
+[ext_resource type="PackedScene" uid="uid://b416focs68jte" path="res://scenes/dynamic/interactables/floatingvending/vending_machine.tscn" id="22_aqqx4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c64tk"]
 texture = ExtResource("3_27cbj")
@@ -1077,3 +1078,6 @@ position = Vector2(-293, -2392)
 
 [node name="Coin27" parent="." instance=ExtResource("21_aqqx4")]
 position = Vector2(-411, -2453)
+
+[node name="VendingMachine" parent="." instance=ExtResource("22_aqqx4")]
+position = Vector2(-552, 63)
