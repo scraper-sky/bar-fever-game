@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="12_utfl0"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/decoration/floatingtorii/floatingtorii.tscn" id="13_o37gu"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="14_kt6on"]
-[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="15_ppjov"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="16_bvftm"]
 [ext_resource type="PackedScene" uid="uid://bahw638wvup6" path="res://scenes/dynamic/decoration/floatingsakura/floatingsakura.tscn" id="16_pafwe"]
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="18_glmj6"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="19_bvftm"]
@@ -634,11 +634,11 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = 887.0
-offset_top = 161.0
-offset_right = 1268.0
-offset_bottom = 223.0
-theme_override_fonts/normal_font = ExtResource("15_ppjov")
+offset_left = 862.0
+offset_top = 198.0
+offset_right = 1198.0
+offset_bottom = 260.0
+theme_override_fonts/normal_font = ExtResource("16_bvftm")
 text = "6. If you descend, you will never return..."
 
 [node name="floatingsakura" parent="." instance=ExtResource("16_pafwe")]

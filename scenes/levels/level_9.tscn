@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="8_6nuwh"]
 [ext_resource type="PackedScene" uid="uid://cj8ysqlmx21au" path="res://scenes/dynamic/platforms/bouncer/bouncer.tscn" id="9_m2cpo"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="10_kj523"]
-[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="11_xampj"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="12_0vi5c"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/obstacles/ghost/ghost.tscn" id="12_xev4b"]
 [ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/decoration/partyballoons/partyballoons.tscn" id="15_b7r0f"]
 [ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="16_b7r0f"]
@@ -784,7 +784,7 @@ offset_left = -103.0
 offset_top = -87.0
 offset_right = 113.0
 offset_bottom = 40.0
-theme_override_fonts/normal_font = ExtResource("11_xampj")
+theme_override_fonts/normal_font = ExtResource("12_0vi5c")
 text = "9. Stay here
 
 "
@@ -801,7 +801,7 @@ offset_left = 499.0
 offset_top = 311.0
 offset_right = 715.0
 offset_bottom = 438.0
-theme_override_fonts/normal_font = ExtResource("11_xampj")
+theme_override_fonts/normal_font = ExtResource("12_0vi5c")
 text = "9. Go back"
 
 [node name="Control3" type="Control" parent="."]
@@ -816,7 +816,7 @@ offset_left = 1464.0
 offset_top = 338.0
 offset_right = 1680.0
 offset_bottom = 483.0
-theme_override_fonts/normal_font = ExtResource("11_xampj")
+theme_override_fonts/normal_font = ExtResource("12_0vi5c")
 text = "9. Go back"
 
 [node name="Control4" type="Control" parent="."]
@@ -831,7 +831,7 @@ offset_left = 1169.0
 offset_top = 810.0
 offset_right = 1385.0
 offset_bottom = 937.0
-theme_override_fonts/normal_font = ExtResource("11_xampj")
+theme_override_fonts/normal_font = ExtResource("12_0vi5c")
 text = "9. Go back"
 
 [node name="Control5" type="Control" parent="."]
@@ -846,7 +846,7 @@ offset_left = 1937.0
 offset_top = 1313.0
 offset_right = 2153.0
 offset_bottom = 1440.0
-theme_override_fonts/normal_font = ExtResource("11_xampj")
+theme_override_fonts/normal_font = ExtResource("12_0vi5c")
 text = "9. Please. Go back."
 
 [node name="ghost" parent="." instance=ExtResource("12_xev4b")]

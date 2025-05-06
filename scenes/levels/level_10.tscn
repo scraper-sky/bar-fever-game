@@ -22,10 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://c7b87auuaws5q" path="res://assets/background&art/1ghost12.png" id="15_b7f35"]
 [ext_resource type="Texture2D" uid="uid://c42jm86fb7u1e" path="res://assets/background&art/1ghost13.png" id="16_hmqkb"]
 [ext_resource type="Texture2D" uid="uid://dun42arwcanq3" path="res://assets/background&art/1ghost14.png" id="17_l6fdw"]
-[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="19_ilo0b"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="21_7pxtr"]
 [ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="22_ctyhw"]
 [ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/obstacles/spiketrap/spike_trap.tscn" id="23_cqrih"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="23_ljl3p"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/obstacles/ghost/ghost.tscn" id="24_odo46"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/decoration/floatingtorii/floatingtorii.tscn" id="27_657iy"]
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/decoration/floatingtorii2/floatingtoriiv_2.tscn" id="28_yy4hl"]
@@ -566,7 +566,7 @@ offset_left = -111.0
 offset_top = 61.0
 offset_right = 181.0
 offset_bottom = 147.0
-theme_override_fonts/normal_font = ExtResource("19_ilo0b")
+theme_override_fonts/normal_font = ExtResource("23_ljl3p")
 text = "10. There's only one correct direction here..."
 
 [node name="Control2" type="Control" parent="."]
@@ -582,7 +582,7 @@ offset_left = 381.0
 offset_top = 1524.0
 offset_right = 673.0
 offset_bottom = 1610.0
-theme_override_fonts/normal_font = ExtResource("19_ilo0b")
+theme_override_fonts/normal_font = ExtResource("23_ljl3p")
 text = "10. There's only one correct direction here..."
 
 [node name="BluePortal" parent="." instance=ExtResource("21_7pxtr")]

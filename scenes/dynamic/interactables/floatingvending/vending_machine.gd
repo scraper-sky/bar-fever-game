@@ -2,15 +2,13 @@ extends Area2D
 
 # Reference to the sprite for visuals
 @onready var sprite: Sprite2D = $Sprite2D
-# Reference to the popup panel
 @onready var popup: PopupPanel = $PopupPanel
-# Reference to the error sound player
 @onready var error_sound: AudioStreamPlayer2D = $ErrorSound
-
+@onready var purchase_sound: AudioStreamPlayer2D = $PurchaseSound
 # Costs for each purchase option
-const SPEED_BOOST_COST: int = 10
-const MAP_HINT_COST: int = 15
-const LEVEL_SKIPPER_COST: int = 25
+const SPEED_BOOST_COST: int = 20
+const MAP_HINT_COST: int = 30
+const LEVEL_SKIPPER_COST: int = 130
 
 # Called when the node is added to the scene tree
 func _ready() -> void:
@@ -40,6 +38,7 @@ func _on_speed_boost_pressed() -> void:
 		var player = get_tree().get_first_node_in_group("player")
 		if player and player.has_method("apply_speed_boost"):
 			player.apply_speed_boost(1.5)
+		purchase_sound.play()
 		popup.hide()
 	else:
 		error_sound.play()
@@ -49,6 +48,7 @@ func _on_map_hint_pressed() -> void:
 	if GameState.deduct_coins(MAP_HINT_COST):
 		# Placeholder: Implement map hint logic (e.g., show minimap)
 		print("Map Hint purchased!")
+		purchase_sound.play()
 		popup.hide()
 	else:
 		error_sound.play()
@@ -58,6 +58,7 @@ func _on_level_skipper_pressed() -> void:
 	if GameState.deduct_coins(LEVEL_SKIPPER_COST):
 		# Placeholder: Implement level skip logic
 		print("Level Skipped!")
+		purchase_sound.play()
 		popup.hide()
 	else:
 		error_sound.play()

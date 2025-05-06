@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/decoration/floatingtorii/floatingtorii.tscn" id="10_fu4h6"]
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/decoration/floatingtorii2/floatingtoriiv_2.tscn" id="11_ay42o"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="12_uxm2d"]
-[ext_resource type="FontFile" uid="uid://bffg4lkd5k5p8" path="res://fonts&style/Exo-Italic-VariableFont_wght.ttf" id="13_hsvsk"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="13_beuva"]
 [ext_resource type="PackedScene" uid="uid://2y5glvmluhje" path="res://scenes/dynamic/decoration/floatingcatmask/floatingcatmask.tscn" id="14_fcb7b"]
 [ext_resource type="PackedScene" uid="uid://d1yd33gpmjb1i" path="res://scenes/dynamic/decoration/memoryloader/memoryloader.tscn" id="15_ov8fk"]
 [ext_resource type="PackedScene" uid="uid://c30gelrcycaml" path="res://scenes/area_functionality/glitch_portal.tscn" id="16_pmra4"]
@@ -378,14 +378,14 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = 377.0
-offset_top = 2307.0
-offset_right = 725.0
-offset_bottom = 2450.0
-theme_override_fonts/normal_font = ExtResource("13_hsvsk")
+offset_left = 395.0
+offset_top = 2276.0
+offset_right = 722.0
+offset_bottom = 2464.0
+theme_override_fonts/normal_font = ExtResource("13_beuva")
 text = "4. You fell here for a reason.
 
-Please stay and enjoy the sky with me. Don't leave. Don't accept any more reasons. Hit a cyberlamp please. This is your final warning."
+Please stay and enjoy the sky with me. Don't leave. Don't accept any more reasons."
 
 [node name="floatingcatmask" parent="." instance=ExtResource("14_fcb7b")]
 position = Vector2(631, 572)

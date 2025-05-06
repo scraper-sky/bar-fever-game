@@ -1,14 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://bm6eheetofr8k"]
 
 [ext_resource type="Script" uid="uid://35vyr4fir4cm" path="res://scenes/ui/hud.gd" id="1_kw0id"]
-[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="2_atyv1"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="2_atyv1"]
 
 [node name="Hud" type="CanvasLayer"]
 script = ExtResource("1_kw0id")
 
 [node name="CoinLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-scale = Vector2(4, 4)
+modulate = Color(0.676189, 0.52622, 0.199282, 1)
+offset_left = 22.0
+offset_top = 24.0
+offset_right = 150.0
+offset_bottom = 47.0
+scale = Vector2(2, 2)
 theme_override_fonts/font = ExtResource("2_atyv1")
 text = "Coins: 0"

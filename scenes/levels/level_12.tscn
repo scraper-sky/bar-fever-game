@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="6_fakti"]
 [ext_resource type="PackedScene" uid="uid://bpxvk0kyv45jg" path="res://scenes/dynamic/decoration/memoryparticles/memory_particles.tscn" id="7_aj8n2"]
 [ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="9_yd7i6"]
-[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="10_vcewm"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="10_jy7ex"]
 [ext_resource type="Script" uid="uid://bn3gd3s3oihtl" path="res://scenes/levels/dialogue_trigger.gd" id="11_b73n6"]
 [ext_resource type="PackedScene" uid="uid://d1yd33gpmjb1i" path="res://scenes/dynamic/decoration/memoryloader/memoryloader.tscn" id="12_rhop2"]
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="13_jy7ex"]
@@ -201,7 +201,7 @@ offset_left = 268.0
 offset_top = 409.0
 offset_right = 594.0
 offset_bottom = 514.0
-theme_override_fonts/normal_font = ExtResource("10_vcewm")
+theme_override_fonts/normal_font = ExtResource("10_jy7ex")
 text = "2. Why why why"
 
 [node name="DialogueTrigger" type="Area2D" parent="."]

@@ -9,7 +9,7 @@ var jump_multiplier = -30.0
 var direction = 0
 var start_position: Vector2
 var is_respawning = false
-var base_speed: float = 200.0
+var base_speed: float = 300.0  # Adjusted to match original speed (10 * 30)
 var current_speed: float = base_speed
 
 func _ready():
@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 
 	direction = Input.get_axis("ui_left", "ui_right")
 	if direction != 0:
-		velocity.x = direction * speed * speed_multiplier
+		velocity.x = direction * current_speed  # Use current_speed for movement
 		if direction < 0:
 			$Sprite2D.flip_h = true
 		else:
@@ -51,7 +51,7 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			animation_player.play("default")
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
+		velocity.x = move_toward(velocity.x, 0, current_speed)  # Use current_speed for deceleration
 		if is_on_floor():
 			animation_player.stop()
 
@@ -62,10 +62,12 @@ func _physics_process(delta: float) -> void:
 
 func apply_speed_boost(multiplier: float) -> void:
 	current_speed = base_speed * multiplier
+	print("Speed boost applied, current_speed: ", current_speed)  # Debug: Confirm boost
 
 func remove_speed_boost() -> void:
 	current_speed = base_speed
-	
+	print("Speed boost removed, current_speed: ", current_speed)  # Debug: Confirm reset
+
 func force_jump(boost: float):
 	velocity.y = jump_power * jump_multiplier * boost  # -450 * boost
 	print("Forced jump applied, velocity: ", velocity.y)

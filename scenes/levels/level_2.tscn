@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="5_wfiw4"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="6_xrdvg"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="7_2tko8"]
-[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="8_43lde"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="8_tv7cl"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="8_uif8c"]
 [ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/obstacles/spiketrap/spike_trap.tscn" id="9_gi70n"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="10_hi48w"]
@@ -229,11 +229,11 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = 255.0
-offset_top = 328.0
+offset_left = 103.0
+offset_top = 303.0
 offset_right = 618.0
 offset_bottom = 519.0
-theme_override_fonts/normal_font = ExtResource("8_43lde")
+theme_override_fonts/normal_font = ExtResource("8_tv7cl")
 text = "2. Glad to see that you're enjoying your time in Given Land
 
 Given land started out as a given; it was destined to be here. An amusement park that connected people's mental nodes to their desired thrills, a waken dream that was finally realized, Given land was all you needed to be given."

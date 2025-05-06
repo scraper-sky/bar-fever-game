@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="7_f2nix"]
 [ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/obstacles/spiketrap/spike_trap.tscn" id="8_ehg4w"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="9_ypc3v"]
-[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="10_54mgj"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="10_josfm"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/obstacles/ghost/ghost.tscn" id="11_825oj"]
 [ext_resource type="PackedScene" uid="uid://cv4trpcwgpj7a" path="res://scenes/dynamic/decoration/partyballoons/partyballoons.tscn" id="12_qi5uv"]
 [ext_resource type="PackedScene" uid="uid://2y5glvmluhje" path="res://scenes/dynamic/decoration/floatingcatmask/floatingcatmask.tscn" id="13_f6egh"]
@@ -234,9 +234,9 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = 299.0
 offset_top = 484.0
-offset_right = 617.0
+offset_right = 747.0
 offset_bottom = 620.0
-theme_override_fonts/normal_font = ExtResource("10_54mgj")
+theme_override_fonts/normal_font = ExtResource("10_josfm")
 text = "3. Please don't leave. 
 
 Given Land is giving you an infinite sky. Consider it an eternal gift."

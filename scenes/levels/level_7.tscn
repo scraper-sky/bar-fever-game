@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="11_wreli"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="12_ymk4h"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/decoration/floatingtorii/floatingtorii.tscn" id="13_ymk4h"]
-[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="14_st48t"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="15_aqqx4"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="15_dfn7m"]
 [ext_resource type="PackedScene" uid="uid://bahw638wvup6" path="res://scenes/dynamic/decoration/floatingsakura/floatingsakura.tscn" id="16_8rm7r"]
 [ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="18_bntht"]
@@ -857,9 +857,9 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -838.0
 offset_top = -519.0
-offset_right = -669.0
+offset_right = -609.0
 offset_bottom = -421.0
-theme_override_fonts/normal_font = ExtResource("14_st48t")
+theme_override_fonts/normal_font = ExtResource("15_aqqx4")
 text = "7. This is the right path; keep following this platform"
 
 [node name="Control2" type="Control" parent="."]
@@ -870,11 +870,11 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
 layout_mode = 0
-offset_left = 282.0
-offset_top = -494.0
-offset_right = 447.0
-offset_bottom = -396.0
-theme_override_fonts/normal_font = ExtResource("14_st48t")
+offset_left = 158.0
+offset_top = -538.0
+offset_right = 393.0
+offset_bottom = -440.0
+theme_override_fonts/normal_font = ExtResource("15_aqqx4")
 text = "7. This is the right path; keep following this platform"
 
 [node name="Control3" type="Control" parent="."]
@@ -885,11 +885,11 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control3"]
 layout_mode = 0
-offset_left = 276.0
-offset_top = -1262.0
-offset_right = 441.0
-offset_bottom = -1164.0
-theme_override_fonts/normal_font = ExtResource("14_st48t")
+offset_left = 208.0
+offset_top = -1299.0
+offset_right = 450.0
+offset_bottom = -1201.0
+theme_override_fonts/normal_font = ExtResource("15_aqqx4")
 text = "7. This is the right path; keep following this platform"
 
 [node name="Control4" type="Control" parent="."]
@@ -900,11 +900,11 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control4"]
 layout_mode = 0
-offset_left = -506.0
+offset_left = -523.0
 offset_top = -1300.0
-offset_right = -341.0
+offset_right = -291.0
 offset_bottom = -1202.0
-theme_override_fonts/normal_font = ExtResource("14_st48t")
+theme_override_fonts/normal_font = ExtResource("15_aqqx4")
 text = "7. This is the right path; keep following this platform"
 
 [node name="Control5" type="Control" parent="."]
@@ -917,8 +917,9 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -165.0
 offset_top = -1986.0
+offset_right = 90.0
 offset_bottom = -1888.0
-theme_override_fonts/normal_font = ExtResource("14_st48t")
+theme_override_fonts/normal_font = ExtResource("15_aqqx4")
 text = "7. This is the right path; keep following this platform"
 
 [node name="Control6" type="Control" parent="."]
@@ -931,9 +932,9 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -382.0
 offset_top = -1874.0
-offset_right = -217.0
+offset_right = -125.0
 offset_bottom = -1776.0
-theme_override_fonts/normal_font = ExtResource("14_st48t")
+theme_override_fonts/normal_font = ExtResource("15_aqqx4")
 text = "7. This is the right path; keep following this platform"
 
 [node name="Control7" type="Control" parent="."]
@@ -946,24 +947,26 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -795.0
 offset_top = -1889.0
-offset_right = -630.0
+offset_right = -585.0
 offset_bottom = -1791.0
-theme_override_fonts/normal_font = ExtResource("14_st48t")
+theme_override_fonts/normal_font = ExtResource("15_aqqx4")
 text = "7. This is the right path; keep following this platform"
 
 [node name="Control8" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_left = -19.0
+offset_top = 40.0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control8"]
 layout_mode = 0
-offset_left = -31.0
+offset_left = -85.0
 offset_top = 52.0
-offset_right = 134.0
+offset_right = 206.0
 offset_bottom = 150.0
-theme_override_fonts/normal_font = ExtResource("14_st48t")
+theme_override_fonts/normal_font = ExtResource("15_aqqx4")
 text = "7. I'm the boy who cried wolf"
 
 [node name="FloatingParticles" parent="." instance=ExtResource("15_dfn7m")]
@@ -988,10 +991,10 @@ position = Vector2(-122, -766)
 position = Vector2(-85, -1372)
 
 [node name="Dreamer" parent="." instance=ExtResource("18_bntht")]
-offset_left = 163.0
-offset_top = 87.0
-offset_right = 203.0
-offset_bottom = 127.0
+offset_left = 187.0
+offset_top = 101.0
+offset_right = 227.0
+offset_bottom = 141.0
 
 [node name="LevelEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("19_7co51")
