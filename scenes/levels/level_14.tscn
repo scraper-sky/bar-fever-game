@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://beolo0be8grp7"]
+[gd_scene load_steps=15 format=4 uid="uid://beolo0be8grp7"]
 
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_vg6n8"]
 [ext_resource type="Script" uid="uid://1wtlo3gcxdo7" path="res://scenes/levels/level_14.gd" id="1_xf43s"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="8_7yavk"]
 [ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/decoration/electricgrass/electricgrass.tscn" id="9_hfkb1"]
 [ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="10_vi0f2"]
+[ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="11_2ayqo"]
+[ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="12_hd4w6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hfkb1"]
 texture = ExtResource("1_vg6n8")
@@ -632,3 +634,23 @@ offset_left = 222.0
 offset_top = -69.0
 offset_right = 262.0
 offset_bottom = -29.0
+
+[node name="Coin" parent="." instance=ExtResource("11_2ayqo")]
+position = Vector2(300, -51)
+
+[node name="Coin2" parent="." instance=ExtResource("11_2ayqo")]
+position = Vector2(300, -15)
+
+[node name="Coin3" parent="." instance=ExtResource("11_2ayqo")]
+position = Vector2(1122, 46)
+
+[node name="Coin4" parent="." instance=ExtResource("11_2ayqo")]
+position = Vector2(1122, 85)
+
+[node name="Coin5" parent="." instance=ExtResource("11_2ayqo")]
+position = Vector2(1155, 46)
+
+[node name="Coin6" parent="." instance=ExtResource("11_2ayqo")]
+position = Vector2(1156, 87)
+
+[node name="Hud" parent="." instance=ExtResource("12_hd4w6")]

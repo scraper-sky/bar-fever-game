@@ -62,7 +62,7 @@ rotation = 2.35619
 [node name="BluePortal" parent="Obstacles" instance=ExtResource("5_l5qf0")]
 position = Vector2(333, 432)
 rotation = 2.44346
-target_scene = "res://scenes/levels/level_19.tscn"
+target_scene = "res://scenes/scene_transitions/retrievedmem3.tscn"
 
 [node name="LaserEmitter" parent="Obstacles" instance=ExtResource("6_p45y2")]
 position = Vector2(475, -145)

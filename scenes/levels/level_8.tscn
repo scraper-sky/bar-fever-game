@@ -426,7 +426,7 @@ texture = ExtResource("5_xsrpe")
 
 [node name="BluePortal" parent="." instance=ExtResource("6_0kxia")]
 position = Vector2(1429, -2130)
-target_scene = "res://scenes/levels/level_9.tscn"
+target_scene = "res://scenes/scene_transitions/retrievedmem2.tscn"
 
 [node name="SpikeTrap" parent="." instance=ExtResource("7_ene4w")]
 position = Vector2(-476, 54)

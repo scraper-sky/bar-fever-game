@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bbf62agybi35o"]
+[gd_scene load_steps=13 format=4 uid="uid://bbf62agybi35o"]
 
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_0l3dn"]
 [ext_resource type="Script" uid="uid://di3b52543b71d" path="res://scenes/levels/level_13.gd" id="1_pkyvj"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b4k87ea7nlgx3" path="res://scenes/area_functionality/red_portal.tscn" id="6_lj5c5"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="7_4habk"]
 [ext_resource type="PackedScene" uid="uid://bbt4ccu4v6n65" path="res://scenes/music/UncertainTimes.tscn" id="8_a8b8j"]
+[ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="9_tmfht"]
+[ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="10_g5tf4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4habk"]
 texture = ExtResource("1_0l3dn")
@@ -683,3 +685,65 @@ position = Vector2(-2268, -3078)
 [node name="BluePortal" parent="." instance=ExtResource("7_4habk")]
 position = Vector2(-413, 2951)
 target_scene = "res://scenes/levels/level_14.tscn"
+
+[node name="Hud" parent="." instance=ExtResource("9_tmfht")]
+
+[node name="Coin" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(-172, 23)
+
+[node name="Coin2" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(-209, 22)
+
+[node name="Coin3" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(-208, -12)
+
+[node name="Coin4" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(-171, -14)
+
+[node name="Coin5" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(396, 241)
+
+[node name="Coin6" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(395, 201)
+
+[node name="Coin7" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(176, 248)
+
+[node name="Coin8" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(131, 248)
+
+[node name="Coin9" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(-143, 414)
+
+[node name="Coin10" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(-142, 507)
+
+[node name="Coin11" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(-143, 334)
+
+[node name="Coin12" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(-142, 597)
+
+[node name="Coin13" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(335, 319)
+
+[node name="Coin14" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(335, 419)
+
+[node name="Coin15" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(335, 511)
+
+[node name="Coin16" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(336, 600)
+
+[node name="Coin17" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(1350, -799)
+
+[node name="Coin18" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(1400, -800)
+
+[node name="Coin19" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(1483, -801)
+
+[node name="Coin20" parent="." instance=ExtResource("10_g5tf4")]
+position = Vector2(1528, -802)

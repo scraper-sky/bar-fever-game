@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var spawner = $MemorySpawner
 @onready var static_rect = $GlitchOverlay/StaticRect
-var memory_scene = preload("res://scenes/dynamic/memory_sprite.tscn")
+var memory_scene = preload("res://scenes/dynamic/decoration/memorysprite/memory_sprite.tscn")
 
 func _ready():
 	print(get_children())  # List children

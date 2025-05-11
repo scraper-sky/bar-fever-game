@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1rbkhb787ryg"]
+[gd_scene load_steps=6 format=3 uid="uid://d1rbkhb787ryg"]
 
 [ext_resource type="Script" uid="uid://dsluuart4jxy5" path="res://scenes/levels/level_18.gd" id="1_7rgcv"]
 [ext_resource type="PackedScene" uid="uid://c7j8hqopnfaxt" path="res://scenes/dynamic/obstacles/spinningcircle/spinning_circle.tscn" id="1_g3o2n"]
 [ext_resource type="PackedScene" uid="uid://bel6r36jwyhgm" path="res://scenes/main_player_2_level_18.tscn" id="2_xleu7"]
 [ext_resource type="Texture2D" uid="uid://dpcyknat33v6f" path="res://assets/background&art/deepsky.png" id="3_xleu7"]
+[ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="5_u7mae"]
 
 [node name="level_18" type="Node2D"]
 script = ExtResource("1_7rgcv")
 
 [node name="SpinningCircle" parent="." instance=ExtResource("1_g3o2n")]
+
+[node name="Hud" parent="SpinningCircle" instance=ExtResource("5_u7mae")]
 
 [node name="MainPlayer2Level18" parent="." instance=ExtResource("2_xleu7")]
 jump_power = 10.0
@@ -20,3 +23,5 @@ jump_power = 10.0
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("3_xleu7")
+
+[node name="Hud" parent="." instance=ExtResource("5_u7mae")]
