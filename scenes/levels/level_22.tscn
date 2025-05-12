@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://xa7pgmir7am0"]
+[gd_scene load_steps=20 format=4 uid="uid://xa7pgmir7am0"]
 
 [ext_resource type="Script" uid="uid://bptonvwg0iexh" path="res://scenes/levels/level_22.gd" id="1_ts6dj"]
 [ext_resource type="Texture2D" uid="uid://da4ui8wg5cpjd" path="res://assets/background&art/floatingcities.png" id="1_ui775"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="12_v83sl"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="13_hx42i"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="14_jr41h"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="15_jr41h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts6dj"]
 texture = ExtResource("2_7ylon")
@@ -1562,6 +1563,11 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ts6dj")
 sources/2 = SubResource("TileSetAtlasSource_v83sl")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qaa7m"]
+shader = ExtResource("15_jr41h")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
+
 [node name="level_22" type="Node2D"]
 script = ExtResource("1_ts6dj")
 
@@ -1719,3 +1725,12 @@ position = Vector2(2323, 287)
 
 [node name="Coin22" parent="." instance=ExtResource("14_jr41h")]
 position = Vector2(2344, 287)
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_qaa7m")
+offset_left = -4313.0
+offset_top = -3940.0
+offset_right = 3952.0
+offset_bottom = 4031.0

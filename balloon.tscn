@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://d0qkyhi7vefrs"]
 
 [ext_resource type="Script" uid="uid://uq7esdr4hjbh" path="res://balloon.gd" id="1_rjslf"]
-[ext_resource type="FontFile" uid="uid://cpt2tglodw1ic" path="res://fonts&style/Exo-VariableFont_wght.ttf" id="2_aqgdt"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_gwpdv"]
+[ext_resource type="FontFile" uid="uid://cdibljaayfnlp" path="res://fonts&style/Perfect DOS VGA 437 Win.ttf" id="2_jj3vs"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_gdgam"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -114,7 +114,7 @@ unique_name_in_owner = true
 modulate = Color(0.931277, 0.0735381, 0.0471508, 1)
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/normal_font = ExtResource("2_aqgdt")
+theme_override_fonts/normal_font = ExtResource("2_jj3vs")
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -125,7 +125,7 @@ unique_name_in_owner = true
 modulate = Color(1, 0.94902, 0.960784, 1)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/normal_font = ExtResource("2_aqgdt")
+theme_override_fonts/normal_font = ExtResource("2_jj3vs")
 text = "Dialogue..."
 
 [node name="Portrait" type="TextureRect" parent="Balloon/Panel"]
@@ -161,7 +161,7 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_aqgdt")
+theme_override_fonts/font = ExtResource("2_jj3vs")
 text = "Response example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]

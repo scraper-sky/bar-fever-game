@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://drahjq4x1ho3k"]
+[gd_scene load_steps=52 format=4 uid="uid://drahjq4x1ho3k"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_n3gcc"]
 [ext_resource type="Script" uid="uid://4cbo2palb5ig" path="res://scenes/levels/level_10.gd" id="1_nk72f"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="36_ljl3p"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="37_1qwk1"]
 [ext_resource type="PackedScene" uid="uid://b416focs68jte" path="res://scenes/dynamic/interactables/floatingvending/vending_machine.tscn" id="38_1qwk1"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="39_lya4r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_55him"]
 texture = ExtResource("2_c7e1w")
@@ -478,6 +479,11 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cahp0"]
+shader = ExtResource("39_lya4r")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
+
 [node name="level_10" type="Node2D"]
 script = ExtResource("1_nk72f")
 
@@ -897,6 +903,12 @@ environment = ExtResource("35_2xxxy")
 
 [node name="Hud" parent="." instance=ExtResource("36_ljl3p")]
 
+[node name="InteractionHint" type="Label" parent="Hud"]
+offset_right = 210.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("23_ljl3p")
+text = "Press -e to interact"
+
 [node name="Coin" parent="." instance=ExtResource("37_1qwk1")]
 position = Vector2(-325, -265)
 
@@ -1043,3 +1055,12 @@ position = Vector2(-651, 1729)
 
 [node name="VendingMachine" parent="." instance=ExtResource("38_1qwk1")]
 position = Vector2(-501, 1011)
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_cahp0")
+offset_left = -2705.0
+offset_top = -833.0
+offset_right = 2467.0
+offset_bottom = 2986.0

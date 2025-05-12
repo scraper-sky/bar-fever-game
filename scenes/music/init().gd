@@ -9,5 +9,5 @@ func _ready():
 	autoplay = false
 
 	# Wait 5 seconds before playing
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(3.0).timeout
 	play()

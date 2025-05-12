@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://cpep8iv7y7bfb"]
+[gd_scene load_steps=32 format=4 uid="uid://cpep8iv7y7bfb"]
 
 [ext_resource type="Script" uid="uid://bh8hulmcii4wl" path="res://scenes/levels/level_5.gd" id="1_53jy1"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_tq3vs"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="6_swdne"]
 [ext_resource type="Script" uid="uid://cm0bj6mpro6nq" path="res://scenes/levels/local_lamp_block.gd" id="7_4dbtn"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="8_bfasp"]
+[ext_resource type="PackedScene" uid="uid://dh7sqne4jhgpu" path="res://scenes/music/8bitaction3.tscn" id="8_vm1kt"]
 [ext_resource type="Script" uid="uid://bnojoghjfw7to" path="res://scenes/levels/obstacle_block.gd" id="9_f3msi"]
 [ext_resource type="Texture2D" uid="uid://bocun7dayxmoy" path="res://assets/background&art/obstacleblock.png" id="9_yvtft"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="11_t0d57"]
@@ -19,6 +20,8 @@
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="17_h717f"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="18_l8eod"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="19_sfnul"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="20_fea5r"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="21_wnnhf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbg7v"]
 texture = ExtResource("2_tq3vs")
@@ -364,6 +367,11 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlais"]
 size = Vector2(64, 64)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vm1kt"]
+shader = ExtResource("20_fea5r")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
+
 [node name="level_5" type="Node2D"]
 script = ExtResource("1_53jy1")
 
@@ -374,6 +382,8 @@ tile_set = SubResource("TileSet_gw0ke")
 [node name="MainPlayer" parent="." instance=ExtResource("6_swdne")]
 position = Vector2(-9, -48)
 collision_mask = 3
+
+[node name="8Bitaction3" parent="MainPlayer" instance=ExtResource("8_vm1kt")]
 
 [node name="LampBlock" type="Area2D" parent="." groups=["lamp_blocks"]]
 position = Vector2(32, 32)
@@ -554,3 +564,18 @@ position = Vector2(551, -39)
 position = Vector2(551, -68)
 
 [node name="Hud" parent="." instance=ExtResource("19_sfnul")]
+
+[node name="InteractionHint" type="Label" parent="Hud"]
+offset_right = 210.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("21_wnnhf")
+text = "Press -e to interact"
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_vm1kt")
+offset_left = -617.0
+offset_top = -672.0
+offset_right = 1262.0
+offset_bottom = 693.0

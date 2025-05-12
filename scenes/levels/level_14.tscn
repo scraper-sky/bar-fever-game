@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://beolo0be8grp7"]
+[gd_scene load_steps=17 format=4 uid="uid://beolo0be8grp7"]
 
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_vg6n8"]
 [ext_resource type="Script" uid="uid://1wtlo3gcxdo7" path="res://scenes/levels/level_14.gd" id="1_xf43s"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="10_vi0f2"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="11_2ayqo"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="12_hd4w6"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="13_x7cri"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hfkb1"]
 texture = ExtResource("1_vg6n8")
@@ -532,6 +533,11 @@ texture = ExtResource("1_vg6n8")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hfkb1")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5muy6"]
+shader = ExtResource("13_x7cri")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
+
 [node name="level_14" type="Node2D"]
 script = ExtResource("1_xf43s")
 
@@ -654,3 +660,12 @@ position = Vector2(1155, 46)
 position = Vector2(1156, 87)
 
 [node name="Hud" parent="." instance=ExtResource("12_hd4w6")]
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_5muy6")
+offset_left = -4313.0
+offset_top = -3940.0
+offset_right = 3952.0
+offset_bottom = 4031.0

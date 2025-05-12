@@ -1,7 +1,8 @@
-[gd_scene load_steps=24 format=4 uid="uid://by2oub33kp6q0"]
+[gd_scene load_steps=27 format=4 uid="uid://by2oub33kp6q0"]
 
 [ext_resource type="Script" uid="uid://chfqsurmss50t" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
+[ext_resource type="PackedScene" uid="uid://ysonrp6ucwj7" path="res://scenes/music/8bitaction2.tscn" id="3_12cdj"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="3_r57se"]
 [ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://assets/background&art/purpleland.png" id="4_3w7cl"]
 [ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://assets/background&art/neoncitybackground.png" id="5_70o17"]
@@ -20,6 +21,7 @@
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="18_vq5n0"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="19_beuva"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="20_05se8"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="21_05se8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3gnf3"]
 texture = ExtResource("3_r57se")
@@ -109,10 +111,17 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3gnf3")
 sources/1 = SubResource("TileSetAtlasSource_af02t")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_12cdj"]
+shader = ExtResource("21_05se8")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
+
 [node name="level_4" type="Node2D"]
 script = ExtResource("1_7pvna")
 
 [node name="MainPlayer" parent="." instance=ExtResource("2_r4k2g")]
+
+[node name="8Bitaction2" parent="MainPlayer" instance=ExtResource("3_12cdj")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(4, 22)
@@ -411,6 +420,12 @@ environment = ExtResource("18_vq5n0")
 
 [node name="Hud" parent="." instance=ExtResource("19_beuva")]
 
+[node name="InteractionHint" type="Label" parent="Hud"]
+offset_right = 210.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("13_beuva")
+text = "Press -e to interact"
+
 [node name="Coin" parent="." instance=ExtResource("20_05se8")]
 position = Vector2(222, 241)
 
@@ -560,3 +575,12 @@ position = Vector2(113, 2388)
 
 [node name="Coin50" parent="." instance=ExtResource("20_05se8")]
 position = Vector2(146, 2388)
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_12cdj")
+offset_left = -85.0
+offset_top = -66.0
+offset_right = 1091.0
+offset_bottom = 2776.0

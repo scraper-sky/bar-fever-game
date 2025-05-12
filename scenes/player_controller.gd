@@ -11,6 +11,10 @@ var start_position: Vector2
 var is_respawning = false
 var base_speed: float = 300.0  # Adjusted to match original speed (10 * 30)
 var current_speed: float = base_speed
+var base_jump_power: float = jump_power
+var current_jump_power: float = base_jump_power
+
+signal booster_started(duration: float)
 
 func _ready():
 	start_position = position
@@ -62,13 +66,22 @@ func _physics_process(delta: float) -> void:
 
 func apply_speed_boost(multiplier: float) -> void:
 	current_speed = base_speed * multiplier
-	print("Speed boost applied, current_speed: ", current_speed)  # Debug: Confirm boost
+	print("Speed boost applied, current_speed: ", current_speed)
+	emit_signal("booster_started", 5.0)
 
 func remove_speed_boost() -> void:
 	current_speed = base_speed
-	print("Speed boost removed, current_speed: ", current_speed)  # Debug: Confirm reset
+	print("Speed boost removed, current_speed: ", current_speed)
+
+func apply_jump_boost(multiplier: float) -> void:
+	current_jump_power = base_jump_power * multiplier
+	print("Jump boost applied, current_jump_power: ", current_jump_power)
+
+func remove_jump_boost() -> void:
+	current_jump_power = base_jump_power
+	print("Jump boost removed, current_jump_power: ", current_jump_power)
 
 func force_jump(boost: float):
-	velocity.y = jump_power * jump_multiplier * boost  # -450 * boost
+	velocity.y = current_jump_power * jump_multiplier * boost
 	print("Forced jump applied, velocity: ", velocity.y)
-	move_and_slide()  # Apply immediately
+	move_and_slide()

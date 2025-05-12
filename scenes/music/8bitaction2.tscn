@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ysonrp6ucwj7"]
+
+[ext_resource type="Script" uid="uid://bhk73apxtxr42" path="res://scenes/music/8_bitaction_2.gd" id="1_icooe"]
+[ext_resource type="AudioStream" uid="uid://beicmykyyo5jn" path="res://scenes/music/Bogart VGM - 8Bit Action- Stage 1.mp3" id="1_rd0eq"]
+
+[node name="8Bitaction2" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_rd0eq")
+script = ExtResource("1_icooe")

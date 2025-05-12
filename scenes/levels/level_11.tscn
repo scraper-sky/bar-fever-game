@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://djepaoy7t5j4e"]
+[gd_scene load_steps=23 format=4 uid="uid://djepaoy7t5j4e"]
 
 [ext_resource type="Script" uid="uid://d03fc830ghowf" path="res://scenes/levels/level_11.gd" id="1_ntgks"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_sewkk"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/decoration/floatingtorii2/floatingtoriiv_2.tscn" id="9_4fty2"]
 [ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="10_1nnno"]
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="11_1nnno"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="12_5tmw6"]
+[ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="13_c8dgj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4fty2"]
 texture = ExtResource("2_ntgks")
@@ -150,6 +152,11 @@ _data = {
 &"glitch": SubResource("Animation_6leo6")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c8dgj"]
+shader = ExtResource("12_5tmw6")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
+
 [node name="level_11" type="Node2D"]
 script = ExtResource("1_ntgks")
 
@@ -224,3 +231,20 @@ text = "1. You have lessons to learn. Let's return to lesson one: be happy with 
 
 [node name="LevelEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("11_1nnno")
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_c8dgj")
+offset_left = -239.0
+offset_top = -273.0
+offset_right = 1238.0
+offset_bottom = 792.0
+
+[node name="Hud" parent="." instance=ExtResource("13_c8dgj")]
+
+[node name="InteractionHint" type="Label" parent="Hud"]
+offset_right = 210.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("10_1nnno")
+text = "Press -e to interact"

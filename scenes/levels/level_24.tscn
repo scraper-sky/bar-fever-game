@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://bh4motacnc3x3"]
+[gd_scene load_steps=44 format=4 uid="uid://bh4motacnc3x3"]
 
 [ext_resource type="Texture2D" uid="uid://b5kapk1c37src" path="res://assets/background&art/chaoticsky1.png" id="1_75tqh"]
 [ext_resource type="Script" uid="uid://d3ymjhjxcchnc" path="res://scenes/levels/level_24.gd" id="1_fb8nu"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://chs7jyve2lsw6" path="res://scenes/miscellaneous/dreamer.tscn" id="30_q6n0s"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="31_2a2un"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="32_syeyb"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="33_7gley"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_awrpk"]
 animations = [{
@@ -1699,6 +1700,11 @@ shader = ExtResource("29_c7ehq")
 shader_parameter/intensity = 0.3
 shader_parameter/speed = 10.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f53me"]
+shader = ExtResource("33_7gley")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
+
 [node name="level_24" type="Node2D"]
 script = ExtResource("1_fb8nu")
 
@@ -2286,3 +2292,12 @@ position = Vector2(1764, -1554)
 
 [node name="Coin36" parent="." instance=ExtResource("32_syeyb")]
 position = Vector2(1800, -1554)
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_f53me")
+offset_left = -4313.0
+offset_top = -3940.0
+offset_right = 7840.0
+offset_bottom = 4083.0

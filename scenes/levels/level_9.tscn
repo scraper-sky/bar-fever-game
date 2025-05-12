@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://qia1gjqqdvr1"]
+[gd_scene load_steps=39 format=4 uid="uid://qia1gjqqdvr1"]
 
 [ext_resource type="Script" uid="uid://do4cp2iisk0j8" path="res://scenes/levels/level_9.gd" id="1_sd2du"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_6v45j"]
@@ -19,6 +19,8 @@
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="17_xex4j"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="18_0vi5c"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="19_5hxyp"]
+[ext_resource type="PackedScene" uid="uid://bum7wdgioscgn" path="res://scenes/dynamic/interactables/watermelonbooster/watermelonbooster.tscn" id="20_5hxyp"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="21_v80mn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7amt0"]
 texture = ExtResource("4_6nuwh")
@@ -450,6 +452,11 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60.5309, 350.261)
 }
 point_count = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_chcbd"]
+shader = ExtResource("21_v80mn")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
 
 [node name="level_9" type="Node2D"]
 script = ExtResource("1_sd2du")
@@ -909,6 +916,12 @@ environment = ExtResource("17_xex4j")
 
 [node name="Hud" parent="." instance=ExtResource("18_0vi5c")]
 
+[node name="InteractionHint" type="Label" parent="Hud"]
+offset_right = 210.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("12_0vi5c")
+text = "Press -e to interact"
+
 [node name="Coin" parent="." instance=ExtResource("19_5hxyp")]
 position = Vector2(110, -52)
 
@@ -1028,3 +1041,15 @@ position = Vector2(2140, 1272)
 
 [node name="Coin40" parent="." instance=ExtResource("19_5hxyp")]
 position = Vector2(2195, 1270)
+
+[node name="Watermelonbooster" parent="." instance=ExtResource("20_5hxyp")]
+position = Vector2(737, 47)
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_chcbd")
+offset_left = -689.0
+offset_top = -1237.0
+offset_right = 3482.0
+offset_bottom = 2235.0

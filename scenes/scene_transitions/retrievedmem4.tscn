@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1fyc2wrlsgml"]
+
+[ext_resource type="Script" uid="uid://c5hiskxpxlrdt" path="res://scenes/scene_transitions/retrievedmem_4.gd" id="1_2dycc"]
+[ext_resource type="Texture2D" uid="uid://slwhwgfriwos" path="res://assets/background&art/rainakeepon1.png" id="2_k0261"]
+[ext_resource type="Texture2D" uid="uid://bh5j5pa8p6lcm" path="res://assets/background&art/rainakeepon2.png" id="3_sdl6f"]
+[ext_resource type="Texture2D" uid="uid://cbm6ydapbg8li" path="res://assets/background&art/rainakeepon3.png" id="4_s3se8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0t042"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k0261")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sdl6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s3se8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Retrievedmem4" type="Node2D"]
+script = ExtResource("1_2dycc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -74.0
+offset_top = -132.0
+offset_right = 1226.0
+offset_bottom = 768.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(545, 301)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0t042")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 544.0
+offset_top = 456.0
+offset_right = 753.0
+offset_bottom = 541.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

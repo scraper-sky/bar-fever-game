@@ -1,8 +1,9 @@
-[gd_scene load_steps=50 format=4 uid="uid://bqj7iq6jc16bl"]
+[gd_scene load_steps=54 format=4 uid="uid://bqj7iq6jc16bl"]
 
 [ext_resource type="Script" uid="uid://c47efte5ou18r" path="res://scenes/levels/level_7.gd" id="1_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_5ffpf"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="3_27cbj"]
+[ext_resource type="PackedScene" uid="uid://dtodlvjr7tgh" path="res://scenes/music/8bitaction4.tscn" id="3_r4aal"]
 [ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://assets/background&art/purpleland.png" id="4_x1ki7"]
 [ext_resource type="Texture2D" uid="uid://datrui1vhfc4b" path="res://assets/background&art/abandonednightcity.png" id="5_73o88"]
 [ext_resource type="Texture2D" uid="uid://cmvce7vxi45mj" path="res://assets/background&art/circustilemap.png" id="5_c64tk"]
@@ -22,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="20_d07tw"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="21_aqqx4"]
 [ext_resource type="PackedScene" uid="uid://b416focs68jte" path="res://scenes/dynamic/interactables/floatingvending/vending_machine.tscn" id="22_aqqx4"]
+[ext_resource type="PackedScene" uid="uid://bum7wdgioscgn" path="res://scenes/dynamic/interactables/watermelonbooster/watermelonbooster.tscn" id="23_g13ha"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="24_nonn3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c64tk"]
 texture = ExtResource("3_27cbj")
@@ -524,12 +527,19 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r4aal"]
+shader = ExtResource("24_nonn3")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
+
 [node name="level_7" type="Node2D"]
 script = ExtResource("1_q0wsq")
 
 [node name="MainPlayer" parent="." instance=ExtResource("2_5ffpf")]
 position = Vector2(3, 6)
 jump_power = 18.0
+
+[node name="8Bitaction4" parent="MainPlayer" instance=ExtResource("3_r4aal")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(4, 22)
@@ -1001,6 +1011,12 @@ environment = ExtResource("19_7co51")
 
 [node name="Hud" parent="." instance=ExtResource("20_d07tw")]
 
+[node name="InteractionHint" type="Label" parent="Hud"]
+offset_right = 210.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("15_aqqx4")
+text = "Press -e to interact"
+
 [node name="Coin" parent="." instance=ExtResource("21_aqqx4")]
 position = Vector2(-339, 10)
 
@@ -1084,3 +1100,15 @@ position = Vector2(-411, -2453)
 
 [node name="VendingMachine" parent="." instance=ExtResource("22_aqqx4")]
 position = Vector2(-552, 63)
+
+[node name="Watermelonbooster" parent="." instance=ExtResource("23_g13ha")]
+position = Vector2(450, 38)
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_r4aal")
+offset_left = -1209.0
+offset_top = -2934.0
+offset_right = 1075.0
+offset_bottom = 449.0

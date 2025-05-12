@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://c2s0r8014xaqu"]
+[gd_scene load_steps=15 format=4 uid="uid://c2s0r8014xaqu"]
 
 [ext_resource type="Script" uid="uid://comtag7a5xvri" path="res://scenes/levels/level_16.gd" id="1_3ycd6"]
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="2_2w147"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="8_imaen"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="9_4wjd0"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="10_lbynr"]
+[ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="11_lbynr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx1a"]
 texture = ExtResource("2_2w147")
@@ -530,6 +531,11 @@ texture = ExtResource("2_2w147")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_acx1a")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lbspt"]
+shader = ExtResource("11_lbynr")
+shader_parameter/fade = 0.0
+shader_parameter/pixel_size = 1.0
+
 [node name="level_16" type="Node2D"]
 script = ExtResource("1_3ycd6")
 
@@ -593,7 +599,7 @@ position = Vector2(844, -1495)
 
 [node name="BluePortal" parent="." instance=ExtResource("7_jx4lj")]
 position = Vector2(-488, -1444)
-target_scene = "res://scenes/levels/level_17.tscn"
+target_scene = "res://scenes/scene_transitions/retrievedmem4.tscn"
 
 [node name="SpaceSpikeTrap" parent="." instance=ExtResource("8_imaen")]
 position = Vector2(-962, -1392)
@@ -650,3 +656,12 @@ position = Vector2(-884, -1420)
 
 [node name="Coin16" parent="." instance=ExtResource("10_lbynr")]
 position = Vector2(-884, -1391)
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+
+[node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
+material = SubResource("ShaderMaterial_lbspt")
+offset_left = -4313.0
+offset_top = -3940.0
+offset_right = 3952.0
+offset_bottom = 4031.0
