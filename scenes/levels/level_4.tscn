@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://by2oub33kp6q0"]
+[gd_scene load_steps=31 format=4 uid="uid://by2oub33kp6q0"]
 
 [ext_resource type="Script" uid="uid://chfqsurmss50t" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
@@ -21,7 +21,10 @@
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="18_vq5n0"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="19_beuva"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="20_05se8"]
+[ext_resource type="Texture2D" uid="uid://b3x07aqur6y58" path="res://assets/background&art/map_hint1.png" id="21_0n65g"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="21_05se8"]
+[ext_resource type="Script" uid="uid://bjv6sch568arg" path="res://scenes/dynamic/interactables.gd" id="23_lc5pf"]
+[ext_resource type="Texture2D" uid="uid://bw5g28nm2xfa0" path="res://assets/background&art/map_item.png" id="24_0n65g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3gnf3"]
 texture = ExtResource("3_r57se")
@@ -115,6 +118,9 @@ sources/1 = SubResource("TileSetAtlasSource_af02t")
 shader = ExtResource("21_05se8")
 shader_parameter/fade = 0.0
 shader_parameter/pixel_size = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyomx"]
+size = Vector2(49, 28)
 
 [node name="level_4" type="Node2D"]
 script = ExtResource("1_7pvna")
@@ -421,10 +427,19 @@ environment = ExtResource("18_vq5n0")
 [node name="Hud" parent="." instance=ExtResource("19_beuva")]
 
 [node name="InteractionHint" type="Label" parent="Hud"]
-offset_right = 210.0
-offset_bottom = 63.0
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 832.0
+offset_bottom = 319.0
 theme_override_fonts/font = ExtResource("13_beuva")
 text = "Press -e to interact"
+
+[node name="MapHint" type="TextureRect" parent="Hud"]
+offset_left = 384.0
+offset_top = 96.0
+offset_right = 896.0
+offset_bottom = 608.0
+texture = ExtResource("21_0n65g")
 
 [node name="Coin" parent="." instance=ExtResource("20_05se8")]
 position = Vector2(222, 241)
@@ -580,7 +595,20 @@ position = Vector2(146, 2388)
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_12cdj")
-offset_left = -85.0
-offset_top = -66.0
-offset_right = 1091.0
-offset_bottom = 2776.0
+offset_left = -1383.0
+offset_top = -344.0
+offset_right = 6445.0
+offset_bottom = 8778.0
+scale = Vector2(0.5, 0.5)
+
+[node name="MapInteractable" type="Area2D" parent="."]
+position = Vector2(699, 232)
+script = ExtResource("23_lc5pf")
+
+[node name="Sprite2D" type="Sprite2D" parent="MapInteractable"]
+position = Vector2(-86, 30)
+texture = ExtResource("24_0n65g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapInteractable"]
+position = Vector2(-84.5, 32)
+shape = SubResource("RectangleShape2D_uyomx")

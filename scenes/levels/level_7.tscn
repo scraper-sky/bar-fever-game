@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://bqj7iq6jc16bl"]
+[gd_scene load_steps=58 format=4 uid="uid://bqj7iq6jc16bl"]
 
 [ext_resource type="Script" uid="uid://c47efte5ou18r" path="res://scenes/levels/level_7.gd" id="1_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_5ffpf"]
@@ -23,8 +23,11 @@
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="20_d07tw"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="21_aqqx4"]
 [ext_resource type="PackedScene" uid="uid://b416focs68jte" path="res://scenes/dynamic/interactables/floatingvending/vending_machine.tscn" id="22_aqqx4"]
+[ext_resource type="Texture2D" uid="uid://damhwomv5waoa" path="res://assets/background&art/map_hint2.png" id="22_qybhm"]
 [ext_resource type="PackedScene" uid="uid://bum7wdgioscgn" path="res://scenes/dynamic/interactables/watermelonbooster/watermelonbooster.tscn" id="23_g13ha"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="24_nonn3"]
+[ext_resource type="Script" uid="uid://bjv6sch568arg" path="res://scenes/dynamic/interactables.gd" id="26_64ngv"]
+[ext_resource type="Texture2D" uid="uid://bw5g28nm2xfa0" path="res://assets/background&art/map_item.png" id="27_qybhm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c64tk"]
 texture = ExtResource("3_27cbj")
@@ -532,6 +535,9 @@ shader = ExtResource("24_nonn3")
 shader_parameter/fade = 0.0
 shader_parameter/pixel_size = 1.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8v86"]
+size = Vector2(49, 28)
+
 [node name="level_7" type="Node2D"]
 script = ExtResource("1_q0wsq")
 
@@ -1012,10 +1018,19 @@ environment = ExtResource("19_7co51")
 [node name="Hud" parent="." instance=ExtResource("20_d07tw")]
 
 [node name="InteractionHint" type="Label" parent="Hud"]
-offset_right = 210.0
-offset_bottom = 63.0
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 832.0
+offset_bottom = 319.0
 theme_override_fonts/font = ExtResource("15_aqqx4")
 text = "Press -e to interact"
+
+[node name="MapHint" type="TextureRect" parent="Hud"]
+offset_left = 384.0
+offset_top = 96.0
+offset_right = 896.0
+offset_bottom = 608.0
+texture = ExtResource("22_qybhm")
 
 [node name="Coin" parent="." instance=ExtResource("21_aqqx4")]
 position = Vector2(-339, 10)
@@ -1099,7 +1114,7 @@ position = Vector2(-293, -2392)
 position = Vector2(-411, -2453)
 
 [node name="VendingMachine" parent="." instance=ExtResource("22_aqqx4")]
-position = Vector2(-552, 63)
+position = Vector2(-556, 50)
 
 [node name="Watermelonbooster" parent="." instance=ExtResource("23_g13ha")]
 position = Vector2(450, 38)
@@ -1108,7 +1123,19 @@ position = Vector2(450, 38)
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_r4aal")
-offset_left = -1209.0
-offset_top = -2934.0
-offset_right = 1075.0
-offset_bottom = 449.0
+offset_left = -3165.0
+offset_top = -4453.0
+offset_right = 3112.0
+offset_bottom = 1919.0
+
+[node name="MapInteractable" type="Area2D" parent="."]
+position = Vector2(-518, -216)
+script = ExtResource("26_64ngv")
+
+[node name="Sprite2D" type="Sprite2D" parent="MapInteractable"]
+position = Vector2(-86, 30)
+texture = ExtResource("27_qybhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapInteractable"]
+position = Vector2(-84.5, 32)
+shape = SubResource("RectangleShape2D_j8v86")

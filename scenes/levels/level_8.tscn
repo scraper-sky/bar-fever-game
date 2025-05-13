@@ -732,7 +732,7 @@ position = Vector2(931, -2101)
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_mnqm8")
-offset_left = -836.0
-offset_top = -2585.0
-offset_right = 1917.0
-offset_bottom = 359.0
+offset_left = -4037.0
+offset_top = -5081.0
+offset_right = 3436.0
+offset_bottom = 3044.0
