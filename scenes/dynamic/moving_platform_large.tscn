@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://1w1hqkl4eq8j"]
+[gd_scene load_steps=7 format=3 uid="uid://1w1hqkl4eq8j"]
 
 [ext_resource type="Script" uid="uid://b3443grp48snd" path="res://scenes/dynamic/moving_platform_large.gd" id="1_k2xjq"]
-[ext_resource type="Texture2D" uid="uid://b717b883hvkr3" path="res://assets/background&art/blueplatform.png" id="2_nrh5o"]
+[ext_resource type="Texture2D" uid="uid://diuqkkc7kpxu4" path="res://assets/background&art/purpleplatform1.png" id="2_knmda"]
+[ext_resource type="Texture2D" uid="uid://baxvf6x1ixgxp" path="res://assets/background&art/purpleplatform2.png" id="3_fa5ei"]
 
 [sub_resource type="Curve2D" id="Curve2D_1cyh2"]
 resource_local_to_scene = true
@@ -9,6 +10,20 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -48)
 }
 point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2p15h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_knmda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fa5ei")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eg8u1"]
 size = Vector2(35, 5)
@@ -26,9 +41,10 @@ remote_path = NodePath("../../AnimatableBody2D")
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_nrh5o")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="AnimatableBody2D"]
+position = Vector2(-1.19209e-07, 3.57628e-07)
+scale = Vector2(0.416667, 0.75)
+sprite_frames = SubResource("SpriteFrames_2p15h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
 position = Vector2(-0.5, 0.5)

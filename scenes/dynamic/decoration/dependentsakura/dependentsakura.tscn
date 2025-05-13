@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://gt51sob8maab"]
+
+[ext_resource type="Script" uid="uid://jpul40wv6ysq" path="res://scenes/dynamic/decoration/dependentsakura/dependentsakura.gd" id="1_0dg0j"]
+[ext_resource type="Texture2D" uid="uid://ch3knrm00rwhl" path="res://assets/background&art/depsakura1.png" id="2_dfki5"]
+[ext_resource type="Texture2D" uid="uid://dcqbbav172c3l" path="res://assets/background&art/depsakura2.png" id="3_xnsh5"]
+[ext_resource type="Texture2D" uid="uid://ch48tuhr3egdf" path="res://assets/background&art/depsakura3.png" id="4_gcvje"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0becb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dfki5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xnsh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gcvje")
+}],
+"loop": true,
+"name": &"floating",
+"speed": 5.0
+}]
+
+[node name="Dependentsakura" type="Node2D"]
+script = ExtResource("1_0dg0j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0becb")
+animation = &"floating"

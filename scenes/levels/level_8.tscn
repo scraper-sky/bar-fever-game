@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://c3ndo40cfpll6"]
+[gd_scene load_steps=32 format=4 uid="uid://c3ndo40cfpll6"]
 
 [ext_resource type="Script" uid="uid://fu7qss4phh5" path="res://scenes/levels/level_8.gd" id="1_7snfr"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_ene4w"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="9_w2i51"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/obstacles/ghost/ghost.tscn" id="10_xsrpe"]
 [ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="12_acgl5"]
-[ext_resource type="FontFile" uid="uid://bffg4lkd5k5p8" path="res://fonts&style/Exo-Italic-VariableFont_wght.ttf" id="12_v7ucw"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/decoration/floatingtorii/floatingtorii.tscn" id="13_vsqe1"]
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/decoration/floatingtorii2/floatingtoriiv_2.tscn" id="14_kk2ik"]
 [ext_resource type="PackedScene" uid="uid://dh8odhiktoxc1" path="res://scenes/dynamic/decoration/floatingpinksign/floatingpinksign.tscn" id="15_kk2ik"]
@@ -654,9 +653,9 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = 651.0
 offset_top = -2013.0
-offset_right = 837.0
+offset_right = 882.0
 offset_bottom = -1961.0
-theme_override_fonts/normal_font = ExtResource("12_v7ucw")
+theme_override_fonts/normal_font = ExtResource("12_acgl5")
 text = "8. Take the platform above"
 
 [node name="floatingtorii" parent="." instance=ExtResource("13_vsqe1")]

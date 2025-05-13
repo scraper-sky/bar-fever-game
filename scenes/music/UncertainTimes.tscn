@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbt4ccu4v6n65"]
 
-[ext_resource type="AudioStream" uid="uid://de52dwhuun5w1" path="res://scenes/music/uncertaintimes.mp3" id="1_vp1i6"]
+[ext_resource type="AudioStream" uid="uid://dpjeyim3bg3qr" path="res://scenes/music/song18.mp3" id="1_vp1i6"]
 [ext_resource type="Script" uid="uid://b2gl3r8nbqq6x" path="res://scenes/music/UncertainTimes.gd" id="2_drvno"]
 
 [node name="UncertainTimes" type="AudioStreamPlayer2D"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://yvhpacff47fk"]
+[gd_scene load_steps=27 format=4 uid="uid://yvhpacff47fk"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_beqrg"]
 [ext_resource type="Script" uid="uid://b75i48xw8l6bo" path="res://scenes/levels/level_3.gd" id="1_vmg1d"]
@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="16_lgrx1"]
 [ext_resource type="PackedScene" uid="uid://bum7wdgioscgn" path="res://scenes/dynamic/interactables/watermelonbooster/watermelonbooster.tscn" id="17_lgrx1"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="18_fhpes"]
+[ext_resource type="PackedScene" uid="uid://bnpcvj4yoabb0" path="res://scenes/dynamic/decoration/givenflowers/givenflowers.tscn" id="20_5f5xw"]
+[ext_resource type="PackedScene" uid="uid://c8nf7r1sc6tgb" path="res://scenes/dynamic/decoration/alsoalsogivenflowers/alsoalsogivenflowers.tscn" id="21_o3ttr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mjn61"]
 texture = ExtResource("2_sp886")
@@ -318,6 +320,222 @@ position = Vector2(1524, 692)
 
 [node name="Watermelonbooster" parent="." instance=ExtResource("17_lgrx1")]
 position = Vector2(-18, 559)
+
+[node name="Givenflowers" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(-47, 582)
+
+[node name="Givenflowers2" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(-21, 582)
+
+[node name="Givenflowers3" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(5, 582)
+
+[node name="Givenflowers4" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(32, 582)
+
+[node name="Givenflowers5" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(64, 582)
+
+[node name="Givenflowers6" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(95, 582)
+
+[node name="Givenflowers7" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(122, 582)
+
+[node name="Givenflowers8" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(150, 582)
+
+[node name="Givenflowers9" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(862, 582)
+
+[node name="Givenflowers10" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(890, 582)
+
+[node name="Givenflowers11" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(920, 582)
+
+[node name="Givenflowers12" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(955, 582)
+
+[node name="Givenflowers13" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(985, 582)
+
+[node name="Givenflowers14" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1020, 582)
+
+[node name="Givenflowers15" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1051, 582)
+
+[node name="Givenflowers16" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1083, 582)
+
+[node name="Givenflowers17" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1114, 582)
+
+[node name="Givenflowers18" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1143, 582)
+
+[node name="Givenflowers19" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1172, 582)
+
+[node name="Givenflowers20" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1245, 838)
+
+[node name="Givenflowers21" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1273, 838)
+
+[node name="Givenflowers22" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1300, 838)
+
+[node name="Givenflowers23" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1329, 838)
+
+[node name="Givenflowers24" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1388, 966)
+
+[node name="Givenflowers25" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1417, 966)
+
+[node name="Givenflowers26" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1445, 966)
+
+[node name="Givenflowers27" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1475, 966)
+
+[node name="Givenflowers28" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1504, 966)
+
+[node name="Givenflowers29" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1532, 966)
+
+[node name="Givenflowers30" parent="." instance=ExtResource("20_5f5xw")]
+position = Vector2(1559, 966)
+
+[node name="Alsoalsogivenflowers" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(-49, 584)
+
+[node name="Alsoalsogivenflowers2" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(-25, 588)
+
+[node name="Alsoalsogivenflowers3" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(-8, 585)
+
+[node name="Alsoalsogivenflowers4" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(19, 585)
+
+[node name="Alsoalsogivenflowers5" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(49, 587)
+
+[node name="Alsoalsogivenflowers6" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(81, 586)
+
+[node name="Alsoalsogivenflowers7" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(109, 584)
+
+[node name="Alsoalsogivenflowers8" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(137, 584)
+
+[node name="Alsoalsogivenflowers9" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(150, 588)
+
+[node name="Alsoalsogivenflowers10" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(94, 587)
+
+[node name="Alsoalsogivenflowers11" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(63, 583)
+
+[node name="Alsoalsogivenflowers12" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(878, 586)
+
+[node name="Alsoalsogivenflowers13" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(860, 583)
+
+[node name="Alsoalsogivenflowers14" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(907, 589)
+
+[node name="Alsoalsogivenflowers15" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(928, 582)
+
+[node name="Alsoalsogivenflowers16" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(943, 587)
+
+[node name="Alsoalsogivenflowers17" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(971, 584)
+
+[node name="Alsoalsogivenflowers18" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1004, 583)
+
+[node name="Alsoalsogivenflowers19" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1019, 587)
+
+[node name="Alsoalsogivenflowers20" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1038, 583)
+
+[node name="Alsoalsogivenflowers21" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1068, 583)
+
+[node name="Alsoalsogivenflowers22" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1081, 587)
+
+[node name="Alsoalsogivenflowers23" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1102, 583)
+
+[node name="Alsoalsogivenflowers24" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1131, 585)
+
+[node name="Alsoalsogivenflowers25" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1158, 582)
+
+[node name="Alsoalsogivenflowers26" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1170, 586)
+
+[node name="Alsoalsogivenflowers27" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1243, 842)
+
+[node name="Alsoalsogivenflowers28" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1261, 839)
+
+[node name="Alsoalsogivenflowers29" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1289, 844)
+
+[node name="Alsoalsogivenflowers30" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1314, 839)
+
+[node name="Alsoalsogivenflowers31" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1327, 842)
+
+[node name="Alsoalsogivenflowers32" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1385, 971)
+
+[node name="Alsoalsogivenflowers33" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1404, 967)
+
+[node name="Alsoalsogivenflowers34" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1416, 971)
+
+[node name="Alsoalsogivenflowers35" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1434, 968)
+
+[node name="Alsoalsogivenflowers36" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1462, 970)
+
+[node name="Alsoalsogivenflowers37" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1474, 971)
+
+[node name="Alsoalsogivenflowers38" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1492, 968)
+
+[node name="Alsoalsogivenflowers39" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1503, 971)
+
+[node name="Alsoalsogivenflowers40" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1521, 969)
+
+[node name="Alsoalsogivenflowers41" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1544, 969)
+
+[node name="Alsoalsogivenflowers42" parent="." instance=ExtResource("21_o3ttr")]
+position = Vector2(1559, 971)
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cw1ds7xodg5ik"]
+[gd_scene load_steps=22 format=4 uid="uid://cw1ds7xodg5ik"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_1rbsa"]
 [ext_resource type="Script" uid="uid://ckl2i0r0x4xt3" path="res://scenes/levels/level_2.gd" id="1_1yj8c"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="12_brxtv"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="13_tv7cl"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="14_r88tb"]
+[ext_resource type="PackedScene" uid="uid://gt51sob8maab" path="res://scenes/dynamic/decoration/dependentsakura/dependentsakura.tscn" id="17_v8d84"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itajj"]
 texture = ExtResource("2_lfk8p")
@@ -295,3 +296,7 @@ offset_left = -364.0
 offset_top = -577.0
 offset_right = 1739.0
 offset_bottom = 908.0
+
+[node name="Dependentsakura" parent="." instance=ExtResource("17_v8d84")]
+position = Vector2(666, 202)
+scale = Vector2(2, 2)

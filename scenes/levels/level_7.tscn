@@ -1007,10 +1007,10 @@ position = Vector2(-122, -766)
 position = Vector2(-85, -1372)
 
 [node name="Dreamer" parent="." instance=ExtResource("18_bntht")]
-offset_left = 187.0
-offset_top = 101.0
-offset_right = 227.0
-offset_bottom = 141.0
+offset_left = 253.0
+offset_top = -32.0
+offset_right = 269.0
+offset_bottom = 8.0
 
 [node name="LevelEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("19_7co51")

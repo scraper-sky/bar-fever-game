@@ -14,6 +14,9 @@ signal dialogues_ready
 @export var portrait_neutral : Texture2D  # Set to res://characters/nbbartender1.png
 @export var portrait_angry : Texture2D   # Set to res://characters/nbbartender2.png
 
+@onready var bgm_player : AudioStreamPlayer2D = $BGMPlayer
+@onready var mystery_player : AudioStreamPlayer2D = $MysteryPlayer
+
 var _seen_first : bool = false
 var _seen_second : bool = false
 var _final_fired : bool = false
@@ -33,6 +36,9 @@ func _ready() -> void:
 	if dialogue_resource == null or dialogue_resource_2 == null or final_dialogue_resource == null:
 		push_error("One or more dialogue resources not assigned in the Inspector!")
 		return
+	if bgm_player == null or mystery_player == null:
+		push_error("Audio players (BGMPlayer or MysteryPlayer) not found under Audio node!")
+		return
 	top_portrait.hide()
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	# Find the Camera2D
@@ -41,6 +47,9 @@ func _ready() -> void:
 		push_error("Could not find Camera2D node at '/root/world_3/Camera2D'. Ensure it exists in the scene.")
 	else:
 		print("Camera2D found at '/root/world_3/Camera2D': ", _camera.name)
+	# Start looping BGM
+	bgm_player.play()
+	bgm_player.connect("finished", Callable(self, "_on_bgm_finished"))
 
 func _process(delta: float) -> void:
 	if _final_fired and _current_balloon and is_instance_valid(_current_balloon):
@@ -51,6 +60,9 @@ func _process(delta: float) -> void:
 			# Trigger shake indefinitely on the first relevant line
 			if "Hey... Bartender, are you there?" in current_line.text and not _is_shaking:
 				start_screen_shake(10.0)  # Strength 10, no duration (indefinite)
+				bgm_player.stop()
+				mystery_player.play()
+				mystery_player.connect("finished", Callable(self, "_on_mystery_finished"))
 
 	# Handle screen shake on the Camera2D
 	if _is_shaking and _camera:
@@ -96,6 +108,10 @@ func _hide_top_portrait_once(res : DialogueResource) -> void:
 		var t := create_tween()
 		t.tween_property(top_portrait, "modulate:a", 0.0, 0.25)
 		t.tween_callback(Callable(top_portrait, "hide"))
+		bgm_player.play()  # Resume BGM when dialogue ends
+		mystery_player.stop()
+		bgm_player.disconnect("finished", Callable(self, "_on_bgm_finished"))
+		mystery_player.disconnect("finished", Callable(self, "_on_mystery_finished"))
 
 func _update_top_portrait(line: DialogueLine) -> void:
 	if not line or not top_portrait.visible or line.character.to_lower() != "bartender":
@@ -115,3 +131,9 @@ func _update_top_portrait(line: DialogueLine) -> void:
 func start_screen_shake(strength: float) -> void:
 	_shake_strength = strength
 	_is_shaking = true
+
+func _on_bgm_finished() -> void:
+	bgm_player.play()  # Restart BGM when it finishes
+
+func _on_mystery_finished() -> void:
+	mystery_player.play()  # Restart mysterious music when it finishes

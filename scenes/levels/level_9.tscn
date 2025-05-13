@@ -1,7 +1,8 @@
-[gd_scene load_steps=39 format=4 uid="uid://qia1gjqqdvr1"]
+[gd_scene load_steps=40 format=4 uid="uid://qia1gjqqdvr1"]
 
 [ext_resource type="Script" uid="uid://do4cp2iisk0j8" path="res://scenes/levels/level_9.gd" id="1_sd2du"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_6v45j"]
+[ext_resource type="PackedScene" uid="uid://ck7bgrjymh5p2" path="res://scenes/music/8bitaction5.tscn" id="3_chcbd"]
 [ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://assets/background&art/neoncitybackground.png" id="3_ltlq2"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="4_6nuwh"]
 [ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://assets/background&art/purpleland.png" id="5_m2cpo"]
@@ -462,6 +463,8 @@ shader_parameter/pixel_size = 1.0
 script = ExtResource("1_sd2du")
 
 [node name="MainPlayer" parent="." instance=ExtResource("2_6v45j")]
+
+[node name="8Bitaction5" parent="MainPlayer" instance=ExtResource("3_chcbd")]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

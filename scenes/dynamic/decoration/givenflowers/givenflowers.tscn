@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnpcvj4yoabb0"]
+
+[ext_resource type="Texture2D" uid="uid://dxw3b22f3nq4j" path="res://assets/background&art/givenflowers.png" id="1_bs18j"]
+
+[node name="Givenflowers" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visibility_layer = 8
+texture = ExtResource("1_bs18j")

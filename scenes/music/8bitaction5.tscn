@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck7bgrjymh5p2"]
+
+[ext_resource type="AudioStream" uid="uid://doiijba38j1d3" path="res://scenes/music/leap.WAV" id="1_fykxf"]
+[ext_resource type="Script" uid="uid://b04cjxd705vmr" path="res://scenes/music/8_bitaction_5.gd" id="2_5ijkt"]
+
+[node name="8Bitaction5" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_fykxf")
+script = ExtResource("2_5ijkt")

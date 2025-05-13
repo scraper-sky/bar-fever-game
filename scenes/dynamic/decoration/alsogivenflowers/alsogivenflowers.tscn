@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cma74m4scskqj"]
+
+[ext_resource type="Texture2D" uid="uid://ewd7l7ixckik" path="res://assets/background&art/alsogivenflowers.png" id="1_uhxu7"]
+
+[node name="Alsogivenflowers" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visibility_layer = 4
+texture = ExtResource("1_uhxu7")

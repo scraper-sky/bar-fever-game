@@ -16,6 +16,7 @@ func _ready():
 	if curve.get_point_count() < 2:
 		print("Error: Path2D curve needs at least 2 points!")
 		return
+	$AnimatableBody2D/Sprite2D.play("default")
 	start_movement()
 
 func start_movement():

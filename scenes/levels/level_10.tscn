@@ -1,8 +1,9 @@
-[gd_scene load_steps=56 format=4 uid="uid://drahjq4x1ho3k"]
+[gd_scene load_steps=57 format=4 uid="uid://drahjq4x1ho3k"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_n3gcc"]
 [ext_resource type="Script" uid="uid://4cbo2palb5ig" path="res://scenes/levels/level_10.gd" id="1_nk72f"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_c7e1w"]
+[ext_resource type="PackedScene" uid="uid://ck7bgrjymh5p2" path="res://scenes/music/8bitaction5.tscn" id="3_diesl"]
 [ext_resource type="Texture2D" uid="uid://bnxdpxikf4vs1" path="res://assets/background&art/purpleland.png" id="3_ilo0b"]
 [ext_resource type="PackedScene" uid="uid://chw3wbntnx678" path="res://scenes/dynamic/talking_ghost.tscn" id="4_c7e1w"]
 [ext_resource type="Texture2D" uid="uid://degwi4qne8xve" path="res://assets/background&art/1ghost1.png" id="4_hl75t"]
@@ -495,6 +496,8 @@ script = ExtResource("1_nk72f")
 
 [node name="MainPlayer" parent="." instance=ExtResource("1_n3gcc")]
 position = Vector2(1, 0)
+
+[node name="8Bitaction5" parent="MainPlayer" instance=ExtResource("3_diesl")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(4, 22)
@@ -1072,6 +1075,7 @@ position = Vector2(-651, 1729)
 position = Vector2(-501, 1011)
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_cahp0")
