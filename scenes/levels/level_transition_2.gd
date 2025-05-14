@@ -5,6 +5,8 @@ extends Node2D
 func _ready():
 	player.velocity.y = -50  # Walk upward
 	print("Entered transition 2 corridor")
+	await get_tree().create_timer(1.0).timeout
+	$AudioStreamPlayer2D.play()
 
 func _process(_delta):
 	# Check player's x position for state transition

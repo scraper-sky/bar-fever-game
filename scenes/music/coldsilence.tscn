@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://crfd6pv3e6ygy"]
+
+[ext_resource type="AudioStream" uid="uid://dlj2vjdarrsui" path="res://scenes/music/cold_silence.ogg" id="1_8e5ln"]
+[ext_resource type="Script" uid="uid://5f5bfsbhjb5k" path="res://scenes/music/coldsilence.gd" id="1_rrpfu"]
+
+[node name="Coldsilence" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_8e5ln")
+script = ExtResource("1_rrpfu")

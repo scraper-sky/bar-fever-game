@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1rbkhb787ryg"]
+[gd_scene load_steps=9 format=3 uid="uid://d1rbkhb787ryg"]
 
 [ext_resource type="Script" uid="uid://dsluuart4jxy5" path="res://scenes/levels/level_18.gd" id="1_7rgcv"]
 [ext_resource type="PackedScene" uid="uid://c7j8hqopnfaxt" path="res://scenes/dynamic/obstacles/spinningcircle/spinning_circle.tscn" id="1_g3o2n"]
 [ext_resource type="PackedScene" uid="uid://bel6r36jwyhgm" path="res://scenes/main_player_2_level_18.tscn" id="2_xleu7"]
 [ext_resource type="Texture2D" uid="uid://dpcyknat33v6f" path="res://assets/background&art/deepsky.png" id="3_xleu7"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="5_u7mae"]
+[ext_resource type="PackedScene" uid="uid://cayg4ilw6domf" path="res://scenes/music/scifitheme.tscn" id="5_y2700"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="6_iopd3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y2700"]
@@ -21,6 +22,8 @@ script = ExtResource("1_7rgcv")
 
 [node name="MainPlayer2Level18" parent="." instance=ExtResource("2_xleu7")]
 jump_power = 10.0
+
+[node name="Scifitheme" parent="MainPlayer2Level18" instance=ExtResource("5_y2700")]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

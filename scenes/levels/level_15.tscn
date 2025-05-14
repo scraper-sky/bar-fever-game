@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cdm0r57bjekd6"]
+[gd_scene load_steps=15 format=4 uid="uid://cdm0r57bjekd6"]
 
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_721gy"]
 [ext_resource type="Script" uid="uid://db6drbco14jl0" path="res://scenes/levels/level_15.gd" id="1_mdtb3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="3_ak4l1"]
 [ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/decoration/electricgrass/electricgrass.tscn" id="4_mdtb3"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="5_6siiu"]
+[ext_resource type="PackedScene" uid="uid://tprmexjnl1k6" path="res://scenes/music/futuretravel.tscn" id="5_nqdgy"]
 [ext_resource type="Texture2D" uid="uid://dpcyknat33v6f" path="res://assets/background&art/deepsky.png" id="7_hsgml"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="8_hsgml"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="9_gfeu0"]
@@ -552,6 +553,8 @@ scale = Vector2(3.5918, 3.76563)
 texture = ExtResource("7_hsgml")
 
 [node name="MainPlayer2" parent="." instance=ExtResource("2_6siiu")]
+
+[node name="Futuretravel" parent="MainPlayer2" instance=ExtResource("5_nqdgy")]
 
 [node name="SpaceSpikeTrap" parent="." instance=ExtResource("3_ak4l1")]
 position = Vector2(64, 8)

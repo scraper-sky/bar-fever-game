@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cayg4ilw6domf"]
+
+[ext_resource type="Script" uid="uid://f2tf35mdy4lw" path="res://scenes/music/scifitheme.gd" id="1_4vsba"]
+[ext_resource type="AudioStream" uid="uid://crbefcholfq6s" path="res://scenes/music/sci-fi_theme.mp3" id="1_h4iqg"]
+
+[node name="Scifitheme" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_h4iqg")
+script = ExtResource("1_4vsba")

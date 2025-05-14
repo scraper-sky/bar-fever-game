@@ -16,3 +16,4 @@ func shoot_laser():
 	laser.position = position  
 	laser.direction = direction
 	get_parent().add_child(laser)
+	$AudioStreamPlayer2D.play()

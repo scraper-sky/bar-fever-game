@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dqdcmqilrij2"]
+[gd_scene load_steps=22 format=3 uid="uid://dqdcmqilrij2"]
 
 [ext_resource type="Script" uid="uid://n73tj0itfhfb" path="res://scenes/fifth_scene/world_end_5.gd" id="1_g0r6m"]
 [ext_resource type="Texture2D" uid="uid://du8bv55i71kwh" path="res://assets/background&art/finalworldend1.png" id="1_jhhx0"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://drl28i6b4n0o2" path="res://assets/background&art/finalworldend11.png" id="11_ht3hh"]
 [ext_resource type="Texture2D" uid="uid://co5tnsn2mkjbi" path="res://assets/background&art/finalworldend12.png" id="12_dyouw"]
 [ext_resource type="Script" uid="uid://brfcptprghhfg" path="res://scenes/fifth_scene/control.gd" id="13_7tn3t"]
+[ext_resource type="PackedScene" uid="uid://cnp7qul5ln2rq" path="res://scenes/music/finalnature.tscn" id="13_a8las"]
 [ext_resource type="PackedScene" uid="uid://3om6fwpcy8bv" path="res://scenes/area_functionality/invisible_block.tscn" id="13_o7ll7"]
 [ext_resource type="PackedScene" uid="uid://cedfjpf8arkmf" path="res://scenes/finalplayer.tscn" id="14_6pu76"]
 
@@ -122,6 +123,8 @@ position = Vector2(5800, 331)
 scale = Vector2(80, 80)
 
 [node name="finalplayer" parent="." instance=ExtResource("14_6pu76")]
+
+[node name="Finalnature" parent="finalplayer" instance=ExtResource("13_a8las")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://3bsphrmeo8um"]
+
+[ext_resource type="AudioStream" uid="uid://cwxhio84luy7" path="res://scenes/music/Melancholy RPG.mp3" id="1_n8fmj"]
+[ext_resource type="Script" uid="uid://bsayqbwlve2gf" path="res://scenes/music/melancholyrpg.gd" id="1_v6lew"]
+
+[node name="Melancholyrpg" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_n8fmj")
+script = ExtResource("1_v6lew")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc0rwoiwcyfoy"]
+
+[ext_resource type="Script" uid="uid://poln6a7bwglk" path="res://scenes/music/dreamambience.gd" id="1_fmg50"]
+[ext_resource type="AudioStream" uid="uid://bpoic5b2l1kkl" path="res://scenes/music/Dream (Ambience).mp3" id="1_ubtlb"]
+
+[node name="Dreamambience" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_ubtlb")
+script = ExtResource("1_fmg50")

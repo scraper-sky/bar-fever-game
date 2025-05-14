@@ -680,6 +680,10 @@ position = Vector2(-176, 76)
 [node name="rainbowdevice6" parent="." instance=ExtResource("14_v4rjq")]
 position = Vector2(-271, 623)
 
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="CityMusicPlayer" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="pressed" from="Portrait/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Undreamer2/Undream" to="Undreamer2" method="_on_undream_pressed"]
 [connection signal="pressed" from="Undreamer2/Exit" to="Undreamer2" method="_on_exit_pressed"]

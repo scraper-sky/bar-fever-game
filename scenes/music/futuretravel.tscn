@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://tprmexjnl1k6"]
+
+[ext_resource type="Script" uid="uid://roakanoqc8ud" path="res://scenes/music/futuretravel.gd" id="1_d1kxe"]
+[ext_resource type="AudioStream" uid="uid://cbw1t7oxprw8k" path="res://scenes/music/Zodik - Future Travel.ogg" id="1_h1p10"]
+
+[node name="Futuretravel" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_h1p10")
+script = ExtResource("1_d1kxe")

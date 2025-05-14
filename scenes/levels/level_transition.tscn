@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://db57w5pp43j24"]
+[gd_scene load_steps=17 format=4 uid="uid://db57w5pp43j24"]
 
 [ext_resource type="Script" uid="uid://b5vhfewu4kgyh" path="res://scenes/levels/level_transition.gd" id="1_gmcu4"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="1_usua8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://7n3ktlwkfnnh" path="res://assets/background&art/lamp_block2.png" id="4_84nfw"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="5_vwu0f"]
 [ext_resource type="Shader" uid="uid://bcoauogmlerw1" path="res://shaders/static_effect.gdshader" id="7_84nfw"]
+[ext_resource type="PackedScene" uid="uid://bf7qn1q36x00i" path="res://scenes/music/distortedvortex.tscn" id="7_546nq"]
 [ext_resource type="Texture2D" uid="uid://dr5p58bjooqbx" path="res://assets/background&art/undreamer.png" id="8_84nfw"]
 [ext_resource type="Script" uid="uid://djqiwrmxn56ur" path="res://scenes/levels/undreamer_2.gd" id="8_vwu0f"]
 
@@ -126,6 +127,8 @@ tile_set = SubResource("TileSet_aj2d0")
 [node name="MainPlayer" parent="." instance=ExtResource("5_vwu0f")]
 position = Vector2(-10, 4)
 jump_power = 20.0
+
+[node name="Distortedvortex" parent="MainPlayer" instance=ExtResource("7_546nq")]
 
 [node name="GlitchOverlay" type="CanvasLayer" parent="."]
 layer = 0

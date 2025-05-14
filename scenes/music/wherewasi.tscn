@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnypbgnpxr1w6"]
+
+[ext_resource type="AudioStream" uid="uid://dyrh1vgolv5cn" path="res://scenes/music/WereWasI.ogg" id="1_s8d47"]
+[ext_resource type="Script" uid="uid://woccaxbnvdmu" path="res://scenes/music/wherewasi.gd" id="2_4ybpu"]
+
+[node name="Wherewasi" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_s8d47")
+script = ExtResource("2_4ybpu")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://c2s0r8014xaqu"]
+[gd_scene load_steps=16 format=4 uid="uid://c2s0r8014xaqu"]
 
 [ext_resource type="Script" uid="uid://comtag7a5xvri" path="res://scenes/levels/level_16.gd" id="1_3ycd6"]
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="2_2w147"]
 [ext_resource type="Texture2D" uid="uid://ctpdmlpewonkr" path="res://assets/background&art/peeringtwilight.png" id="3_xw7bu"]
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="4_jx4lj"]
 [ext_resource type="PackedScene" uid="uid://b4k87ea7nlgx3" path="res://scenes/area_functionality/red_portal.tscn" id="5_2w147"]
+[ext_resource type="PackedScene" uid="uid://chwwagjb8b5qe" path="res://scenes/music/blindshift.tscn" id="5_lbspt"]
 [ext_resource type="PackedScene" uid="uid://xg4yxbcdii6p" path="res://scenes/dynamic/obstacles/oldraina/old_raina.tscn" id="6_xw7bu"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="7_jx4lj"]
 [ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="8_imaen"]
@@ -554,6 +555,8 @@ texture = ExtResource("3_xw7bu")
 
 [node name="MainPlayer2" parent="." instance=ExtResource("4_jx4lj")]
 position = Vector2(1, -2)
+
+[node name="Blindshift" parent="MainPlayer2" instance=ExtResource("5_lbspt")]
 
 [node name="red_portal" parent="." instance=ExtResource("5_2w147")]
 position = Vector2(245, -28)

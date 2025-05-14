@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr0pbgo83wmju"]
+
+[ext_resource type="AudioStream" uid="uid://cgicnlrkgigd7" path="res://scenes/music/Viktor Kraus - Blueberries.mp3" id="1_ghosi"]
+[ext_resource type="Script" uid="uid://bjfu8sut2y8dy" path="res://scenes/music/blueberries.gd" id="1_gsexk"]
+
+[node name="Blueberries" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_ghosi")
+script = ExtResource("1_gsexk")

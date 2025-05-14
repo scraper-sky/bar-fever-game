@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnp7qul5ln2rq"]
+
+[ext_resource type="Script" uid="uid://cc4d76vvg0g1h" path="res://scenes/music/finalnature.gd" id="1_i8g8k"]
+[ext_resource type="AudioStream" uid="uid://du103pjstljoj" path="res://scenes/music/nature sketch.wav" id="1_oahtk"]
+
+[node name="Finalnature" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_oahtk")
+script = ExtResource("1_i8g8k")

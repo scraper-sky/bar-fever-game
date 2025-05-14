@@ -48,6 +48,7 @@ func _ready() -> void:
 	else:
 		print("Camera2D found at '/root/world_3/Camera2D': ", _camera.name)
 	# Start looping BGM
+	await get_tree().create_timer(2.0).timeout
 	bgm_player.play()
 	bgm_player.connect("finished", Callable(self, "_on_bgm_finished"))
 

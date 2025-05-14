@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf7qn1q36x00i"]
+
+[ext_resource type="Script" uid="uid://dva3rcgppu0c6" path="res://scenes/music/distortedvortex.gd" id="1_o5afd"]
+[ext_resource type="AudioStream" uid="uid://chva7nxoyqslm" path="res://scenes/music/Distorted Vortex - Start.mp3" id="1_q553j"]
+
+[node name="Distortedvortex" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_q553j")
+script = ExtResource("1_o5afd")

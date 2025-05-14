@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://chwwagjb8b5qe"]
+
+[ext_resource type="Script" uid="uid://1irqvbweelk4" path="res://scenes/music/blindshift.gd" id="1_gxth7"]
+[ext_resource type="AudioStream" uid="uid://djkirrxrvcibv" path="res://scenes/music/Blind Shift.mp3" id="1_l0srl"]
+
+[node name="Blindshift" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_l0srl")
+script = ExtResource("1_gxth7")

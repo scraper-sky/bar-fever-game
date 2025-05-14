@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=4 uid="uid://03rn77egsj20"]
+[gd_scene load_steps=15 format=4 uid="uid://03rn77egsj20"]
 
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_d1pgp"]
 [ext_resource type="Script" uid="uid://chxcttr2dfdy5" path="res://scenes/levels/level_17.gd" id="1_dhd0r"]
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="2_d1pgp"]
 [ext_resource type="PackedScene" uid="uid://dlqsxofwtcrv3" path="res://scenes/dynamic/obstacles/lasers/laser_emitter.tscn" id="3_s5aqk"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="4_ddhf2"]
+[ext_resource type="PackedScene" uid="uid://cayg4ilw6domf" path="res://scenes/music/scifitheme.tscn" id="4_k1vf7"]
 [ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="5_ddhf2"]
 [ext_resource type="PackedScene" uid="uid://bhgcysy3l8bqd" path="res://scenes/dynamic/decoration/electricgrass/electricgrass.tscn" id="6_r3g1g"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="7_n50xv"]
@@ -806,6 +807,8 @@ tile_map_data = PackedByteArray("AAD5/wIAAAAIAAwAAAD5/wMAAAAIAA0AAAD5/wQAAAAIAA4
 tile_set = SubResource("TileSet_iulpy")
 
 [node name="MainPlayer2" parent="." instance=ExtResource("2_d1pgp")]
+
+[node name="Scifitheme" parent="MainPlayer2" instance=ExtResource("4_k1vf7")]
 
 [node name="LaserEmitter" parent="." instance=ExtResource("3_s5aqk")]
 position = Vector2(-212, 0)

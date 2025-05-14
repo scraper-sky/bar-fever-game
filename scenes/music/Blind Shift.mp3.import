@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djkirrxrvcibv"
+path="res://.godot/imported/Blind Shift.mp3-745fe1abb920276f884ef297d4a869bc.mp3str"
+
+[deps]
+
+source_file="res://scenes/music/Blind Shift.mp3"
+dest_files=["res://.godot/imported/Blind Shift.mp3-745fe1abb920276f884ef297d4a869bc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

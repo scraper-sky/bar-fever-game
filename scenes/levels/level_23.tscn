@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://clg6pp5tghkao"]
+[gd_scene load_steps=34 format=4 uid="uid://clg6pp5tghkao"]
 
 [ext_resource type="Script" uid="uid://biksouy02kr2g" path="res://scenes/levels/level_23.gd" id="1_1o3dd"]
 [ext_resource type="Texture2D" uid="uid://da4ui8wg5cpjd" path="res://assets/background&art/floatingcities.png" id="1_3r7cu"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="5_hqj44"]
 [ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="6_ty7xx"]
 [ext_resource type="PackedScene" uid="uid://bjruqqlklphst" path="res://scenes/dynamic/obstacles/chasingmob/chasing_mob.tscn" id="7_1o3dd"]
+[ext_resource type="PackedScene" uid="uid://3bsphrmeo8um" path="res://scenes/music/melancholyrpg.tscn" id="8_hkq80"]
 [ext_resource type="Texture2D" uid="uid://644s4axc2da0" path="res://assets/background&art/neoncitybackground.png" id="9_4dpby"]
 [ext_resource type="Texture2D" uid="uid://datrui1vhfc4b" path="res://assets/background&art/abandonednightcity.png" id="10_4qh5e"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="11_tetix"]
@@ -1758,6 +1759,8 @@ position = Vector2(3028, 334)
 
 [node name="MainPlayer2" parent="." instance=ExtResource("5_hqj44")]
 jump_power = 17.5
+
+[node name="Melancholyrpg" parent="MainPlayer2" instance=ExtResource("8_hkq80")]
 
 [node name="SpaceSpikeTrap" parent="." instance=ExtResource("6_ty7xx")]
 position = Vector2(3407, 128)

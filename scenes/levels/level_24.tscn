@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://bh4motacnc3x3"]
+[gd_scene load_steps=45 format=4 uid="uid://bh4motacnc3x3"]
 
 [ext_resource type="Texture2D" uid="uid://b5kapk1c37src" path="res://assets/background&art/chaoticsky1.png" id="1_75tqh"]
 [ext_resource type="Script" uid="uid://d3ymjhjxcchnc" path="res://scenes/levels/level_24.gd" id="1_fb8nu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bp0ud2n1rv2vl" path="res://assets/background&art/chaoticsky3.png" id="3_poky2"]
 [ext_resource type="Texture2D" uid="uid://bp3hotjispsf0" path="res://assets/background&art/chaoticsky4.png" id="4_tybsa"]
 [ext_resource type="Texture2D" uid="uid://b1qogfkwsa1ws" path="res://assets/background&art/fairydirt.png" id="6_tybsa"]
+[ext_resource type="PackedScene" uid="uid://cc0rwoiwcyfoy" path="res://scenes/music/dreamambience.tscn" id="7_f53me"]
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="7_fxsgv"]
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="8_fxsgv"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="9_wnjep"]
@@ -1723,6 +1724,8 @@ sprite_frames = SubResource("SpriteFrames_awrpk")
 
 [node name="MainPlayer2" parent="." instance=ExtResource("8_fxsgv")]
 jump_power = 20.0
+
+[node name="Dreamambience" parent="MainPlayer2" instance=ExtResource("7_f53me")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(1, 0)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=4 uid="uid://beolo0be8grp7"]
+[gd_scene load_steps=18 format=4 uid="uid://beolo0be8grp7"]
 
 [ext_resource type="Texture2D" uid="uid://bqlw0su4cjdfk" path="res://assets/background&art/nexttilemap.png" id="1_vg6n8"]
 [ext_resource type="Script" uid="uid://1wtlo3gcxdo7" path="res://scenes/levels/level_14.gd" id="1_xf43s"]
 [ext_resource type="Texture2D" uid="uid://dpcyknat33v6f" path="res://assets/background&art/deepsky.png" id="2_jf1ms"]
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="3_g3nt1"]
+[ext_resource type="PackedScene" uid="uid://tprmexjnl1k6" path="res://scenes/music/futuretravel.tscn" id="5_5muy6"]
 [ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="5_y3x6f"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="6_2j1nx"]
 [ext_resource type="PackedScene" uid="uid://b4k87ea7nlgx3" path="res://scenes/area_functionality/red_portal.tscn" id="7_wr6ej"]
@@ -555,6 +556,8 @@ scale = Vector2(3.5918, 3.76563)
 texture = ExtResource("2_jf1ms")
 
 [node name="MainPlayer2" parent="." instance=ExtResource("3_g3nt1")]
+
+[node name="Futuretravel" parent="MainPlayer2" instance=ExtResource("5_5muy6")]
 
 [node name="SpaceSpikeTrap" parent="." instance=ExtResource("5_y3x6f")]
 position = Vector2(353, 224)

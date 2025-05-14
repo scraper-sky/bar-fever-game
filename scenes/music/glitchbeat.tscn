@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq5t2iedvkqp0"]
+
+[ext_resource type="AudioStream" uid="uid://hixb4mxpmdgy" path="res://scenes/music/GlitchBeat.mp3" id="1_1qoj0"]
+[ext_resource type="Script" uid="uid://4xcx66d0sl4c" path="res://scenes/music/glitchbeat.gd" id="1_o32si"]
+
+[node name="Glitchbeat" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_1qoj0")
+script = ExtResource("1_o32si")

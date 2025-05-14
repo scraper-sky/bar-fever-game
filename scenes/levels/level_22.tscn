@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://xa7pgmir7am0"]
+[gd_scene load_steps=21 format=4 uid="uid://xa7pgmir7am0"]
 
 [ext_resource type="Script" uid="uid://bptonvwg0iexh" path="res://scenes/levels/level_22.gd" id="1_ts6dj"]
 [ext_resource type="Texture2D" uid="uid://da4ui8wg5cpjd" path="res://assets/background&art/floatingcities.png" id="1_ui775"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cmi1wie8b2kpa" path="res://scenes/main_player_2.tscn" id="5_bx7gb"]
 [ext_resource type="PackedScene" uid="uid://bjruqqlklphst" path="res://scenes/dynamic/obstacles/chasingmob/chasing_mob.tscn" id="6_501ru"]
 [ext_resource type="PackedScene" uid="uid://emeuhni5ji7o" path="res://scenes/dynamic/obstacles/spacespiketrap/space_spike_trap.tscn" id="7_4vafk"]
+[ext_resource type="PackedScene" uid="uid://3bsphrmeo8um" path="res://scenes/music/melancholyrpg.tscn" id="7_qaa7m"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="8_0x7s7"]
 [ext_resource type="PackedScene" uid="uid://b4k87ea7nlgx3" path="res://scenes/area_functionality/red_portal.tscn" id="9_ykmed"]
 [ext_resource type="PackedScene" uid="uid://b200y7l58l6ol" path="res://scenes/dynamic/obstacles/pinkpool/pink_pool.tscn" id="10_ykmed"]
@@ -1610,6 +1611,8 @@ position = Vector2(2245, 60)
 fixed_position = Vector2(2245, 60)
 
 [node name="MainPlayer2" parent="." instance=ExtResource("5_bx7gb")]
+
+[node name="Melancholyrpg" parent="MainPlayer2" instance=ExtResource("7_qaa7m")]
 
 [node name="ChasingMob" parent="." instance=ExtResource("6_501ru")]
 

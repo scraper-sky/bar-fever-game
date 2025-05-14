@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://du103pjstljoj"
+path="res://.godot/imported/nature sketch.wav-0299227f76e3022673f0cdc54636d357.sample"
+
+[deps]
+
+source_file="res://scenes/music/nature sketch.wav"
+dest_files=["res://.godot/imported/nature sketch.wav-0299227f76e3022673f0cdc54636d357.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
