@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2i6ct2dm3pkf"]
+
+[ext_resource type="Texture2D" uid="uid://8vagi7ej86yc" path="res://assets/background&art/floatingvending.png" id="1_745yk"]
+[ext_resource type="Script" uid="uid://bgq7yf8kkq532" path="res://scenes/dynamic/interactables/finalvending/finalvending.gd" id="1_wobqg"]
+[ext_resource type="AudioStream" uid="uid://dxr8xqqpxyunw" path="res://scenes/music/error-89206.mp3" id="2_ee6hc"]
+[ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="3_3ah82"]
+[ext_resource type="AudioStream" uid="uid://b4l1pnwcfwage" path="res://scenes/music/coin-drops-and-spins-272429.mp3" id="4_wobqg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ah82"]
+size = Vector2(110, 104)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qapdm"]
+bg_color = Color(0.1, 0.1, 0.1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.94, 0.22, 0.61, 1)
+
+[node name="Finalvending" type="Area2D"]
+script = ExtResource("1_wobqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-58, 45)
+texture = ExtResource("1_745yk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-62, 44)
+shape = SubResource("RectangleShape2D_3ah82")
+
+[node name="ErrorSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ee6hc")
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+auto_translate_mode = 1
+size = Vector2i(400, 109)
+visible = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_qapdm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 396.0
+offset_bottom = 105.0
+
+[node name="FirstButton" type="Button" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3ah82")
+text = "Yourself (100 coins)"
+
+[node name="SecondButton" type="Button" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3ah82")
+text = "Memories (300 coins)"
+
+[node name="ThirdButton" type="Button" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3ah82")
+text = "Happiness (2000 coins)"
+
+[node name="PurchaseSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wobqg")

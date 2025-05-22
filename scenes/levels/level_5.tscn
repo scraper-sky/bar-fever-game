@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://cpep8iv7y7bfb"]
+[gd_scene load_steps=32 format=4 uid="uid://cpep8iv7y7bfb"]
 
 [ext_resource type="Script" uid="uid://bh8hulmcii4wl" path="res://scenes/levels/level_5.gd" id="1_53jy1"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_tq3vs"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="8_bfasp"]
 [ext_resource type="PackedScene" uid="uid://dh7sqne4jhgpu" path="res://scenes/music/8bitaction3.tscn" id="8_vm1kt"]
 [ext_resource type="Script" uid="uid://bnojoghjfw7to" path="res://scenes/levels/obstacle_block.gd" id="9_f3msi"]
+[ext_resource type="Texture2D" uid="uid://bejlmlrothxob" path="res://assets/background&art/glow.png" id="9_wnnhf"]
 [ext_resource type="Texture2D" uid="uid://bocun7dayxmoy" path="res://assets/background&art/obstacleblock.png" id="9_yvtft"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="11_t0d57"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="12_xu5a5"]
@@ -383,6 +384,10 @@ position = Vector2(-9, -48)
 collision_mask = 3
 
 [node name="8Bitaction3" parent="MainPlayer" instance=ExtResource("8_vm1kt")]
+
+[node name="PointLight2D" type="PointLight2D" parent="MainPlayer"]
+energy = 0.25
+texture = ExtResource("9_wnnhf")
 
 [node name="LampBlock" type="Area2D" parent="." groups=["lamp_blocks"]]
 position = Vector2(32, 32)

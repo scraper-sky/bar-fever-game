@@ -5,4 +5,4 @@ func _ready() -> void:
 
 func _on_body_entered(body):
 	if body.name == "MainPlayer":
-		body.call_deferred("respawn")
+		body.call_deferred("die")

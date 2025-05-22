@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjs5602u0owi6"]
+[gd_scene load_steps=14 format=3 uid="uid://bjs5602u0owi6"]
 
 [ext_resource type="Texture2D" uid="uid://ccd4xlp3hg6ri" path="res://assets/background&art/endworld.png" id="1_n6olk"]
 [ext_resource type="Script" uid="uid://c8ri0uqup20iq" path="res://scenes/fifth_scene/world_end_4.gd" id="1_vxncq"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://dwxhjkq56sdne" path="res://scenes/fifth_scene/finalundream_1.gd" id="6_jkvap"]
 [ext_resource type="Texture2D" uid="uid://3082sjrpg0bq" path="res://assets/background&art/finalundream2.png" id="7_jkvap"]
 [ext_resource type="Texture2D" uid="uid://c3b6hlp2s7cuu" path="res://assets/background&art/finalundream3.png" id="8_4hhgk"]
+[ext_resource type="PackedScene" uid="uid://b2i6ct2dm3pkf" path="res://scenes/dynamic/interactables/finalvending/finalvending.tscn" id="10_4hhgk"]
+[ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="11_j8g5f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hnr2l"]
 shader = ExtResource("5_nasiq")
@@ -98,5 +100,10 @@ offset_left = 1020.0
 offset_top = 124.0
 offset_right = 1097.0
 offset_bottom = 193.0
+
+[node name="Finalvending" parent="." instance=ExtResource("10_4hhgk")]
+position = Vector2(930, 115)
+
+[node name="Hud" parent="." instance=ExtResource("11_j8g5f")]
 
 [connection signal="pressed" from="finalundream1/Undream" to="finalundream1" method="_on_undream_pressed"]

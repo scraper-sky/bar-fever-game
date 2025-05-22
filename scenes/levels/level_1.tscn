@@ -366,7 +366,8 @@ environment = ExtResource("2_bahl2")
 
 [node name="MainPlayer" parent="." instance=ExtResource("3_0y4r0")]
 position = Vector2(3, 6)
-jump_power = 18.0
+speed = 15.0
+jump_power = 20.0
 
 [node name="8Bitaction1" parent="MainPlayer" instance=ExtResource("4_mkypq")]
 
@@ -561,10 +562,10 @@ position = Vector2(447, 254)
 position = Vector2(319, 430)
 
 [node name="partyballoons2" parent="." instance=ExtResource("13_dnkej")]
-position = Vector2(579, 303)
+position = Vector2(1062, 554)
 
 [node name="partyballoons3" parent="." instance=ExtResource("13_dnkej")]
-position = Vector2(861, 266)
+position = Vector2(495, 472)
 
 [node name="floatingcatmask" parent="." instance=ExtResource("14_mm8aj")]
 position = Vector2(619, 430)

@@ -20,6 +20,8 @@ func _process(delta):
 		direction *= -1
 
 func _on_body_entered(body):
-	if body.name == "MainPlayer" or body.name == "MainPlayer2":
+	if body.name == "MainPlayer2":
 		print("Ghost hit player at ", position)
 		body.call_deferred("respawn")
+	if body.name == "MainPlayer":
+		body.call_deferred("die")

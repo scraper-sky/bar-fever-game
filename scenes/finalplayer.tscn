@@ -55,7 +55,7 @@ animations = [{
 radius = 21.0
 height = 46.0
 
-[node name="finalplayer" type="CharacterBody2D"]
+[node name="finalplayer" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_j07yu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
