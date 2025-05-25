@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://c3ndo40cfpll6"]
+[gd_scene load_steps=34 format=4 uid="uid://c3ndo40cfpll6"]
 
 [ext_resource type="Script" uid="uid://fu7qss4phh5" path="res://scenes/levels/level_8.gd" id="1_7snfr"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_ene4w"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://deb144eh5m8eb" path="res://scenes/area_functionality/blue_portal_local.tscn" id="6_0kxia"]
 [ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/obstacles/spiketrap/spike_trap.tscn" id="7_ene4w"]
 [ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="8_h6r4t"]
+[ext_resource type="PackedScene" uid="uid://cpvh7wc2numtm" path="res://scenes/dynamic/decoration/retrofire/retrofire.tscn" id="9_pdbfg"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="9_w2i51"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/obstacles/ghost/ghost.tscn" id="10_xsrpe"]
 [ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="12_acgl5"]
@@ -20,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="18_acgl5"]
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="19_61loj"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="20_61loj"]
+[ext_resource type="PackedScene" uid="uid://bq1cr37l7t5hd" path="res://scenes/dynamic/decoration/circustent/circustent.tscn" id="20_mnqm8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vsqe1"]
 texture = ExtResource("3_h6r4t")
@@ -432,6 +434,15 @@ position = Vector2(-66, -869)
 scale = Vector2(3.35758, 7.73677)
 texture = ExtResource("5_xsrpe")
 
+[node name="Circustent" parent="." instance=ExtResource("20_mnqm8")]
+position = Vector2(-96, 5)
+
+[node name="Retrofire" parent="." instance=ExtResource("9_pdbfg")]
+position = Vector2(153, -394)
+
+[node name="Retrofire2" parent="." instance=ExtResource("9_pdbfg")]
+position = Vector2(-221, -394)
+
 [node name="BluePortal" parent="." instance=ExtResource("6_0kxia")]
 position = Vector2(1429, -2130)
 target_scene = "res://scenes/scene_transitions/retrievedmem2.tscn"
@@ -582,15 +593,17 @@ position = Vector2(1192, -1961)
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 40.0
+offset_top = 40.0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = -146.0
-offset_top = -73.0
-offset_right = 137.0
-offset_bottom = 30.0
+offset_left = -197.0
+offset_top = -87.0
+offset_right = 86.0
+offset_bottom = 16.0
 theme_override_fonts/normal_font = ExtResource("12_acgl5")
 text = "8. Just stop already.
 "
@@ -630,8 +643,10 @@ text = "8. Take this platform
 [node name="Control4" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 19.0
+offset_top = -1.0
+offset_right = 59.0
+offset_bottom = 39.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control4"]
 layout_mode = 0
@@ -646,8 +661,10 @@ text = "8. Take this platform
 [node name="Control5" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 9.0
+offset_top = 20.0
+offset_right = 49.0
+offset_bottom = 60.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control5"]
 layout_mode = 0
@@ -686,8 +703,10 @@ environment = ExtResource("17_40qa3")
 [node name="Hud" parent="." instance=ExtResource("18_acgl5")]
 
 [node name="InteractionHint" type="Label" parent="Hud"]
-offset_right = 210.0
-offset_bottom = 63.0
+offset_left = -82.0
+offset_top = 47.0
+offset_right = 238.0
+offset_bottom = 110.0
 theme_override_fonts/font = ExtResource("12_acgl5")
 text = "Press -e to interact"
 
@@ -731,7 +750,7 @@ position = Vector2(931, -2101)
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_mnqm8")
-offset_left = -4037.0
-offset_top = -5081.0
-offset_right = 3436.0
-offset_bottom = 3044.0
+offset_left = -4010.0
+offset_top = -5086.0
+offset_right = 3463.0
+offset_bottom = 3039.0

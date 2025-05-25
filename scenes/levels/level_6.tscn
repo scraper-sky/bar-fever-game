@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://r3rb56u7yrik"]
+[gd_scene load_steps=39 format=4 uid="uid://r3rb56u7yrik"]
 
 [ext_resource type="Script" uid="uid://dqlqf5pjt83vv" path="res://scenes/levels/level_6.gd" id="1_fta2x"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_kvmlg"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/obstacles/spiketrap/spike_trap.tscn" id="7_012n5"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="8_2466l"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="9_i4v3b"]
+[ext_resource type="PackedScene" uid="uid://drw73lq07gx2b" path="res://scenes/dynamic/decoration/retrobamboo/retrobamboo.tscn" id="9_uu8qo"]
 [ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="10_4s3nr"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/obstacles/ghost/ghost.tscn" id="11_0axwl"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="12_utfl0"]
@@ -456,13 +457,97 @@ tile_set = SubResource("TileSet_pf4i8")
 motion_scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(2085, 1173)
+position = Vector2(2085, 1181)
 scale = Vector2(4.05599, 5.42262)
 texture = ExtResource("4_t51po")
 
 [node name="BluePortal" parent="." instance=ExtResource("6_21esf")]
 position = Vector2(1243, 633)
 target_scene = "res://scenes/levels/level_7.tscn"
+
+[node name="Retrobamboo" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(172, 118)
+
+[node name="Retrobamboo2" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(227, 118)
+
+[node name="Retrobamboo3" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(227, 118)
+
+[node name="Retrobamboo4" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(274, 118)
+
+[node name="Retrobamboo5" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(326, 118)
+
+[node name="Retrobamboo6" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(376, 118)
+
+[node name="Retrobamboo7" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(430, 118)
+
+[node name="Retrobamboo8" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(483, 118)
+
+[node name="Retrobamboo9" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(535, 118)
+
+[node name="Retrobamboo10" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(585, 118)
+
+[node name="Retrobamboo11" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(631, 118)
+
+[node name="Retrobamboo12" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(684, 118)
+
+[node name="Retrobamboo13" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(738, 118)
+
+[node name="Retrobamboo14" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(781, 118)
+
+[node name="Retrobamboo15" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(1196, 310)
+
+[node name="Retrobamboo16" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(1142, 310)
+
+[node name="Retrobamboo17" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(791, 1462)
+
+[node name="Retrobamboo19" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(848, 1462)
+
+[node name="Retrobamboo20" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(900, 1462)
+
+[node name="Retrobamboo21" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(951, 1462)
+
+[node name="Retrobamboo22" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(1002, 1462)
+
+[node name="Retrobamboo23" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(1045, 1462)
+
+[node name="Retrobamboo24" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(1093, 1462)
+
+[node name="Retrobamboo25" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(1129, 1462)
+
+[node name="Retrobamboo26" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(1186, 1526)
+
+[node name="Retrobamboo27" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(1235, 1526)
+
+[node name="Retrobamboo28" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(1258, 1526)
+
+[node name="Retrobamboo18" parent="." instance=ExtResource("9_uu8qo")]
+position = Vector2(737, 1462)
 
 [node name="SpikeTrap" parent="." instance=ExtResource("7_012n5")]
 position = Vector2(1315, 1590)
@@ -602,10 +687,10 @@ scale = Vector2(-2.0751, 2.8654)
 curve = SubResource("Curve2D_2lwvg")
 
 [node name="ghost" parent="." instance=ExtResource("11_0axwl")]
-position = Vector2(208, 109)
+position = Vector2(190, 105)
 
 [node name="ghost2" parent="." instance=ExtResource("11_0axwl")]
-position = Vector2(430, 110)
+position = Vector2(433, 103)
 start_direction = -1
 
 [node name="ghost3" parent="." instance=ExtResource("11_0axwl")]

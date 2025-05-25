@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://drw73lq07gx2b"]
+
+[ext_resource type="Texture2D" uid="uid://yh7520mkd8j6" path="res://assets/background&art/retrobamboo.png" id="1_diw5x"]
+
+[node name="Retrobamboo" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.9)
+scale = Vector2(2, 2)
+texture = ExtResource("1_diw5x")

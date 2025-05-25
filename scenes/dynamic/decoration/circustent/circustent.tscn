@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq1cr37l7t5hd"]
+
+[ext_resource type="Texture2D" uid="uid://dmqoqsei4byf4" path="res://assets/background&art/circustent.png" id="1_r1x5g"]
+
+[node name="Circustent" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_r1x5g")

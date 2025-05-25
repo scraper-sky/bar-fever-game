@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://bqj7iq6jc16bl"]
+[gd_scene load_steps=61 format=4 uid="uid://bqj7iq6jc16bl"]
 
 [ext_resource type="Script" uid="uid://c47efte5ou18r" path="res://scenes/levels/level_7.gd" id="1_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_5ffpf"]
@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://cmvce7vxi45mj" path="res://assets/background&art/circustilemap.png" id="5_c64tk"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="6_fusg1"]
 [ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/obstacles/spiketrap/spike_trap.tscn" id="7_ra2hv"]
+[ext_resource type="PackedScene" uid="uid://boxqehw65qp85" path="res://scenes/dynamic/decoration/retroshelf/retroshelf.tscn" id="9_4xx2j"]
 [ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="10_fo4xe"]
+[ext_resource type="PackedScene" uid="uid://drw73lq07gx2b" path="res://scenes/dynamic/decoration/retrobamboo/retrobamboo.tscn" id="10_gyp50"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="10_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/obstacles/ghost/ghost.tscn" id="11_88heu"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="11_wreli"]
@@ -27,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://bum7wdgioscgn" path="res://scenes/dynamic/interactables/watermelonbooster/watermelonbooster.tscn" id="23_g13ha"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="24_nonn3"]
 [ext_resource type="Script" uid="uid://bjv6sch568arg" path="res://scenes/dynamic/interactables.gd" id="26_64ngv"]
+[ext_resource type="PackedScene" uid="uid://cpvh7wc2numtm" path="res://scenes/dynamic/decoration/retrofire/retrofire.tscn" id="26_j8v86"]
 [ext_resource type="Texture2D" uid="uid://bw5g28nm2xfa0" path="res://assets/background&art/map_item.png" id="27_qybhm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c64tk"]
@@ -566,6 +569,216 @@ texture = ExtResource("5_73o88")
 position = Vector2(-598, -2512)
 target_scene = "res://scenes/levels/level_8.tscn"
 
+[node name="Retroshelf" parent="." instance=ExtResource("9_4xx2j")]
+position = Vector2(-529, 101)
+
+[node name="Retroshelf5" parent="." instance=ExtResource("9_4xx2j")]
+position = Vector2(348, 102)
+
+[node name="Retrobamboo" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-720, 118)
+
+[node name="Retrobamboo2" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-677, 118)
+
+[node name="Retrobamboo3" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-630, 118)
+
+[node name="Retrobamboo4" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-586, 118)
+
+[node name="Retrobamboo5" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-475, 118)
+
+[node name="Retrobamboo6" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-423, 118)
+
+[node name="Retrobamboo7" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-372, 118)
+
+[node name="Retrobamboo8" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-324, 118)
+
+[node name="Retrobamboo9" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-273, 118)
+
+[node name="Retrobamboo10" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-220, 118)
+
+[node name="Retrobamboo11" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-166, 118)
+
+[node name="Retrobamboo12" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-105, 118)
+
+[node name="Retrobamboo13" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-52, 118)
+
+[node name="Retrobamboo14" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(3, 118)
+
+[node name="Retrobamboo15" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(34, 118)
+
+[node name="Retrobamboo16" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(87, 118)
+
+[node name="Retrobamboo17" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(140, 118)
+
+[node name="Retrobamboo18" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(203, 118)
+
+[node name="Retrobamboo19" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(258, 118)
+
+[node name="Retrobamboo20" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(294, 118)
+
+[node name="Retrobamboo21" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(405, 118)
+
+[node name="Retrobamboo22" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(455, 118)
+
+[node name="Retrobamboo23" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(489, 118)
+
+[node name="Retrobamboo24" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-784, 117)
+
+[node name="Retrobamboo25" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-836, 117)
+
+[node name="Retrobamboo26" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-864, 113)
+
+[node name="Retrobamboo27" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-857, -397)
+
+[node name="Retrobamboo28" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-808, -394)
+
+[node name="Retrobamboo29" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-536, -394)
+
+[node name="Retrobamboo30" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-474, -394)
+
+[node name="Retrobamboo31" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-419, -394)
+
+[node name="Retrobamboo32" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-360, -394)
+
+[node name="Retrobamboo33" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-95, -394)
+
+[node name="Retrobamboo34" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-39, -394)
+
+[node name="Retrobamboo35" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(37, -394)
+
+[node name="Retrobamboo36" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(95, -394)
+
+[node name="Retrobamboo37" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(364, -394)
+
+[node name="Retrobamboo38" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(436, -394)
+
+[node name="Retrobamboo39" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(487, -394)
+
+[node name="Retrobamboo40" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(486, -1162)
+
+[node name="Retrobamboo41" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(426, -1162)
+
+[node name="Retrobamboo42" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(369, -1162)
+
+[node name="Retrobamboo43" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(91, -1162)
+
+[node name="Retrobamboo44" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(37, -1164)
+
+[node name="Retrobamboo45" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-21, -1165)
+
+[node name="Retrobamboo46" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-89, -1162)
+
+[node name="Retrobamboo47" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-351, -1162)
+
+[node name="Retrobamboo48" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-409, -1162)
+
+[node name="Retrobamboo49" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-465, -1162)
+
+[node name="Retrobamboo50" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-516, -1162)
+
+[node name="Retrobamboo51" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-543, -1162)
+
+[node name="Retrobamboo52" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-793, -1162)
+
+[node name="Retrobamboo53" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-856, -1162)
+
+[node name="Retrobamboo54" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(481, -1802)
+
+[node name="Retrobamboo55" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(426, -1802)
+
+[node name="Retrobamboo56" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(374, -1802)
+
+[node name="Retrobamboo57" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(51, -1802)
+
+[node name="Retrobamboo58" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(3, -1803)
+
+[node name="Retrobamboo59" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-55, -1803)
+
+[node name="Retrobamboo60" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-109, -1802)
+
+[node name="Retrobamboo61" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-155, -1802)
+
+[node name="Retrobamboo62" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-345, -1802)
+
+[node name="Retrobamboo63" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-407, -1802)
+
+[node name="Retrobamboo64" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-461, -1804)
+
+[node name="Retrobamboo65" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-509, -1802)
+
+[node name="Retrobamboo66" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-540, -1802)
+
+[node name="Retrobamboo67" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-795, -1802)
+
+[node name="Retrobamboo68" parent="." instance=ExtResource("10_gyp50")]
+position = Vector2(-848, -1803)
+
 [node name="ghost" parent="." instance=ExtResource("11_88heu")]
 position = Vector2(-443, -78)
 
@@ -590,10 +803,10 @@ position = Vector2(-447, 118)
 position = Vector2(-860, 118)
 
 [node name="SpikeTrap4" parent="." instance=ExtResource("7_ra2hv")]
-position = Vector2(273, 118)
+position = Vector2(217, 118)
 
 [node name="SpikeTrap5" parent="." instance=ExtResource("7_ra2hv")]
-position = Vector2(484, 118)
+position = Vector2(412, 118)
 
 [node name="SpikeTrap6" parent="." instance=ExtResource("7_ra2hv")]
 position = Vector2(-206, 118)
@@ -873,10 +1086,11 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -838.0
 offset_top = -519.0
-offset_right = -609.0
+offset_right = -465.0
 offset_bottom = -421.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("15_aqqx4")
-text = "7. This is the right path; keep following this platform"
+text = "7. Follow this platform"
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
@@ -888,10 +1102,12 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = 158.0
 offset_top = -538.0
-offset_right = 393.0
+offset_right = 585.0
 offset_bottom = -440.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("15_aqqx4")
-text = "7. This is the right path; keep following this platform"
+text = "7. Follow this platform
+"
 
 [node name="Control3" type="Control" parent="."]
 layout_mode = 3
@@ -903,10 +1119,11 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = 208.0
 offset_top = -1299.0
-offset_right = 450.0
+offset_right = 596.0
 offset_bottom = -1201.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("15_aqqx4")
-text = "7. This is the right path; keep following this platform"
+text = "7. Follow this platform"
 
 [node name="Control4" type="Control" parent="."]
 layout_mode = 3
@@ -920,8 +1137,9 @@ offset_left = -523.0
 offset_top = -1300.0
 offset_right = -291.0
 offset_bottom = -1202.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("15_aqqx4")
-text = "7. This is the right path; keep following this platform"
+text = "7. Follow this platform"
 
 [node name="Control5" type="Control" parent="."]
 layout_mode = 3
@@ -933,10 +1151,11 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -165.0
 offset_top = -1986.0
-offset_right = 90.0
+offset_right = 215.0
 offset_bottom = -1888.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("15_aqqx4")
-text = "7. This is the right path; keep following this platform"
+text = "7. Follow this platform"
 
 [node name="Control6" type="Control" parent="."]
 layout_mode = 3
@@ -946,12 +1165,13 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control6"]
 layout_mode = 0
-offset_left = -382.0
-offset_top = -1874.0
-offset_right = -125.0
-offset_bottom = -1776.0
+offset_left = -546.0
+offset_top = -1974.0
+offset_right = -289.0
+offset_bottom = -1876.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("15_aqqx4")
-text = "7. This is the right path; keep following this platform"
+text = "7. Follow this platform"
 
 [node name="Control7" type="Control" parent="."]
 layout_mode = 3
@@ -965,8 +1185,9 @@ offset_left = -795.0
 offset_top = -1889.0
 offset_right = -585.0
 offset_bottom = -1791.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("15_aqqx4")
-text = "7. This is the right path; keep following this platform"
+text = "7. Follow this platform"
 
 [node name="Control8" type="Control" parent="."]
 layout_mode = 3
@@ -979,9 +1200,10 @@ offset_bottom = 40.0
 [node name="RichTextLabel" type="RichTextLabel" parent="Control8"]
 layout_mode = 0
 offset_left = -85.0
-offset_top = 52.0
+offset_top = 35.0
 offset_right = 206.0
-offset_bottom = 150.0
+offset_bottom = 133.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("15_aqqx4")
 text = "7. I'm the boy who cried wolf"
 
@@ -998,7 +1220,7 @@ position = Vector2(-200, -1849)
 position = Vector2(-201, -2307)
 
 [node name="floatingsakura" parent="." instance=ExtResource("16_8rm7r")]
-position = Vector2(-138, -23)
+position = Vector2(-127, -40)
 
 [node name="floatingsakura2" parent="." instance=ExtResource("16_8rm7r")]
 position = Vector2(-122, -766)
@@ -1007,10 +1229,10 @@ position = Vector2(-122, -766)
 position = Vector2(-85, -1372)
 
 [node name="Dreamer" parent="." instance=ExtResource("18_bntht")]
-offset_left = 253.0
-offset_top = -32.0
-offset_right = 269.0
-offset_bottom = 8.0
+offset_left = 162.0
+offset_top = -213.0
+offset_right = 178.0
+offset_bottom = -173.0
 
 [node name="LevelEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("19_7co51")
@@ -1114,19 +1336,37 @@ position = Vector2(-293, -2392)
 position = Vector2(-411, -2453)
 
 [node name="VendingMachine" parent="." instance=ExtResource("22_aqqx4")]
-position = Vector2(-556, 50)
+position = Vector2(-550, 52)
 
 [node name="Watermelonbooster" parent="." instance=ExtResource("23_g13ha")]
 position = Vector2(450, 38)
+
+[node name="Retrofire" parent="." instance=ExtResource("26_j8v86")]
+position = Vector2(140, 120)
+
+[node name="Retrofire2" parent="." instance=ExtResource("26_j8v86")]
+position = Vector2(-753, 118)
+
+[node name="Retrofire3" parent="." instance=ExtResource("26_j8v86")]
+position = Vector2(-434, -393)
+
+[node name="Retrofire4" parent="." instance=ExtResource("26_j8v86")]
+position = Vector2(29, -1161)
+
+[node name="Retrofire5" parent="." instance=ExtResource("26_j8v86")]
+position = Vector2(84, -1802)
+
+[node name="Retrofire6" parent="." instance=ExtResource("26_j8v86")]
+position = Vector2(-286, -2378)
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_r4aal")
-offset_left = -3165.0
-offset_top = -4453.0
-offset_right = 3112.0
-offset_bottom = 1919.0
+offset_left = -3301.0
+offset_top = -4452.0
+offset_right = 2976.0
+offset_bottom = 1920.0
 
 [node name="MapInteractable" type="Area2D" parent="."]
 position = Vector2(-518, -216)

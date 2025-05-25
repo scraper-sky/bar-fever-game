@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpvh7wc2numtm"]
+
+[ext_resource type="Script" uid="uid://bf1gkxgqbgwa0" path="res://scenes/dynamic/decoration/retrofire/retrofire.gd" id="1_q68ba"]
+[ext_resource type="Texture2D" uid="uid://eacp1x3g1e85" path="res://assets/background&art/retrofire1.png" id="2_ocaj0"]
+[ext_resource type="Texture2D" uid="uid://ckarnu01clbir" path="res://assets/background&art/retrofire2.png" id="3_6q07m"]
+[ext_resource type="Texture2D" uid="uid://cskx0w148a2lo" path="res://assets/background&art/retrofire3.png" id="4_4firo"]
+[ext_resource type="Texture2D" uid="uid://b6ytjej165hbo" path="res://assets/background&art/retrofire4.png" id="5_6l2ht"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n52wx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ocaj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6q07m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4firo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6l2ht")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Retrofire" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_q68ba")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n52wx")

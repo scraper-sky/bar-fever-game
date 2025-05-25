@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://ch73btdbh41my"]
+
+[ext_resource type="Script" uid="uid://1ij3jkfd3hrt" path="res://scenes/dynamic/interactables/darkraina/darkraina.gd" id="1_ad6ro"]
+[ext_resource type="Texture2D" uid="uid://b6k0vym2o72sk" path="res://assets/background&art/darkraina1.png" id="2_m7a1v"]
+[ext_resource type="Texture2D" uid="uid://c1la58a855c33" path="res://assets/background&art/darkraina2.png" id="3_ap6ig"]
+[ext_resource type="Texture2D" uid="uid://p2vn7m42cm2f" path="res://assets/background&art/darkraina3.png" id="4_sa5sw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_66gwu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m7a1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ap6ig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sa5sw")
+}],
+"loop": true,
+"name": &"floating",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmrlk"]
+size = Vector2(19, 27)
+
+[node name="DarkRaina" type="Area2D"]
+scale = Vector2(1.6, 1.6)
+script = ExtResource("1_ad6ro")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_66gwu")
+animation = &"floating"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 3.5)
+shape = SubResource("RectangleShape2D_tmrlk")

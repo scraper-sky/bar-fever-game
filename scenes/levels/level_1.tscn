@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://cxa0ih033yf0a"]
+[gd_scene load_steps=34 format=4 uid="uid://cxa0ih033yf0a"]
 
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="1_4526a"]
 [ext_resource type="Script" uid="uid://mtl5lqyk5fvb" path="res://scripts/LevelRoot.gd" id="1_wtwp4"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="7_uflvd"]
 [ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="7_v6ha0"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="8_oyruo"]
+[ext_resource type="PackedScene" uid="uid://bq1cr37l7t5hd" path="res://scenes/dynamic/decoration/circustent/circustent.tscn" id="9_mqh5v"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/decoration/floatingtorii/floatingtorii.tscn" id="10_tn1f1"]
 [ext_resource type="PackedScene" uid="uid://bv0quf0yd0s51" path="res://scenes/dynamic/decoration/floatingtorii2/floatingtoriiv_2.tscn" id="11_8ve0l"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="12_tgm38"]
@@ -23,6 +24,8 @@
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="20_gmpev"]
 [ext_resource type="PackedScene" uid="uid://bnpcvj4yoabb0" path="res://scenes/dynamic/decoration/givenflowers/givenflowers.tscn" id="21_ndtll"]
 [ext_resource type="PackedScene" uid="uid://cma74m4scskqj" path="res://scenes/dynamic/decoration/alsogivenflowers/alsogivenflowers.tscn" id="22_7h2jl"]
+[ext_resource type="PackedScene" uid="uid://drw73lq07gx2b" path="res://scenes/dynamic/decoration/retrobamboo/retrobamboo.tscn" id="22_7o3do"]
+[ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="25_o7j4k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iav0o"]
 texture = ExtResource("1_4526a")
@@ -394,6 +397,10 @@ text = "1. Welcome to the Given Land
 If you're wondering who's talking to you...
 Well, just forget about it"
 
+[node name="Circustent" parent="." instance=ExtResource("9_mqh5v")]
+modulate = Color(1, 1, 1, 0.9)
+position = Vector2(822, 452)
+
 [node name="MovingPlatformLarge" parent="." instance=ExtResource("4_h65t0")]
 position = Vector2(256.993, 309.839)
 scale = Vector2(3.05369, 0.85255)
@@ -552,8 +559,20 @@ position = Vector2(514, 624)
 [node name="floatingtorii" parent="." instance=ExtResource("10_tn1f1")]
 position = Vector2(189, 444)
 
+[node name="floatingtorii2" parent="." instance=ExtResource("10_tn1f1")]
+position = Vector2(807, 208)
+
+[node name="floatingtorii3" parent="." instance=ExtResource("10_tn1f1")]
+position = Vector2(331, 110)
+
 [node name="floatingtoriiv2" parent="." instance=ExtResource("11_8ve0l")]
 position = Vector2(730, 38)
+
+[node name="floatingtoriiv3" parent="." instance=ExtResource("11_8ve0l")]
+position = Vector2(123, 248)
+
+[node name="floatingtoriiv4" parent="." instance=ExtResource("11_8ve0l")]
+position = Vector2(532, 42)
 
 [node name="FloatingParticles" parent="." instance=ExtResource("12_tgm38")]
 position = Vector2(447, 254)
@@ -567,8 +586,23 @@ position = Vector2(1062, 554)
 [node name="partyballoons3" parent="." instance=ExtResource("13_dnkej")]
 position = Vector2(495, 472)
 
+[node name="partyballoons4" parent="." instance=ExtResource("13_dnkej")]
+position = Vector2(1001, 464)
+
+[node name="partyballoons5" parent="." instance=ExtResource("13_dnkej")]
+position = Vector2(554, 367)
+
+[node name="partyballoons6" parent="." instance=ExtResource("13_dnkej")]
+position = Vector2(649, 339)
+
+[node name="partyballoons7" parent="." instance=ExtResource("13_dnkej")]
+position = Vector2(655, 451)
+
+[node name="partyballoons8" parent="." instance=ExtResource("13_dnkej")]
+position = Vector2(353, 353)
+
 [node name="floatingcatmask" parent="." instance=ExtResource("14_mm8aj")]
-position = Vector2(619, 430)
+position = Vector2(391, 432)
 
 [node name="Coin" parent="." instance=ExtResource("18_np2pn")]
 position = Vector2(71, 360)
@@ -589,6 +623,12 @@ position = Vector2(996, 503)
 
 [node name="BluePortal" parent="." instance=ExtResource("5_b16y8")]
 position = Vector2(1056, 8)
+
+[node name="Retrobamboo" parent="." instance=ExtResource("22_7o3do")]
+position = Vector2(722, 501)
+
+[node name="Retrobamboo2" parent="." instance=ExtResource("22_7o3do")]
+position = Vector2(934, 500)
 
 [node name="Givenflowers" parent="." instance=ExtResource("21_ndtll")]
 position = Vector2(877, 518)
@@ -638,12 +678,15 @@ position = Vector2(731, 519)
 [node name="Alsogivenflowers9" parent="." instance=ExtResource("22_7h2jl")]
 position = Vector2(702, 519)
 
+[node name="DarkRaina" parent="." instance=ExtResource("25_o7j4k")]
+position = Vector2(948, 62)
+facing_direction = -1
+
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_mkypq")
-offset_left = -322.0
-offset_top = -300.0
-offset_right = 1322.0
-offset_bottom = 868.0
+offset_left = -342.0
+offset_top = -322.0
+offset_right = 1302.0
+offset_bottom = 846.0
