@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://cpep8iv7y7bfb"]
+[gd_scene load_steps=34 format=4 uid="uid://cpep8iv7y7bfb"]
 
 [ext_resource type="Script" uid="uid://bh8hulmcii4wl" path="res://scenes/levels/level_5.gd" id="1_53jy1"]
 [ext_resource type="Texture2D" uid="uid://bdoycwwy2iqr6" path="res://assets/background&art/purplestone.png" id="2_tq3vs"]
@@ -21,7 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="18_l8eod"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="19_sfnul"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="20_fea5r"]
+[ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="21_iu1q5"]
 [ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="21_wnnhf"]
+[ext_resource type="Resource" uid="uid://b1xblghh0cexd" path="res://dialogue/level5darkraina.dialogue" id="22_orjhg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dbg7v"]
 texture = ExtResource("2_tq3vs")
@@ -566,6 +568,11 @@ position = Vector2(551, -39)
 
 [node name="Coin6" parent="." instance=ExtResource("18_l8eod")]
 position = Vector2(551, -68)
+
+[node name="DarkRaina" parent="." instance=ExtResource("21_iu1q5")]
+position = Vector2(561, -25)
+facing_direction = -1
+dialogue_resource = ExtResource("22_orjhg")
 
 [node name="Hud" parent="." instance=ExtResource("19_sfnul")]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://qia1gjqqdvr1"]
+[gd_scene load_steps=42 format=4 uid="uid://qia1gjqqdvr1"]
 
 [ext_resource type="Script" uid="uid://do4cp2iisk0j8" path="res://scenes/levels/level_9.gd" id="1_sd2du"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_6v45j"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="19_5hxyp"]
 [ext_resource type="PackedScene" uid="uid://bum7wdgioscgn" path="res://scenes/dynamic/interactables/watermelonbooster/watermelonbooster.tscn" id="20_5hxyp"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="21_v80mn"]
+[ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="22_1hv7j"]
+[ext_resource type="Resource" uid="uid://cl3i3s0cu2tn3" path="res://dialogue/level9darkraina.dialogue" id="23_lbaq2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7amt0"]
 texture = ExtResource("4_6nuwh")
@@ -1047,6 +1049,10 @@ position = Vector2(2195, 1270)
 
 [node name="Watermelonbooster" parent="." instance=ExtResource("20_5hxyp")]
 position = Vector2(737, 47)
+
+[node name="DarkRaina" parent="." instance=ExtResource("22_1hv7j")]
+position = Vector2(484, 638)
+dialogue_resource = ExtResource("23_lbaq2")
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 

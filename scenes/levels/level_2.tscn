@@ -373,7 +373,6 @@ position = Vector2(992, 105)
 scale = Vector2(2, 2)
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_1yj8c")

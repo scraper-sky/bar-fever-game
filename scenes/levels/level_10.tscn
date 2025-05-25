@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://drahjq4x1ho3k"]
+[gd_scene load_steps=64 format=4 uid="uid://drahjq4x1ho3k"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_n3gcc"]
 [ext_resource type="Script" uid="uid://4cbo2palb5ig" path="res://scenes/levels/level_10.gd" id="1_nk72f"]
@@ -48,6 +48,8 @@
 [ext_resource type="Texture2D" uid="uid://bw5g28nm2xfa0" path="res://assets/background&art/map_item.png" id="42_au8ab"]
 [ext_resource type="PackedScene" uid="uid://cma74m4scskqj" path="res://scenes/dynamic/decoration/alsogivenflowers/alsogivenflowers.tscn" id="44_lm6tl"]
 [ext_resource type="PackedScene" uid="uid://bnpcvj4yoabb0" path="res://scenes/dynamic/decoration/givenflowers/givenflowers.tscn" id="45_7xi6w"]
+[ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="46_lm6tl"]
+[ext_resource type="Resource" uid="uid://bk56v36h58ao" path="res://dialogue/level10darkraina.dialogue" id="47_7xi6w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_55him"]
 texture = ExtResource("2_c7e1w")
@@ -514,7 +516,7 @@ tile_set = SubResource("TileSet_kn1qc")
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1114, 1249)
+position = Vector2(1095, 1249)
 scale = Vector2(6.15475, 11.1746)
 texture = ExtResource("4_omffp")
 
@@ -595,10 +597,11 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = -111.0
-offset_top = 61.0
-offset_right = 181.0
-offset_bottom = 147.0
+offset_left = -90.0
+offset_top = 66.0
+offset_right = 660.0
+offset_bottom = 152.0
+scale = Vector2(0.5, 0.5)
 theme_override_fonts/normal_font = ExtResource("23_ljl3p")
 text = "10. There's only one correct direction here..."
 
@@ -611,10 +614,11 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
 layout_mode = 0
-offset_left = 381.0
-offset_top = 1524.0
-offset_right = 673.0
-offset_bottom = 1610.0
+offset_left = 116.0
+offset_top = 1555.0
+offset_right = 864.0
+offset_bottom = 1641.0
+scale = Vector2(0.5, 0.5)
 theme_override_fonts/normal_font = ExtResource("23_ljl3p")
 text = "10. There's only one correct direction here..."
 
@@ -850,6 +854,7 @@ start_direction = -1
 position = Vector2(-35, 2189)
 
 [node name="floatingtorii" parent="." instance=ExtResource("27_657iy")]
+position = Vector2(35, -13)
 
 [node name="floatingtorii2" parent="." instance=ExtResource("27_657iy")]
 position = Vector2(-848, 975)
@@ -919,10 +924,10 @@ position = Vector2(-314, -329)
 position = Vector2(881, 2211)
 
 [node name="Dreamer" parent="." instance=ExtResource("34_55him")]
-offset_left = -279.0
-offset_top = 159.0
-offset_right = -91.0
-offset_bottom = 178.0
+offset_left = -11.0
+offset_top = 158.0
+offset_right = 177.0
+offset_bottom = 177.0
 
 [node name="LevelEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("35_2xxxy")
@@ -1104,13 +1109,280 @@ position = Vector2(-130, 1094)
 position = Vector2(-69, 1094)
 
 [node name="Alsogivenflowers6" parent="." instance=ExtResource("44_lm6tl")]
-position = Vector2(-48, 1094)
+position = Vector2(-56, 1094)
 
 [node name="Alsogivenflowers7" parent="." instance=ExtResource("44_lm6tl")]
 position = Vector2(-100, 1094)
 
 [node name="Alsogivenflowers4" parent="." instance=ExtResource("44_lm6tl")]
 position = Vector2(-69, 1094)
+
+[node name="Alsogivenflowers8" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-25, 199)
+
+[node name="Alsogivenflowers9" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(6, 199)
+
+[node name="Alsogivenflowers10" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(31, 199)
+
+[node name="Alsogivenflowers11" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(58, 199)
+
+[node name="Alsogivenflowers12" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(86, 199)
+
+[node name="Alsogivenflowers13" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(101, 199)
+
+[node name="Alsogivenflowers14" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(131, 199)
+
+[node name="Alsogivenflowers15" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(160, 199)
+
+[node name="Alsogivenflowers16" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(185, 199)
+
+[node name="Alsogivenflowers17" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(202, 199)
+
+[node name="Alsogivenflowers18" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(220, 199)
+
+[node name="Alsogivenflowers19" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(242, 198)
+
+[node name="Alsogivenflowers20" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(266, 198)
+
+[node name="Alsogivenflowers21" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(295, 198)
+
+[node name="Alsogivenflowers22" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(326, 198)
+
+[node name="Alsogivenflowers23" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(349, 198)
+
+[node name="Alsogivenflowers24" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(379, 198)
+
+[node name="Alsogivenflowers25" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(401, 198)
+
+[node name="Alsogivenflowers26" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(426, 198)
+
+[node name="Alsogivenflowers27" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(459, 199)
+
+[node name="Alsogivenflowers28" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(476, 199)
+
+[node name="Alsogivenflowers29" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(504, 199)
+
+[node name="Alsogivenflowers30" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(529, 199)
+
+[node name="Alsogivenflowers31" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(552, 199)
+
+[node name="Alsogivenflowers32" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(567, 198)
+
+[node name="Alsogivenflowers33" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(606, 198)
+
+[node name="Alsogivenflowers34" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(636, 198)
+
+[node name="Alsogivenflowers35" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(664, 198)
+
+[node name="Alsogivenflowers36" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(692, 198)
+
+[node name="Alsogivenflowers37" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(723, 198)
+
+[node name="Alsogivenflowers38" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(746, 198)
+
+[node name="Alsogivenflowers39" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(756, 198)
+
+[node name="Alsogivenflowers40" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-57, 199)
+
+[node name="Alsogivenflowers41" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-86, 199)
+
+[node name="Alsogivenflowers42" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-117, 199)
+
+[node name="Alsogivenflowers43" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-139, 198)
+
+[node name="Alsogivenflowers44" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-171, 198)
+
+[node name="Alsogivenflowers45" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-197, 198)
+
+[node name="Alsogivenflowers46" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-221, 198)
+
+[node name="Alsogivenflowers47" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-250, 198)
+
+[node name="Alsogivenflowers48" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-276, 198)
+
+[node name="Alsogivenflowers49" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-299, 198)
+
+[node name="Alsogivenflowers50" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-325, 198)
+
+[node name="Alsogivenflowers51" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-358, 198)
+
+[node name="Alsogivenflowers52" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-386, 198)
+
+[node name="Alsogivenflowers53" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-410, 198)
+
+[node name="Alsogivenflowers54" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-438, 198)
+
+[node name="Alsogivenflowers55" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-460, 198)
+
+[node name="Alsogivenflowers56" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-481, 198)
+
+[node name="Alsogivenflowers57" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-505, 198)
+
+[node name="Alsogivenflowers58" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-531, 198)
+
+[node name="Alsogivenflowers59" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-552, 198)
+
+[node name="Alsogivenflowers60" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-172, 1671)
+
+[node name="Alsogivenflowers61" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-140, 1671)
+
+[node name="Alsogivenflowers62" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-111, 1671)
+
+[node name="Alsogivenflowers63" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-80, 1671)
+
+[node name="Alsogivenflowers64" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-50, 1671)
+
+[node name="Alsogivenflowers65" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(-18, 1671)
+
+[node name="Alsogivenflowers66" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(14, 1671)
+
+[node name="Alsogivenflowers67" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(45, 1671)
+
+[node name="Alsogivenflowers68" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(77, 1671)
+
+[node name="Alsogivenflowers69" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(109, 1671)
+
+[node name="Alsogivenflowers70" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(140, 1671)
+
+[node name="Alsogivenflowers71" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(172, 1671)
+
+[node name="Alsogivenflowers72" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(202, 1671)
+
+[node name="Alsogivenflowers73" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(231, 1671)
+
+[node name="Alsogivenflowers74" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(260, 1671)
+
+[node name="Alsogivenflowers75" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(292, 1671)
+
+[node name="Alsogivenflowers76" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(324, 1671)
+
+[node name="Alsogivenflowers77" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(356, 1671)
+
+[node name="Alsogivenflowers78" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(388, 1671)
+
+[node name="Alsogivenflowers79" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(418, 1671)
+
+[node name="Alsogivenflowers80" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(450, 1671)
+
+[node name="Alsogivenflowers81" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(481, 1671)
+
+[node name="Alsogivenflowers82" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(512, 1671)
+
+[node name="Alsogivenflowers83" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(542, 1671)
+
+[node name="Alsogivenflowers84" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(573, 1671)
+
+[node name="Alsogivenflowers85" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(605, 1671)
+
+[node name="Alsogivenflowers86" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(637, 1671)
+
+[node name="Alsogivenflowers87" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(669, 1671)
+
+[node name="Alsogivenflowers88" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(701, 1671)
+
+[node name="Alsogivenflowers89" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(733, 1671)
+
+[node name="Alsogivenflowers90" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(763, 1671)
+
+[node name="Alsogivenflowers91" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(795, 1671)
+
+[node name="Alsogivenflowers92" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(827, 1671)
+
+[node name="Alsogivenflowers93" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(859, 1671)
+
+[node name="Alsogivenflowers94" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(891, 1671)
+
+[node name="Alsogivenflowers95" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(920, 1671)
+
+[node name="Alsogivenflowers96" parent="." instance=ExtResource("44_lm6tl")]
+position = Vector2(948, 1671)
 
 [node name="Givenflowers" parent="." instance=ExtResource("45_7xi6w")]
 position = Vector2(-191, 1093)
@@ -1129,6 +1401,331 @@ position = Vector2(-73, 1094)
 
 [node name="Givenflowers6" parent="." instance=ExtResource("45_7xi6w")]
 position = Vector2(-47, 1094)
+
+[node name="Givenflowers7" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-39, 199)
+
+[node name="Givenflowers8" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(3, 199)
+
+[node name="Givenflowers9" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(32, 198)
+
+[node name="Givenflowers10" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(75, 200)
+
+[node name="Givenflowers11" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(47, 200)
+
+[node name="Givenflowers12" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(47, 200)
+
+[node name="Givenflowers13" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(88, 200)
+
+[node name="Givenflowers14" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(115, 200)
+
+[node name="Givenflowers15" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(126, 200)
+
+[node name="Givenflowers16" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(151, 200)
+
+[node name="Givenflowers17" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(162, 198)
+
+[node name="Givenflowers18" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(187, 199)
+
+[node name="Givenflowers19" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(221, 199)
+
+[node name="Givenflowers20" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(233, 198)
+
+[node name="Givenflowers21" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(260, 199)
+
+[node name="Givenflowers22" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(288, 199)
+
+[node name="Givenflowers23" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(314, 199)
+
+[node name="Givenflowers24" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(332, 199)
+
+[node name="Givenflowers25" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(360, 199)
+
+[node name="Givenflowers26" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(384, 199)
+
+[node name="Givenflowers27" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(422, 198)
+
+[node name="Givenflowers28" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(449, 200)
+
+[node name="Givenflowers29" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(464, 199)
+
+[node name="Givenflowers30" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(490, 199)
+
+[node name="Givenflowers31" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(521, 199)
+
+[node name="Givenflowers32" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(545, 198)
+
+[node name="Givenflowers33" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(566, 198)
+
+[node name="Givenflowers34" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(589, 198)
+
+[node name="Givenflowers35" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(606, 199)
+
+[node name="Givenflowers36" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(637, 199)
+
+[node name="Givenflowers37" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(665, 199)
+
+[node name="Givenflowers38" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(715, 199)
+
+[node name="Givenflowers39" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(743, 199)
+
+[node name="Givenflowers40" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-71, 199)
+
+[node name="Givenflowers41" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-95, 199)
+
+[node name="Givenflowers42" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-109, 199)
+
+[node name="Givenflowers43" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-137, 200)
+
+[node name="Givenflowers44" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-157, 198)
+
+[node name="Givenflowers45" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-181, 198)
+
+[node name="Givenflowers46" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-203, 199)
+
+[node name="Givenflowers47" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-220, 199)
+
+[node name="Givenflowers48" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-236, 198)
+
+[node name="Givenflowers49" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-257, 199)
+
+[node name="Givenflowers50" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-275, 199)
+
+[node name="Givenflowers51" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-302, 198)
+
+[node name="Givenflowers52" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-315, 198)
+
+[node name="Givenflowers53" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-334, 199)
+
+[node name="Givenflowers54" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-355, 199)
+
+[node name="Givenflowers55" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-371, 199)
+
+[node name="Givenflowers56" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-393, 198)
+
+[node name="Givenflowers57" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-429, 199)
+
+[node name="Givenflowers58" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-460, 198)
+
+[node name="Givenflowers59" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-476, 199)
+
+[node name="Givenflowers60" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-506, 198)
+
+[node name="Givenflowers61" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-515, 198)
+
+[node name="Givenflowers62" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-533, 200)
+
+[node name="Givenflowers63" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-561, 199)
+
+[node name="Givenflowers64" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-168, 1671)
+
+[node name="Givenflowers65" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-146, 1671)
+
+[node name="Givenflowers66" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-119, 1671)
+
+[node name="Givenflowers67" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-90, 1671)
+
+[node name="Givenflowers68" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-62, 1671)
+
+[node name="Givenflowers69" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-45, 1671)
+
+[node name="Givenflowers70" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-155, 1672)
+
+[node name="Givenflowers71" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(-20, 1671)
+
+[node name="Givenflowers72" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(4, 1671)
+
+[node name="Givenflowers73" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(21, 1671)
+
+[node name="Givenflowers74" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(47, 1672)
+
+[node name="Givenflowers75" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(65, 1672)
+
+[node name="Givenflowers76" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(91, 1672)
+
+[node name="Givenflowers77" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(114, 1672)
+
+[node name="Givenflowers78" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(136, 1672)
+
+[node name="Givenflowers79" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(157, 1672)
+
+[node name="Givenflowers80" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(181, 1672)
+
+[node name="Givenflowers81" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(201, 1672)
+
+[node name="Givenflowers82" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(214, 1671)
+
+[node name="Givenflowers83" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(244, 1672)
+
+[node name="Givenflowers84" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(259, 1672)
+
+[node name="Givenflowers85" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(273, 1671)
+
+[node name="Givenflowers86" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(300, 1672)
+
+[node name="Givenflowers87" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(325, 1670)
+
+[node name="Givenflowers88" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(340, 1672)
+
+[node name="Givenflowers89" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(366, 1671)
+
+[node name="Givenflowers90" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(385, 1670)
+
+[node name="Givenflowers91" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(414, 1671)
+
+[node name="Givenflowers92" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(427, 1670)
+
+[node name="Givenflowers93" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(443, 1671)
+
+[node name="Givenflowers94" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(472, 1671)
+
+[node name="Givenflowers95" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(498, 1671)
+
+[node name="Givenflowers96" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(530, 1671)
+
+[node name="Givenflowers97" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(556, 1672)
+
+[node name="Givenflowers98" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(580, 1672)
+
+[node name="Givenflowers99" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(606, 1671)
+
+[node name="Givenflowers100" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(630, 1671)
+
+[node name="Givenflowers101" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(659, 1671)
+
+[node name="Givenflowers102" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(684, 1672)
+
+[node name="Givenflowers103" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(711, 1671)
+
+[node name="Givenflowers104" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(729, 1671)
+
+[node name="Givenflowers105" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(753, 1672)
+
+[node name="Givenflowers106" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(778, 1671)
+
+[node name="Givenflowers107" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(803, 1671)
+
+[node name="Givenflowers108" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(823, 1672)
+
+[node name="Givenflowers109" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(847, 1671)
+
+[node name="Givenflowers110" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(869, 1672)
+
+[node name="Givenflowers111" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(886, 1672)
+
+[node name="Givenflowers112" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(914, 1670)
+
+[node name="Givenflowers113" parent="." instance=ExtResource("45_7xi6w")]
+position = Vector2(941, 1671)
+
+[node name="DarkRaina" parent="." instance=ExtResource("46_lm6tl")]
+position = Vector2(-279, 1086)
+dialogue_resource = ExtResource("47_7xi6w")
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 

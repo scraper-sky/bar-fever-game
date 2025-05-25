@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://bqj7iq6jc16bl"]
+[gd_scene load_steps=63 format=4 uid="uid://bqj7iq6jc16bl"]
 
 [ext_resource type="Script" uid="uid://c47efte5ou18r" path="res://scenes/levels/level_7.gd" id="1_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_5ffpf"]
@@ -31,6 +31,8 @@
 [ext_resource type="Script" uid="uid://bjv6sch568arg" path="res://scenes/dynamic/interactables.gd" id="26_64ngv"]
 [ext_resource type="PackedScene" uid="uid://cpvh7wc2numtm" path="res://scenes/dynamic/decoration/retrofire/retrofire.tscn" id="26_j8v86"]
 [ext_resource type="Texture2D" uid="uid://bw5g28nm2xfa0" path="res://assets/background&art/map_item.png" id="27_qybhm"]
+[ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="29_ejkkn"]
+[ext_resource type="Resource" uid="uid://b68bx6o6xm3c4" path="res://dialogue/level7darkraina.dialogue" id="30_rt60r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c64tk"]
 texture = ExtResource("3_27cbj")
@@ -1358,6 +1360,11 @@ position = Vector2(84, -1802)
 
 [node name="Retrofire6" parent="." instance=ExtResource("26_j8v86")]
 position = Vector2(-286, -2378)
+
+[node name="DarkRaina" parent="." instance=ExtResource("29_ejkkn")]
+position = Vector2(-281, -2364)
+scale = Vector2(1.2, 1.2)
+dialogue_resource = ExtResource("30_rt60r")
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 

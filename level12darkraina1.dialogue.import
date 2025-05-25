@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://but4j3hwhe2wa"
+path="res://.godot/imported/level12darkraina1.dialogue-124a012a8fa5180a0ba5392cf388721b.tres"
+
+[deps]
+
+source_file="res://level12darkraina1.dialogue"
+dest_files=["res://.godot/imported/level12darkraina1.dialogue-124a012a8fa5180a0ba5392cf388721b.tres"]
+
+[params]
+
+defaults=true

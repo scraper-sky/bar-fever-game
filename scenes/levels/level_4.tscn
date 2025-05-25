@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://by2oub33kp6q0"]
+[gd_scene load_steps=33 format=4 uid="uid://by2oub33kp6q0"]
 
 [ext_resource type="Script" uid="uid://chfqsurmss50t" path="res://scenes/levels/level_4.gd" id="1_7pvna"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_r4k2g"]
@@ -23,8 +23,10 @@
 [ext_resource type="PackedScene" uid="uid://de1fg8n8wgcj3" path="res://scenes/dynamic/collectibles/coin/coin.tscn" id="20_05se8"]
 [ext_resource type="Texture2D" uid="uid://b3x07aqur6y58" path="res://assets/background&art/map_hint1.png" id="21_0n65g"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="21_05se8"]
+[ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="23_io455"]
 [ext_resource type="Script" uid="uid://bjv6sch568arg" path="res://scenes/dynamic/interactables.gd" id="23_lc5pf"]
 [ext_resource type="Texture2D" uid="uid://bw5g28nm2xfa0" path="res://assets/background&art/map_item.png" id="24_0n65g"]
+[ext_resource type="Resource" uid="uid://cp7lou7oos7e3" path="res://dialogue/level4darkraina.dialogue" id="24_suy3i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3gnf3"]
 texture = ExtResource("3_r57se")
@@ -590,6 +592,11 @@ position = Vector2(113, 2388)
 
 [node name="Coin50" parent="." instance=ExtResource("20_05se8")]
 position = Vector2(146, 2388)
+
+[node name="DarkRaina" parent="." instance=ExtResource("23_io455")]
+position = Vector2(1018, 1278)
+facing_direction = -1
+dialogue_resource = ExtResource("24_suy3i")
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 

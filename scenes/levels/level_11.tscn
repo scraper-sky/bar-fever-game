@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://djepaoy7t5j4e"]
+[gd_scene load_steps=26 format=4 uid="uid://djepaoy7t5j4e"]
 
 [ext_resource type="Script" uid="uid://d03fc830ghowf" path="res://scenes/levels/level_11.gd" id="1_ntgks"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_sewkk"]
@@ -13,7 +13,9 @@
 [ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="10_1nnno"]
 [ext_resource type="Environment" uid="uid://dvr6yb67u6okp" path="res://resources/global_environment.tres" id="11_1nnno"]
 [ext_resource type="Shader" uid="uid://dca8wni8oqu0g" path="res://shaders/transition_pixellate.gdshader" id="12_5tmw6"]
+[ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="13_6leo6"]
 [ext_resource type="PackedScene" uid="uid://bm6eheetofr8k" path="res://scenes/ui/HUD.tscn" id="13_c8dgj"]
+[ext_resource type="Resource" uid="uid://dyhp765sn5hdh" path="res://level11darkraina.dialogue" id="14_fy7yk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4fty2"]
 texture = ExtResource("2_ntgks")
@@ -234,6 +236,11 @@ text = "1. You have lessons to learn. Let's return to lesson one: be happy with 
 
 [node name="LevelEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("11_1nnno")
+
+[node name="DarkRaina" parent="." instance=ExtResource("13_6leo6")]
+position = Vector2(363, 510)
+facing_direction = -1
+dialogue_resource = ExtResource("14_fy7yk")
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 
