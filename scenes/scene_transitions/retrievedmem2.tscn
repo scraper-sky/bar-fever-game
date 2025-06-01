@@ -1,9 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckoo87ojttcey"]
+[gd_scene load_steps=11 format=3 uid="uid://ckoo87ojttcey"]
 
 [ext_resource type="Script" uid="uid://doen0twaaqiny" path="res://scenes/scene_transitions/retrivedmem_2.gd" id="1_167xu"]
 [ext_resource type="Texture2D" uid="uid://bnvaxp0kf14h7" path="res://assets/background&art/rainasleep1.png" id="2_2h5gl"]
 [ext_resource type="Texture2D" uid="uid://o5kox0ylgnms" path="res://assets/background&art/rainasleep2.png" id="3_8wt4i"]
 [ext_resource type="Texture2D" uid="uid://cto3kll4rkdkm" path="res://assets/background&art/rainasleep3.png" id="4_8kjei"]
+[ext_resource type="Texture2D" uid="uid://deahu0crixl0x" path="res://assets/background&art/rainamid1.png" id="5_8kjei"]
+[ext_resource type="Texture2D" uid="uid://dspbcq413eumj" path="res://assets/background&art/rainamid2.png" id="6_qm3st"]
+[ext_resource type="Texture2D" uid="uid://cwtepom5pvijm" path="res://assets/background&art/rainamid3.png" id="7_b6nl3"]
+[ext_resource type="Texture2D" uid="uid://d1qimmhur6ccy" path="res://assets/background&art/memtape1.png" id="8_b6nl3"]
+[ext_resource type="Texture2D" uid="uid://bmnj04ehuj8rh" path="res://assets/background&art/memtape2.png" id="9_f2d3m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_itt4n"]
 animations = [{
@@ -33,15 +38,92 @@ offset_right = 1322.0
 offset_bottom = 782.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(635, 312)
+position = Vector2(635, 365)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_itt4n")
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 484.0
-offset_top = 443.0
-offset_right = 652.0
-offset_bottom = 550.0
+offset_left = 485.0
+offset_top = 492.0
+offset_right = 653.0
+offset_bottom = 599.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(330, 273)
+rotation = 0.602139
+scale = Vector2(2, 2)
+texture = ExtResource("5_8kjei")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(596, 114)
+rotation = 1.65632
+scale = Vector2(2, 2)
+texture = ExtResource("6_qm3st")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(893, 281)
+rotation = -0.375246
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("7_b6nl3")
+
+[node name="tape" type="Sprite2D" parent="."]
+position = Vector2(235, 302)
+rotation = 0.600393
+texture = ExtResource("8_b6nl3")
+
+[node name="tape2" type="Sprite2D" parent="."]
+position = Vector2(338, 371)
+rotation = 1.05418
+texture = ExtResource("8_b6nl3")
+
+[node name="tape3" type="Sprite2D" parent="."]
+position = Vector2(421, 241)
+rotation = 0.827286
+texture = ExtResource("8_b6nl3")
+
+[node name="tape4" type="Sprite2D" parent="."]
+position = Vector2(326, 175)
+rotation = 0.0750492
+texture = ExtResource("8_b6nl3")
+
+[node name="tape5" type="Sprite2D" parent="."]
+position = Vector2(511, 170)
+rotation = 1.20428
+texture = ExtResource("9_f2d3m")
+
+[node name="tape6" type="Sprite2D" parent="."]
+position = Vector2(670, 180)
+rotation = -1.20428
+texture = ExtResource("9_f2d3m")
+
+[node name="tape7" type="Sprite2D" parent="."]
+position = Vector2(681, 57)
+rotation = 1.50447
+texture = ExtResource("9_f2d3m")
+
+[node name="tape8" type="Sprite2D" parent="."]
+position = Vector2(521, 42)
+rotation = 0.225147
+texture = ExtResource("9_f2d3m")
+
+[node name="tape9" type="Sprite2D" parent="."]
+position = Vector2(868, 361)
+rotation = -0.0750492
+texture = ExtResource("8_b6nl3")
+
+[node name="tape10" type="Sprite2D" parent="."]
+position = Vector2(972, 326)
+rotation = 1.80467
+texture = ExtResource("8_b6nl3")
+
+[node name="tape11" type="Sprite2D" parent="."]
+position = Vector2(920, 193)
+rotation = -1.80642
+texture = ExtResource("8_b6nl3")
+
+[node name="tape12" type="Sprite2D" parent="."]
+position = Vector2(818, 234)
+texture = ExtResource("8_b6nl3")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

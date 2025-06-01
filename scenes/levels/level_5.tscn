@@ -384,6 +384,7 @@ tile_set = SubResource("TileSet_gw0ke")
 [node name="MainPlayer" parent="." instance=ExtResource("6_swdne")]
 position = Vector2(-9, -48)
 collision_mask = 3
+camera_zoom = Vector2(2, 2)
 
 [node name="8Bitaction3" parent="MainPlayer" instance=ExtResource("8_vm1kt")]
 
@@ -535,12 +536,13 @@ offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = 9.0
-offset_top = -144.0
-offset_right = 333.0
-offset_bottom = -69.0
+offset_left = 14.0
+offset_top = -110.0
+offset_right = 456.0
+offset_bottom = -35.0
+scale = Vector2(0.5, 0.5)
 theme_override_fonts/normal_font = ExtResource("21_wnnhf")
-text = "5. Toggle exactly 3 of the tiles to open the path to the portal."
+text = "5. Toggle exactly 3 tiles to open the path to the portal."
 
 [node name="partyballoons" parent="." instance=ExtResource("15_0y7y4")]
 position = Vector2(336, -115)

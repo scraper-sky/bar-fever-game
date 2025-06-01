@@ -586,13 +586,13 @@ target_position = Vector2(850, -1550)
 position = Vector2(672, -1524)
 
 [node name="OldRaina" parent="." instance=ExtResource("6_xw7bu")]
-position = Vector2(304, 1)
+position = Vector2(306, -7)
 
 [node name="OldRaina2" parent="." instance=ExtResource("6_xw7bu")]
-position = Vector2(-40, -6)
+position = Vector2(-45, -6)
 
 [node name="OldRaina3" parent="." instance=ExtResource("6_xw7bu")]
-position = Vector2(-96, -508)
+position = Vector2(-109, -519)
 
 [node name="OldRaina4" parent="." instance=ExtResource("6_xw7bu")]
 position = Vector2(353, -518)
@@ -661,10 +661,11 @@ position = Vector2(-884, -1420)
 position = Vector2(-884, -1391)
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_lbspt")
 offset_left = -4313.0
-offset_top = -3940.0
+offset_top = -3950.0
 offset_right = 3952.0
-offset_bottom = 4031.0
+offset_bottom = 4021.0

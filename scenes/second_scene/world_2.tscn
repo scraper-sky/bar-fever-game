@@ -1,9 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://dti7nlt73w1pt"]
+[gd_scene load_steps=17 format=3 uid="uid://dti7nlt73w1pt"]
 
-[ext_resource type="Script" uid="uid://dr6naed6mcyoc" path="res://scenes/second_scene/Player2.gd" id="1_7lwsp"]
 [ext_resource type="Script" uid="uid://cowhrcrjlih20" path="res://scenes/second_scene/world_2.gd" id="1_75xp1"]
-[ext_resource type="Texture2D" uid="uid://d1ab6q2vdpgqm" path="res://scenes/second_scene/raina2d.png" id="2_70ee7"]
 [ext_resource type="Texture2D" uid="uid://dnt8xax5o751t" path="res://assets/background&art/barrier.png" id="4_7rxoq"]
+[ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="4_gdvr1"]
 [ext_resource type="Texture2D" uid="uid://4jkctykfwtt7" path="res://assets/background&art/wall2.png" id="5_bgpmq"]
 [ext_resource type="PackedScene" uid="uid://cnypbgnpxr1w6" path="res://scenes/music/wherewasi.tscn" id="5_e8iy5"]
 [ext_resource type="Script" uid="uid://dwxp688q2gnk3" path="res://scenes/second_scene/area_2d.gd" id="5_iv88o"]
@@ -15,31 +14,6 @@
 [ext_resource type="Script" uid="uid://c4n0aow3ri0lr" path="res://scenes/second_scene/undreamer.gd" id="11_5yrdi"]
 
 [sub_resource type="Theme" id="Theme_dwmqt"]
-
-[sub_resource type="Animation" id="Animation_bl830"]
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_govmh"]
-_data = {
-&"default": SubResource("Animation_bl830")
-}
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i2rln"]
-radius = 40.0
-height = 98.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umgay"]
 size = Vector2(22.9939, 23.0207)
@@ -58,53 +32,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = SubResource("Theme_dwmqt")
 
-[node name="Player2" type="CharacterBody2D" parent="."]
-position = Vector2(-25, -17)
-script = ExtResource("1_7lwsp")
-speed = 400.0
-dialogue_resource = ExtResource("6_cbxgm")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player2"]
-root_node = NodePath("../Sprite2D")
-libraries = {
-&"": SubResource("AnimationLibrary_govmh")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
-position = Vector2(106, 408)
-shape = SubResource("CapsuleShape2D_i2rln")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player2"]
-texture_filter = 1
-position = Vector2(109, 407)
-scale = Vector2(3.0625, 3.16406)
-texture = ExtResource("2_70ee7")
-hframes = 2
-metadata/_aseprite_wizard_interface_config_ = {
-"pending_changes": {
-"embed_tex": false
-}
-}
-metadata/_aseprite_wizard_config_ = {
-"i_mode": -1,
-"keep_anim_length": false,
-"layers": [],
-"o_ex_p": "",
-"o_folder": "",
-"o_name": "",
-"only_visible": false,
-"player": "Player2/AnimationPlayer",
-"slice": "",
-"source": "res://raina2d.aseprite"
-}
-metadata/_aseprite_wizard_source_file_hash_ = "200dc72acad1dd88d86760626efed077"
-
-[node name="Camera2D" type="Camera2D" parent="Player2"]
-position = Vector2(182, 331)
-zoom = Vector2(0.75, 0.75)
-
-[node name="Wherewasi" parent="Player2" instance=ExtResource("5_e8iy5")]
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -119,14 +46,21 @@ texture = ExtResource("5_kl62o")
 position = Vector2(39, 0)
 
 [node name="neoncitylayer2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(421, 225)
-scale = Vector2(1.27497, 1.55291)
+position = Vector2(460.5, 255.5)
+scale = Vector2(1.32367, 1.6336)
 texture = ExtResource("6_baomu")
+
+[node name="MainPlayer" parent="." instance=ExtResource("4_gdvr1")]
+scale = Vector2(2, 2)
+camera_zoom = Vector2(0.9, 0.9)
+
+[node name="Wherewasi" parent="MainPlayer" instance=ExtResource("5_e8iy5")]
 
 [node name="Mysterious_Person" type="Area2D" parent="."]
 position = Vector2(1269, 588)
 scale = Vector2(5.15625, 4.53125)
 script = ExtResource("5_iv88o")
+dialogue_resource = ExtResource("6_cbxgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mysterious_Person"]
 position = Vector2(2.13333, -35.531)
@@ -211,6 +145,7 @@ offset_top = 160.0
 offset_right = 670.0
 offset_bottom = 225.0
 
-[connection signal="body_entered" from="Mysterious_Person" to="Player2" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Mysterious_Person" to="Mysterious_Person" method="_on_body_entered"]
+[connection signal="body_exited" from="Mysterious_Person" to="Mysterious_Person" method="_on_body_exited"]
 [connection signal="pressed" from="Undreamer/Undream" to="Undreamer" method="_on_undream_pressed"]
 [connection signal="pressed" from="Undreamer/Exit" to="Undreamer" method="_on_exit_pressed"]

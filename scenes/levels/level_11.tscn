@@ -164,6 +164,7 @@ shader_parameter/pixel_size = 1.0
 script = ExtResource("1_ntgks")
 
 [node name="MainPlayer" parent="." instance=ExtResource("1_sewkk")]
+camera_zoom = Vector2(2, 2)
 
 [node name="Glitchbeat" parent="MainPlayer" instance=ExtResource("3_yf4k5")]
 

@@ -503,6 +503,7 @@ script = ExtResource("1_nk72f")
 
 [node name="MainPlayer" parent="." instance=ExtResource("1_n3gcc")]
 position = Vector2(1, 0)
+camera_zoom = Vector2(2, 2)
 
 [node name="8Bitaction5" parent="MainPlayer" instance=ExtResource("3_diesl")]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://bqj7iq6jc16bl"]
+[gd_scene load_steps=68 format=4 uid="uid://bqj7iq6jc16bl"]
 
 [ext_resource type="Script" uid="uid://c47efte5ou18r" path="res://scenes/levels/level_7.gd" id="1_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="2_5ffpf"]
@@ -9,13 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://cmvce7vxi45mj" path="res://assets/background&art/circustilemap.png" id="5_c64tk"]
 [ext_resource type="PackedScene" uid="uid://doy1jks5c41vu" path="res://scenes/area_functionality/blue_portal.tscn" id="6_fusg1"]
 [ext_resource type="PackedScene" uid="uid://vnidjrc1n3oj" path="res://scenes/dynamic/obstacles/spiketrap/spike_trap.tscn" id="7_ra2hv"]
+[ext_resource type="PackedScene" uid="uid://d1bnriu6xq6c1" path="res://scenes/dynamic/decoration/ghostflower/ghostflower.tscn" id="9_4qlpv"]
 [ext_resource type="PackedScene" uid="uid://boxqehw65qp85" path="res://scenes/dynamic/decoration/retroshelf/retroshelf.tscn" id="9_4xx2j"]
 [ext_resource type="PackedScene" uid="uid://1w1hqkl4eq8j" path="res://scenes/dynamic/moving_platform_large.tscn" id="10_fo4xe"]
 [ext_resource type="PackedScene" uid="uid://drw73lq07gx2b" path="res://scenes/dynamic/decoration/retrobamboo/retrobamboo.tscn" id="10_gyp50"]
 [ext_resource type="PackedScene" uid="uid://dpo2ex878fwrp" path="res://scenes/dynamic/obstacles/flickerlamp/flickerlamp.tscn" id="10_q0wsq"]
 [ext_resource type="PackedScene" uid="uid://bjrc4jfda4v7w" path="res://scenes/dynamic/obstacles/ghost/ghost.tscn" id="11_88heu"]
+[ext_resource type="PackedScene" uid="uid://0nmkgqmd5r6k" path="res://scenes/dynamic/decoration/giventent/giventent.tscn" id="11_qx2c0"]
 [ext_resource type="PackedScene" uid="uid://cs5wyojhpl4ge" path="res://scenes/dynamic/color_block.tscn" id="11_wreli"]
+[ext_resource type="PackedScene" uid="uid://dwk54s0qf5wch" path="res://scenes/dynamic/decoration/redtent/redtent.tscn" id="12_48u08"]
 [ext_resource type="PackedScene" uid="uid://cnyi1qyyt2626" path="res://scenes/dynamic/color_block_2.tscn" id="12_ymk4h"]
+[ext_resource type="PackedScene" uid="uid://ciw4mommqlcmx" path="res://scenes/dynamic/decoration/bluetent/bluetent.tscn" id="13_eqjcn"]
 [ext_resource type="PackedScene" uid="uid://gw0an34kb46r" path="res://scenes/dynamic/decoration/floatingtorii/floatingtorii.tscn" id="13_ymk4h"]
 [ext_resource type="FontFile" uid="uid://dnl7v48dkuj28" path="res://fonts&style/PressStart2P-Regular.ttf" id="15_aqqx4"]
 [ext_resource type="PackedScene" uid="uid://bfognf282tcs7" path="res://scenes/dynamic/decoration/floatingparticles/floating_particles.tscn" id="15_dfn7m"]
@@ -33,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://bw5g28nm2xfa0" path="res://assets/background&art/map_item.png" id="27_qybhm"]
 [ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="29_ejkkn"]
 [ext_resource type="Resource" uid="uid://b68bx6o6xm3c4" path="res://dialogue/level7darkraina.dialogue" id="30_rt60r"]
+[ext_resource type="PackedScene" uid="uid://b5el52ncaa6dp" path="res://scenes/dynamic/decoration/floatingshelf/floatingshelf.tscn" id="32_2nv2l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c64tk"]
 texture = ExtResource("3_27cbj")
@@ -549,6 +554,7 @@ script = ExtResource("1_q0wsq")
 [node name="MainPlayer" parent="." instance=ExtResource("2_5ffpf")]
 position = Vector2(3, 6)
 jump_power = 18.0
+camera_zoom = Vector2(2, 2)
 
 [node name="8Bitaction4" parent="MainPlayer" instance=ExtResource("3_r4aal")]
 
@@ -570,6 +576,112 @@ texture = ExtResource("5_73o88")
 [node name="BluePortal" parent="." instance=ExtResource("6_fusg1")]
 position = Vector2(-598, -2512)
 target_scene = "res://scenes/levels/level_8.tscn"
+
+[node name="Ghostflower" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(-486, 18)
+
+[node name="Ghostflower2" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(-811, 85)
+scale = Vector2(0.5, 0.5)
+choice = 0
+
+[node name="Ghostflower3" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(403, 50)
+scale = Vector2(0.75, 0.75)
+
+[node name="Ghostflower4" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(-827, -192)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+choice = 0
+
+[node name="Ghostflower5" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(-827, -957)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+
+[node name="Ghostflower6" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(-828, -1404)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+choice = 0
+
+[node name="Ghostflower7" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(-828, -2072)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+
+[node name="Ghostflower8" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(452, -2007)
+rotation = 4.71239
+scale = Vector2(0.5, 0.5)
+choice = 0
+
+[node name="Ghostflower9" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(453, -1457)
+rotation = 4.71239
+scale = Vector2(0.5, 0.5)
+
+[node name="Ghostflower10" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(453, -702)
+rotation = 4.71239
+scale = Vector2(0.5, 0.5)
+choice = 0
+
+[node name="Ghostflower11" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(68, -772)
+rotation = 4.71239
+scale = Vector2(0.5, 0.5)
+
+[node name="Ghostflower12" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(81, -849)
+rotation = 4.71239
+scale = Vector2(0.4, 0.4)
+choice = 0
+
+[node name="Ghostflower13" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(95, -686)
+rotation = 4.71239
+scale = Vector2(0.3, 0.3)
+
+[node name="Ghostflower14" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(94, -1330)
+rotation = 4.71239
+scale = Vector2(0.3, 0.3)
+choice = 0
+
+[node name="Ghostflower15" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(94, -1482)
+rotation = 4.71239
+scale = Vector2(0.3, 0.3)
+
+[node name="Ghostflower16" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(80, -1919)
+rotation = 4.71239
+scale = Vector2(0.4, 0.4)
+choice = 0
+
+[node name="Ghostflower17" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(94, -2054)
+rotation = 4.71239
+scale = Vector2(0.3, 0.3)
+
+[node name="Ghostflower18" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(68, -2243)
+rotation = 4.71239
+scale = Vector2(0.5, 0.5)
+choice = 0
+
+[node name="Ghostflower19" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(-201, -2250)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+
+[node name="Ghostflower20" parent="." instance=ExtResource("9_4qlpv")]
+position = Vector2(-175, -2064)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+choice = 0
 
 [node name="Retroshelf" parent="." instance=ExtResource("9_4xx2j")]
 position = Vector2(-529, 101)
@@ -780,6 +892,26 @@ position = Vector2(-795, -1802)
 
 [node name="Retrobamboo68" parent="." instance=ExtResource("10_gyp50")]
 position = Vector2(-848, -1803)
+
+[node name="Redtent" parent="." instance=ExtResource("12_48u08")]
+position = Vector2(-691, 86)
+
+[node name="Redtent2" parent="." instance=ExtResource("12_48u08")]
+position = Vector2(148, 87)
+
+[node name="Bluetent" parent="." instance=ExtResource("13_eqjcn")]
+position = Vector2(-18, 87)
+
+[node name="Giventent" parent="." instance=ExtResource("11_qx2c0")]
+position = Vector2(-416, 103)
+choice = 0
+
+[node name="Giventent2" parent="." instance=ExtResource("11_qx2c0")]
+position = Vector2(-321, 102)
+
+[node name="Giventent3" parent="." instance=ExtResource("11_qx2c0")]
+position = Vector2(-225, 102)
+choice = 2
 
 [node name="ghost" parent="." instance=ExtResource("11_88heu")]
 position = Vector2(-443, -78)
@@ -1365,6 +1497,63 @@ position = Vector2(-286, -2378)
 position = Vector2(-281, -2364)
 scale = Vector2(1.2, 1.2)
 dialogue_resource = ExtResource("30_rt60r")
+
+[node name="Floatingshelf" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(273, -122)
+
+[node name="Floatingshelf2" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(414, -601)
+
+[node name="Floatingshelf3" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(37, -670)
+
+[node name="Floatingshelf4" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-216, -297)
+
+[node name="Floatingshelf5" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-799, -100)
+
+[node name="Floatingshelf6" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-722, -640)
+
+[node name="Floatingshelf7" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-358, -888)
+
+[node name="Floatingshelf8" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(194, -1066)
+
+[node name="Floatingshelf9" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(327, -1369)
+
+[node name="Floatingshelf10" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(14, -1480)
+
+[node name="Floatingshelf11" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-211, -1477)
+
+[node name="Floatingshelf12" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-497, -1372)
+
+[node name="Floatingshelf13" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-716, -1313)
+
+[node name="Floatingshelf14" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-707, -2041)
+
+[node name="Floatingshelf15" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-518, -2041)
+
+[node name="Floatingshelf16" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-518, -2112)
+
+[node name="Floatingshelf17" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-518, -2112)
+
+[node name="Floatingshelf18" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(-182, -2171)
+
+[node name="Floatingshelf19" parent="." instance=ExtResource("32_2nv2l")]
+position = Vector2(239, -2101)
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 

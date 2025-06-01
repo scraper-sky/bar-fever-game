@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://yvhpacff47fk"]
+[gd_scene load_steps=34 format=4 uid="uid://yvhpacff47fk"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_beqrg"]
 [ext_resource type="Script" uid="uid://b75i48xw8l6bo" path="res://scenes/levels/level_3.gd" id="1_vmg1d"]
@@ -25,8 +25,10 @@
 [ext_resource type="PackedScene" uid="uid://drw73lq07gx2b" path="res://scenes/dynamic/decoration/retrobamboo/retrobamboo.tscn" id="20_jql0x"]
 [ext_resource type="PackedScene" uid="uid://c8nf7r1sc6tgb" path="res://scenes/dynamic/decoration/alsoalsogivenflowers/alsoalsogivenflowers.tscn" id="21_o3ttr"]
 [ext_resource type="PackedScene" uid="uid://cpvh7wc2numtm" path="res://scenes/dynamic/decoration/retrofire/retrofire.tscn" id="23_kva3v"]
+[ext_resource type="PackedScene" uid="uid://d1bnriu6xq6c1" path="res://scenes/dynamic/decoration/ghostflower/ghostflower.tscn" id="25_aey3y"]
 [ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="25_n8qcm"]
 [ext_resource type="Resource" uid="uid://dd7cbmvra3y5x" path="res://dialogue/level3darkraina.dialogue" id="26_aey3y"]
+[ext_resource type="PackedScene" uid="uid://cpcqnnfleein8" path="res://scenes/dynamic/decoration/cloud/cloud.tscn" id="28_k0dme"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mjn61"]
 texture = ExtResource("2_sp886")
@@ -125,6 +127,7 @@ shader_parameter/pixel_size = 1.0
 script = ExtResource("1_vmg1d")
 
 [node name="MainPlayer" parent="." instance=ExtResource("1_beqrg")]
+camera_zoom = Vector2(2, 2)
 
 [node name="8Bitaction2" parent="MainPlayer" instance=ExtResource("3_1nwmf")]
 
@@ -264,6 +267,7 @@ offset_left = 160.0
 offset_top = 484.0
 offset_right = 608.0
 offset_bottom = 620.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("10_josfm")
 text = "3. Please don't leave. 
 
@@ -565,9 +569,123 @@ position = Vector2(1559, 971)
 [node name="Retrofire" parent="." instance=ExtResource("23_kva3v")]
 position = Vector2(36, 118)
 
+[node name="Ghostflower" parent="." instance=ExtResource("25_aey3y")]
+position = Vector2(1001, 545)
+scale = Vector2(0.4, 0.4)
+choice = 0
+
+[node name="Ghostflower2" parent="." instance=ExtResource("25_aey3y")]
+position = Vector2(892, 559)
+scale = Vector2(0.3, 0.3)
+
+[node name="Ghostflower3" parent="." instance=ExtResource("25_aey3y")]
+position = Vector2(1064, 572)
+scale = Vector2(0.2, 0.2)
+choice = 0
+
+[node name="Ghostflower4" parent="." instance=ExtResource("25_aey3y")]
+position = Vector2(1271, 661)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+
+[node name="Ghostflower5" parent="." instance=ExtResource("25_aey3y")]
+position = Vector2(1252, 721)
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+choice = 0
+
+[node name="Ghostflower6" parent="." instance=ExtResource("25_aey3y")]
+position = Vector2(1265, 771)
+rotation = 1.5708
+scale = Vector2(0.35, 0.35)
+
 [node name="DarkRaina" parent="." instance=ExtResource("25_n8qcm")]
 position = Vector2(1374, 958)
 dialogue_resource = ExtResource("26_aey3y")
+
+[node name="Cloud" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(-66, 835)
+start_y_position = 850.0
+speed = 800.0
+cloud_scale = Vector2(1.25, 0.75)
+
+[node name="Cloud2" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(23, 711)
+start_y_position = 850.0
+speed = 1200.0
+cloud_scale = Vector2(0.8, 1)
+
+[node name="Cloud3" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(210, 803)
+start_y_position = 850.0
+speed = 600.0
+cloud_scale = Vector2(0.8, 1.3)
+
+[node name="Cloud4" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(387, 712)
+start_y_position = 850.0
+speed = 1440.0
+cloud_scale = Vector2(1.1, 1.4)
+
+[node name="Cloud5" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(515, 883)
+start_y_position = 850.0
+speed = 600.0
+cloud_scale = Vector2(1.3, 0.9)
+
+[node name="Cloud6" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(705, 730)
+start_y_position = 850.0
+speed = 1000.0
+cloud_scale = Vector2(0.8, 1.2)
+
+[node name="Cloud7" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(575, 674)
+start_y_position = 850.0
+speed = 900.0
+cloud_scale = Vector2(1.3, 0.9)
+
+[node name="Cloud8" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(852, 818)
+start_y_position = 850.0
+speed = 1300.0
+cloud_scale = Vector2(0.95, 1.2)
+
+[node name="Cloud9" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(920, 634)
+start_y_position = 850.0
+speed = 500.0
+cloud_scale = Vector2(0.76, 1)
+
+[node name="Cloud10" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(1065, 803)
+start_y_position = 850.0
+speed = 800.0
+cloud_scale = Vector2(0.5, 0.75)
+
+[node name="Cloud11" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(1274, 1181)
+start_y_position = 1250.0
+speed = 900.0
+cloud_scale = Vector2(0.75, 0.5)
+
+[node name="Cloud12" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(1404, 1113)
+start_y_position = 1250.0
+speed = 600.0
+cloud_scale = Vector2(0.6, 1)
+
+[node name="Cloud13" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(1548, 1193)
+start_y_position = 1250.0
+speed = 1300.0
+cloud_scale = Vector2(0.4, 0.6)
+
+[node name="Cloud14" parent="." instance=ExtResource("28_k0dme")]
+position = Vector2(1649, 1111)
+start_y_position = 1250.0
+speed = 750.0
+cloud_scale = Vector2(0.75, 0.9)
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 

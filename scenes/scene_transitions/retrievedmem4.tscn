@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1fyc2wrlsgml"]
+[gd_scene load_steps=10 format=3 uid="uid://b1fyc2wrlsgml"]
 
 [ext_resource type="Script" uid="uid://c5hiskxpxlrdt" path="res://scenes/scene_transitions/retrievedmem_4.gd" id="1_2dycc"]
 [ext_resource type="Texture2D" uid="uid://slwhwgfriwos" path="res://assets/background&art/rainakeepon1.png" id="2_k0261"]
 [ext_resource type="Texture2D" uid="uid://bh5j5pa8p6lcm" path="res://assets/background&art/rainakeepon2.png" id="3_sdl6f"]
 [ext_resource type="Texture2D" uid="uid://cbm6ydapbg8li" path="res://assets/background&art/rainakeepon3.png" id="4_s3se8"]
+[ext_resource type="Texture2D" uid="uid://crvt7hkk4gq1a" path="res://assets/background&art/rainaold1.png" id="5_0t042"]
+[ext_resource type="Texture2D" uid="uid://dmataaajfcebf" path="res://assets/background&art/rainaold2.png" id="6_hvih5"]
+[ext_resource type="Texture2D" uid="uid://d1qimmhur6ccy" path="res://assets/background&art/memtape1.png" id="7_amrrh"]
+[ext_resource type="Texture2D" uid="uid://bmnj04ehuj8rh" path="res://assets/background&art/memtape2.png" id="8_mw88n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0t042"]
 animations = [{
@@ -43,5 +47,56 @@ offset_left = 544.0
 offset_top = 456.0
 offset_right = 753.0
 offset_bottom = 541.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(316, 196)
+rotation = 0.602139
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_0t042")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(277, 440)
+rotation = -0.376991
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("6_hvih5")
+
+[node name="tape" type="Sprite2D" parent="."]
+position = Vector2(199, 397)
+rotation = 1.05418
+texture = ExtResource("7_amrrh")
+
+[node name="tape2" type="Sprite2D" parent="."]
+position = Vector2(251, 525)
+texture = ExtResource("7_amrrh")
+
+[node name="tape3" type="Sprite2D" parent="."]
+position = Vector2(354, 485)
+rotation = -0.827286
+texture = ExtResource("7_amrrh")
+
+[node name="tape4" type="Sprite2D" parent="."]
+position = Vector2(306, 355)
+rotation = 0.300197
+texture = ExtResource("7_amrrh")
+
+[node name="tape5" type="Sprite2D" parent="."]
+position = Vector2(242, 217)
+rotation = 0.977384
+texture = ExtResource("8_mw88n")
+
+[node name="tape6" type="Sprite2D" parent="."]
+position = Vector2(326, 268)
+rotation = 1.27933
+texture = ExtResource("8_mw88n")
+
+[node name="tape7" type="Sprite2D" parent="."]
+position = Vector2(390, 171)
+rotation = -0.677188
+texture = ExtResource("8_mw88n")
+
+[node name="tape8" type="Sprite2D" parent="."]
+position = Vector2(315, 121)
+rotation = 0.527089
+texture = ExtResource("8_mw88n")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

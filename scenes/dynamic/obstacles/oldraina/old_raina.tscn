@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://xg4yxbcdii6p"]
+[gd_scene load_steps=7 format=3 uid="uid://xg4yxbcdii6p"]
 
 [ext_resource type="Script" uid="uid://dcjd87rkytv32" path="res://scenes/dynamic/obstacles/oldraina/old_raina.gd" id="1_5hlrj"]
-[ext_resource type="Texture2D" uid="uid://bqlwpnn6gkt0s" path="res://characters/raina2dsplit1.png" id="2_sf1r5"]
-[ext_resource type="Texture2D" uid="uid://ba06jtw0j7d6n" path="res://characters/raina2dsplit2.png" id="3_p570l"]
+[ext_resource type="Texture2D" uid="uid://xonj2djx8v0t" path="res://characters/newraina1.png" id="2_o2h5q"]
+[ext_resource type="Texture2D" uid="uid://b1rhfxqe6e6w6" path="res://characters/newraina2.png" id="3_53w7w"]
+[ext_resource type="Texture2D" uid="uid://cugn6o4mvya3x" path="res://characters/newraina3.png" id="4_nyj4s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ojr17"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_sf1r5")
+"texture": ExtResource("2_o2h5q")
 }],
 "loop": true,
 "name": &"idle",
@@ -16,10 +17,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_sf1r5")
+"texture": ExtResource("2_o2h5q")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_p570l")
+"texture": ExtResource("3_53w7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nyj4s")
 }],
 "loop": true,
 "name": &"walking",
@@ -35,7 +39,7 @@ script = ExtResource("1_5hlrj")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_ojr17")
-animation = &"walking"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 2.5)

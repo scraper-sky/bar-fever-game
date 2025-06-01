@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1bnriu6xq6c1"]
+
+[ext_resource type="Script" uid="uid://bjj44vqqqao45" path="res://scenes/dynamic/decoration/ghostflower/ghostflower.gd" id="1_3afel"]
+[ext_resource type="Texture2D" uid="uid://df60d1rl42qgd" path="res://assets/background&art/ghostflower1.png" id="1_dsuhs"]
+[ext_resource type="Texture2D" uid="uid://cwma7t8jratkt" path="res://assets/background&art/ghostflower2.png" id="2_3afel"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iou3j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dsuhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3afel")
+}],
+"loop": true,
+"name": &"cycle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3afel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_dsuhs")
+}],
+"loop": true,
+"name": &"cycle2",
+"speed": 5.0
+}]
+
+[node name="Ghostflower" type="Node2D"]
+script = ExtResource("1_3afel")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_iou3j")
+animation = &"cycle"

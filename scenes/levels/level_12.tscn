@@ -127,6 +127,7 @@ script = ExtResource("1_aj8n2")
 
 [node name="MainPlayer" parent="." instance=ExtResource("1_r84c5")]
 jump_power = 18.0
+camera_zoom = Vector2(2, 2)
 
 [node name="Coldsilence" parent="MainPlayer" instance=ExtResource("3_fo48u")]
 

@@ -128,6 +128,7 @@ size = Vector2(49, 28)
 script = ExtResource("1_7pvna")
 
 [node name="MainPlayer" parent="." instance=ExtResource("2_r4k2g")]
+camera_zoom = Vector2(2, 2)
 
 [node name="8Bitaction2" parent="MainPlayer" instance=ExtResource("3_12cdj")]
 
@@ -396,9 +397,10 @@ offset_bottom = 40.0
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
 offset_left = 395.0
-offset_top = 2276.0
+offset_top = 2300.0
 offset_right = 722.0
-offset_bottom = 2464.0
+offset_bottom = 2488.0
+scale = Vector2(0.75, 0.75)
 theme_override_fonts/normal_font = ExtResource("13_beuva")
 text = "4. You fell here for a reason.
 
@@ -418,10 +420,10 @@ position = Vector2(718, 168)
 position = Vector2(58, 1881)
 
 [node name="Dreamer" parent="." instance=ExtResource("17_1bx01")]
-offset_left = 312.0
-offset_top = 289.0
-offset_right = 352.0
-offset_bottom = 312.0
+offset_left = 420.0
+offset_top = 248.0
+offset_right = 460.0
+offset_bottom = 271.0
 
 [node name="LevelEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("18_vq5n0")
@@ -594,7 +596,7 @@ position = Vector2(113, 2388)
 position = Vector2(146, 2388)
 
 [node name="DarkRaina" parent="." instance=ExtResource("23_io455")]
-position = Vector2(1018, 1278)
+position = Vector2(995, 1278)
 facing_direction = -1
 dialogue_resource = ExtResource("24_suy3i")
 
@@ -602,9 +604,9 @@ dialogue_resource = ExtResource("24_suy3i")
 
 [node name="TransitionRect" type="ColorRect" parent="TransitionLayer"]
 material = SubResource("ShaderMaterial_12cdj")
-offset_left = -1383.0
+offset_left = -1396.0
 offset_top = -344.0
-offset_right = 6445.0
+offset_right = 6432.0
 offset_bottom = 8778.0
 scale = Vector2(0.5, 0.5)
 

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed = 10.0
 @export var jump_power = 15.0
+@export var camera_zoom: Vector2 = Vector2.ONE
 @onready var animated_sprite = $AnimatedSprite
 @onready var jump_sound = $JumpSound
 @onready var death_sound = $DeathSound
@@ -25,6 +26,7 @@ func _ready():
 	is_dead = false
 	# Set initial scale to 1.5
 	animated_sprite.scale = Vector2(1.5, 1.5)
+	$Camera2D.zoom = camera_zoom
 
 func _input(event):
 	if event.is_action_pressed("menu_in"):

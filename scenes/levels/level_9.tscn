@@ -465,6 +465,7 @@ shader_parameter/pixel_size = 1.0
 script = ExtResource("1_sd2du")
 
 [node name="MainPlayer" parent="." instance=ExtResource("2_6v45j")]
+camera_zoom = Vector2(2, 2)
 
 [node name="8Bitaction5" parent="MainPlayer" instance=ExtResource("3_chcbd")]
 

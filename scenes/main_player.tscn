@@ -67,12 +67,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_1xr6p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_r5n64")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_gv8u8")
 }],
 "loop": true,
 "name": &"walk",
@@ -95,7 +89,8 @@ zoom = Vector2(2, 2)
 position = Vector2(7, -5)
 scale = Vector2(1.61, 1.61)
 sprite_frames = SubResource("SpriteFrames_hafb0")
-animation = &"idle"
+animation = &"walk"
+frame_progress = 0.136213
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_n0lfc")

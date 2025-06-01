@@ -545,6 +545,7 @@ tile_set = SubResource("TileSet_4fl1q")
 position = Vector2(25, -44)
 speed = 15.0
 jump_power = 20.0
+camera_zoom = Vector2(2, 2)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
