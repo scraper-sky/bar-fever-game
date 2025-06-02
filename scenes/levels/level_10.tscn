@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://drahjq4x1ho3k"]
+[gd_scene load_steps=67 format=4 uid="uid://drahjq4x1ho3k"]
 
 [ext_resource type="PackedScene" uid="uid://coem68ixayh4v" path="res://scenes/main_player.tscn" id="1_n3gcc"]
 [ext_resource type="Script" uid="uid://4cbo2palb5ig" path="res://scenes/levels/level_10.gd" id="1_nk72f"]
@@ -17,7 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://drw73lq07gx2b" path="res://scenes/dynamic/decoration/retrobamboo/retrobamboo.tscn" id="9_h8dgm"]
 [ext_resource type="PackedScene" uid="uid://bq1cr37l7t5hd" path="res://scenes/dynamic/decoration/circustent/circustent.tscn" id="9_jaqb5"]
 [ext_resource type="Texture2D" uid="uid://ndi1w4q6svii" path="res://assets/background&art/1ghost6.png" id="9_odo46"]
+[ext_resource type="PackedScene" uid="uid://dwk54s0qf5wch" path="res://scenes/dynamic/decoration/redtent/redtent.tscn" id="9_rfw8p"]
 [ext_resource type="PackedScene" uid="uid://boxqehw65qp85" path="res://scenes/dynamic/decoration/retroshelf/retroshelf.tscn" id="10_4n6ax"]
+[ext_resource type="PackedScene" uid="uid://ciw4mommqlcmx" path="res://scenes/dynamic/decoration/bluetent/bluetent.tscn" id="10_inp4p"]
 [ext_resource type="Texture2D" uid="uid://bwpfrupwvhjnh" path="res://assets/background&art/1ghost7.png" id="10_nk72f"]
 [ext_resource type="Texture2D" uid="uid://brt2n4n5a5gv4" path="res://assets/background&art/1ghost8.png" id="11_vxf3i"]
 [ext_resource type="Texture2D" uid="uid://bwg0t3ykp2a8f" path="res://assets/background&art/1ghost9.png" id="12_657iy"]
@@ -50,6 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://bnpcvj4yoabb0" path="res://scenes/dynamic/decoration/givenflowers/givenflowers.tscn" id="45_7xi6w"]
 [ext_resource type="PackedScene" uid="uid://ch73btdbh41my" path="res://scenes/dynamic/interactables/darkraina/darkraina.tscn" id="46_lm6tl"]
 [ext_resource type="Resource" uid="uid://bk56v36h58ao" path="res://dialogue/level10darkraina.dialogue" id="47_7xi6w"]
+[ext_resource type="PackedScene" uid="uid://b5el52ncaa6dp" path="res://scenes/dynamic/decoration/floatingshelf/floatingshelf.tscn" id="48_tdl4a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_55him"]
 texture = ExtResource("2_c7e1w")
@@ -527,6 +530,24 @@ texture = ExtResource("4_omffp")
 position = Vector2(568.625, 1116.5)
 scale = Vector2(2.72796, 3.94312)
 texture = ExtResource("5_odo46")
+
+[node name="Redtent" parent="." instance=ExtResource("9_rfw8p")]
+position = Vector2(-511, 1046)
+
+[node name="Redtent2" parent="." instance=ExtResource("9_rfw8p")]
+position = Vector2(-380, 1046)
+
+[node name="Redtent3" parent="." instance=ExtResource("9_rfw8p")]
+position = Vector2(-20, 1047)
+
+[node name="Bluetent" parent="." instance=ExtResource("10_inp4p")]
+position = Vector2(-260, 1046)
+
+[node name="Bluetent2" parent="." instance=ExtResource("10_inp4p")]
+position = Vector2(-633, 1046)
+
+[node name="Bluetent3" parent="." instance=ExtResource("10_inp4p")]
+position = Vector2(96, 1046)
 
 [node name="Retrobamboo" parent="." instance=ExtResource("9_h8dgm")]
 position = Vector2(-222, 1078)
@@ -1723,6 +1744,15 @@ position = Vector2(914, 1670)
 
 [node name="Givenflowers113" parent="." instance=ExtResource("45_7xi6w")]
 position = Vector2(941, 1671)
+
+[node name="Floatingshelf" parent="." instance=ExtResource("48_tdl4a")]
+position = Vector2(-712, 1080)
+
+[node name="Floatingshelf2" parent="." instance=ExtResource("48_tdl4a")]
+position = Vector2(-652, 1080)
+
+[node name="Floatingshelf3" parent="." instance=ExtResource("48_tdl4a")]
+position = Vector2(-460, 1079)
 
 [node name="DarkRaina" parent="." instance=ExtResource("46_lm6tl")]
 position = Vector2(-279, 1086)

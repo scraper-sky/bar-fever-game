@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6v8vsougo3ru"]
+
+[ext_resource type="Script" uid="uid://bqw8dxp0gju2g" path="res://scenes/dynamic/decoration/givenmoth/givenmoth.gd" id="1_dglxg"]
+[ext_resource type="Texture2D" uid="uid://bjoo5hwxoshca" path="res://assets/background&art/givenmoth.png" id="2_08vt4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dglxg"]
+size = Vector2(36, 34)
+
+[node name="Givenmoth" type="Area2D"]
+script = ExtResource("1_dglxg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_08vt4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 3)
+shape = SubResource("RectangleShape2D_dglxg")

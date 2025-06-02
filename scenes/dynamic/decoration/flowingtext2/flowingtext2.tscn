@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://3daucv3eje1u"]
+
+[ext_resource type="Script" uid="uid://cisyugrqk7s46" path="res://scenes/dynamic/decoration/flowingtext2/flowingtext_2.gd" id="1_acqd1"]
+
+[node name="Flowingtext2" type="Node2D"]
+script = ExtResource("1_acqd1")

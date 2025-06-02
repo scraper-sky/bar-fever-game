@@ -1494,8 +1494,8 @@ position = Vector2(84, -1802)
 position = Vector2(-286, -2378)
 
 [node name="DarkRaina" parent="." instance=ExtResource("29_ejkkn")]
-position = Vector2(-281, -2364)
-scale = Vector2(1.2, 1.2)
+position = Vector2(-273, -2370)
+scale = Vector2(1.5, 1.5)
 dialogue_resource = ExtResource("30_rt60r")
 
 [node name="Floatingshelf" parent="." instance=ExtResource("32_2nv2l")]

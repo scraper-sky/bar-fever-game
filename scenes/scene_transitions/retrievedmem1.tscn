@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3pyuge4n201b"]
+[gd_scene load_steps=12 format=3 uid="uid://d3pyuge4n201b"]
 
 [ext_resource type="Script" uid="uid://cnnea1yhem56" path="res://scenes/scene_transitions/retrievedmem_1.gd" id="1_0c8j1"]
 [ext_resource type="Texture2D" uid="uid://cxkiclin34c6n" path="res://assets/background&art/rainabuilding1.png" id="1_t0nyv"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bi4kts7hqbepw" path="res://assets/background&art/rainayoung3.png" id="7_ams5s"]
 [ext_resource type="Texture2D" uid="uid://d1qimmhur6ccy" path="res://assets/background&art/memtape1.png" id="8_dt7a5"]
 [ext_resource type="Texture2D" uid="uid://bmnj04ehuj8rh" path="res://assets/background&art/memtape2.png" id="9_08222"]
+[ext_resource type="PackedScene" uid="uid://ctox6gaviccrf" path="res://scenes/dynamic/decoration/flowingtext1/flowingtext.tscn" id="10_08222"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c638e"]
 animations = [{
@@ -137,5 +138,19 @@ position = Vector2(499, 70.0001)
 rotation = 0.827286
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_08222")
+
+[node name="Flowingtext" parent="." instance=ExtResource("10_08222")]
+position = Vector2(-63, 9.99998)
+rotation = -0.436332
+stream_height = 800.0
+text_speed = 400.0
+spawn_interval = 0.1
+
+[node name="Flowingtext2" parent="." instance=ExtResource("10_08222")]
+position = Vector2(1079, -16)
+rotation = 0.610865
+stream_height = 800.0
+text_speed = 400.0
+spawn_interval = 0.1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

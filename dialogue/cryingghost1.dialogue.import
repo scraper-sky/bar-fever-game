@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bwkii1f13dv5m"
+path="res://.godot/imported/cryingghost1.dialogue-8af5adce678c496b1badb889b0d8eebc.tres"
+
+[deps]
+
+source_file="res://dialogue/cryingghost1.dialogue"
+dest_files=["res://.godot/imported/cryingghost1.dialogue-8af5adce678c496b1badb889b0d8eebc.tres"]
+
+[params]
+
+defaults=true

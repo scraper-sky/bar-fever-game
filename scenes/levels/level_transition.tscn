@@ -127,6 +127,7 @@ tile_set = SubResource("TileSet_aj2d0")
 [node name="MainPlayer" parent="." instance=ExtResource("5_vwu0f")]
 position = Vector2(-10, 4)
 jump_power = 20.0
+camera_zoom = Vector2(2, 2)
 
 [node name="Distortedvortex" parent="MainPlayer" instance=ExtResource("7_546nq")]
 

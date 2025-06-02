@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dxa6it8yvq3v8"
+path="res://.godot/imported/cherrymen1.dialogue-bef5e4c167f6c7a3b4c58a1979ed649d.tres"
+
+[deps]
+
+source_file="res://dialogue/cherrymen1.dialogue"
+dest_files=["res://.godot/imported/cherrymen1.dialogue-bef5e4c167f6c7a3b4c58a1979ed649d.tres"]
+
+[params]
+
+defaults=true

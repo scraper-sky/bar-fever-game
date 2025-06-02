@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca5ahcyk2smx5"]
+
+[ext_resource type="Texture2D" uid="uid://by1a7202vkch1" path="res://assets/background&art/cryingghost1.png" id="1_2sv5e"]
+[ext_resource type="Script" uid="uid://btrw7xhanbinh" path="res://scenes/dynamic/interactables/cryingghost/cryingghost.gd" id="1_ceo4m"]
+[ext_resource type="Texture2D" uid="uid://cnbfjiat2o7kc" path="res://assets/background&art/cryingghost2.png" id="2_ceo4m"]
+[ext_resource type="Texture2D" uid="uid://dlh3cvj5j6avj" path="res://assets/background&art/cryingghost3.png" id="3_olla2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13c2p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2sv5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ceo4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_olla2")
+}],
+"loop": true,
+"name": &"floating",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myf03"]
+size = Vector2(48, 63)
+
+[node name="Cryingghost" type="Area2D"]
+script = ExtResource("1_ceo4m")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_13c2p")
+animation = &"floating"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0.5)
+shape = SubResource("RectangleShape2D_myf03")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
